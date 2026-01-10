@@ -3,7 +3,6 @@ package com.mykerd.panic
 import android.app.*
 import android.content.*
 import android.hardware.Camera
-import android.location.Location
 import android.media.MediaRecorder
 import android.os.*
 import android.util.Log
@@ -15,10 +14,7 @@ import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
-import java.io.IOException
-import java.util.*
 import java.util.concurrent.TimeUnit
-import java.util.concurrent.atomic.AtomicBoolean
 
 class PanicService : Service() {
     private var mediaRecorder: MediaRecorder? = null
@@ -26,7 +22,7 @@ class PanicService : Service() {
     private val handler = Handler(Looper.getMainLooper())
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private var currentFile: File? = null
-    private val isUploading = AtomicBoolean(false)
+    private var isRunning = false
 
     private val client = OkHttpClient.Builder()
         .connectTimeout(15, TimeUnit.SECONDS)
@@ -41,125 +37,30 @@ class PanicService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-        if (camera != null) {
-            showToast("🔄 SETTINGS UPDATED")
-            rotateRecording()
-        } else {
-            showToast("🚀 SOS SERVICE STARTED")
-            setupForeground()
-            fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
-            prepareNewRecording()
-            startRecordingLoop()
-        }
+        if (isRunning) return START_STICKY
+
+        isRunning = true
+        setupForeground()
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
+
+        startRecordingFlow()
         return START_STICKY
     }
 
-    private fun startRecordingLoop() {
-        handler.removeCallbacksAndMessages(null)
-        val prefs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE)
-
-        val runnable = object : Runnable {
-            override fun run() {
-
-                val seconds = prefs.getInt("rotation_seconds", 20)
-                val intervalMs = (seconds * 1000).toLong()
-
-                showToast("🔄 CYCLE ${seconds}s: Rotating...")
-                updateLocation()
-                rotateRecording()
-                vibrate(60)
-
-                handler.postDelayed(this, intervalMs)
-            }
+    private fun startRecordingFlow() {
+        if (initCamera()) {
+            startMediaRecorder()
+            // Immediately start syncing existing files from previous sessions
+            syncFiles()
+            scheduleRotation()
+            showToast("🚀 SOS ACTIVE & RECORDING")
+        } else {
+            showToast("❌ CAMERA ERROR: Could not initialize")
         }
-        val initialSeconds = prefs.getInt("rotation_seconds", 20)
-        handler.postDelayed(runnable, (initialSeconds * 1000).toLong())
     }
 
-    private fun rotateRecording() {
-        val fileToUpload = currentFile
-        stopAndReleaseResources()
-
-        if (fileToUpload != null && fileToUpload.exists() && fileToUpload.length() > 0) {
-            checkAndUploadQueue(fileToUpload)
-        }
-
-        prepareNewRecording()
-    }
-
-    private fun checkAndUploadQueue(currentFile: File) {
-        if (isUploading.get()) return
-
-        Thread {
-            isUploading.set(true)
-            val prefs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE)
-            val ip = prefs.getString("server_ip", "")?.trim() ?: ""
-            val port = prefs.getString("server_port", "9999")?.trim() ?: "9999"
-            val url = "http://$ip:$port/upload"
-
-            if (ip.isNotEmpty()) {
-                val success = performUpload(currentFile, url)
-
-                if (success) {
-                    val publicDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES)
-                    val panicFolder = File(publicDir, "zMPanicRec")
-                    val files = panicFolder.listFiles()?.filter {
-                        it.name.endsWith(".mp4") && it.absolutePath != currentFile.absolutePath
-                    }?.sortedBy { it.lastModified() }
-
-                    files?.forEach { failedFile ->
-                        Log.d(TAG, "Retrying failed file: ${failedFile.name}")
-                        performUpload(failedFile, url)
-                    }
-                }
-            }
-            isUploading.set(false)
-        }.start()
-    }
-
-    private fun performUpload(file: File, url: String): Boolean {
+    private fun initCamera(): Boolean {
         return try {
-            val requestBody = file.asRequestBody("application/octet-stream".toMediaType())
-            val request = Request.Builder().url(url).post(requestBody).build()
-            val response = client.newCall(request).execute()
-
-            val isOk = response.isSuccessful
-            if (isOk) {
-                showToast("✅ SENT: ${file.name.takeLast(8)}")
-                // Optional: file.delete() if you delete after upload
-            }
-            response.close()
-            isOk
-        } catch (e: Exception) {
-            Log.e(TAG, "Upload failed for ${file.name}")
-            false
-        }
-    }
-
-    private fun stopAndReleaseResources() {
-        try {
-            mediaRecorder?.stop()
-            mediaRecorder?.reset()
-            mediaRecorder?.release()
-        } catch (e: Exception) { }
-        mediaRecorder = null
-        try {
-            camera?.stopPreview()
-            camera?.setPreviewDisplay(null)
-            camera?.release()
-        } catch (e: Exception) { }
-        camera = null
-    }
-
-    private fun prepareNewRecording() {
-        val publicDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES)
-        val panicFolder = File(publicDir, "zMPanicRec")
-        if (!panicFolder.exists()) panicFolder.mkdirs()
-
-        val newFile = File(panicFolder, "SOS_${System.currentTimeMillis()}.mp4")
-        currentFile = newFile
-
-        try {
             val prefs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE)
             val useFront = prefs.getBoolean("use_front_cam", false)
             val camId = findCameraId(if (useFront) Camera.CameraInfo.CAMERA_FACING_FRONT else Camera.CameraInfo.CAMERA_FACING_BACK)
@@ -171,6 +72,27 @@ class PanicService : Service() {
                 camera?.startPreview()
             }
             camera?.unlock()
+            true
+        } catch (e: Exception) {
+            Log.e(TAG, "Camera Init Exception", e)
+            false
+        }
+    }
+
+    private fun startMediaRecorder() {
+        val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES)
+        val panicFolder = File(baseDir, "zMPanicRec")
+
+        if (!panicFolder.exists()) {
+            panicFolder.mkdirs()
+        }
+
+        val file = File(panicFolder, "SOS_${System.currentTimeMillis()}.mp4")
+        currentFile = file
+
+        try {
+            val prefs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE)
+            val useFront = prefs.getBoolean("use_front_cam", false)
 
             mediaRecorder = MediaRecorder().apply {
                 setCamera(camera)
@@ -182,15 +104,157 @@ class PanicService : Service() {
                 setVideoEncodingBitRate(500000)
                 setVideoEncoder(MediaRecorder.VideoEncoder.H264)
                 setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
-                setOutputFile(newFile.absolutePath)
-                if (useFront) setOrientationHint(270) else setOrientationHint(90)
+                setOutputFile(file.absolutePath)
+                setOrientationHint(if (useFront) 270 else 90)
                 previewHolder?.let { setPreviewDisplay(it.surface) }
                 prepare()
                 start()
             }
         } catch (e: Exception) {
-            showToast("❌ CAMERA ERROR")
+            Log.e(TAG, "Recorder Start Error", e)
+            showToast("⚠️ RECORDER ERROR: ${e.localizedMessage}")
         }
+    }
+
+    private fun scheduleRotation() {
+        handler.removeCallbacksAndMessages(null)
+        val secs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE).getInt("rotation_seconds", 20)
+
+        handler.postDelayed({
+            rotateProcess()
+            updateLocation()
+            vibrate(40)
+            scheduleRotation()
+        }, (secs * 1000).toLong())
+    }
+
+    private fun rotateProcess() {
+        val oldFile = currentFile
+        Log.d(TAG, "Rotating video file...")
+
+        try {
+            mediaRecorder?.let {
+                try {
+                    it.stop()
+                } catch (e: RuntimeException) {
+                    oldFile?.delete()
+                }
+                it.reset()
+                it.release()
+            }
+            mediaRecorder = null
+
+            camera?.apply {
+                lock()
+                stopPreview()
+                startPreview()
+                unlock()
+            }
+
+            startMediaRecorder()
+            syncFiles()
+
+        } catch (e: Exception) {
+            Log.e(TAG, "Rotation Error", e)
+            showToast("🔄 ROTATION ERROR: Restarting flow...")
+            stopAll()
+            startRecordingFlow()
+        }
+    }
+
+    private fun syncFiles() {
+        Thread {
+            val prefs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE)
+            val ip = prefs.getString("server_ip", "") ?: ""
+            val port = prefs.getString("server_port", "9999") ?: "9999"
+            val url = "http://$ip:$port/upload"
+
+            if (ip.isEmpty()) {
+                showToast("🚫 SYNC ABORTED: No IP set")
+                return@Thread
+            }
+
+            val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES)
+            val panicFolder = File(baseDir, "zMPanicRec")
+            if (!panicFolder.exists()) return@Thread
+
+            val getFilesToSync = {
+                panicFolder.listFiles { file ->
+                    file.extension == "mp4" &&
+                            !file.name.endsWith(".synced.mp4") &&
+                            file.absolutePath != currentFile?.absolutePath &&
+                            file.length() > 5000
+                }?.sortedBy { it.lastModified() } ?: emptyList()
+            }
+
+            var filesToSync = getFilesToSync()
+
+            if (filesToSync.isNotEmpty()) {
+                showToast("📡 SYNC: Found ${filesToSync.size} file(s) to upload")
+            }
+
+            while (filesToSync.isNotEmpty()) {
+                if (!isRunning) break
+
+                for (file in filesToSync) {
+                    if (!isRunning) break
+
+                    showToast("📤 UPLOADING: ${file.name}")
+                    var success = false
+                    try {
+                        val body = file.asRequestBody("application/octet-stream".toMediaType())
+                        val request = Request.Builder()
+                            .url(url)
+                            .header("File-Name", file.name)
+                            .post(body)
+                            .build()
+
+                        client.newCall(request).execute().use { response ->
+                            if (response.isSuccessful) {
+                                success = true
+                            } else {
+                                Log.e(TAG, "Server Error: ${response.code}")
+                                showToast("❌ SERVER ERROR ${response.code} for ${file.name}")
+                            }
+                        }
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Network Error", e)
+                        showToast("📡 CONNECTION LOST: Retrying in 5s... ⏳")
+                        break
+                    }
+
+                    if (success) {
+                        val syncedFile = File(file.parent, file.name.replace(".mp4", ".synced.mp4"))
+                        if (file.renameTo(syncedFile)) {
+                            Log.d(TAG, "Sync Success: ${file.name}")
+                            showToast("✅ SUCCESS: ${file.name} synced!")
+                        }
+                    }
+                }
+
+                try { Thread.sleep(5000) } catch (e: Exception) {}
+                filesToSync = getFilesToSync()
+            }
+
+            if (isRunning) {
+                Log.d(TAG, "All files are synchronized.")
+                showToast("🏁 SYNC COMPLETE: All files uploaded!")
+            }
+        }.start()
+    }
+
+    private fun stopAll() {
+        try {
+            mediaRecorder?.stop()
+            mediaRecorder?.release()
+        } catch (e: Exception) {}
+        mediaRecorder = null
+        try {
+            camera?.lock()
+            camera?.stopPreview()
+            camera?.release()
+        } catch (e: Exception) {}
+        camera = null
     }
 
     private fun findCameraId(facing: Int): Int {
@@ -203,28 +267,32 @@ class PanicService : Service() {
     }
 
     private fun setupForeground() {
-        val channelId = "panic_service"
+        val chanId = "panic_chan"
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val chan = NotificationChannel(channelId, "zMPanic Service", NotificationManager.IMPORTANCE_LOW)
-            val manager = getSystemService(NotificationManager::class.java)
-            manager.createNotificationChannel(chan)
+            val chan = NotificationChannel(chanId, "zM SOS Service", NotificationManager.IMPORTANCE_LOW)
+            getSystemService(NotificationManager::class.java)?.createNotificationChannel(chan)
         }
-        val notification = NotificationCompat.Builder(this, channelId)
-            .setContentTitle("zM SOS Active")
-            .setContentText("Emergency monitoring running")
+        val n = NotificationCompat.Builder(this, chanId)
+            .setContentTitle("zM SOS Guard Active")
+            .setContentText("Recording and monitoring in progress...")
             .setSmallIcon(android.R.drawable.ic_menu_camera)
-            .setOngoing(true).build()
-        startForeground(1, notification)
+            .setOngoing(true)
+            .build()
+        startForeground(1, n)
     }
 
     private fun updateLocation() {
         try {
-            fusedLocationClient.lastLocation.addOnSuccessListener { if (it != null) Log.d(TAG, "GPS OK") }
-        } catch (e: SecurityException) {}
+            fusedLocationClient.lastLocation.addOnSuccessListener { loc ->
+                if (loc != null) Log.d(TAG, "Location updated: ${loc.latitude}, ${loc.longitude}")
+            }
+        } catch (e: SecurityException) {
+            Log.e(TAG, "Location permission missing")
+        }
     }
 
-    private fun showToast(message: String) {
-        handler.post { Toast.makeText(applicationContext, "zM: $message", Toast.LENGTH_SHORT).show() }
+    private fun showToast(msg: String) {
+        handler.post { Toast.makeText(applicationContext, "zM: $msg", Toast.LENGTH_SHORT).show() }
     }
 
     private fun vibrate(ms: Long) {
@@ -235,10 +303,12 @@ class PanicService : Service() {
     }
 
     override fun onDestroy() {
+        isRunning = false
         handler.removeCallbacksAndMessages(null)
-        stopAndReleaseResources()
+        stopAll()
+        showToast("🛑 SERVICE SHUTDOWN COMPLETE")
         super.onDestroy()
     }
 
-    override fun onBind(intent: Intent?) = null
+    override fun onBind(i: Intent?) = null
 }
