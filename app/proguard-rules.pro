@@ -1,21 +1,43 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+-dontobfuscate
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+-keepattributes Signature, InnerClasses, EnclosingMethod
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# --- OPTIMIZE NETWORK (OkHttp & Okio) ---
+-keep class okhttp3.internal.publicsuffix.PublicSuffixDatabase { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+#R8 FullMode: nobug mode
+-keepclassmembers class okhttp3.internal.publicsuffix.PublicSuffixDatabase {
+    private byte[] *;
+}
+-keepclassmembers class okhttp3.OkHttpClient {
+    *** client;
+}
+
+-dontwarn okhttp3.internal.platform.**
+-dontwarn org.conscrypt.**
+-dontwarn org.bouncycastle.**
+-dontwarn org.openjsse.**
+
+# --- CORE APP ---
+-keep class com.mykerd.panic.** { *; }
+
+# --- COMPOSE ---
+-keep class androidx.compose.runtime.** { *; }
+-keep class androidx.compose.material3.** { *; }
+-dontwarn androidx.compose.runtime.**
+
+# --- ANDROID HARDWARE & SYSTEM ---
+-keep class android.hardware.Camera { *; }
+-keep class android.location.LocationManager { *; }
+-keep class android.media.MediaRecorder { *; }
+
+# --- CLEAN LOG ---
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+}
+
+# --- DEBUG & ERROR REPORTING ---
+-keepattributes SourceFile, LineNumberTable
+-dontnote **

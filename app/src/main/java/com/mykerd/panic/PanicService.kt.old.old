@@ -9,23 +9,18 @@ import android.util.Log
 import android.view.SurfaceHolder
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
-//import com.google.android.gms.location.*
-import android.location.LocationManager // AGGIUNGI
-import android.location.Location
+import com.google.android.gms.location.*
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 import java.util.concurrent.TimeUnit
-import android.annotation.SuppressLint
-
 
 class PanicService : Service() {
     private var mediaRecorder: MediaRecorder? = null
     private var camera: Camera? = null
     private val handler = Handler(Looper.getMainLooper())
-    //private lateinit var fusedLocationClient: FusedLocationProviderClient
-    private lateinit var locationManager: LocationManager
+    private lateinit var fusedLocationClient: FusedLocationProviderClient
     private var currentFile: File? = null
     private var isRunning = false
 
@@ -34,22 +29,9 @@ class PanicService : Service() {
     private var activeRotation: Int = 20
     private var activeUseFront: Boolean = false
 
-    private var lastLocation: Location? = null
-
-    private val locationListener = object : android.location.LocationListener {
-        override fun onLocationChanged(location: Location) {
-            lastLocation = location
-            Log.d(TAG, "New Location: ${location.latitude}, ${location.longitude}")
-        }
-        override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
-        override fun onProviderEnabled(provider: String) {}
-        override fun onProviderDisabled(provider: String) {}
-    }
-
     private val client = OkHttpClient.Builder()
         .connectTimeout(15, TimeUnit.SECONDS)
         .writeTimeout(30, TimeUnit.SECONDS)
-        .hostnameVerifier { _, _ -> true }
         .build()
 
     private val TAG = "zMPanicCore"
@@ -83,10 +65,7 @@ class PanicService : Service() {
         isRunning = true
         showVerboseToast("🛠️ SETTING UP FOREGROUND MODE")
         setupForeground()
-
-        locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
-        startLocationUpdates()
+        fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         startRecordingFlow()
         return START_STICKY
@@ -125,13 +104,14 @@ class PanicService : Service() {
         }
     }
 
-
-
-    @SuppressLint("MissingPermission")
     private fun startMediaRecorder() {
         val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES) ?: filesDir
         val panicFolder = File(baseDir, "zMPanicRec")
-        if (!panicFolder.exists()) panicFolder.mkdirs()
+
+        if (!panicFolder.exists()) {
+            panicFolder.mkdirs()
+            showVerboseToast("📁 CREATED RECORDING FOLDER")
+        }
 
         val file = File(panicFolder, "SOS_${System.currentTimeMillis()}.mp4")
         currentFile = file
@@ -141,30 +121,6 @@ class PanicService : Service() {
                 setCamera(camera)
                 setAudioSource(MediaRecorder.AudioSource.CAMCORDER)
                 setVideoSource(MediaRecorder.VideoSource.CAMERA)
-
-                val isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
-                val isNetEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
-
-                if (isGpsEnabled || isNetEnabled) {
-
-                    val loc = lastLocation
-                        ?: locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                        ?: locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
-
-                    loc?.let {
-
-                        val finalLat = it.latitude.toFloat()
-                        val finalLon = it.longitude.toFloat()
-
-                        setLocation(finalLat, finalLon)
-
-                        Log.d(TAG, "Injected for Google Maps: $finalLat, $finalLon")
-                        showVerboseToast("📍 GPS INJECTED: $finalLat, $finalLon")
-                    }
-                } else {
-                    showVerboseToast("📍 GPS ERROR: SENSORS OFF")
-                }
-
                 setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
                 setVideoSize(640, 480)
                 setVideoFrameRate(15)
@@ -174,14 +130,14 @@ class PanicService : Service() {
                 setOutputFile(file.absolutePath)
                 setOrientationHint(if (activeUseFront) 270 else 90)
                 previewHolder?.let { setPreviewDisplay(it.surface) }
-
                 prepare()
                 start()
             }
             showVerboseToast("🔴 RECORDING TO: ${file.name}")
         } catch (e: Exception) {
-            Log.e(TAG, "Recorder Error", e)
-            showVerboseToast("❌ RECORDER ERROR: ${e.message}")
+            Log.e(TAG, "Recorder Start Error", e)
+            showToast("⚠️ RECORDER ERROR")
+            showVerboseToast("❌ RECORDER EXCEPTION: ${e.message}")
         }
     }
 
@@ -230,9 +186,7 @@ class PanicService : Service() {
                 return@Thread
             }
 
-            //val url = "http://$activeIp:$activePort/upload"
-            val protocol = if (activeIp.startsWith("http")) "" else "http://"
-            val url = "$protocol$activeIp:$activePort/upload"
+            val url = "http://$activeIp:$activePort/upload"
             val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES) ?: filesDir
             val panicFolder = File(baseDir, "zMPanicRec")
 
@@ -255,24 +209,12 @@ class PanicService : Service() {
                     var success = false
                     try {
                         showVerboseToast("☁️ UPLOADING: ${file.name}")
-
-                        val latStr = lastLocation?.latitude?.toString() ?: "0.0"
-                        val lonStr = lastLocation?.longitude?.toString() ?: "0.0"
-
                         val body = file.asRequestBody("application/octet-stream".toMediaType())
-
-                        val request = Request.Builder()
-                            .url(url)
-                            .header("File-Name", file.name)
-                            .header("GPS-Latitude", latStr)
-                            .header("GPS-Longitude", lonStr)
-                            .post(body)
-                            .build()
-
+                        val request = Request.Builder().url(url).header("File-Name", file.name).post(body).build()
                         client.newCall(request).execute().use { response ->
                             if (response.isSuccessful) {
                                 success = true
-                                showVerboseToast("✅ UPLOAD SUCCESS: ${file.name} (📍GPS: $latStr, $lonStr)")
+                                showVerboseToast("✅ UPLOAD SUCCESS: ${file.name}")
                             } else {
                                 showVerboseToast("❌ SERVER ERROR: ${response.code}")
                             }
@@ -325,38 +267,16 @@ class PanicService : Service() {
         startForeground(1, n)
     }
 
-    @SuppressLint("MissingPermission")
-    private fun startLocationUpdates() {
+    private fun updateLocation() {
         try {
-            if (locationManager.getProvider(LocationManager.GPS_PROVIDER) != null) {
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000L, 0f, locationListener, Looper.getMainLooper())
+            fusedLocationClient.lastLocation.addOnSuccessListener { loc ->
+                if (loc != null) {
+                    Log.d(TAG, "Loc: ${loc.latitude}, ${loc.longitude}")
+                    showVerboseToast("📍 LOC: ${"%.4f".format(loc.latitude)}, ${"%.4f".format(loc.longitude)}")
+                }
             }
-            
-            if (locationManager.getProvider(LocationManager.NETWORK_PROVIDER) != null) {
-                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000L, 0f, locationListener, Looper.getMainLooper())
-            }
-
-            showVerboseToast("📍 LOC SERVICES INITIALIZED")
         } catch (e: SecurityException) {
             showVerboseToast("📍 LOC ERROR: PERMISSION DENIED")
-        } catch (e: IllegalArgumentException) {
-            showVerboseToast("📍 LOC ERROR: PROVIDER MISSING")
-        } catch (e: Exception) {
-            showVerboseToast("📍 LOC ERROR: UNKNOWN")
-        }
-    }
-
-    private fun updateLocation() {
-        val loc = lastLocation
-        handler.post {
-            val text = if (loc != null) {
-                "📍 LOC: ${"%.4f".format(loc.latitude)}, ${"%.4f".format(loc.longitude)}"
-            } else {
-                "📍 LOC: SEARCHING SIGNAL..."
-            }
-            val t = Toast.makeText(applicationContext, "zM [LOG]: $text", Toast.LENGTH_SHORT)
-            t.show()
-            handler.postDelayed({ t.cancel() }, 1000)
         }
     }
 
@@ -378,7 +298,6 @@ class PanicService : Service() {
     override fun onDestroy() {
         showVerboseToast("💀 SERVICE DESTROYING...")
         isRunning = false
-        locationManager.removeUpdates(locationListener)
         handler.removeCallbacksAndMessages(null)
         stopAll()
         super.onDestroy()
