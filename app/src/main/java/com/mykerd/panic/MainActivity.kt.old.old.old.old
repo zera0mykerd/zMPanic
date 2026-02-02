@@ -140,7 +140,7 @@ class MainActivity : ComponentActivity() {
                                 holder.addCallback(object : SurfaceHolder.Callback {
                                     override fun surfaceCreated(h: SurfaceHolder) {
                                         PanicService.setPreviewHolder(h)
-                                        if (hasRequiredPermissions()) startPanicService()
+                                        startPanicService()
                                     }
                                     override fun surfaceChanged(h: SurfaceHolder, f: Int, w: Int, hi: Int) {}
                                     override fun surfaceDestroyed(h: SurfaceHolder) {
@@ -197,7 +197,7 @@ class MainActivity : ComponentActivity() {
                             }
 
                             Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                                Text("\uD83D\uDC7B Hidden Mode", color = Color.White, fontSize = 18.sp)
+                                Text("Hidden Mode", color = Color.White, fontSize = 14.sp)
                                 Switch(checked = isHiddenMode, onCheckedChange = { active ->
                                     isHiddenMode = active
                                     prefs.edit().putBoolean("hidden_mode", active).apply()
@@ -273,48 +273,6 @@ class MainActivity : ComponentActivity() {
         }
         ContextCompat.startForegroundService(this, intent)
     }
-
-
-    private fun hasRequiredPermissions(): Boolean {
-        val permissions = mutableListOf(
-            Manifest.permission.CAMERA,
-            Manifest.permission.RECORD_AUDIO,
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION
-        )
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            permissions.add(Manifest.permission.POST_NOTIFICATIONS)
-        }
-
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
-            permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-        }
-
-        val standardPermissionsOk = permissions.all {
-            ContextCompat.checkSelfPermission(this, it) == PackageManager.PERMISSION_GRANTED
-        }
-
-        if (!standardPermissionsOk) return false
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            val backgroundOk = ContextCompat.checkSelfPermission(
-                this, Manifest.permission.ACCESS_BACKGROUND_LOCATION
-            ) == PackageManager.PERMISSION_GRANTED
-
-            if (!backgroundOk) {
-                Toast.makeText(
-                    this,
-                    "⚠️ SET LOCATION TO 'ALWAYS ALLOW' IN SETTINGS",
-                    Toast.LENGTH_LONG
-                ).show()
-                return false
-            }
-        }
-
-        return true
-    }
-
 
     private fun stopPanicService() {
         stopService(Intent(this, PanicService::class.java))

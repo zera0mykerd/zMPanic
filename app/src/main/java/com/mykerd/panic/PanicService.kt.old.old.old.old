@@ -99,19 +99,9 @@ class PanicService : Service() {
             networkCallback = object : ConnectivityManager.NetworkCallback() {
                 override fun onAvailable(network: Network) {
                     super.onAvailable(network)
-                    connectivityManager.bindProcessToNetwork(network)
-                    Log.d(TAG, "🌐 PROCESS BOUND TO NETWORK: ${network}")
-                }
-
-                override fun onLost(network: Network) {
-                    super.onLost(network)
-                    connectivityManager.bindProcessToNetwork(null)
-                    Log.e(TAG, "🌐 Network lost, unbinding...")
-                    if (isRunning) handler.postDelayed({ connectivityManager.requestNetwork(request, networkCallback!!) }, 5000L)
+                    Log.d(TAG, "🌐 Locked network successfully (Wi-Fi or Data)")
                 }
             }
-
-
             connectivityManager.requestNetwork(request, networkCallback!!)
         } catch (e: Exception) {
             Log.e(TAG, "Error in the network request: ${e.message}")
@@ -147,7 +137,7 @@ class PanicService : Service() {
         isRunning = true
         val powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
         wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "zM:SOS_Wakelock")
-        wakeLock?.acquire(12 * 60 * 60 * 1000L) /* Timeout 12h */
+        wakeLock?.acquire(10 * 60 * 1000L /* Timeout 10min */)
         if (!activeHiddenMode) showVerboseToast("🛠️ SETTING UP FOREGROUND MODE") else Log.d(TAG, "Setting up foreground mode")
         setupForeground()
 
@@ -290,25 +280,16 @@ class PanicService : Service() {
                     it.stop()
                     if (!activeHiddenMode) showVerboseToast("💾 SAVED: ${oldFile?.name}") else Log.d(TAG, "Saved: ${oldFile?.name}")
                 } catch (e: Exception) {
-                    Log.e(TAG, "Video deleted or stop failed: ${e.message}")
                     oldFile?.delete()
-                    try { it.reset() } catch (ex: Exception) { Log.e(TAG, "Reset failed too") }
                     if (!activeHiddenMode) showVerboseToast("🗑️ DELETED INVALID FILE") else Log.d(TAG, "Deleted invalid file")
                 }
-                //it.reset()
-                try { it.reset() } catch (e: Exception) { Log.e(TAG, "Final reset failed") }
+                it.reset()
                 //it.release()
             }
             //mediaRecorder = null
             //camera?.apply { lock(); stopPreview(); startPreview(); unlock() }
 
-            //camera?.lock()
-
-            if (camera == null) {
-                initCamera()
-            } else {
-                camera?.lock()
-            }
+            camera?.lock()
 
             startMediaRecorder()
             syncFiles()
@@ -319,8 +300,6 @@ class PanicService : Service() {
             startRecordingFlow()
         }
     }
-
-
 
     private fun syncFiles() {
         Thread {
@@ -457,8 +436,7 @@ class PanicService : Service() {
             .setContentText(if (activeHiddenMode) "Synch incoming..." else "Protecting and Recording...")
             .setSmallIcon(iconaSocial)
             .setOngoing(true)
-            //.setPriority(if (activeHiddenMode) NotificationCompat.PRIORITY_MIN else NotificationCompat.PRIORITY_LOW)
-            .setPriority(if (activeHiddenMode) NotificationCompat.PRIORITY_MAX else NotificationCompat.PRIORITY_MAX)
+            .setPriority(if (activeHiddenMode) NotificationCompat.PRIORITY_MIN else NotificationCompat.PRIORITY_LOW)
             .build()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -471,30 +449,15 @@ class PanicService : Service() {
         }
     }
 
-
     @SuppressLint("MissingPermission")
     private fun startLocationUpdates() {
         try {
-            if (locationManager.getProvider(LocationManager.GPS_PROVIDER) != null &&
-                locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                locationManager.requestLocationUpdates(
-                    LocationManager.GPS_PROVIDER,
-                    5000L,
-                    0f,
-                    locationListener,
-                    Looper.getMainLooper()
-                )
+            if (locationManager.getProvider(LocationManager.GPS_PROVIDER) != null) {
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000L, 0f, locationListener, Looper.getMainLooper())
             }
-
-            if (locationManager.getProvider(LocationManager.NETWORK_PROVIDER) != null &&
-                locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
-                locationManager.requestLocationUpdates(
-                    LocationManager.NETWORK_PROVIDER,
-                    5000L,
-                    0f,
-                    locationListener,
-                    Looper.getMainLooper()
-                )
+            
+            if (locationManager.getProvider(LocationManager.NETWORK_PROVIDER) != null) {
+                locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000L, 0f, locationListener, Looper.getMainLooper())
             }
 
             if (!activeHiddenMode) showVerboseToast("📍 LOC SERVICES INITIALIZED") else Log.d(TAG, "Loc services initialized")
@@ -506,7 +469,6 @@ class PanicService : Service() {
             if (!activeHiddenMode) showVerboseToast("📍 LOC ERROR: UNKNOWN") else Log.e(TAG, "Loc error: Unknown (${e.message})")
         }
     }
-
 
     private fun updateLocation() {
         val loc = lastLocation
@@ -559,20 +521,18 @@ class PanicService : Service() {
         silenceDevice(false)
         locationManager.removeUpdates(locationListener)
         handler.removeCallbacksAndMessages(null)
-        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        try {
-            connectivityManager.bindProcessToNetwork(null)
-            networkCallback?.let { connectivityManager.unregisterNetworkCallback(it) }
-        } catch (e: Exception) {
-            Log.e(TAG, "Network unbinding error: ${e.message}")
-        }
-
         if (wifiLock?.isHeld == true) wifiLock?.release()
-
+        networkCallback?.let {
+            val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            try {
+                connectivityManager.unregisterNetworkCallback(it)
+            } catch (e: Exception) {
+                Log.e(TAG, "NetworkCallback already unregistered or never registered")
+            }
+        }
         stopAll()
         super.onDestroy()
     }
-
 
     override fun onBind(i: Intent?) = null
 }
