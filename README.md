@@ -1,3 +1,6 @@
+
+![screen](https://github.com/user-attachments/assets/10380238-752c-4ddd-a252-c9e16b67c2d4)
+
 # 🛡️ zM SOS GUARD - Advanced Emergency Surveillance System
 
 ![Android 16 Compatible](https://img.shields.io/badge/Android-16%20Ready-brightgreen)
