@@ -156,7 +156,7 @@ python3 server.py
 python3 server.py
 
 
-🔌 Network Protocol Specifications (API Mapping)
+## 🔌 Network Protocol Specifications (API Mapping)
 Communication occurs via high-speed stateless requests to prevent prolonged handshakes.
 
 Endpoint: POST http://<SERVER_IP>:<PORT>/upload
@@ -185,7 +185,7 @@ Required HTTP Headers (Custom Headers)HeaderTypeDescriptionExampleFile-NameStrin
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
 
-📱 Why Android Exclusive? (The iOS Wall)
+## 📱 Why Android Exclusive? (The iOS Wall)
 The zM SOS GUARD protocol is structurally and philosophically incompatible with the iOS ecosystem due to hardware and software restrictions imposed by Apple to preserve its commercial monopoly:  
 
 Background Cage: iOS instantly cuts power and suspends AVCaptureSession (the camera) as soon as the app loses foreground focus, is minimized, or the screen turns off. There is no equivalent to Android’s Foreground Service that allows continuous background camera access.
@@ -194,7 +194,7 @@ Infiltrated Hardware Indicators: The orange/green privacy dot in the iOS status 
 
 Controlled Centralized Distribution: Android allows native compilation and immediate installation via standalone APK files (Sideloading in two clicks) at zero cost. Apple imposes a hardware barrier (requiring a Mac computer to compile in Xcode), a €100 annual fee, and restrictions that block unsigned apps after just 7 days if installed via alternative free stores.
 
-⚖️ Intent Declaration & Legal Notes
+## ⚖️ Intent Declaration & Legal Notes
   
 This software is a tool for forensic protection, emergency documentation, and technical research into mobile operating system resilience, released exclusively for security and personal protection purposes.
 
