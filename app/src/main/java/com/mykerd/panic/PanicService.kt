@@ -9,14 +9,9 @@ import android.util.Log
 import android.view.SurfaceHolder
 import android.widget.Toast
 import androidx.core.app.NotificationCompat
-//import com.google.android.gms.location.*
 import android.location.LocationManager
 import android.location.Location
-import okhttp3.*
-import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
-import java.util.concurrent.TimeUnit
 import android.annotation.SuppressLint
 import android.media.AudioManager
 import android.net.ConnectivityManager
@@ -24,36 +19,29 @@ import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.net.wifi.WifiManager
-
-
+import java.lang.ref.WeakReference
+import android.content.Intent
+import android.os.Build
 class PanicService : Service() {
     private var mediaRecorder: MediaRecorder? = null
     private var camera: Camera? = null
     private val handler = Handler(Looper.getMainLooper())
-    //private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var locationManager: LocationManager
     private var currentFile: File? = null
+    private var pendingNextFile: File? = null
     private var isRunning = false
-
     private var activeIp: String = ""
     private var activePort: String = ""
     private var activeRotation: Int = 20
     private var activeUseFront: Boolean = false
-
     private var lastLocation: Location? = null
-
     private var activeHiddenMode: Boolean = false
-
     private var wakeLock: PowerManager.WakeLock? = null
-
     private var dummySurfaceTexture: android.graphics.SurfaceTexture? = null
-
     private lateinit var audioManager: AudioManager
     private var originalSystemVolume: Int = 0
-
     private var wifiLock: WifiManager.WifiLock? = null
     private var networkCallback: ConnectivityManager.NetworkCallback? = null
-
     private val locationListener = object : android.location.LocationListener {
         override fun onLocationChanged(location: Location) {
             lastLocation = location
@@ -63,25 +51,21 @@ class PanicService : Service() {
         override fun onProviderEnabled(provider: String) {}
         override fun onProviderDisabled(provider: String) {}
     }
-
-    private val client = OkHttpClient.Builder()
-        .connectTimeout(5, TimeUnit.SECONDS)
-        .writeTimeout(10, TimeUnit.SECONDS)
-        .readTimeout(5, TimeUnit.SECONDS)
-        .hostnameVerifier { _, _ -> true }
-        .retryOnConnectionFailure(true)
-        .build()
-
     private val TAG = "zMPanicCore"
-
     companion object {
         private var previewHolder: SurfaceHolder? = null
+        private var visibleTexture: android.graphics.SurfaceTexture? = null
+        private var serviceRef: WeakReference<PanicService>? = null
+        private var instance: PanicService? = null
         fun setPreviewHolder(holder: SurfaceHolder?) { previewHolder = holder }
+        fun setVisibleSurfaceTexture(st: android.graphics.SurfaceTexture?) {
+            visibleTexture = st
+            serviceRef?.get()?.updatePreviewTarget()
+        }
     }
-
     override fun onCreate() {
         super.onCreate()
-
+        serviceRef = WeakReference(this)
         try {
             val wifiManager = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
             wifiLock = wifiManager.createWifiLock(WifiManager.WIFI_MODE_FULL_HIGH_PERF, "PanicWifiLock")
@@ -89,20 +73,17 @@ class PanicService : Service() {
         } catch (e: Exception) {
             Log.e(TAG, "Error while activating wifilock: ${e.message}")
         }
-
         try {
             val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             val request = NetworkRequest.Builder()
                 .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
                 .build()
-
             networkCallback = object : ConnectivityManager.NetworkCallback() {
                 override fun onAvailable(network: Network) {
                     super.onAvailable(network)
                     connectivityManager.bindProcessToNetwork(network)
-                    Log.d(TAG, "🌐 PROCESS BOUND TO NETWORK: ${network}")
+                    Log.d(TAG, "🌐 PROCESS BOUND TO NETWORK: $network")
                 }
-
                 override fun onLost(network: Network) {
                     super.onLost(network)
                     connectivityManager.bindProcessToNetwork(null)
@@ -110,18 +91,13 @@ class PanicService : Service() {
                     if (isRunning) handler.postDelayed({ connectivityManager.requestNetwork(request, networkCallback!!) }, 5000L)
                 }
             }
-
-
             connectivityManager.requestNetwork(request, networkCallback!!)
         } catch (e: Exception) {
             Log.e(TAG, "Error in the network request: ${e.message}")
         }
     }
-
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-
         audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
-
         intent?.let {
             activeIp = it.getStringExtra("EXTRA_IP") ?: ""
             activePort = it.getStringExtra("EXTRA_PORT") ?: "9999"
@@ -130,7 +106,6 @@ class PanicService : Service() {
             activeHiddenMode = it.getBooleanExtra("EXTRA_HIDDEN", false)
             silenceDevice(true)
         }
-
         if (activeIp.isEmpty()) {
             val prefs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE)
             activeIp = prefs.getString("server_ip", "192.168.1.220") ?: "192.168.1.220"
@@ -138,204 +113,196 @@ class PanicService : Service() {
             activeRotation = prefs.getInt("rotation_seconds", 20)
             activeUseFront = prefs.getBoolean("use_front_cam", false)
         }
-
         if (isRunning) {
-            if (!activeHiddenMode) showVerboseToast("ℹ️ SERVICE ALREADY RUNNING") else Log.d(TAG, "Service already running")
+            if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_service_running)) else Log.d(TAG, "Service already running")
+            updatePreviewTarget()
             return START_STICKY
         }
-
         isRunning = true
         val powerManager = getSystemService(Context.POWER_SERVICE) as PowerManager
         wakeLock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "zM:SOS_Wakelock")
         wakeLock?.acquire(12 * 60 * 60 * 1000L) /* Timeout 12h */
-        if (!activeHiddenMode) showVerboseToast("🛠️ SETTING UP FOREGROUND MODE") else Log.d(TAG, "Setting up foreground mode")
+        if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_setup_foreground)) else Log.d(TAG, "Setting up foreground mode")
         setupForeground()
-
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-
         startLocationUpdates()
-
         startRecordingFlow()
         return START_STICKY
     }
-
     private fun startRecordingFlow() {
-        if (!activeHiddenMode) showVerboseToast("📷 INITIALIZING CAMERA...") else Log.d(TAG, "Initializing camera")
+        if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_init_camera)) else Log.d(TAG, "Initializing camera")
         if (initCamera()) {
-            if (!activeHiddenMode) showVerboseToast("📼 STARTING MEDIA RECORDER...") else Log.d(TAG, "Starting media recorder")
+            if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_start_recorder)) else Log.d(TAG, "Starting media recorder")
             startMediaRecorder()
-            if (!activeHiddenMode) showVerboseToast("🔄 STARTING SYNC WORKER...") else Log.d(TAG, "Starting sync worker")
+            if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_start_sync)) else Log.d(TAG, "Starting sync worker")
             syncFiles()
-            scheduleRotation()
-            if (!activeHiddenMode) showToast("🚀 SOS ACTIVE & RECORDING") else Log.d(TAG, "SOS active and recording")
+            if (!activeHiddenMode) showToast(getString(R.string.toast_sos_active)) else Log.d(TAG, "SOS active and recording")
         } else {
-            if (!activeHiddenMode) showToast("❌ CAMERA ERROR: COULD NOT INITIALIZE") else Log.e(TAG, "Camera error")
+            if (!activeHiddenMode) showToast(getString(R.string.toast_camera_error)) else Log.e(TAG, "Camera error")
         }
     }
-
     private fun initCamera(): Boolean {
+        val camId = findCameraId(if (activeUseFront) Camera.CameraInfo.CAMERA_FACING_FRONT else Camera.CameraInfo.CAMERA_FACING_BACK)
+        val keyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+        var attempts = 0
+        val maxAttempts = 5
+        while (attempts < maxAttempts) {
+            if (keyguardManager.isKeyguardLocked) {
+                Log.w(TAG, "Blocked screen...")
+                try { Thread.sleep(500) } catch (e: Exception) {}
+                continue
+            }
+            try {
+                camera = Camera.open(camId)
+                break
+            } catch (e: Exception) {
+                attempts++
+                Log.w(TAG, "Camera hardware busy, attempt $attempts/$maxAttempts... Waiting 250ms")
+                if (attempts >= maxAttempts) {
+                    Log.e(TAG, "Final Camera Init Error: ${e.message}")
+                    return false
+                }
+                try { Thread.sleep(250) } catch (sleepEx: Exception) {}
+            }
+        }
         return try {
-            val camId = findCameraId(if (activeUseFront) Camera.CameraInfo.CAMERA_FACING_FRONT else Camera.CameraInfo.CAMERA_FACING_BACK)
-            camera = Camera.open(camId)
             if (activeHiddenMode) camera?.enableShutterSound(false)
             camera?.setDisplayOrientation(90)
-
+            camera?.parameters?.let { params ->
+                if (params.supportedFocusModes.contains(Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO)) {
+                    params.focusMode = Camera.Parameters.FOCUS_MODE_CONTINUOUS_VIDEO
+                    camera?.parameters = params
+                    Log.d(TAG, "🔥 Continuous video autofocus activated!")
+                }
+            }
             dummySurfaceTexture = android.graphics.SurfaceTexture(10)
-            camera?.setPreviewTexture(dummySurfaceTexture)
-
+            if (visibleTexture != null) {
+                camera?.setPreviewTexture(visibleTexture)
+            } else {
+                camera?.setPreviewTexture(dummySurfaceTexture)
+            }
             camera?.startPreview()
             camera?.unlock()
             true
         } catch (e: Exception) {
-            Log.e(TAG, "Camera Init Error: ${e.message}")
+            Log.e(TAG, "Camera Configuration Error: ${e.message}")
             false
         }
     }
-
-
+    fun updatePreviewTarget() {
+        handler.post {
+            try {
+                camera?.let { cam ->
+                    if (visibleTexture != null) {
+                        cam.setPreviewTexture(visibleTexture)
+                    } else {
+                        cam.setPreviewTexture(dummySurfaceTexture)
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Error changing preview target dynamically: ${e.message}")
+            }
+        }
+    }
     @SuppressLint("MissingPermission")
     private fun startMediaRecorder() {
         val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES) ?: filesDir
         val panicFolder = File(baseDir, "zMPanicRec")
         if (!panicFolder.exists()) panicFolder.mkdirs()
-
         val file = File(panicFolder, "SOS_${System.currentTimeMillis()}.mp4")
         currentFile = file
-
         try {
-
             if (mediaRecorder == null) {
                 mediaRecorder = MediaRecorder()
             }
-
-            try {
-                camera?.unlock()
-            } catch (e: Exception) {
-            //Ignored
-            }
-
-            //mediaRecorder = MediaRecorder().apply {
-            mediaRecorder?.apply {  
+            try { camera?.unlock() } catch (e: Exception) { /* Ignored */ }
+            mediaRecorder?.apply {
                 setCamera(camera)
                 setAudioSource(MediaRecorder.AudioSource.CAMCORDER)
                 setVideoSource(MediaRecorder.VideoSource.CAMERA)
-
                 val isGpsEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
                 val isNetEnabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)
-
                 if (isGpsEnabled || isNetEnabled) {
-
                     val loc = lastLocation
                         ?: locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
                         ?: locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
-
                     loc?.let {
-
                         val finalLat = it.latitude.toFloat()
                         val finalLon = it.longitude.toFloat()
-
                         setLocation(finalLat, finalLon)
-
                         Log.d(TAG, "Injected for Google Maps: $finalLat, $finalLon")
-                        if (!activeHiddenMode) showVerboseToast("📍 GPS INJECTED: $finalLat, $finalLon") else Log.d(TAG, "GPS Injected: $finalLat, $finalLon")
                     }
-                } else {
-                    if (!activeHiddenMode) showVerboseToast("📍 GPS ERROR: SENSORS OFF") else Log.e(TAG, "GPS Error: Sensors off")
                 }
-
                 setOutputFormat(MediaRecorder.OutputFormat.MPEG_4)
                 setVideoSize(640, 480)
                 setVideoFrameRate(15)
-                setVideoEncodingBitRate(500000)
+                val videoBitRate = 500_000
+                val audioBitRate = 128_000
+                setVideoEncodingBitRate(videoBitRate)
+                setAudioEncodingBitRate(audioBitRate)
                 setVideoEncoder(MediaRecorder.VideoEncoder.H264)
                 setAudioEncoder(MediaRecorder.AudioEncoder.AAC)
                 setOutputFile(file.absolutePath)
+                val bytesPerSecond = (videoBitRate + audioBitRate) / 8
+                val maxFileSizeBytes = bytesPerSecond * activeRotation.toLong()
+                setMaxFileSize(maxFileSizeBytes)
                 setOrientationHint(if (activeUseFront) 270 else 90)
-                //previewHolder?.let { setPreviewDisplay(it.surface) }
-
-                val surface = previewHolder?.surface ?: android.view.Surface(dummySurfaceTexture)
-                setPreviewDisplay(surface)
-
-                if (activeHiddenMode) {
-                    mediaRecorder?.setOnInfoListener { _, _, _ -> }
-                    mediaRecorder?.setOnErrorListener { _, _, _ -> }
+                val recordingSurface = android.view.Surface(dummySurfaceTexture)
+                setPreviewDisplay(recordingSurface)
+                setOnInfoListener { _, what, _ ->
+                    if (what == 803) {
+                        handleSeamlessRotation()
+                    }
+                    else if (what == 802) {
+                        if (pendingNextFile == null) queueNextOutputFile()
+                    }
                 }
-
+                if (activeHiddenMode) {
+                    setOnErrorListener { _, _, _ -> }
+                }
                 prepare()
                 start()
             }
-            if (!activeHiddenMode) showVerboseToast("🔴 RECORDING TO: ${file.name}") else Log.d(TAG, "Recording to: ${file.name}")
+            if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_recording_to, file.name)) else Log.d(TAG, "Recording to: ${file.name}")
+            queueNextOutputFile()
         } catch (e: Exception) {
             Log.e(TAG, "Recorder Error", e)
-            if (!activeHiddenMode) showVerboseToast("❌ RECORDER ERROR: ${e.message}") else Log.e(TAG, "Recorder Error: ${e.message}")
+            if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_recorder_error, e.message ?: "")) else Log.e(TAG, "Recorder Error: ${e.message}")
         }
     }
-
-    private fun scheduleRotation() {
-        handler.removeCallbacksAndMessages(null)
-        handler.postDelayed({
-            if (!activeHiddenMode) showVerboseToast("⏳ ROTATION TRIGGERED (${activeRotation}s)") else Log.d(TAG, "Rotation triggered: ${activeRotation}s")
-            rotateProcess()
-            updateLocation()
-            vibrate(40)
-            scheduleRotation()
-        }, (activeRotation * 1000).toLong())
-    }
-
-    private fun rotateProcess() {
-        val oldFile = currentFile
-        try {
-            mediaRecorder?.let {
-                try {
-                    it.stop()
-                    if (!activeHiddenMode) showVerboseToast("💾 SAVED: ${oldFile?.name}") else Log.d(TAG, "Saved: ${oldFile?.name}")
-                } catch (e: Exception) {
-                    Log.e(TAG, "Video deleted or stop failed: ${e.message}")
-                    oldFile?.delete()
-                    try { it.reset() } catch (ex: Exception) { Log.e(TAG, "Reset failed too") }
-                    if (!activeHiddenMode) showVerboseToast("🗑️ DELETED INVALID FILE") else Log.d(TAG, "Deleted invalid file")
-                }
-                //it.reset()
-                try { it.reset() } catch (e: Exception) { Log.e(TAG, "Final reset failed") }
-                //it.release()
+    private fun queueNextOutputFile() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES) ?: filesDir
+            val panicFolder = File(baseDir, "zMPanicRec")
+            val nextFile = File(panicFolder, "SOS_${System.currentTimeMillis()}.mp4")
+            pendingNextFile = nextFile
+            try {
+                mediaRecorder?.setNextOutputFile(nextFile)
+                Log.d(TAG, "Next gapless file queued: ${nextFile.name}")
+            } catch (e: Exception) {
+                Log.e(TAG, "Unable to queue next file: ${e.message}")
             }
-            //mediaRecorder = null
-            //camera?.apply { lock(); stopPreview(); startPreview(); unlock() }
-
-            //camera?.lock()
-
-            if (camera == null) {
-                initCamera()
-            } else {
-                camera?.lock()
-            }
-
-            startMediaRecorder()
-            syncFiles()
-        } catch (e: Exception) {
-            Log.e(TAG, "Rotation Error", e)
-            if (!activeHiddenMode) showVerboseToast("🧨 ROTATION CRASHED: RECOVERING...") else Log.e(TAG, "Rotation crashed, recovering...")
-            stopAll()
-            startRecordingFlow()
         }
     }
-
-
-
+    private fun handleSeamlessRotation() {
+        val completedFile = currentFile
+        currentFile = pendingNextFile
+        pendingNextFile = null
+        if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_chunk_saved, completedFile?.name ?: "")) else Log.d(TAG, "Chunk saved: ${completedFile?.name}")
+        updateLocation()
+        vibrate(40)
+        queueNextOutputFile()
+    }
     private fun syncFiles() {
         Thread {
             if (activeIp.isEmpty()) {
                 Log.e(TAG, "Sync aborted: IP is empty")
-                if (!activeHiddenMode) showToast("🚫 SYNC ABORTED: NO IP") else Log.e(TAG, "Sync aborted: No IP configured")
                 return@Thread
             }
-
-            //val url = "http://$activeIp:$activePort/upload"
             val protocol = if (activeIp.startsWith("http")) "" else "http://"
             val url = "$protocol$activeIp:$activePort/upload"
             val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES) ?: filesDir
             val panicFolder = File(baseDir, "zMPanicRec")
-
             val getFilesToSync = {
                 panicFolder.listFiles { file ->
                     file.extension == "mp4" &&
@@ -344,42 +311,43 @@ class PanicService : Service() {
                             file.length() > 5000
                 }?.sortedBy { it.lastModified() } ?: emptyList()
             }
-
             var filesToSync = getFilesToSync()
-            if (!activeHiddenMode && filesToSync.isNotEmpty()) showVerboseToast("📤 SYNC: ${filesToSync.size} PENDING FILES") else if (filesToSync.isNotEmpty()) Log.d(TAG, "Sync: ${filesToSync.size} pending files")
-
-            while (filesToSync.isNotEmpty()) {
+            while (filesToSync.isNotEmpty() || isRunning) {
                 if (!isRunning) break
                 for (file in filesToSync) {
                     if (!isRunning) break
                     var success = false
                     try {
-                        if (!activeHiddenMode) showVerboseToast("☁️ UPLOADING: ${file.name}") else Log.d(TAG, "Uploading: ${file.name}")
-
                         val latStr = lastLocation?.latitude?.toString() ?: "0.0"
                         val lonStr = lastLocation?.longitude?.toString() ?: "0.0"
-
-                        val body = file.asRequestBody("application/octet-stream".toMediaType())
-
-                        val request = Request.Builder()
-                            .url(url)
-                            .header("File-Name", file.name)
-                            .header("GPS-Latitude", latStr)
-                            .header("GPS-Longitude", lonStr)
-                            .post(body)
-                            .build()
-
-                        client.newCall(request).execute().use { response ->
-                            if (response.isSuccessful) {
-                                success = true
-                                if (!activeHiddenMode) showVerboseToast("✅ UPLOAD SUCCESS: ${file.name} (📍GPS: $latStr, $lonStr)") else Log.d(TAG, "Upload success: ${file.name} (GPS: $latStr, $lonStr)")
-                            } else {
-                                if (!activeHiddenMode) showVerboseToast("❌ SERVER ERROR: ${response.code}") else Log.e(TAG, "Server Error: ${response.code}")
+                        val urlObj = java.net.URL(url)
+                        val connection = urlObj.openConnection() as java.net.HttpURLConnection
+                        if (connection is javax.net.ssl.HttpsURLConnection) {
+                            connection.hostnameVerifier = javax.net.ssl.HostnameVerifier { _, _ -> true }
+                        }
+                        connection.connectTimeout = 5000
+                        connection.readTimeout = 5000
+                        connection.requestMethod = "POST"
+                        connection.doOutput = true
+                        connection.setRequestProperty("Content-Type", "application/octet-stream")
+                        connection.setRequestProperty("File-Name", file.name)
+                        connection.setRequestProperty("GPS-Latitude", latStr)
+                        connection.setRequestProperty("GPS-Longitude", lonStr)
+                        connection.outputStream.use { os ->
+                            file.inputStream().use { fis ->
+                                fis.copyTo(os)
                             }
                         }
+                        val responseCode = connection.responseCode
+                        if (responseCode in 200..299) {
+                            success = true
+                            if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_upload_success, file.name)) else Log.d(TAG, "Upload success: ${file.name}")
+                        } else {
+                            Log.e(TAG, "Server Error: $responseCode")
+                        }
+                        connection.disconnect()
                     } catch (e: Exception) {
-                        Log.e(TAG, "Network Error")
-                        if (!activeHiddenMode) showVerboseToast("🌐 NETWORK ERROR: UNREACHABLE") else Log.e(TAG, "Network Error: Unreachable")
+                        Log.e(TAG, "Network Error: Unreachable")
                         break
                     }
                     if (success) {
@@ -392,9 +360,8 @@ class PanicService : Service() {
             }
         }.start()
     }
-
     private fun stopAll() {
-        if (!activeHiddenMode) showVerboseToast("🛑 RELEASING RESOURCES...") else Log.d(TAG, "Releasing resources")
+        if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_releasing_resources)) else Log.d(TAG, "Releasing resources")
         try { mediaRecorder?.stop(); mediaRecorder?.release() } catch (e: Exception) {}
         mediaRecorder = null
         try { camera?.lock(); camera?.stopPreview(); camera?.release() } catch (e: Exception) {}
@@ -404,30 +371,23 @@ class PanicService : Service() {
             wakeLock = null
         }
     }
-
     private fun silenceDevice(silent: Boolean) {
         if (!activeHiddenMode) return
-
         try {
             if (silent) {
                 originalSystemVolume = audioManager.getStreamVolume(AudioManager.STREAM_SYSTEM)
-
                 audioManager.setStreamVolume(AudioManager.STREAM_SYSTEM, 0, 0)
                 audioManager.setStreamVolume(AudioManager.STREAM_RING, 0, 0)
                 audioManager.setStreamVolume(AudioManager.STREAM_NOTIFICATION, 0, 0)
-
                 audioManager.ringerMode = AudioManager.RINGER_MODE_SILENT
-                Log.d(TAG, "🔇 Device muted!")
             } else {
                 audioManager.setStreamVolume(AudioManager.STREAM_SYSTEM, originalSystemVolume, 0)
                 audioManager.ringerMode = AudioManager.RINGER_MODE_NORMAL
-                Log.d(TAG, "🔊 Volume ON")
             }
         } catch (e: Exception) {
             Log.e(TAG, "Error in the silencer: ${e.message}")
         }
     }
-
     private fun findCameraId(facing: Int): Int {
         val info = Camera.CameraInfo()
         for (i in 0 until Camera.getNumberOfCameras()) {
@@ -436,31 +396,26 @@ class PanicService : Service() {
         }
         return 0
     }
-
     private fun setupForeground() {
         val chanId = if (activeHiddenMode) "sys_sync_chan" else "panic_chan"
-        val chanName = if (activeHiddenMode) "System Integrity Service" else "zM SOS Service"
+        val chanName = if (activeHiddenMode) getString(R.string.notification_channel_hidden) else getString(R.string.notification_channel_normal)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val chan = NotificationChannel(chanId, chanName, NotificationManager.IMPORTANCE_LOW)
             chan.lockscreenVisibility = if (activeHiddenMode) Notification.VISIBILITY_SECRET else Notification.VISIBILITY_PUBLIC
             getSystemService(NotificationManager::class.java)?.createNotificationChannel(chan)
         }
-
         val iconaSocial = if (activeHiddenMode) {
             android.R.drawable.stat_notify_sync
         } else {
             android.R.drawable.ic_menu_camera
         }
-
         val n = NotificationCompat.Builder(this, chanId)
-            .setContentTitle(if (activeHiddenMode) "System Update" else "zM SOS Guard Active")
-            .setContentText(if (activeHiddenMode) "Synch incoming..." else "Protecting and Recording...")
+            .setContentTitle(if (activeHiddenMode) getString(R.string.notification_title_hidden) else getString(R.string.notification_title_normal))
+            .setContentText(if (activeHiddenMode) getString(R.string.notification_text_hidden) else getString(R.string.notification_text_normal))
             .setSmallIcon(iconaSocial)
             .setOngoing(true)
-            //.setPriority(if (activeHiddenMode) NotificationCompat.PRIORITY_MIN else NotificationCompat.PRIORITY_LOW)
-            .setPriority(if (activeHiddenMode) NotificationCompat.PRIORITY_MAX else NotificationCompat.PRIORITY_MAX)
+            .setPriority(NotificationCompat.PRIORITY_MAX)
             .build()
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             startForeground(1, n,
                 android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_CAMERA or
@@ -470,8 +425,6 @@ class PanicService : Service() {
             startForeground(1, n)
         }
     }
-
-
     @SuppressLint("MissingPermission")
     private fun startLocationUpdates() {
         try {
@@ -485,7 +438,6 @@ class PanicService : Service() {
                     Looper.getMainLooper()
                 )
             }
-
             if (locationManager.getProvider(LocationManager.NETWORK_PROVIDER) != null &&
                 locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
                 locationManager.requestLocationUpdates(
@@ -496,47 +448,32 @@ class PanicService : Service() {
                     Looper.getMainLooper()
                 )
             }
-
-            if (!activeHiddenMode) showVerboseToast("📍 LOC SERVICES INITIALIZED") else Log.d(TAG, "Loc services initialized")
-        } catch (e: SecurityException) {
-            if (!activeHiddenMode) showVerboseToast("📍 LOC ERROR: PERMISSION DENIED") else Log.e(TAG, "Loc error: Permission denied")
-        } catch (e: IllegalArgumentException) {
-            if (!activeHiddenMode) showVerboseToast("📍 LOC ERROR: PROVIDER MISSING") else Log.e(TAG, "Loc error: Provider missing")
         } catch (e: Exception) {
-            if (!activeHiddenMode) showVerboseToast("📍 LOC ERROR: UNKNOWN") else Log.e(TAG, "Loc error: Unknown (${e.message})")
+            Log.e(TAG, "Loc error: Unknown (${e.message})")
         }
     }
-
-
     private fun updateLocation() {
         val loc = lastLocation
-
-        if (activeHiddenMode) {
-            val logText = if (loc != null) "LOC: ${loc.latitude}, ${loc.longitude}" else "LOC: SEARCHING SIGNAL..."
-            Log.d(TAG, logText)
-            return
-        }
-
+        if (activeHiddenMode) return
         handler.post {
             val text = if (loc != null) {
-                "📍 LOC: ${"%.4f".format(loc.latitude)}, ${"%.4f".format(loc.longitude)}"
+                val baseLocText = getString(R.string.toast_loc_found).replace("%s", "").trim()
+                val formattedCoords = "${"%.4f".format(loc.latitude)}, ${"%.4f".format(loc.longitude)}"
+                "$baseLocText $formattedCoords"
             } else {
-                "📍 LOC: SEARCHING SIGNAL..."
+                getString(R.string.toast_loc_searching)
             }
-            val t = Toast.makeText(applicationContext, "zM [LOG]: $text", Toast.LENGTH_SHORT)
+            val t = Toast.makeText(applicationContext, text, Toast.LENGTH_SHORT)
             t.show()
             handler.postDelayed({ t.cancel() }, 1000)
         }
     }
-
     private fun showToast(msg: String) {
         handler.post { Toast.makeText(applicationContext, "zM: $msg", Toast.LENGTH_SHORT).show() }
     }
-
     private fun showVerboseToast(msg: String) {
         handler.post { Toast.makeText(applicationContext, "zM [LOG]: $msg", Toast.LENGTH_SHORT).show() }
     }
-
     private fun vibrate(ms: Long) {
         if (activeHiddenMode) return
         val v = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
@@ -544,18 +481,13 @@ class PanicService : Service() {
             v.vibrate(VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE))
         } else { @Suppress("DEPRECATION") v.vibrate(ms) }
     }
-
     override fun onTaskRemoved(rootIntent: Intent?) {
-        if (activeHiddenMode) {
-            Log.d(TAG, "Closed mode ignored!")
-        } else {
-            super.onTaskRemoved(rootIntent)
-        }
+        if (!activeHiddenMode) super.onTaskRemoved(rootIntent)
     }
-
     override fun onDestroy() {
-        if (!activeHiddenMode) showVerboseToast("💀 SERVICE DESTROYING...") else Log.d(TAG, "Service destroying...")
         isRunning = false
+        serviceRef?.clear()
+        instance = null
         silenceDevice(false)
         locationManager.removeUpdates(locationListener)
         handler.removeCallbacksAndMessages(null)
@@ -563,16 +495,10 @@ class PanicService : Service() {
         try {
             connectivityManager.bindProcessToNetwork(null)
             networkCallback?.let { connectivityManager.unregisterNetworkCallback(it) }
-        } catch (e: Exception) {
-            Log.e(TAG, "Network unbinding error: ${e.message}")
-        }
-
+        } catch (e: Exception) {}
         if (wifiLock?.isHeld == true) wifiLock?.release()
-
         stopAll()
         super.onDestroy()
     }
-
-
     override fun onBind(i: Intent?) = null
 }
