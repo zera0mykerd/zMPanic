@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">PRIDRŽI</string>
+    <string name="title_system_settings">SISTEMSKE NASTAVITVE</string>
+    <string name="hint_server_ip">IP naslov strežnika</string>
+    <string name="hint_port">Pristanišče</string>
+    <string name="hint_secs">sek</string>
+    <string name="label_front_camera">🤳 Sprednja kamera</string>
+    <string name="label_hidden_mode">👻 Skriti način</string>
+    <string name="btn_download_server">📜 Prenesite strežniški skript</string>
+    <string name="dialog_eula_title">⚠️ VARNOSTNO OBVESTILO SISTEMA</string>
+    <string name="dialog_eula_positive">SPREJEM</string>
+    <string name="dialog_eula_negative">ZAVRNITE</string>
+    <string name="dialog_eula_message">POGOJI STORITVE IN LICENČNA POGODBA ZA KONČNEGA UPORABNIKA (EULA)\n\n1. AVTORSKE PRAVICE &amp; ZNAK\nTa projekt je odprtokoden, vendar zaščiten z avtorskimi pravicami. Dovoljeno vam je nadaljnja distribucija in spreminjanje te programske opreme pod pogojem, da je izvirnemu ustvarjalcu jasno pripisana zasluga.\n© zMykerd. Vse pravice pridržane.\n\n2. DOVOLJENA IN ZAKONITA UPORABA\nTa programska oprema je zasnovana kot orodje za osebno varnost/SOS. Izrecno se strinjate, da NE boste uporabljali te aplikacije, njene izvorne kode ali povezanih skriptov za nezakonite namene, nepooblaščen nadzor ali vohunske dejavnosti. Ustvarjalec ne prevzema nobene odgovornosti za nepravilno uporabo!\n\nS klikom na "SPREJMEM" se strinjate s temi pogoji. Če se ne strinjate, izberite "ZAVRNI" za izhod iz aplikacije.</string>
+    <string name="toast_alias_active">🎭 Samodejno posodabljanje sistema</string>
+    <string name="toast_alias_inactive">🔓 Običajni način je odklenjen</string>
+    <string name="toast_perm_denied">❌ Potrebna dovoljenja niso podeljena</string>
+    <string name="toast_bg_perm_denied">❌ Dovoljenje za ozadje zavrnjeno: nekatere funkcije so omejene</string>
+    <string name="toast_service_stopped">🛑 SOS STORITEV USTAVLJENA</string>
+    <string name="toast_script_saved">✅ Shranjeno: %s</string>
+    <string name="toast_script_error">❌ Napaka: %s</string>
+    <string name="toast_select_always_allow">⚠️ NA NASLEDNJEM ZASLONU IZBERITE »VEDNO DOVOLI«.</string>
+    <string name="notification_channel_normal">zM SOS služba</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Zaščita in snemanje...</string>
+    <string name="notification_channel_hidden">Storitev sistemske celovitosti</string>
+    <string name="notification_title_hidden">Posodobitev sistema</string>
+    <string name="notification_text_hidden">Sinhroniziraj dohodne ...</string>
+    <string name="toast_service_running">ℹ️ STORITEV ŽE TEČE</string>
+    <string name="toast_setup_foreground">🛠️ NASTAVITEV NAČINA V OSPREDJU</string>
+    <string name="toast_init_camera">📷 INICIALIZACIJA KAMERE ...</string>
+    <string name="toast_start_recorder">📼 ZAGON MEDIJSKEGA SNEMALNIKA ...</string>
+    <string name="toast_start_sync">🔄 ZAGON SYNC WORKER ...</string>
+    <string name="toast_sos_active">🚀 SOS AKTIVNO &amp; SNEMANJE</string>
+    <string name="toast_camera_error">❌ NAPAKA KAMERE: NI MOGLO INICIALIZIRATI</string>
+    <string name="toast_recording_to">🔴 SNEMANJE NA: %s</string>
+    <string name="toast_recorder_error">❌ NAPAKA SNEMALNIKA: %s</string>
+    <string name="toast_chunk_saved">💾 SHRANJEN KOŠČEK: %s</string>
+    <string name="toast_upload_success">✅ USPEŠNO NALAGANJE: %s</string>
+    <string name="toast_releasing_resources">🛑 SPROŠČANJE VIROV ...</string>
+    <string name="toast_loc_searching">📍 LOC: ISKANJE SIGNAL...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

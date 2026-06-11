@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">थांबा</string>
+    <string name="btn_hold">धरा</string>
+    <string name="title_system_settings">सिस्टम सेटिंग्ज</string>
+    <string name="hint_server_ip">सर्व्हर IP पत्ता</string>
+    <string name="hint_port">बंदर</string>
+    <string name="hint_secs">से</string>
+    <string name="label_front_camera">🤳 फ्रंट कॅमेरा</string>
+    <string name="label_hidden_mode">👻 लपलेला मोड</string>
+    <string name="btn_download_server">📜 सर्व्हर स्क्रिप्ट डाउनलोड करा</string>
+    <string name="dialog_eula_title">⚠️ प्रणाली सुरक्षा सूचना</string>
+    <string name="dialog_eula_positive">स्वीकारा</string>
+    <string name="dialog_eula_negative">नकार द्या</string>
+    <string name="dialog_eula_message">सेवा अटी आणि अंतिम वापरकर्ता परवाना करार (EULA)\n\n1. कॉपीराइट आणि क्रेडिट्स\nहा प्रकल्प मुक्त स्रोत आहे परंतु कॉपीराइटद्वारे संरक्षित आहे. मूळ निर्मात्याला स्पष्ट श्रेय दिले गेले असेल तर तुम्हाला हे सॉफ्टवेअर पुनर्वितरण आणि सुधारित करण्याची परवानगी आहे.\n© zMykerd. सर्व हक्क राखीव.\n\n2. परवानगी आणि कायदेशीर वापर\nहे सॉफ्टवेअर वैयक्तिक सुरक्षा/SOS साधन म्हणून डिझाइन केले आहे. बेकायदेशीर हेतूने, अनधिकृत पाळत ठेवणे किंवा हेरगिरी क्रियाकलापांसाठी हा अनुप्रयोग, त्याचा स्त्रोत कोड किंवा कोणत्याही संबंधित स्क्रिप्टचा वापर न करण्याबद्दल तुम्ही कठोरपणे सहमत आहात. अयोग्य वापरासाठी निर्माता कोणतीही जबाबदारी घेत नाही!\n\n"स्वीकार करा" वर क्लिक करून, तुम्ही या अटींना सहमती देता. तुम्ही सहमत नसल्यास, अर्जातून बाहेर पडण्यासाठी "नकार द्या" निवडा.</string>
+    <string name="toast_alias_active">🎭 सिस्टम ऑटोअपडेटर</string>
+    <string name="toast_alias_inactive">🔓 सामान्य मोड अनलॉक केला</string>
+    <string name="toast_perm_denied">❌ आवश्यक परवानग्या मंजूर नाहीत</string>
+    <string name="toast_bg_perm_denied">❌ पार्श्वभूमी परवानगी नाकारली: काही कार्ये मर्यादित</string>
+    <string name="toast_service_stopped">🛑 SOS सेवा बंद</string>
+    <string name="toast_script_saved">✅ जतन केले: %s</string>
+    <string name="toast_script_error">❌ त्रुटी: %s</string>
+    <string name="toast_select_always_allow">⚠️ पुढील स्क्रीनवर \'नेहमी परवानगी द्या\' निवडा</string>
+    <string name="notification_channel_normal">zM SOS सेवा</string>
+    <string name="notification_title_normal">zM SOS गार्ड सक्रिय</string>
+    <string name="notification_text_normal">संरक्षण आणि रेकॉर्डिंग...</string>
+    <string name="notification_channel_hidden">सिस्टम अखंडता सेवा</string>
+    <string name="notification_title_hidden">सिस्टम अपडेट</string>
+    <string name="notification_text_hidden">येणारे समक्रमित करा...</string>
+    <string name="toast_service_running">ℹ️ सेवा आधीच चालू आहे</string>
+    <string name="toast_setup_foreground">🛠️ फोरग्राउंड मोड सेट करत आहे</string>
+    <string name="toast_init_camera">📷 कॅमेरा सुरू करत आहे...</string>
+    <string name="toast_start_recorder">📼 मीडिया रेकॉर्डर सुरू करत आहे...</string>
+    <string name="toast_start_sync">🔄 सिंक वर्कर सुरू करत आहे...</string>
+    <string name="toast_sos_active">🚀 SOS सक्रिय आणि रेकॉर्डिंग</string>
+    <string name="toast_camera_error">❌ कॅमेरा त्रुटी: प्रारंभ करू शकलो नाही</string>
+    <string name="toast_recording_to">🔴 यासाठी रेकॉर्डिंग: %s</string>
+    <string name="toast_recorder_error">❌ रेकॉर्डर त्रुटी: %s</string>
+    <string name="toast_chunk_saved">💾 भाग जतन केला: %s</string>
+    <string name="toast_upload_success">✅ अपलोड यशस्वी: %s</string>
+    <string name="toast_releasing_resources">🛑 संसाधने जारी करत आहे...</string>
+    <string name="toast_loc_searching">📍 LOC: सर्चिंग सिग्नल...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

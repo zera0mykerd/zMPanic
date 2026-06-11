@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">ZATRZYMYWAĆ SIĘ</string>
+    <string name="btn_hold">TRZYMAĆ</string>
+    <string name="title_system_settings">USTAWIENIA SYSTEMU</string>
+    <string name="hint_server_ip">Adres IP serwera</string>
+    <string name="hint_port">Port</string>
+    <string name="hint_secs">sek</string>
+    <string name="label_front_camera">🤳 Przedni aparat</string>
+    <string name="label_hidden_mode">👻 Tryb ukryty</string>
+    <string name="btn_download_server">📜 Pobierz skrypt serwera</string>
+    <string name="dialog_eula_title">⚠️ UWAGA DOTYCZĄCA BEZPIECZEŃSTWA SYSTEMU</string>
+    <string name="dialog_eula_positive">PRZYJĄĆ</string>
+    <string name="dialog_eula_negative">SPADEK</string>
+    <string name="dialog_eula_message">WARUNKI KORZYSTANIA Z USŁUG I UMOWA LICENCYJNA UŻYTKOWNIKA KOŃCOWEGO (EULA)\n\n1. PRAWA AUTORSKIE I KREDYTY\nTen projekt ma charakter open source, ale jest chroniony prawem autorskim. Możesz rozpowszechniać i modyfikować to oprogramowanie pod warunkiem wyraźnego wskazania pierwotnego twórcy.\n© zMykerd. Wszelkie prawa zastrzeżone.\n\n2. DOZWOLONE I ZGODNE Z PRAWEM UŻYCIE\nTo oprogramowanie zostało zaprojektowane jako narzędzie zapewniające bezpieczeństwo osobiste/narzędzie SOS. Użytkownik całkowicie zgadza się NIE używać tej aplikacji, jej kodu źródłowego ani żadnych powiązanych skryptów do celów nielegalnych, nieautoryzowanego nadzoru lub działań szpiegowskich. Twórca nie ponosi odpowiedzialności za niewłaściwe użycie!\n\nKlikając „AKCEPTUJĘ”, wyrażasz zgodę na te warunki. Jeżeli nie wyrażasz zgody, wybierz opcję „ODMÓW”, aby wyjść z aplikacji.</string>
+    <string name="toast_alias_active">🎭 Automatyczna aktualizacja systemu</string>
+    <string name="toast_alias_inactive">🔓 Odblokowany tryb normalny</string>
+    <string name="toast_perm_denied">❌ Nie udzielono niezbędnych zezwoleń</string>
+    <string name="toast_bg_perm_denied">❌ Odmowa uprawnień w tle: niektóre funkcje ograniczone</string>
+    <string name="toast_service_stopped">🛑 USŁUGA SOS ZATRZYMANA</string>
+    <string name="toast_script_saved">✅ Zapisano: %s</string>
+    <string name="toast_script_error">❌ Błąd: %s</string>
+    <string name="toast_select_always_allow">⚠️ WYBIERZ „ZAWSZE ZEZWALAJ” NA NASTĘPNYM EKRANIE</string>
+    <string name="notification_channel_normal">Serwis zM SOS</string>
+    <string name="notification_title_normal">zM Straż SOS aktywna</string>
+    <string name="notification_text_normal">Ochrona i nagrywanie...</string>
+    <string name="notification_channel_hidden">Usługa integralności systemu</string>
+    <string name="notification_title_hidden">Aktualizacja systemu</string>
+    <string name="notification_text_hidden">Synchronizuj przychodzące...</string>
+    <string name="toast_service_running">ℹ️ USŁUGA JUŻ DZIAŁA</string>
+    <string name="toast_setup_foreground">🛠️ KONFIGURACJA TRYBU PIERWSZEGO GRUNTU</string>
+    <string name="toast_init_camera">📷 INICJALIZACJA KAMERY...</string>
+    <string name="toast_start_recorder">📼 URUCHAMIANIE REJESTRATORA MULTIMEDIÓW...</string>
+    <string name="toast_start_sync">🔄 URUCHAMIANIE PRACOWNIKA SYNC...</string>
+    <string name="toast_sos_active">🚀 SOS AKTYWNE I NAGRYWANIE</string>
+    <string name="toast_camera_error">❌ BŁĄD KAMERY: NIE MOŻNA INICJALIZOWAĆ</string>
+    <string name="toast_recording_to">🔴 NAGRYWANIE DO: %s</string>
+    <string name="toast_recorder_error">❌ BŁĄD REJESTRATORA: %s</string>
+    <string name="toast_chunk_saved">💾 KRAJ ZAPISANY: %s</string>
+    <string name="toast_upload_success">✅ POMYŚLNE PRZESYŁANIE: %s</string>
+    <string name="toast_releasing_resources">🛑 UWOLNIENIE ZASOBÓW...</string>
+    <string name="toast_loc_searching">📍 LOC: WYSZUKIWANIE SYGNAŁU...</string>
+    <string name="toast_loc_found">📍 LOKALIZACJA: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">HOIDA</string>
+    <string name="title_system_settings">SÜSTEEMI SEADED</string>
+    <string name="hint_server_ip">Serveri IP-aadress</string>
+    <string name="hint_port">Port</string>
+    <string name="hint_secs">Seks</string>
+    <string name="label_front_camera">🤳 Esikaamera</string>
+    <string name="label_hidden_mode">👻 Peidetud režiim</string>
+    <string name="btn_download_server">📜 Laadige alla serveri skript</string>
+    <string name="dialog_eula_title">⚠️ SÜSTEEMI TURVATEADE</string>
+    <string name="dialog_eula_positive">NÕUSTU</string>
+    <string name="dialog_eula_negative">KEELDUS</string>
+    <string name="dialog_eula_message">TEENUSETINGIMUSED JA LÕPPKASUTAJA LITSENTSILEPING (EULA)\n\n1. AUTORIÕIGUSED JA KREDIIT\nSee projekt on avatud lähtekoodiga, kuid kaitstud autoriõigusega. Teil on lubatud seda tarkvara edasi levitada ja muuta, eeldusel, et algsele loojale antakse selge tunnustus.\n© zMykerd. Kõik õigused kaitstud.\n\n2. LUBATUD JA SEADUSLIK KASUTAMINE\nSee tarkvara on loodud isikliku turva-/SOS-tööriistana. Nõustute rangelt, et MITTE kasutada seda rakendust, selle lähtekoodi ega sellega seotud skripte ebaseaduslikel eesmärkidel, volitamata jälgimiseks või nuhkimistegevuseks. Looja ei vastuta sobimatu kasutamise eest!\n\nKlõpsates "NÕUSTU", nõustute nende tingimustega. Kui te ei ole nõus, valige rakendusest väljumiseks "KEELA".</string>
+    <string name="toast_alias_active">🎭 Süsteemi automaatne värskendaja</string>
+    <string name="toast_alias_inactive">🔓 Tavarežiim on lukustamata</string>
+    <string name="toast_perm_denied">❌ Vajalikke lube ei antud</string>
+    <string name="toast_bg_perm_denied">❌ Tausta luba keelatud: mõned funktsioonid on piiratud</string>
+    <string name="toast_service_stopped">🛑 SOS-TEENUS PEATUS</string>
+    <string name="toast_script_saved">✅ Salvestatud: %s</string>
+    <string name="toast_script_error">❌ Viga: %s</string>
+    <string name="toast_select_always_allow">⚠️ VALIK JÄRGMISEL EKRAANIL „LUBA ALATI”.</string>
+    <string name="notification_channel_normal">zM SOS-teenus</string>
+    <string name="notification_title_normal">zM SOS Guard aktiivne</string>
+    <string name="notification_text_normal">Kaitsmine ja salvestamine...</string>
+    <string name="notification_channel_hidden">Süsteemi terviklikkuse teenus</string>
+    <string name="notification_title_hidden">Süsteemi värskendus</string>
+    <string name="notification_text_hidden">Sünkrooni sissetulevad...</string>
+    <string name="toast_service_running">ℹ️ TEENUS JUBA TÖÖTAB</string>
+    <string name="toast_setup_foreground">🛠️ ESIMESE REŽIIMI SEADISTAMINE</string>
+    <string name="toast_init_camera">📷 KAAMERA ALUSTAMINE...</string>
+    <string name="toast_start_recorder">📼 MEEDIA SALVESTAJA KÄIVITAMINE...</string>
+    <string name="toast_start_sync">🔄 SÜNKROONITÖÖTAJA KÄIVITAMINE...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE &amp; SALVESTAMINE</string>
+    <string name="toast_camera_error">❌ KAAMERA VIGA: EI SAANUD ALUSTADA</string>
+    <string name="toast_recording_to">🔴 SALVESTAMINE: %s</string>
+    <string name="toast_recorder_error">❌ SALVESTAJA VIGA: %s</string>
+    <string name="toast_chunk_saved">💾 SALVESTATUD OSA: %s</string>
+    <string name="toast_upload_success">✅ Üleslaadimise õnnestumine: %s</string>
+    <string name="toast_releasing_resources">🛑 RESSURSIDE VABASTAMINE...</string>
+    <string name="toast_loc_searching">📍 LOC: OTSIMISSIGNAAL...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

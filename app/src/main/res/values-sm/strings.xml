@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">TUMAU</string>
+    <string name="btn_hold">TUMAU</string>
+    <string name="title_system_settings">FA\'AIGA</string>
+    <string name="hint_server_ip">tuatusi IP Server</string>
+    <string name="hint_port">Taulaga</string>
+    <string name="hint_secs">Sec</string>
+    <string name="label_front_camera">🤳 Meapueata Luma</string>
+    <string name="label_hidden_mode">👻 Faiga Natia</string>
+    <string name="btn_download_server">📜 La\'i mai le Fa\'amaumauga a le Server</string>
+    <string name="dialog_eula_title">⚠️ FA\'AALIGA FA\'AALIGA FA\'AIGA</string>
+    <string name="dialog_eula_positive">TALIA</string>
+    <string name="dialog_eula_negative">TE\'I</string>
+    <string name="dialog_eula_message">TU\'U\'U\'U\'U\'U\'U\'U\'U MA\'IGA FA\'A\'OA\'OGA FA\'A\'UGA (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nO lenei poloketi e tatala-puna ae puipuia e Puletaofia. Ua fa\'atagaina oe e toe fa\'asoa ma fa\'aleleia lenei polokalame pe a fa\'apea o lo\'o tu\'uina atu le fa\'afetai manino i lē na faia muamua.\n© zMykerd. Ua taofia uma aia tatau.\n\n2. FA\'ATAGA &amp; FAATULAFONO\nO lenei polokalame ua mamanuina e avea o se mea faigaluega saogalemu/SOS. E te matua\'i malie e LE\'I fa\'aogaina lenei talosaga, lona puna code, po\'o so\'o se tusitusiga e feso\'ota\'i mo fa\'amoemoega fa\'aletulafono, mata\'ituina e le\'i fa\'atagaina, po\'o gaoioiga tau sipai. E leai se matafaioi a le na faia mea mo le fa\'aoga sese!\n\nI le kilikiina o le "ACCEPT", ua e ioe i nei aiaiga. Afai e te le malie, filifili le "TE\'I" e alu ese mai le talosaga.</string>
+    <string name="toast_alias_active">🎭 System AutoUpdater</string>
+    <string name="toast_alias_inactive">🔓 Ua tatala le tulaga masani</string>
+    <string name="toast_perm_denied">❌ E le\'i fa\'atagaina pemita mana\'omia</string>
+    <string name="toast_bg_perm_denied">❌ Te\'ena fa\'atagaga i tua: fa\'atapula\'aina nisi o galuega</string>
+    <string name="toast_service_stopped">🛑 TUMAU AUAUNAGA SOS</string>
+    <string name="toast_script_saved">✅ Faasaoina: %s</string>
+    <string name="toast_script_error">❌ Sese: %s</string>
+    <string name="toast_select_always_allow">⚠️ FILIFILI \'E FA\'ATAGA PEA\' I LE SISI VAA</string>
+    <string name="notification_channel_normal">zM SOS Auaunaga</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Puipuia ma le pueina...</string>
+    <string name="notification_channel_hidden">Au\'aunaga Amiotonu System</string>
+    <string name="notification_title_hidden">Fa\'afou Faiga</string>
+    <string name="notification_text_hidden">Fa\'atasi le ulufale mai...</string>
+    <string name="toast_service_running">ℹ️ AUAUNAGA UA FAI</string>
+    <string name="toast_setup_foreground">🛠️ FA\'ATUNUU FA\'ATA\'U MUA</string>
+    <string name="toast_init_camera">📷 FA\'AMATAINA PUEAMEA...</string>
+    <string name="toast_start_recorder">📼 AMATA LE LOTO FA\'AVAE...</string>
+    <string name="toast_start_sync">🔄 AMATA LE GALUEGA SYNC...</string>
+    <string name="toast_sos_active">🚀 SOS GALUEGA &amp; PU\'UINA</string>
+    <string name="toast_camera_error">❌ SESE PUEPUE: LE MAFAI ONA FAATAITAI</string>
+    <string name="toast_recording_to">🔴 PU\'UINA IA: %s</string>
+    <string name="toast_recorder_error">❌ SESE FAAMAU: %s</string>
+    <string name="toast_chunk_saved">💾 FAASAO LE PATI: %s</string>
+    <string name="toast_upload_success">✅ LA\'U MAI LE MANUIA: %s</string>
+    <string name="toast_releasing_resources">🛑 FA\'A\'OA\'OINA PUNAOA...</string>
+    <string name="toast_loc_searching">📍 LOC: FA\'ALI\'I SILI...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

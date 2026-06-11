@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">TART</string>
+    <string name="title_system_settings">RENDSZERBEÁLLÍTÁSOK</string>
+    <string name="hint_server_ip">Szerver IP-címe</string>
+    <string name="hint_port">Kikötő</string>
+    <string name="hint_secs">Secs</string>
+    <string name="label_front_camera">🤳 Előlapi kamera</string>
+    <string name="label_hidden_mode">👻 Rejtett mód</string>
+    <string name="btn_download_server">📜 Szerver szkript letöltése</string>
+    <string name="dialog_eula_title">⚠️ RENDSZERBIZTONSÁGI ÉRTESÍTÉS</string>
+    <string name="dialog_eula_positive">ELFOGADJA</string>
+    <string name="dialog_eula_negative">HANYATLÁS</string>
+    <string name="dialog_eula_message">SZOLGÁLTATÁSI FELTÉTELEK ÉS VÉGFELHASZNÁLÓI LICENCSZERZŐDÉS (EULA)\n\n1. SZERZŐI JOG ÉS HITELEK\nEz a projekt nyílt forráskódú, de szerzői jogi védelem alatt áll. Ön jogosult a szoftver újraterjesztésére és módosítására, feltéve, hogy az eredeti készítőt egyértelműen elismerik.\n© zMykerd. Minden jog fenntartva.\n\n2. ENGEDÉLYEZETT ÉS TÖRVÉNYES HASZNÁLAT\nEz a szoftver személyes biztonsági/SOS eszköznek készült. Szigorúan beleegyezik abba, hogy ezt az alkalmazást, annak forráskódját vagy a kapcsolódó szkripteket NE használja illegális célokra, jogosulatlan megfigyelésre vagy kémtevékenységre. Az alkotó nem vállal felelősséget a nem megfelelő használatért!\n\nAz "ELFOGADÁS" gombra kattintva elfogadja ezeket a feltételeket. Ha nem ért egyet, válassza az „Elutasítás” lehetőséget az alkalmazásból való kilépéshez.</string>
+    <string name="toast_alias_active">🎭 Rendszer automatikus frissítése</string>
+    <string name="toast_alias_inactive">🔓 Normál mód feloldva</string>
+    <string name="toast_perm_denied">❌ A szükséges engedélyek nem kerültek megadásra</string>
+    <string name="toast_bg_perm_denied">❌ Háttérengedély megtagadva: egyes funkciók korlátozottak</string>
+    <string name="toast_service_stopped">🛑 SOS SZOLGÁLTATÁS LEÁLLÍTOTT</string>
+    <string name="toast_script_saved">✅ Mentve: %s</string>
+    <string name="toast_script_error">❌ Hiba: %s</string>
+    <string name="toast_select_always_allow">⚠️ A KÖVETKEZŐ KÉPERNYŐN KIVÁLASZTJA A MINDIG ENGEDÉLYEZÉST</string>
+    <string name="notification_channel_normal">zM SOS szolgáltatás</string>
+    <string name="notification_title_normal">zM SOS Guard aktív</string>
+    <string name="notification_text_normal">Védelem és rögzítés...</string>
+    <string name="notification_channel_hidden">Rendszerintegritási szolgáltatás</string>
+    <string name="notification_title_hidden">Rendszerfrissítés</string>
+    <string name="notification_text_hidden">Bejövő szinkronizálás...</string>
+    <string name="toast_service_running">ℹ️ A SZOLGÁLTATÁS MÁR MŰKÖDIK</string>
+    <string name="toast_setup_foreground">🛠️ AZ FOREGROUND MÓD BEÁLLÍTÁSA</string>
+    <string name="toast_init_camera">📷 KAMERA INICIALIZÁLÁSA...</string>
+    <string name="toast_start_recorder">📼 A MÉDIA RÖGZÍTŐ INDÍTÁSA...</string>
+    <string name="toast_start_sync">🔄 A SYNC WORKER INDÍTÁSA...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE &amp; RECORDING</string>
+    <string name="toast_camera_error">❌ KAMERA HIBA: NEM LEHET INICIALIZÁLNI</string>
+    <string name="toast_recording_to">🔴 FELVÉTEL: %s</string>
+    <string name="toast_recorder_error">❌ RÖGZÍTŐ HIBA: %s</string>
+    <string name="toast_chunk_saved">💾 RÉSZ MENTVE: %s</string>
+    <string name="toast_upload_success">✅ SIKER FELTÖLTÉS: %s</string>
+    <string name="toast_releasing_resources">🛑 FORRÁSOK FELSZABADÍTÁSA...</string>
+    <string name="toast_loc_searching">📍 LOC: KERESŐ JEL...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

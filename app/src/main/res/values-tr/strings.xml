@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">DURMAK</string>
+    <string name="btn_hold">TUTMAK</string>
+    <string name="title_system_settings">SİSTEM AYARLARI</string>
+    <string name="hint_server_ip">Sunucu IP Adresi</string>
+    <string name="hint_port">Liman</string>
+    <string name="hint_secs">saniye</string>
+    <string name="label_front_camera">🤳 Ön Kamera</string>
+    <string name="label_hidden_mode">👻 Gizli Mod</string>
+    <string name="btn_download_server">📜 Sunucu Komut Dosyasını İndirin</string>
+    <string name="dialog_eula_title">⚠️ SİSTEM GÜVENLİK BİLDİRİMİ</string>
+    <string name="dialog_eula_positive">KABUL ETMEK</string>
+    <string name="dialog_eula_negative">REDDETMEK</string>
+    <string name="dialog_eula_message">HİZMET ŞARTLARI VE SON KULLANICI LİSANS SÖZLEŞMESİ (EULA)\n\n1. TELİF HAKKI VE KREDİLER\nBu proje açık kaynaktır ancak Telif Hakkı ile korunmaktadır. Orijinal yaratıcıya açıkça atıfta bulunulması koşuluyla, bu yazılımı yeniden dağıtmanıza ve değiştirmenize izin verilmektedir.\n© zMykerd. Tüm hakları saklıdır.\n\n2. İZİN VERİLEN VE YASAL KULLANIM\nBu yazılım kişisel güvenlik/SOS aracı olarak tasarlanmıştır. Bu uygulamayı, kaynak kodunu veya ilgili komut dosyalarını yasa dışı amaçlarla, yetkisiz gözetim veya casusluk faaliyetleri için KULLANMAMAYI kesinlikle kabul edersiniz. İçerik oluşturucu, uygunsuz kullanımla ilgili hiçbir sorumluluk kabul etmez!\n\n"KABUL ET" seçeneğini tıklayarak bu şartları kabul etmiş olursunuz. Kabul etmiyorsanız uygulamadan çıkmak için "REDDET" seçeneğini seçin.</string>
+    <string name="toast_alias_active">🎭 Sistem Otomatik Güncelleyici</string>
+    <string name="toast_alias_inactive">🔓 Normal modun kilidi açıldı</string>
+    <string name="toast_perm_denied">❌ Gerekli izinler verilmedi</string>
+    <string name="toast_bg_perm_denied">❌ Arka plan izni reddedildi: bazı işlevler sınırlı</string>
+    <string name="toast_service_stopped">🛑 SOS HİZMETİ DURDURULDU</string>
+    <string name="toast_script_saved">✅ Kaydedildi: %s</string>
+    <string name="toast_script_error">❌ Hata: %s</string>
+    <string name="toast_select_always_allow">⚠️ SONRAKİ EKRANDA \'HER ZAMAN İZİN VER\' SEÇİNİZ</string>
+    <string name="notification_channel_normal">zM SOS Hizmeti</string>
+    <string name="notification_title_normal">zM SOS Koruması Aktif</string>
+    <string name="notification_text_normal">Korumak ve Kaydetmek...</string>
+    <string name="notification_channel_hidden">Sistem Bütünlüğü Hizmeti</string>
+    <string name="notification_title_hidden">Sistem Güncellemesi</string>
+    <string name="notification_text_hidden">Gelenleri senkronize et...</string>
+    <string name="toast_service_running">ℹ️ HİZMET ZATEN ÇALIŞIYOR</string>
+    <string name="toast_setup_foreground">🛠️ ÖN PLAN MODUNUN AYARLANMASI</string>
+    <string name="toast_init_camera">📷 KAMERA BAŞLATILIYOR...</string>
+    <string name="toast_start_recorder">📼 MEDYA KAYDEDİCİ BAŞLIYOR...</string>
+    <string name="toast_start_sync">🔄 SYNC WORKER BAŞLIYOR...</string>
+    <string name="toast_sos_active">🚀 SOS AKTİF VE KAYIT</string>
+    <string name="toast_camera_error">❌ KAMERA HATASI: BAŞLATILMADI</string>
+    <string name="toast_recording_to">🔴 KAYIT ŞURASI: %s</string>
+    <string name="toast_recorder_error">❌ KAYDEDİCİ HATASI: %s</string>
+    <string name="toast_chunk_saved">💾 PARÇA KAYDEDİLDİ: %s</string>
+    <string name="toast_upload_success">✅ YÜKLEME BAŞARISI: %s</string>
+    <string name="toast_releasing_resources">🛑 KAYNAKLARI SERBEST BIRAKMAK...</string>
+    <string name="toast_loc_searching">📍LOC: SİNYAL ARANIYOR...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

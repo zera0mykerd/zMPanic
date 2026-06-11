@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">停止</string>
+    <string name="btn_hold">抓住</string>
+    <string name="title_system_settings">系统设置</string>
+    <string name="hint_server_ip">服务器IP地址</string>
+    <string name="hint_port">港口</string>
+    <string name="hint_secs">秒</string>
+    <string name="label_front_camera">🤳 前置摄像头</string>
+    <string name="label_hidden_mode">👻隐藏模式</string>
+    <string name="btn_download_server">📜 下载服务器脚本</string>
+    <string name="dialog_eula_title">⚠️系统安全通知</string>
+    <string name="dialog_eula_positive">接受</string>
+    <string name="dialog_eula_negative">衰退</string>
+    <string name="dialog_eula_message">服务条款和最终用户许可协议 (EULA)\n\n1.版权和制作人员\n该项目是开源的，但受版权保护。您可以重新分发和修改此软件，前提是明确注明原始创建者。\n© zMykerd。保留所有权利。\n\n2.允许且合法的使用\n该软件被设计为个人安全/SOS 工具。您严格同意不将此应用程序、其源代码或任何相关脚本用于非法目的、未经授权的监视或间谍活动。创建者对不当使用不承担任何责任！\n\n点击“接受”即表示您同意这些条款。如果您不同意，请选择“拒绝”退出申请。</string>
+    <string name="toast_alias_active">🎭 系统自动更新程序</string>
+    <string name="toast_alias_inactive">🔓 普通模式已解锁</string>
+    <string name="toast_perm_denied">❌ 未获得必要的许可</string>
+    <string name="toast_bg_perm_denied">❌ 后台权限被拒绝：部分功能受限</string>
+    <string name="toast_service_stopped">🛑 SOS 服务已停止</string>
+    <string name="toast_script_saved">✅ 已保存：%s</string>
+    <string name="toast_script_error">❌错误：%s</string>
+    <string name="toast_select_always_allow">⚠️ 在下一个屏幕上选择“始终允许”</string>
+    <string name="notification_channel_normal">zM SOS 服务</string>
+    <string name="notification_title_normal">zM SOS 防护激活</string>
+    <string name="notification_text_normal">保护和记录...</string>
+    <string name="notification_channel_hidden">系统完整性服务</string>
+    <string name="notification_title_hidden">系统更新</string>
+    <string name="notification_text_hidden">同步传入...</string>
+    <string name="toast_service_running">ℹ️服务已经运行</string>
+    <string name="toast_setup_foreground">🛠️ 设置前台模式</string>
+    <string name="toast_init_camera">📷 正在初始化相机...</string>
+    <string name="toast_start_recorder">📼 正在启动媒体记录器...</string>
+    <string name="toast_start_sync">🔄 正在启动同步工作程序...</string>
+    <string name="toast_sos_active">🚀 SOS 活动和录音</string>
+    <string name="toast_camera_error">❌相机错误：无法初始化</string>
+    <string name="toast_recording_to">🔴 录制至：%s</string>
+    <string name="toast_recorder_error">❌ 记录器错误：%s</string>
+    <string name="toast_chunk_saved">💾 已保存块：%s</string>
+    <string name="toast_upload_success">✅ 上传成功：%s</string>
+    <string name="toast_releasing_resources">🛑 释放资源...</string>
+    <string name="toast_loc_searching">📍LOC：正在搜索信号...</string>
+    <string name="toast_loc_found">📍位置：%s</string>
+</resources>

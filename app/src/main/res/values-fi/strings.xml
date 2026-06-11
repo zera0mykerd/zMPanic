@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">PIDÄ</string>
+    <string name="title_system_settings">JÄRJESTELMÄASETUKSET</string>
+    <string name="hint_server_ip">Palvelimen IP-osoite</string>
+    <string name="hint_port">Portti</string>
+    <string name="hint_secs">Sekuntia</string>
+    <string name="label_front_camera">🤳 Etukamera</string>
+    <string name="label_hidden_mode">👻 Piilotettu tila</string>
+    <string name="btn_download_server">📜 Lataa palvelinkomentosarja</string>
+    <string name="dialog_eula_title">⚠️ JÄRJESTELMÄN TURVALLISUUSILMOITUS</string>
+    <string name="dialog_eula_positive">HYVÄKSYÄ</string>
+    <string name="dialog_eula_negative">HYLKÄÄ</string>
+    <string name="dialog_eula_message">PALVELUEHDOT JA LOPPUKÄYTTÄJÄN KÄYTTÖOIKEUSSOPIMUS (EULA)\n\n1. TEKIJÄNOIKEUDET JA LUOTTEET\nTämä projekti on avoimen lähdekoodin, mutta tekijänoikeuslain suojaama. Sinulla on lupa jakaa ja muokata tätä ohjelmistoa, mikäli alkuperäiselle tekijälle annetaan selkeä tunnustus.\n© zMykerd. Kaikki oikeudet pidätetään.\n\n2. SALLITTU JA LAINSÄÄDÄNTÖ\nTämä ohjelmisto on suunniteltu henkilökohtaiseksi turva-/SOS-työkaluksi. Suostut ehdottomasti käyttämään tätä sovellusta, sen lähdekoodia tai mitään siihen liittyviä skriptejä laittomiin tarkoituksiin, luvattomaan valvontaan tai vakoilutoimintaan. Tekijä ei ota vastuuta sopimattomasta käytöstä!\n\nKlikkaamalla "Hyväksy" hyväksyt nämä ehdot. Jos et hyväksy, poistu sovelluksesta valitsemalla "HYLKÄÄ".</string>
+    <string name="toast_alias_active">🎭 Järjestelmän automaattinen päivitys</string>
+    <string name="toast_alias_inactive">🔓 Normaali tila lukitsematta</string>
+    <string name="toast_perm_denied">❌ Tarvittavia lupia ei myönnetä</string>
+    <string name="toast_bg_perm_denied">❌ Taustalupa estetty: joitakin toimintoja rajoitettu</string>
+    <string name="toast_service_stopped">🛑 SOS-PALVELU POIS</string>
+    <string name="toast_script_saved">✅ Tallennettu: %s</string>
+    <string name="toast_script_error">❌ Virhe: %s</string>
+    <string name="toast_select_always_allow">⚠️ VALITSE SEURAAVALLA NÄYTÖSSÄ AINA SALLI</string>
+    <string name="notification_channel_normal">zM SOS-palvelu</string>
+    <string name="notification_title_normal">zM SOS Guard aktiivinen</string>
+    <string name="notification_text_normal">Suojataan ja tallennetaan...</string>
+    <string name="notification_channel_hidden">Järjestelmän eheyspalvelu</string>
+    <string name="notification_title_hidden">Järjestelmän päivitys</string>
+    <string name="notification_text_hidden">Synkronoi saapuvat...</string>
+    <string name="toast_service_running">ℹ️ PALVELU JO KÄYNNISSÄ</string>
+    <string name="toast_setup_foreground">🛠️ FOREGROUND-TILAN ASETTAMINEN</string>
+    <string name="toast_init_camera">📷 KAMERAA ALUSTETAAN...</string>
+    <string name="toast_start_recorder">📼 MEDIA RECORDER KÄYNNISTYY...</string>
+    <string name="toast_start_sync">🔄 KÄYNNISTETÄÄN SYNC TYÖKÄYTTÖÄ...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE &amp; TALLENNUS</string>
+    <string name="toast_camera_error">❌ KAMERAN VIRHE: EI VOI ALUSTAA</string>
+    <string name="toast_recording_to">🔴 TALLENNUS: %s</string>
+    <string name="toast_recorder_error">❌ TALLENTIMEN VIRHE: %s</string>
+    <string name="toast_chunk_saved">💾 OSA TALLENNETTU: %s</string>
+    <string name="toast_upload_success">✅ LATAUSONNISTUS: %s</string>
+    <string name="toast_releasing_resources">🛑 RESURSSEJA vapautetaan...</string>
+    <string name="toast_loc_searching">📍 LOC: HAKU SIGNAALI...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

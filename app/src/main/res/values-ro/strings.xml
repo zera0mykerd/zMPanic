@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">ȚINE</string>
+    <string name="title_system_settings">SETĂRI DE SISTEM</string>
+    <string name="hint_server_ip">Adresa IP a serverului</string>
+    <string name="hint_port">Port</string>
+    <string name="hint_secs">Sec</string>
+    <string name="label_front_camera">🤳 Camera frontală</string>
+    <string name="label_hidden_mode">👻 Modul ascuns</string>
+    <string name="btn_download_server">📜 Descărcați Scriptul Server</string>
+    <string name="dialog_eula_title">⚠️ NOTIFICARE DE SECURITATE A SISTEMULUI</string>
+    <string name="dialog_eula_positive">ACCEPTA</string>
+    <string name="dialog_eula_negative">DECLIN</string>
+    <string name="dialog_eula_message">TERMENI ȘI SERVICIUL ȘI ACORDUL DE LICENȚĂ CU UTILIZATORUL FINAL (EULA)\n\n1. COPYRIGHT ȘI CREDITE\nAcest proiect este open-source, dar protejat de drepturi de autor. Aveți permisiunea să redistribuiți și să modificați acest software cu condiția să acordați un credit clar creatorului original.\n© zMykerd. Toate drepturile rezervate.\n\n2. UTILIZARE PERMISĂ ȘI LEGAL\nAcest software este conceput ca un instrument de siguranță personală/SOS. Sunteți strict de acord să NU utilizați această aplicație, codul ei sursă sau orice scripturi asociate în scopuri ilegale, supraveghere neautorizată sau activități de spionaj. Creatorul nu își asumă nicio responsabilitate pentru utilizarea necorespunzătoare!\n\nFăcând clic pe „ACCEPT”, sunteți de acord cu acești termeni. Dacă nu sunteți de acord, alegeți „DECLINE” pentru a părăsi aplicația.</string>
+    <string name="toast_alias_active">🎭 Actualizare automată a sistemului</string>
+    <string name="toast_alias_inactive">🔓 Modul normal deblocat</string>
+    <string name="toast_perm_denied">❌ Avizele necesare nu s-au acordat</string>
+    <string name="toast_bg_perm_denied">❌ Permisiune de fundal refuzată: unele funcții limitate</string>
+    <string name="toast_service_stopped">🛑 SERVICIUL SOS OPRIT</string>
+    <string name="toast_script_saved">✅ Salvat: %s</string>
+    <string name="toast_script_error">❌ Eroare: %s</string>
+    <string name="toast_select_always_allow">⚠️ SELECTAȚI „PERMITERE ÎNTOTDEAUNA” PE URMĂTORUL ECRAN</string>
+    <string name="notification_channel_normal">Serviciul zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Protejarea și înregistrarea...</string>
+    <string name="notification_channel_hidden">Serviciul de integritate a sistemului</string>
+    <string name="notification_title_hidden">Actualizare de sistem</string>
+    <string name="notification_text_hidden">Sincronizați intrarea...</string>
+    <string name="toast_service_running">ℹ️ SERVICIUL DEJA FUNCȚIONEAZĂ</string>
+    <string name="toast_setup_foreground">🛠️ CONFIGURAREA MODULUI PRIM-PLAN</string>
+    <string name="toast_init_camera">📷 INITIALIZARE CAMERA...</string>
+    <string name="toast_start_recorder">📼 PORNIRE ÎNREGISTRAREA MEDIA...</string>
+    <string name="toast_start_sync">🔄 ÎNCEPE LUCRĂTORUL DE SINCRONIZARE...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIV ȘI ÎNREGISTRARE</string>
+    <string name="toast_camera_error">❌ EROARE CAMERA: NU S-A POAT INIȚIALIZA</string>
+    <string name="toast_recording_to">🔴 ÎNREGISTRARE LA: %s</string>
+    <string name="toast_recorder_error">❌ EROARE ÎNREGISTRATOR: %s</string>
+    <string name="toast_chunk_saved">💾 BOCATĂ SALVATĂ: %s</string>
+    <string name="toast_upload_success">✅ ÎNCĂRCARE SUCCES: %s</string>
+    <string name="toast_releasing_resources">🛑 ELIBERARE RESURSE...</string>
+    <string name="toast_loc_searching">📍 LOC: SE CĂUTARE SEMNAL...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

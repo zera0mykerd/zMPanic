@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">TIGIL</string>
+    <string name="btn_hold">HAWAKAN</string>
+    <string name="title_system_settings">SYSTEM SETTINGS</string>
+    <string name="hint_server_ip">IP Address ng Server</string>
+    <string name="hint_port">Port</string>
+    <string name="hint_secs">Secs</string>
+    <string name="label_front_camera">🤳 Front Camera</string>
+    <string name="label_hidden_mode">👻 Nakatagong Mode</string>
+    <string name="btn_download_server">📜 I-download ang Server Script</string>
+    <string name="dialog_eula_title">⚠️ NOTICE SA SEGURIDAD NG SYSTEM</string>
+    <string name="dialog_eula_positive">TANGGAPIN</string>
+    <string name="dialog_eula_negative">TUMAWAG</string>
+    <string name="dialog_eula_message">MGA TUNTUNIN NG SERBISYO at END USER LICENSE AGREEMENT (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nAng proyektong ito ay open-source ngunit protektado ng Copyright. Pinahihintulutan kang muling ipamahagi at baguhin ang software na ito sa kondisyon na ang malinaw na kredito ay ibinigay sa orihinal na lumikha.\n© zMykerd. Nakalaan ang lahat ng karapatan.\n\n2. PINAHIHINTULUTAN AT BATAS NA PAGGAMIT\nAng software na ito ay idinisenyo bilang personal na kaligtasan/SOS tool. Mahigpit kang sumasang-ayon na HINDI gamitin ang application na ito, ang source code nito, o anumang nauugnay na script para sa mga iligal na layunin, hindi awtorisadong pagsubaybay, o mga aktibidad sa pag-espiya. Walang pananagutan ang tagalikha para sa hindi wastong paggamit!\n\nSa pamamagitan ng pag-click sa "TANGGAPIN", sumasang-ayon ka sa mga tuntuning ito. Kung hindi ka sumasang-ayon, piliin ang "DECLINE" upang lumabas sa aplikasyon.</string>
+    <string name="toast_alias_active">🎭 System AutoUpdater</string>
+    <string name="toast_alias_inactive">🔓 Naka-unlock ang normal na mode</string>
+    <string name="toast_perm_denied">❌ Hindi ipinagkaloob ang mga kinakailangang permit</string>
+    <string name="toast_bg_perm_denied">❌ Tinanggihan ang pahintulot sa background: limitado ang ilang function</string>
+    <string name="toast_service_stopped">🛑 TUMIGIL ANG SERBISYO ng SOS</string>
+    <string name="toast_script_saved">✅ Nai-save: %s</string>
+    <string name="toast_script_error">❌ Error: %s</string>
+    <string name="toast_select_always_allow">⚠️ PILIIN ang \'ALWAYS Allow\' SA SUSUNOD NA SCREEN</string>
+    <string name="notification_channel_normal">Serbisyo ng zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Pagprotekta at Pagre-record...</string>
+    <string name="notification_channel_hidden">Serbisyo ng Integridad ng System</string>
+    <string name="notification_title_hidden">Update ng System</string>
+    <string name="notification_text_hidden">I-synch ang papasok...</string>
+    <string name="toast_service_running">ℹ️ TUMAKBO NA ANG SERBISYO</string>
+    <string name="toast_setup_foreground">🛠️ PAG-SET UP FOREGROUND MODE</string>
+    <string name="toast_init_camera">📷 NAGSIMULA NG CAMERA...</string>
+    <string name="toast_start_recorder">📼 PAGSISIMULA NG MEDIA RECORDER...</string>
+    <string name="toast_start_sync">🔄 NAGSIMULA NG SYNC WORKER...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE at RECORDING</string>
+    <string name="toast_camera_error">❌ CAMERA ERROR: HINDI MA-INITIALIZE</string>
+    <string name="toast_recording_to">🔴 PAGREKOD SA: %s</string>
+    <string name="toast_recorder_error">❌ RECORDER ERROR: %s</string>
+    <string name="toast_chunk_saved">💾 NA-save ang CHUNK: %s</string>
+    <string name="toast_upload_success">✅ TAGUMPAY SA PAG-UPLOAD: %s</string>
+    <string name="toast_releasing_resources">🛑 NAGLABAS NG MGA RESOURCES...</string>
+    <string name="toast_loc_searching">📍 LOC: SEARCHING SIGNAL...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

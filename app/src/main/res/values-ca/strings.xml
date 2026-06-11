@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">MANTENIM</string>
+    <string name="title_system_settings">CONFIGURACIÓ DEL SISTEMA</string>
+    <string name="hint_server_ip">Adreça IP del servidor</string>
+    <string name="hint_port">Port</string>
+    <string name="hint_secs">Segs</string>
+    <string name="label_front_camera">🤳 Càmera frontal</string>
+    <string name="label_hidden_mode">👻 Mode ocult</string>
+    <string name="btn_download_server">📜 Baixeu l\'script del servidor</string>
+    <string name="dialog_eula_title">⚠️ AVÍS DE SEGURETAT DEL SISTEMA</string>
+    <string name="dialog_eula_positive">ACEPTAR</string>
+    <string name="dialog_eula_negative">DECLINAR</string>
+    <string name="dialog_eula_message">TERMES DEL SERVEI I ACCORD DE LLICÈNCIA DE L\'USUARI FINAL (EULA)\n\n1. COPYRIGHT I CREDITS\nAquest projecte és de codi obert però està protegit per Copyright. Teniu permís per redistribuir i modificar aquest programari sempre que s\'atorgui un crèdit clar al creador original.\n© zMykerd. Tots els drets reservats.\n\n2. ÚS PERMÈS I LEGIT\nAquest programari està dissenyat com una eina de seguretat personal/SOS. Accepteu estrictament NO utilitzar aquesta aplicació, el seu codi font ni cap script associat amb finalitats il·legals, vigilància no autoritzada o activitats d\'espionatge. El creador no assumeix cap responsabilitat per l\'ús inadequat!\n\nEn fer clic a "ACCEPT", accepteu aquestes condicions. Si no hi esteu d\'acord, seleccioneu "DECLINAR" per sortir de l\'aplicació.</string>
+    <string name="toast_alias_active">🎭 Actualització automàtica del sistema</string>
+    <string name="toast_alias_inactive">🔓 Mode normal desbloquejat</string>
+    <string name="toast_perm_denied">❌ No s\'atorguen els permisos necessaris</string>
+    <string name="toast_bg_perm_denied">❌ Permís de fons denegat: algunes funcions limitades</string>
+    <string name="toast_service_stopped">🛑 SERVEI SOS PARAT</string>
+    <string name="toast_script_saved">✅ Desat: %s</string>
+    <string name="toast_script_error">❌ Error: %s</string>
+    <string name="toast_select_always_allow">⚠️ SELECCIONA "PERMETRE SEMPRE" A LA PANTALLA SEGÜENT</string>
+    <string name="notification_channel_normal">Servei SOS zM</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Protecció i gravació...</string>
+    <string name="notification_channel_hidden">Servei d\'Integritat del Sistema</string>
+    <string name="notification_title_hidden">Actualització del sistema</string>
+    <string name="notification_text_hidden">Sincronitza l\'entrada...</string>
+    <string name="toast_service_running">ℹ️ SERVEI JA EN FUNCIONAMENT</string>
+    <string name="toast_setup_foreground">🛠️ CONFIGURANT EL MODE DE PRIM PLAN</string>
+    <string name="toast_init_camera">📷 S\'està iniciant la càmera...</string>
+    <string name="toast_start_recorder">📼 COMENÇANT LA GRAVADORA DE MEDIS...</string>
+    <string name="toast_start_sync">🔄 COMENÇANT EL TREBALLADOR DE SINCRONITZACIÓ...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE I ENREGISTRANT</string>
+    <string name="toast_camera_error">❌ ERROR DE CÀMERA: NO S\'HA PODUT INICIALITZAR</string>
+    <string name="toast_recording_to">🔴 ENREGISTRANT A: %s</string>
+    <string name="toast_recorder_error">❌ ERROR DE LA GRAVADORA: %s</string>
+    <string name="toast_chunk_saved">💾 PARTS DESADES: %s</string>
+    <string name="toast_upload_success">✅ CÀRREGA ÈXIT: %s</string>
+    <string name="toast_releasing_resources">🛑 ALLIBERAMENT DE RECURSOS...</string>
+    <string name="toast_loc_searching">📍 LOC: SENYAL DE CERCANT...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">Hagarara</string>
+    <string name="btn_hold">HOLD</string>
+    <string name="title_system_settings">SYSTEM SETTINGS</string>
+    <string name="hint_server_ip">Seriveri IP Aderesi</string>
+    <string name="hint_port">Icyambu</string>
+    <string name="hint_secs">Amasegonda</string>
+    <string name="label_front_camera">Kamera Imbere</string>
+    <string name="label_hidden_mode">Mode Uburyo bwihishe</string>
+    <string name="btn_download_server">Kuramo inyandiko ya seriveri</string>
+    <string name="dialog_eula_title">ICYITONDERWA RY\'UMUTEKANO WA SYSTEM</string>
+    <string name="dialog_eula_positive">Emera</string>
+    <string name="dialog_eula_negative">ICYEMEZO</string>
+    <string name="dialog_eula_message">AMABWIRIZA YA SERIVISI &amp; IHEREZO RY\'AMASEZERANO Y’ABAKORESHEJWE (EULA) \ n \ n1. COPYRIGHT &amp; CREDITS \ nUyu mushinga ufunguye-isoko ariko urinzwe na Copyright. Uremerewe kugabura no guhindura iyi software mugihe inguzanyo isobanutse ihabwa uwashizeho umwimerere. \ N © zMykerd. Uburenganzira bwose burasubitswe. \ N \ n2. BIKORESHEJWE &amp; GUKORESHA AMATEGEKO \ nIyi software yateguwe nkumutekano wihariye / igikoresho cya SOS. Uremeranya rwose Kudakoresha iyi porogaramu, code yinkomoko yayo, cyangwa inyandiko iyo ari yo yose ifitanye isano nintego zitemewe, kugenzura bitemewe, cyangwa ibikorwa byubutasi. Iyakaremye nta nshingano afite yo gukoresha nabi! \ N \ nKanda "KWEMERA", wemera aya magambo. Niba utabyemera, hitamo "DECLINE" kugirango usohoke.</string>
+    <string name="toast_alias_active">🎭 Sisitemu AutoUpdater</string>
+    <string name="toast_alias_inactive">Mode Uburyo busanzwe bufunguwe</string>
+    <string name="toast_perm_denied">Uruhushya rwa ngombwa ntirutangwa</string>
+    <string name="toast_bg_perm_denied">Uruhushya rwibanze rwanze: imirimo imwe n\'imwe igarukira</string>
+    <string name="toast_service_stopped">SER SERIVISI ZA SOS ZAHAGARAGARA</string>
+    <string name="toast_script_saved">Yakijijwe: %s</string>
+    <string name="toast_script_error">Ikosa: %s</string>
+    <string name="toast_select_always_allow">HITAMO \'BURUNDU UREKE\' KUBURYO BUKURIKIRA</string>
+    <string name="notification_channel_normal">zM SOS</string>
+    <string name="notification_title_normal">zM SOS Murinzi</string>
+    <string name="notification_text_normal">Kurinda no gufata amajwi ...</string>
+    <string name="notification_channel_hidden">Serivisi y\'Ubunyangamugayo</string>
+    <string name="notification_title_hidden">Kuvugurura sisitemu</string>
+    <string name="notification_text_hidden">Gereranya kwinjira ...</string>
+    <string name="toast_service_running">ℹ️ SERIVISI ZISANZWE</string>
+    <string name="toast_setup_foreground">GUSHYIRA HANZE UBURYO BWA MBERE</string>
+    <string name="toast_init_camera">GUTANGIZA CAMERA ...</string>
+    <string name="toast_start_recorder">GUTANGIRA ICYANDITSWE CY\'ITANGAZAMAKURU ...</string>
+    <string name="toast_start_sync">GUTANGIRA UMUKOZI WA SYNC ...</string>
+    <string name="toast_sos_active">IGIKORWA CYA SOS &amp; ICYANDITSWE</string>
+    <string name="toast_camera_error">AMAKOSA YA CAMERA: NTIBISHOBORA GUTANGIZA</string>
+    <string name="toast_recording_to">ICYANDITSWE NA: %s</string>
+    <string name="toast_recorder_error">AMAKOSA YANDITSWE: %s</string>
+    <string name="toast_chunk_saved">💾 CHUNK YAKIZE: %s</string>
+    <string name="toast_upload_success">✅ GUKURIKIRA Intsinzi: %s</string>
+    <string name="toast_releasing_resources">GUSOHORA UMUTUNGO ...</string>
+    <string name="toast_loc_searching">LOC: GUSHAKA IKIMENYETSO ...</string>
+    <string name="toast_loc_found">LOC: %s</string>
+</resources>

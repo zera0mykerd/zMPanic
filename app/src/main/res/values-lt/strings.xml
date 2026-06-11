@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">LAIKYTI</string>
+    <string name="title_system_settings">SISTEMOS NUSTATYMAI</string>
+    <string name="hint_server_ip">Serverio IP adresas</string>
+    <string name="hint_port">Uostas</string>
+    <string name="hint_secs">Sek</string>
+    <string name="label_front_camera">🤳 Priekinė kamera</string>
+    <string name="label_hidden_mode">👻 Paslėptas režimas</string>
+    <string name="btn_download_server">📜 Atsisiųskite serverio scenarijų</string>
+    <string name="dialog_eula_title">⚠️ SISTEMOS SAUGOS PRANEŠIMAS</string>
+    <string name="dialog_eula_positive">PRIIMTI</string>
+    <string name="dialog_eula_negative">ATMESTI</string>
+    <string name="dialog_eula_message">PASLAUGŲ TEIKIMO SĄLYGOS IR GALUTINĖS VARTOTOJŲ LICENCIJOS SUTARTIS (EULA)\n\n1. AUTORIŲ TEISĖS IR KREDITAI\nŠis projektas yra atvirojo kodo, bet saugomas autorių teisių. Jums leidžiama platinti ir modifikuoti šią programinę įrangą su sąlyga, kad pirminis kūrėjas yra aiškiai įvertintas.\n© zMykerd. Visos teisės saugomos.\n\n2. LEIDŽIAMAS IR TEISĖTAS NAUDOJIMAS\nŠi programinė įranga sukurta kaip asmens saugos / SOS įrankis. Jūs griežtai sutinkate NEnaudoti šios programos, jos šaltinio kodo ar bet kokių susijusių scenarijų neteisėtiems tikslams, neteisėtam stebėjimui ar šnipinėjimo veiklai. Kūrėjas neprisiima jokios atsakomybės už netinkamą naudojimą!\n\nSpustelėdami „SUTIKI“ sutinkate su šiomis sąlygomis. Jei nesutinkate, pasirinkite „ATMESTI“, kad išeitumėte iš programos.</string>
+    <string name="toast_alias_active">🎭 Sistemos automatinis atnaujinimas</string>
+    <string name="toast_alias_inactive">🔓 Įprastas režimas atrakintas</string>
+    <string name="toast_perm_denied">❌ Reikalingi leidimai nesuteikti</string>
+    <string name="toast_bg_perm_denied">❌ Foninis leidimas atmestas: kai kurios funkcijos apribotos</string>
+    <string name="toast_service_stopped">🛑 SOS PASLAUGA SUSTOJO</string>
+    <string name="toast_script_saved">✅ Išsaugota: %s</string>
+    <string name="toast_script_error">❌ Klaida: %s</string>
+    <string name="toast_select_always_allow">⚠️ KITAME EKRANE PASIRINKITE „VISADA LEISTI“.</string>
+    <string name="notification_channel_normal">zM SOS paslauga</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Apsauga ir įrašymas...</string>
+    <string name="notification_channel_hidden">Sistemos vientisumo paslauga</string>
+    <string name="notification_title_hidden">Sistemos atnaujinimas</string>
+    <string name="notification_text_hidden">Sinchronizuoti gaunamus...</string>
+    <string name="toast_service_running">ℹ️ PASLAUGA JAU VEIKIA</string>
+    <string name="toast_setup_foreground">🛠️ PIRMINIO REŽIMO NUSTATYMAS</string>
+    <string name="toast_init_camera">📷 INICIACIJAMA KAMEROS...</string>
+    <string name="toast_start_recorder">📼 PALEIDIMAS MEDŽIAGOS ĮRAŠYMO...</string>
+    <string name="toast_start_sync">🔄 PRADEDAMA SINCHRONIZAVIMO DARBUOTOJA...</string>
+    <string name="toast_sos_active">🚀 SOS AKTYVUS IR ĮRAŠYMAS</string>
+    <string name="toast_camera_error">❌ KAMEROS KLAIDA: NEGALIMA INICIALUOTI</string>
+    <string name="toast_recording_to">🔴 ĮRAŠYMAS Į: %s</string>
+    <string name="toast_recorder_error">❌ ĮRAŠYMO KLAIDA: %s</string>
+    <string name="toast_chunk_saved">💾 IŠSAUGOTA DALIS: %s</string>
+    <string name="toast_upload_success">✅ SĖKMAS ĮKELTI: %s</string>
+    <string name="toast_releasing_resources">🛑 IŠTEKLIŲ IŠLEIDIMAS...</string>
+    <string name="toast_loc_searching">📍 LOC: PAIEŠKOS SIGNALAS...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

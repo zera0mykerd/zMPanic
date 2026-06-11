@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">UITSTEL</string>
+    <string name="title_system_settings">SYSTEEMINSTELLINGEN</string>
+    <string name="hint_server_ip">Server-IP-adres</string>
+    <string name="hint_port">Haven</string>
+    <string name="hint_secs">Sec</string>
+    <string name="label_front_camera">🤳 Camera aan de voorkant</string>
+    <string name="label_hidden_mode">👻 Verborgen modus</string>
+    <string name="btn_download_server">📜 Serverscript downloaden</string>
+    <string name="dialog_eula_title">⚠️ SYSTEEMBEVEILIGINGSMELDING</string>
+    <string name="dialog_eula_positive">ACCEPTEREN</string>
+    <string name="dialog_eula_negative">AFWIJZEN</string>
+    <string name="dialog_eula_message">SERVICEVOORWAARDEN EN LICENTIEOVEREENKOMST VOOR EINDGEBRUIKERS (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nDit project is open-source maar beschermd door auteursrecht. Het is u toegestaan ​​deze software opnieuw te distribueren en te wijzigen, op voorwaarde dat de oorspronkelijke maker duidelijk wordt vermeld.\n© zMykerd. Alle rechten voorbehouden.\n\n2. TOEGESTAAN EN RECHTMATIG GEBRUIK\nDeze software is ontworpen als hulpmiddel voor persoonlijke veiligheid/SOS. U gaat er strikt mee akkoord deze applicatie, de broncode of eventuele bijbehorende scripts NIET te gebruiken voor illegale doeleinden, ongeoorloofde surveillance of spionageactiviteiten. De maker aanvaardt geen verantwoordelijkheid voor oneigenlijk gebruik!\n\nDoor op "ACCEPTEREN" te klikken, gaat u akkoord met deze voorwaarden. Als u het er niet mee eens bent, kiest u "AFWIJZEN" om de toepassing af te sluiten.</string>
+    <string name="toast_alias_active">🎭 Systeem AutoUpdater</string>
+    <string name="toast_alias_inactive">🔓 Normale modus ontgrendeld</string>
+    <string name="toast_perm_denied">❌ Noodzakelijke vergunningen niet verleend</string>
+    <string name="toast_bg_perm_denied">❌ Achtergrondtoestemming geweigerd: sommige functies zijn beperkt</string>
+    <string name="toast_service_stopped">🛑 SOS-SERVICE GESTOPT</string>
+    <string name="toast_script_saved">✅ Opgeslagen: %s</string>
+    <string name="toast_script_error">❌ Fout: %s</string>
+    <string name="toast_select_always_allow">⚠️ SELECTEER \'ALTIJD TOESTAAN\' OP HET VOLGENDE SCHERM</string>
+    <string name="notification_channel_normal">zM SOS-service</string>
+    <string name="notification_title_normal">zM SOS Guard actief</string>
+    <string name="notification_text_normal">Beveiligen en opnemen...</string>
+    <string name="notification_channel_hidden">Systeemintegriteitsservice</string>
+    <string name="notification_title_hidden">Systeemupdate</string>
+    <string name="notification_text_hidden">Synchroniseer binnenkomende...</string>
+    <string name="toast_service_running">ℹ️SERVICE DRAAIT REEDS</string>
+    <string name="toast_setup_foreground">🛠️ VOORGRONDMODUS INSTELLEN</string>
+    <string name="toast_init_camera">📷 CAMERA INITIALISEREN...</string>
+    <string name="toast_start_recorder">📼 MEDIA-RECORDER STARTEN...</string>
+    <string name="toast_start_sync">🔄 STARTEN SYNC WERKER...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIEF &amp; OPNAME</string>
+    <string name="toast_camera_error">❌ CAMERAFOUT: KAN NIET INITIALISEREN</string>
+    <string name="toast_recording_to">🔴 OPNEMEN NAAR: %s</string>
+    <string name="toast_recorder_error">❌ RECORDERFOUT: %s</string>
+    <string name="toast_chunk_saved">💾 CHUNK OPGESLAGEN: %s</string>
+    <string name="toast_upload_success">✅ UPLOAD SUCCES: %s</string>
+    <string name="toast_releasing_resources">🛑 MIDDELEN VRIJGEVEN...</string>
+    <string name="toast_loc_searching">📍 LOC: SIGNAAL ZOEKEN...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

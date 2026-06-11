@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">หยุด</string>
+    <string name="btn_hold">ถือ</string>
+    <string name="title_system_settings">การตั้งค่าระบบ</string>
+    <string name="hint_server_ip">ที่อยู่ IP ของเซิร์ฟเวอร์</string>
+    <string name="hint_port">ท่าเรือ</string>
+    <string name="hint_secs">วินาที</string>
+    <string name="label_front_camera">🤳 กล้องหน้า</string>
+    <string name="label_hidden_mode">🎃 โหมดซ่อนเร้น</string>
+    <string name="btn_download_server">📜 ดาวน์โหลดสคริปต์เซิร์ฟเวอร์</string>
+    <string name="dialog_eula_title">⚠️ ประกาศเกี่ยวกับความปลอดภัยของระบบ</string>
+    <string name="dialog_eula_positive">ยอมรับ</string>
+    <string name="dialog_eula_negative">ปฏิเสธ</string>
+    <string name="dialog_eula_message">ข้อกำหนดในการให้บริการและข้อตกลงสิทธิ์การใช้งานสำหรับผู้ใช้ปลายทาง (EULA)\n\n1. ลิขสิทธิ์และเครดิต\nโครงการนี้เป็นโอเพ่นซอร์สแต่ได้รับการคุ้มครองโดยลิขสิทธิ์ คุณได้รับอนุญาตให้แจกจ่ายและแก้ไขซอฟต์แวร์นี้โดยต้องให้เครดิตที่ชัดเจนแก่ผู้สร้างต้นฉบับ\n© zMykerd สงวนลิขสิทธิ์\n\n2. การใช้งานที่ได้รับอนุญาตและถูกกฎหมาย\nซอฟต์แวร์นี้ได้รับการออกแบบให้เป็นเครื่องมือด้านความปลอดภัย/SOS ส่วนบุคคล คุณตกลงอย่างเคร่งครัดว่าจะไม่ใช้แอปพลิเคชันนี้ ซอร์สโค้ดของแอปพลิเคชันนี้ หรือสคริปต์ที่เกี่ยวข้องเพื่อวัตถุประสงค์ที่ผิดกฎหมาย การเฝ้าระวังโดยไม่ได้รับอนุญาต หรือการสอดแนม ผู้สร้างจะไม่รับผิดชอบต่อการใช้งานที่ไม่เหมาะสม!\n\nการคลิก "ยอมรับ" แสดงว่าคุณยอมรับข้อกำหนดเหล่านี้ หากคุณไม่เห็นด้วย ให้เลือก "ปฏิเสธ" เพื่อออกจากแอปพลิเคชัน</string>
+    <string name="toast_alias_active">🎭 ระบบอัปเดตอัตโนมัติ</string>
+    <string name="toast_alias_inactive">🔓 ปลดล็อคโหมดปกติแล้ว</string>
+    <string name="toast_perm_denied">❌ ไม่ได้รับใบอนุญาตที่จำเป็น</string>
+    <string name="toast_bg_perm_denied">❌ การอนุญาตพื้นหลังถูกปฏิเสธ: ฟังก์ชั่นบางอย่างถูกจำกัด</string>
+    <string name="toast_service_stopped">🛑 บริการ SOS หยุดทำงานแล้ว</string>
+    <string name="toast_script_saved">✅ บันทึกแล้ว: %s</string>
+    <string name="toast_script_error">❌ ข้อผิดพลาด: %s</string>
+    <string name="toast_select_always_allow">⚠️ เลือก \'อนุญาตเสมอ\' บนหน้าจอถัดไป</string>
+    <string name="notification_channel_normal">บริการ zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard ใช้งานอยู่</string>
+    <string name="notification_text_normal">การปกป้องและการบันทึก...</string>
+    <string name="notification_channel_hidden">บริการความสมบูรณ์ของระบบ</string>
+    <string name="notification_title_hidden">การอัปเดตระบบ</string>
+    <string name="notification_text_hidden">ซิงค์ขาเข้า...</string>
+    <string name="toast_service_running">ℹ️ เปิดให้บริการแล้ว</string>
+    <string name="toast_setup_foreground">🛠️ การตั้งค่าโหมดเบื้องหน้า</string>
+    <string name="toast_init_camera">📷 กำลังเริ่มต้นกล้อง...</string>
+    <string name="toast_start_recorder">📼 กำลังเริ่มเครื่องบันทึกสื่อ...</string>
+    <string name="toast_start_sync">🔄 กำลังเริ่มงานซิงค์...</string>
+    <string name="toast_sos_active">🚀 SOS ใช้งานและบันทึก</string>
+    <string name="toast_camera_error">❌ ข้อผิดพลาดของกล้อง: ไม่สามารถเริ่มต้นได้</string>
+    <string name="toast_recording_to">🔴 บันทึกไปที่: %s</string>
+    <string name="toast_recorder_error">❌ ข้อผิดพลาดในการบันทึก: %s</string>
+    <string name="toast_chunk_saved">💾 บันทึกเป็นก้อน: %s</string>
+    <string name="toast_upload_success">✅ ความสำเร็จในการอัปโหลด: %s</string>
+    <string name="toast_releasing_resources">🛑 กำลังปล่อยทรัพยากร...</string>
+    <string name="toast_loc_searching">📍 LOC: กำลังค้นหาสัญญาณ...</string>
+    <string name="toast_loc_found">📍 ตำแหน่ง: %s</string>
+</resources>

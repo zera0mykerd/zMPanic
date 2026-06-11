@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">IMA</string>
+    <string name="btn_hold">BAMBA</string>
+    <string name="title_system_settings">IZILUNGISELELO ZOHLELO</string>
+    <string name="hint_server_ip">Ikheli le-IP yeseva</string>
+    <string name="hint_port">Itheku</string>
+    <string name="hint_secs">Imizuzwana</string>
+    <string name="label_front_camera">🤳 Ikhamera yangaphambili</string>
+    <string name="label_hidden_mode">👻 Imodi Efihliwe</string>
+    <string name="btn_download_server">📜 Landa Isikripthi Seseva</string>
+    <string name="dialog_eula_title">⚠️ ISAZISO SOKUVIKELA UHLELO</string>
+    <string name="dialog_eula_positive">YAMUKELA</string>
+    <string name="dialog_eula_negative">YEHLUKA</string>
+    <string name="dialog_eula_message">IMIGOMO YENKONZO KANYE NESIVUMELWANO SELAYISENSI YOMSEBENZISI (EULA)\n\n1. I-COPYRIGHT &amp; CREDITS\nLe phrojekthi iwumthombo ovulekile kodwa ivikelwe yi-Copyright. Uvunyelwe ukusabalalisa kabusha nokuguqula le softhiwe ngaphandle kokuthi ikhredithi ecacile inikezwe umdali wangempela.\n© zMykerd. Wonke amalungelo agodliwe.\n\n2. UKUSETSHENZISWA KWEMVUMELE KANYE OKUMTHETHO\nLe softhiwe yakhelwe njengethuluzi lokuphepha lomuntu siqu/i-SOS. UVUMELA ngokuqinile UKUTHI NGEKE ukusebenzisa lolu hlelo lokusebenza, ikhodi yalo yomthombo, nanoma yimiphi imibhalo ehlobene ngezinjongo ezingekho emthethweni, ukugada okungagunyaziwe, noma imisebenzi yobunhloli. Umdali akanasibopho sokusebenzisa okungafanele!\n\nNgokuchofoza "YAMUKELA", uyavumelana nale migomo. Uma ungavumelani, khetha okuthi "DECLINE" ukuze uphume kuhlelo lokusebenza.</string>
+    <string name="toast_alias_active">🎭 Isivuseleli Esizenzakalelayo Sesistimu</string>
+    <string name="toast_alias_inactive">🔓 Imodi evamile ivuliwe</string>
+    <string name="toast_perm_denied">❌ Izimvume ezidingekayo azinikezwanga</string>
+    <string name="toast_bg_perm_denied">❌ Imvume yangemuva inqatshiwe: eminye imisebenzi inomkhawulo</string>
+    <string name="toast_service_stopped">🛑 INKONZO YE-SOS IMILE</string>
+    <string name="toast_script_saved">✅ Ilondoloziwe: %s</string>
+    <string name="toast_script_error">❌ Iphutha: %s</string>
+    <string name="toast_select_always_allow">⚠️ KHETHA \'NJALO UVUMELE\' ESIKUKENI ESILANDELAYO</string>
+    <string name="notification_channel_normal">Isevisi ye-zM SOS</string>
+    <string name="notification_title_normal">I-zM SOS Guard Iyasebenza</string>
+    <string name="notification_text_normal">Iyavikela futhi Iyarekhoda...</string>
+    <string name="notification_channel_hidden">Isevisi Yesistimu Yobuqotho</string>
+    <string name="notification_title_hidden">Isibuyekezo Sesistimu</string>
+    <string name="notification_text_hidden">Vumelanisa okungenayo...</string>
+    <string name="toast_service_running">ℹ️ INKONZO YASEVELE IYASEBENZA</string>
+    <string name="toast_setup_foreground">🛠️ UKUSETHA INDLELA ENGAPHAMBILI</string>
+    <string name="toast_init_camera">📷 IKHAMELA IYAQALA...</string>
+    <string name="toast_start_recorder">📼 UKUQALA IREKHODI YEMEDI...</string>
+    <string name="toast_start_sync">🔄 UKUQALA UMSEBENZI WOKUVUMELANISA...</string>
+    <string name="toast_sos_active">🚀 I-SOS IYASEBENZA NOKUREKHODA</string>
+    <string name="toast_camera_error">❌ IPHUTHA LEKHAMERA: AYIKWAZI UKUQALA</string>
+    <string name="toast_recording_to">🔴 IREKHODA KU: %s</string>
+    <string name="toast_recorder_error">❌ IPHUTHA LEREKHODI: %s</string>
+    <string name="toast_chunk_saved">💾 I-CHUNK IGCINWE: %s</string>
+    <string name="toast_upload_success">✅ IMPUMELELO YOKULAYISHA: %s</string>
+    <string name="toast_releasing_resources">🛑 IZINSIZA ZOKUKHIPHA...</string>
+    <string name="toast_loc_searching">📍 INDAWO: ISIGNALI YOKUSESHA...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

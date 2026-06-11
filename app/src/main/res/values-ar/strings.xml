@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">قف</string>
+    <string name="btn_hold">يمسك</string>
+    <string name="title_system_settings">إعدادات النظام</string>
+    <string name="hint_server_ip">عنوان IP للخادم</string>
+    <string name="hint_port">ميناء</string>
+    <string name="hint_secs">ثواني</string>
+    <string name="label_front_camera">🤳 كاميرا أمامية</string>
+    <string name="label_hidden_mode">👻 الوضع المخفي</string>
+    <string name="btn_download_server">📜 تنزيل سكريبت الخادم</string>
+    <string name="dialog_eula_title">⚠️ إشعار أمان النظام</string>
+    <string name="dialog_eula_positive">يقبل</string>
+    <string name="dialog_eula_negative">انخفاض</string>
+    <string name="dialog_eula_message">شروط الخدمة واتفاقية ترخيص المستخدم النهائي (EULA)\n\n1. حقوق الطبع والنشر والاعتمادات\nهذا المشروع مفتوح المصدر ولكنه محمي بموجب حقوق الطبع والنشر. يُسمح لك بإعادة توزيع هذا البرنامج وتعديله بشرط منح ائتمان واضح للمنشئ الأصلي.\n© zMykerd. كافة الحقوق محفوظة.\n\n2. الاستخدام المسموح به والقانوني\nتم تصميم هذا البرنامج كأداة للسلامة الشخصية/SOS. أنت توافق تمامًا على عدم استخدام هذا التطبيق أو كود المصدر الخاص به أو أي نصوص برمجية مرتبطة به لأغراض غير قانونية أو مراقبة غير مصرح بها أو أنشطة تجسس. لا يتحمل المنشئ أية مسؤولية عن الاستخدام غير السليم!\n\nبالنقر فوق "قبول"، فإنك توافق على هذه الشروط. إذا كنت لا توافق، فاختر "رفض" للخروج من التطبيق.</string>
+    <string name="toast_alias_active">🎭 التحديث التلقائي للنظام</string>
+    <string name="toast_alias_inactive">🔓 الوضع العادي مفتوح</string>
+    <string name="toast_perm_denied">❌ لم يتم منح التصاريح اللازمة</string>
+    <string name="toast_bg_perm_denied">❌ تم رفض إذن الخلفية: بعض الوظائف محدودة</string>
+    <string name="toast_service_stopped">🛑 توقفت خدمة SOS</string>
+    <string name="toast_script_saved">✅ تم الحفظ: %s</string>
+    <string name="toast_script_error">❌ الخطأ: %s</string>
+    <string name="toast_select_always_allow">⚠️ حدد "السماح دائمًا" على الشاشة التالية</string>
+    <string name="notification_channel_normal">خدمة zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard نشط</string>
+    <string name="notification_text_normal">الحماية والتسجيل...</string>
+    <string name="notification_channel_hidden">خدمة سلامة النظام</string>
+    <string name="notification_title_hidden">تحديث النظام</string>
+    <string name="notification_text_hidden">مزامنة الوارد...</string>
+    <string name="toast_service_running">ℹ️ الخدمة قيد التشغيل بالفعل</string>
+    <string name="toast_setup_foreground">🛠️ إعداد الوضع الأمامي</string>
+    <string name="toast_init_camera">📷 جارٍ تهيئة الكاميرا...</string>
+    <string name="toast_start_recorder">📼 بدء تشغيل مسجل الوسائط...</string>
+    <string name="toast_start_sync">🔄 بدء تشغيل عامل المزامنة...</string>
+    <string name="toast_sos_active">🚀 SOS نشط وتسجيل</string>
+    <string name="toast_camera_error">❌ خطأ في الكاميرا: تعذرت التهيئة</string>
+    <string name="toast_recording_to">🔴 التسجيل لـ: %s</string>
+    <string name="toast_recorder_error">❌ خطأ في التسجيل: %s</string>
+    <string name="toast_chunk_saved">💾 تم حفظ القطعة: %s</string>
+    <string name="toast_upload_success">✅ نجاح التحميل: %s</string>
+    <string name="toast_releasing_resources">🛑 تحرير الموارد...</string>
+    <string name="toast_loc_searching">📍 الموقع: إشارة البحث...</string>
+    <string name="toast_loc_found">📍 المركز المحلي: %s</string>
+</resources>

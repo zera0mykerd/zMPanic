@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">СТОП</string>
+    <string name="btn_hold">ХОЛД</string>
+    <string name="title_system_settings">СИСТЕМСКЕ ПОСТАВКЕ</string>
+    <string name="hint_server_ip">ИП адреса сервера</string>
+    <string name="hint_port">Порт</string>
+    <string name="hint_secs">Сецс</string>
+    <string name="label_front_camera">🤳 Предња камера</string>
+    <string name="label_hidden_mode">👻 Скривени режим</string>
+    <string name="btn_download_server">📜 Преузмите серверску скрипту</string>
+    <string name="dialog_eula_title">⚠ ОБАВЕШТЕЊЕ О БЕЗБЕДНОСТИ СИСТЕМА</string>
+    <string name="dialog_eula_positive">АЦЦЕПТ</string>
+    <string name="dialog_eula_negative">ДЕЦЛИНЕ</string>
+    <string name="dialog_eula_message">УСЛОВИ КОРИШЋЕЊА И УГОВОР О ЛИЦЕНЦИ КРАЈЊЕГ КОРИСНИКА (ЕУЛА)\н\н1. АУТОРСКА ПРАВА И КРЕДИТИ\нОвај пројекат је отвореног кода, али заштићен ауторским правима. Дозвољено вам је да редистрибуирате и модификујете овај софтвер под условом да се јасно одаје признање оригиналном креатору.\н© зМикерд. Сва права задржана.\н\н2. ДОЗВОЉЕНА И ЗАКОНИТА КОРИШЋЕЊЕ\нОвај софтвер је дизајниран као алатка за личну безбедност/СОС. Стриктно се слажете да НЕ користите ову апликацију, њен изворни код или било које повезане скрипте у незаконите сврхе, неовлашћени надзор или шпијунске активности. Креатор не преузима никакву одговорност за неправилну употребу!\н\нКликом на „ПРИХВАТИ“, прихватате ове услове. Ако се не слажете, изаберите „ОДБИЈЕНИ“ да бисте изашли из апликације.</string>
+    <string name="toast_alias_active">🎭 Аутоматско ажурирање система</string>
+    <string name="toast_alias_inactive">🔓 Нормални режим је откључан</string>
+    <string name="toast_perm_denied">❌ Потребне дозволе нису издате</string>
+    <string name="toast_bg_perm_denied">❌ Позадинска дозвола одбијена: неке функције су ограничене</string>
+    <string name="toast_service_stopped">🛑 СОС СЕРВИС ЗАУСТАВЉЕН</string>
+    <string name="toast_script_saved">✅ Сачувано: %s</string>
+    <string name="toast_script_error">❌ Грешка: %s</string>
+    <string name="toast_select_always_allow">⚠ ИЗАБЕРИТЕ \'УВЕК ДОЗВОЛИ\' НА СЛЕДЕЋЕМ ЕКРАНУ</string>
+    <string name="notification_channel_normal">зМ СОС сервис</string>
+    <string name="notification_title_normal">зМ СОС Гуард Ацтиве</string>
+    <string name="notification_text_normal">Заштита и снимање...</string>
+    <string name="notification_channel_hidden">Служба за интегритет система</string>
+    <string name="notification_title_hidden">Ажурирање система</string>
+    <string name="notification_text_hidden">Синхронизујте долазне...</string>
+    <string name="toast_service_running">ℹ СЕРВИС ВЕЋ РАДИ</string>
+    <string name="toast_setup_foreground">🛠 ПОДЕШАВАЊЕ РЕЖИМА У ПРЕДЛОГУ</string>
+    <string name="toast_init_camera">📷 ИНИЦИЈАЛИЗАЦИЈА КАМЕРЕ...</string>
+    <string name="toast_start_recorder">📼 ПОКРЕТАЊЕ МЕДИЈСКОГ СНИМАЧА...</string>
+    <string name="toast_start_sync">🔄 ПОКРЕТАЊЕ СИНЦ ВОРКЕР-а...</string>
+    <string name="toast_sos_active">🚀 СОС АКТИВАН И СНИМАЊЕ</string>
+    <string name="toast_camera_error">❌ ГРЕШКА КАМЕРЕ: НИЈЕ МОГЛО ДА СЕ ИНИЦИЈАЛИЗУЈЕ</string>
+    <string name="toast_recording_to">🔴 СНИМАЊЕ ЗА: %s</string>
+    <string name="toast_recorder_error">❌ ГРЕШКА СНИМАЧА: %s</string>
+    <string name="toast_chunk_saved">💾 КОМАД САЧУВАНО: %s</string>
+    <string name="toast_upload_success">✅ УСПЕШНО ОТПРЕМА: %s</string>
+    <string name="toast_releasing_resources">🛑 ОБЈАВЉИВАЊЕ РЕСУРСА...</string>
+    <string name="toast_loc_searching">📍 ЛОЦ: ТРАЖИ СЕ СИГНАЛ...</string>
+    <string name="toast_loc_found">📍 ЛОЦ: %s</string>
+</resources>

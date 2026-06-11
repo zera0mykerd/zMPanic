@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">DỪNG LẠI</string>
+    <string name="btn_hold">GIỮ</string>
+    <string name="title_system_settings">CÀI ĐẶT HỆ THỐNG</string>
+    <string name="hint_server_ip">Địa chỉ IP máy chủ</string>
+    <string name="hint_port">Cảng</string>
+    <string name="hint_secs">Giây</string>
+    <string name="label_front_camera">🤳 Camera trước</string>
+    <string name="label_hidden_mode">👻 Chế độ ẩn</string>
+    <string name="btn_download_server">📜 Tải xuống tập lệnh máy chủ</string>
+    <string name="dialog_eula_title">⚠️ THÔNG BÁO AN NINH HỆ THỐNG</string>
+    <string name="dialog_eula_positive">CHẤP NHẬN</string>
+    <string name="dialog_eula_negative">SỰ SUY SỤP</string>
+    <string name="dialog_eula_message">ĐIỀU KHOẢN DỊCH VỤ &amp; THỎA THUẬN CẤP PHÉP NGƯỜI DÙNG CUỐI (EULA)\n\n1. BẢN QUYỀN &amp; TÍN DỤNG\nDự án này là nguồn mở nhưng được bảo vệ bởi Bản quyền. Bạn được phép phân phối lại và sửa đổi phần mềm này với điều kiện là người sáng tạo ban đầu phải ghi công rõ ràng.\n© zMykerd. Mọi quyền được bảo lưu.\n\n2. ĐƯỢC PHÉP VÀ SỬ DỤNG HỢP PHÁP\nPhần mềm này được thiết kế như một công cụ an toàn cá nhân/SOS. Bạn hoàn toàn đồng ý KHÔNG sử dụng ứng dụng này, mã nguồn của nó hoặc bất kỳ tập lệnh liên quan nào cho các mục đích bất hợp pháp, giám sát trái phép hoặc hoạt động gián điệp. Người sáng tạo không chịu trách nhiệm về việc sử dụng không đúng cách!\n\nBằng cách nhấp vào "CHẤP NHẬN", bạn đồng ý với các điều khoản này. Nếu không đồng ý chọn “TỪ CHỐI” để thoát khỏi ứng dụng.</string>
+    <string name="toast_alias_active">🎭 Tự động cập nhật hệ thống</string>
+    <string name="toast_alias_inactive">🔓 Đã mở khóa chế độ bình thường</string>
+    <string name="toast_perm_denied">❌ Giấy phép cần thiết không được cấp</string>
+    <string name="toast_bg_perm_denied">❌ Quyền nền bị từ chối: một số chức năng bị giới hạn</string>
+    <string name="toast_service_stopped">🛑 DỊCH VỤ SOS DỪNG</string>
+    <string name="toast_script_saved">✅ Đã lưu: %s</string>
+    <string name="toast_script_error">❌ Lỗi: %s</string>
+    <string name="toast_select_always_allow">⚠️ CHỌN \'LUÔN CHO PHÉP\' TRÊN MÀN HÌNH TIẾP THEO</string>
+    <string name="notification_channel_normal">Dịch vụ zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard đang hoạt động</string>
+    <string name="notification_text_normal">Bảo vệ và ghi lại...</string>
+    <string name="notification_channel_hidden">Dịch vụ toàn vẹn hệ thống</string>
+    <string name="notification_title_hidden">Cập nhật hệ thống</string>
+    <string name="notification_text_hidden">Đồng bộ hóa đến...</string>
+    <string name="toast_service_running">ℹ️ DỊCH VỤ ĐANG CHẠY</string>
+    <string name="toast_setup_foreground">🛠️ THIẾT LẬP CHẾ ĐỘ TIỀN NỀN</string>
+    <string name="toast_init_camera">📷 KHỞI ĐỘNG CAMERA...</string>
+    <string name="toast_start_recorder">📼 KHỞI ĐỘNG MÁY GHI MEDIA...</string>
+    <string name="toast_start_sync">🔄 BẮT ĐẦU CÔNG NHÂN ĐỒNG BỘ...</string>
+    <string name="toast_sos_active">🚀 SOS HOẠT ĐỘNG &amp; GHI ÂM</string>
+    <string name="toast_camera_error">❌ LỖI CAMERA: KHÔNG THỂ KHỞI TẠO</string>
+    <string name="toast_recording_to">🔴 GHI VÀO: %s</string>
+    <string name="toast_recorder_error">❌ LỖI GHI: %s</string>
+    <string name="toast_chunk_saved">💾 ĐÃ LƯU LẠI: %s</string>
+    <string name="toast_upload_success">✅ TẢI LÊN THÀNH CÔNG: %s</string>
+    <string name="toast_releasing_resources">🛑 PHÁT HÀNH NGUỒN LỰC...</string>
+    <string name="toast_loc_searching">📍 LỘC: TÍN HIỆU TÌM KIẾM...</string>
+    <string name="toast_loc_found">📍 LỘC: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">LEANBH</string>
+    <string name="title_system_settings">SOCRUITHE CÓRAS</string>
+    <string name="hint_server_ip">Seoladh IP an fhreastalaí</string>
+    <string name="hint_port">Port</string>
+    <string name="hint_secs">Soicind</string>
+    <string name="label_front_camera">🤳 Ceamara Tosaigh</string>
+    <string name="label_hidden_mode">👻 Mód Hidden</string>
+    <string name="btn_download_server">📜 Íoslódáil scripteanna freastalaí</string>
+    <string name="dialog_eula_title">⚠️ FÓGRA SLÁNDÁLA CÓRAS</string>
+    <string name="dialog_eula_positive">GLACADH</string>
+    <string name="dialog_eula_negative">DEARBHÚ</string>
+    <string name="dialog_eula_message">TÉARMAÍ SEIRBHÍSE &amp; COMHAONTÚ CEADÚNAIS ÚSÁIDEORA DEIRIDH (EULA)\n\n1. CÓIPCHEART &amp; CREIDMHEASA\nTá an tionscadal foinse oscailte ach cosanta ag Cóipcheart. Tá cead agat na bogearraí seo a athdháileadh agus a mhodhnú ar an gcoinníoll go dtugtar creidmheas soiléir don bhunchruthaitheoir.\n© zMykerd. Gach ceart ar cosaint.\n\n2. ÚSÁID CEADAITHE &amp; DHLÍTHE\nTá an bogearra seo deartha mar uirlis sábháilteachta pearsanta/SOS. Aontaíonn tú go docht GAN an feidhmchlár seo, a cód foinse, nó aon scripteanna gaolmhara a úsáid chun críocha mídhleathacha, faireachas neamhúdaraithe, nó gníomhaíochtaí spiaireachta. Ní ghlacann an cruthaitheoir freagracht ar bith as úsáid mhíchuí!\n\nTrí "GLACADH", aontaíonn tú leis na téarmaí seo. Mura n-aontaíonn tú, roghnaigh "DECLINE" chun an feidhmchlár a fhágáil.</string>
+    <string name="toast_alias_active">🎭 Córas Uath-nuashonraithe</string>
+    <string name="toast_alias_inactive">🔓 Gnáthmhód díghlasáilte</string>
+    <string name="toast_perm_denied">❌ Níor deonaíodh na ceadanna riachtanacha</string>
+    <string name="toast_bg_perm_denied">❌ Cead cúlra diúltaithe: roinnt feidhmeanna teoranta</string>
+    <string name="toast_service_stopped">🛑 SEIRBHÍS SOS AR scur</string>
+    <string name="toast_script_saved">✅ Sábháilte: %s</string>
+    <string name="toast_script_error">❌ Earráid: %s</string>
+    <string name="toast_select_always_allow">⚠️ ROGHNAIGH ‘CEADÚ I BHFEIDHM’ AR AN gCÉAD Scáileán</string>
+    <string name="notification_channel_normal">zM SOS Seirbhíse</string>
+    <string name="notification_title_normal">zM SOS Garda Gníomhach</string>
+    <string name="notification_text_normal">Cosaint agus Taifeadadh...</string>
+    <string name="notification_channel_hidden">Seirbhís Sláine an Chórais</string>
+    <string name="notification_title_hidden">Nuashonrú Córais</string>
+    <string name="notification_text_hidden">Sioncrónaigh ag teacht isteach...</string>
+    <string name="toast_service_running">ℹ️ SEIRBHÍS AR Ritheadh ​​CHEANA</string>
+    <string name="toast_setup_foreground">🛠️ MODE FOREGROUND A BHUNÚ</string>
+    <string name="toast_init_camera">📷 Ag TÚSÚ Ceamara...</string>
+    <string name="toast_start_recorder">📼 TOSÚ TAIFEAD MEÁIN...</string>
+    <string name="toast_start_sync">🔄 AG TÚSÚ OIBRÍ Sync...</string>
+    <string name="toast_sos_active">🚀 SOS GNÍOMHACH &amp; TAIFEAD</string>
+    <string name="toast_camera_error">❌ EARRÁID ceamara: Níorbh fhéidir í a thionscnamh</string>
+    <string name="toast_recording_to">🔴 AG TAIFEAD GO: %s</string>
+    <string name="toast_recorder_error">❌ EARRÁID TAIFEAD: %s</string>
+    <string name="toast_chunk_saved">💾 CHUNK SAVED: %s</string>
+    <string name="toast_upload_success">✅ UPLOAD Rath: %s</string>
+    <string name="toast_releasing_resources">🛑 ACMHAINNÍ A FHÁIL...</string>
+    <string name="toast_loc_searching">📍 LOC: COMHARTHA AG CUARDACH...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

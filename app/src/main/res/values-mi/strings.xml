@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">KATI</string>
+    <string name="btn_hold">KAUPAPA</string>
+    <string name="title_system_settings">TE WHAKAMAHI PUNA</string>
+    <string name="hint_server_ip">Wāhitau IP Tūmau</string>
+    <string name="hint_port">Tauranga</string>
+    <string name="hint_secs">Hekona</string>
+    <string name="label_front_camera">🤳 Kāmera o mua</string>
+    <string name="label_hidden_mode">👻 Aratau Huna</string>
+    <string name="btn_download_server">📜 Tikiake Hōtuhi Tūmau</string>
+    <string name="dialog_eula_title">⚠️ WHAKAMAHI WHAKAMAHI PUNA</string>
+    <string name="dialog_eula_positive">Whakaae</string>
+    <string name="dialog_eula_negative">Whakaheke</string>
+    <string name="dialog_eula_message">NGA WHAKAMAHI KAUPAPA ME TE WHAKAMAHI WHAKAMAHI WHAKAMAHI WHAKAMAHI (EULA)\n\n1. TE WHAKAMAHI KAUPAPA &amp; WHAKAMAHI\nHe puna tuwhera tenei kaupapa engari ma te Mana pupuri. Ka whakaaetia koe ki te tohatoha me te whakarereke i tenei rorohiko mena ka hoatu he nama marama ki te kaihanga taketake.\n© zMykerd. Katoa nga mana.\n\n2. TE WHAKAMAHI ME TE WHAKAMAHI I TE TURE\nI hangaia tenei rorohiko hei taputapu haumaru whaiaro/SOS. Ka tino whakaae koe KAUA e whakamahi i tenei tono, i tana waehere puna, i etahi tuhinga e pa ana mo nga kaupapa ture, te tirotiro kore mana, me nga mahi torotoro. Karekau he kawenga a te Kaihanga mo te whakamahi hee!\n\nMa te panui "Whakaae", ka whakaae koe ki enei tikanga. Ki te kore koe e whakaae, kowhiria te "DECLINE" ki te puta atu i te tono.</string>
+    <string name="toast_alias_active">🎭 Pūnaha WhakahouAunoa</string>
+    <string name="toast_alias_inactive">🔓 Kua wetekina te aratau noa</string>
+    <string name="toast_perm_denied">❌ Ko nga whakaaetanga e tika ana kaore i whakawhiwhia</string>
+    <string name="toast_bg_perm_denied">❌ Kua whakakorehia te whakaaetanga papamuri: he iti etahi mahi</string>
+    <string name="toast_service_stopped">🛑 KA MATE TE RATONGA SOS</string>
+    <string name="toast_script_saved">✅ Tiaki: %s</string>
+    <string name="toast_script_error">❌ Hapa: %s</string>
+    <string name="toast_select_always_allow">⚠️ KŌWHIWHI I TE \'TAHI KAUPAPA\' I TE KAUPAPA KAUPAPA</string>
+    <string name="notification_channel_normal">zM SOS Ratonga</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Te Tiaki me te Hopu...</string>
+    <string name="notification_channel_hidden">Ratonga Tikanga Pūnaha</string>
+    <string name="notification_title_hidden">Whakahōu Pūnaha</string>
+    <string name="notification_text_hidden">Tukutahi taumai...</string>
+    <string name="toast_service_running">ℹ️ RATONGA KEI TE RERE</string>
+    <string name="toast_setup_foreground">🛠️ TE WHAKATAUTANGA I TE AHUA O MUA</string>
+    <string name="toast_init_camera">📷 KAUPAPA KAUPAPA...</string>
+    <string name="toast_start_recorder">📼 KAUPAPA KAUPAPA KAUPAPA KAUPAPA...</string>
+    <string name="toast_start_sync">🔄 TE WHAKAMAHI I TE KAIMAHI WHAKATAKITANGA...</string>
+    <string name="toast_sos_active">🚀 SOS WHAKAMAHI me te REPUKE</string>
+    <string name="toast_camera_error">❌ HAPA KAMERA: KAORE I TE WHAKAMAHI</string>
+    <string name="toast_recording_to">🔴 REPUTA KI: %s</string>
+    <string name="toast_recorder_error">❌ HAPA KAUPAPA: %s</string>
+    <string name="toast_chunk_saved">💾 TAHI TANGATA: %s</string>
+    <string name="toast_upload_success">✅ TANGATA ANGITU: %s</string>
+    <string name="toast_releasing_resources">🛑 TE PUTANGA RAUEMI...</string>
+    <string name="toast_loc_searching">📍 WAHI: WHAKAMAHI RAPU...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">ZASTÁVKA</string>
+    <string name="btn_hold">DRŽET</string>
+    <string name="title_system_settings">SYSTÉMOVÁ NASTAVENÍ</string>
+    <string name="hint_server_ip">IP adresa serveru</string>
+    <string name="hint_port">Přístav</string>
+    <string name="hint_secs">Sek</string>
+    <string name="label_front_camera">🤳 Přední kamera</string>
+    <string name="label_hidden_mode">👻 Skrytý režim</string>
+    <string name="btn_download_server">📜 Stáhněte si skript serveru</string>
+    <string name="dialog_eula_title">⚠️ UPOZORNĚNÍ ZABEZPEČENÍ SYSTÉMU</string>
+    <string name="dialog_eula_positive">PŘIJMOUT</string>
+    <string name="dialog_eula_negative">POKLES</string>
+    <string name="dialog_eula_message">PODMÍNKY SLUŽBY A LICENČNÍ SMLOUVA S KONCOVÝM UŽIVATELEM (EULA)\n\n1. AUTORSKÁ PRÁVA A KREDITY\nTento projekt je open source, ale je chráněn autorským právem. Jste oprávněni redistribuovat a upravovat tento software za předpokladu, že bude jasně uveden původní tvůrce.\n© zMykerd. Všechna práva vyhrazena.\n\n2. POVOLENÉ A ZÁKONNÉ POUŽÍVÁNÍ\nTento software je navržen jako nástroj osobní bezpečnosti/SOS. Přísně souhlasíte s tím, že NEPOUŽÍVÁTE tuto aplikaci, její zdrojový kód ani žádné související skripty pro nezákonné účely, neoprávněné sledování nebo špionážní aktivity. Tvůrce nepřebírá žádnou odpovědnost za nesprávné použití!\n\nKliknutím na „PŘIJÍMAT“ souhlasíte s těmito podmínkami. Pokud nesouhlasíte, zvolte "DECLINE" pro ukončení aplikace.</string>
+    <string name="toast_alias_active">🎭 Automatická aktualizace systému</string>
+    <string name="toast_alias_inactive">🔓 Normální režim je odemčen</string>
+    <string name="toast_perm_denied">❌ Nezbytná povolení nebyla udělena</string>
+    <string name="toast_bg_perm_denied">❌ Oprávnění na pozadí odepřeno: některé funkce jsou omezeny</string>
+    <string name="toast_service_stopped">🛑 SLUŽBA SOS ZASTAVENA</string>
+    <string name="toast_script_saved">✅ Uloženo: %s</string>
+    <string name="toast_script_error">❌ Chyba: %s</string>
+    <string name="toast_select_always_allow">⚠️ NA DALŠÍ OBRAZOVCE VYBERTE „VŽDY POVOLIT“.</string>
+    <string name="notification_channel_normal">Služba SOS zM</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Ochrana a nahrávání...</string>
+    <string name="notification_channel_hidden">Služba integrity systému</string>
+    <string name="notification_title_hidden">Aktualizace systému</string>
+    <string name="notification_text_hidden">Synchronizovat příchozí...</string>
+    <string name="toast_service_running">ℹ️ SLUŽBA JIŽ FUNGUJE</string>
+    <string name="toast_setup_foreground">🛠️ NASTAVENÍ REŽIMU V POZADÍ</string>
+    <string name="toast_init_camera">📷 INICIALIZACE FOTOAPARÁTU...</string>
+    <string name="toast_start_recorder">📼 SPUŠTĚNÍ MEDIÁLNÍHO ZÁZNAMU...</string>
+    <string name="toast_start_sync">🔄 SPUŠTĚNÍ PRACOVNÍKA SYNCHRONIZACE...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE &amp; RECORDING</string>
+    <string name="toast_camera_error">❌ CHYBA KAMERY: NELZE INICIALIZOVAT</string>
+    <string name="toast_recording_to">🔴 NAHRÁVÁNÍ DO: %s</string>
+    <string name="toast_recorder_error">❌ CHYBA ZÁZNAMU: %s</string>
+    <string name="toast_chunk_saved">💾 KUS ULOŽENÝ: %s</string>
+    <string name="toast_upload_success">✅ ÚSPĚCH PŘI NAHRÁVÁNÍ: %s</string>
+    <string name="toast_releasing_resources">🛑 UVOLNĚNÍ ZDROJŮ...</string>
+    <string name="toast_loc_searching">📍 LOC: VYHLEDÁVACÍ SIGNÁL...</string>
+    <string name="toast_loc_found">📍 MÍSTO: %s</string>
+</resources>

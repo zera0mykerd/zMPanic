@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">ΣΤΑΣΗ</string>
+    <string name="btn_hold">ΑΜΠΑΡΙ</string>
+    <string name="title_system_settings">ΡΥΘΜΙΣΕΙΣ ΣΥΣΤΗΜΑΤΟΣ</string>
+    <string name="hint_server_ip">Διεύθυνση IP διακομιστή</string>
+    <string name="hint_port">Λιμάνι</string>
+    <string name="hint_secs">Δευτ</string>
+    <string name="label_front_camera">🤳 Μπροστινή κάμερα</string>
+    <string name="label_hidden_mode">👻 Κρυφή λειτουργία</string>
+    <string name="btn_download_server">📜 Λήψη σεναρίου διακομιστή</string>
+    <string name="dialog_eula_title">⚠️ ΣΗΜΕΙΩΣΗ ΑΣΦΑΛΕΙΑΣ ΣΥΣΤΗΜΑΤΟΣ</string>
+    <string name="dialog_eula_positive">ΑΠΟΔΕΧΟΜΑΙ</string>
+    <string name="dialog_eula_negative">ΠΤΩΣΗ</string>
+    <string name="dialog_eula_message">ΟΡΟΙ ΥΠΗΡΕΣΙΑΣ &amp; ΣΥΜΦΩΝΙΑ ΑΔΕΙΑΣ ΤΕΛΙΚΟΥ ΧΡΗΣΤΗ (EULA)\n\n1. ΠΝΕΥΜΑΤΙΚΑ ΔΙΚΑΙΩΜΑΤΑ &amp; ΠΙΣΤΩΣΕΙΣ\nΑυτό το έργο είναι ανοιχτού κώδικα αλλά προστατεύεται από πνευματικά δικαιώματα. Επιτρέπεται να αναδιανείμετε και να τροποποιήσετε αυτό το λογισμικό με την προϋπόθεση ότι αποδίδεται σαφής πίστωση στον αρχικό δημιουργό.\n© zMykerd. Με την επιφύλαξη παντός δικαιώματος.\n\n2. ΕΠΙΤΡΕΠΟΜΕΝΗ &amp; ΝΟΜΙΜΗ ΧΡΗΣΗ\nΑυτό το λογισμικό έχει σχεδιαστεί ως εργαλείο προσωπικής ασφάλειας/SOS. Συμφωνείτε αυστηρά να ΜΗΝ χρησιμοποιείτε αυτήν την εφαρμογή, τον πηγαίο κώδικα ή οποιαδήποτε σχετικά σενάρια για παράνομους σκοπούς, μη εξουσιοδοτημένη παρακολούθηση ή κατασκοπευτικές δραστηριότητες. Ο δημιουργός δεν φέρει καμία ευθύνη για ακατάλληλη χρήση!\n\nΚάνοντας κλικ στο "ΑΠΟΔΟΧΗ", συμφωνείτε με αυτούς τους όρους. Εάν δεν συμφωνείτε, επιλέξτε "ΑΠΟΡΡΙΨΗ" για έξοδο από την εφαρμογή.</string>
+    <string name="toast_alias_active">🎭 Αυτόματη ενημέρωση συστήματος</string>
+    <string name="toast_alias_inactive">🔓 Ξεκλείδωτη η κανονική λειτουργία</string>
+    <string name="toast_perm_denied">❌ Δεν χορηγούνται οι απαραίτητες άδειες</string>
+    <string name="toast_bg_perm_denied">❌ Δεν επιτρέπεται η άδεια παρασκηνίου: ορισμένες λειτουργίες είναι περιορισμένες</string>
+    <string name="toast_service_stopped">🛑 Η ΥΠΗΡΕΣΙΑ SOS ΣΤΑΜΑΤΗΣΕ</string>
+    <string name="toast_script_saved">✅ Αποθηκευμένο: %s</string>
+    <string name="toast_script_error">❌ Σφάλμα: %s</string>
+    <string name="toast_select_always_allow">⚠️ ΕΠΙΛΕΞΤΕ «ΝΑ ΕΠΙΤΡΕΠΕΤΑΙ ΠΑΝΤΑ» ΣΤΗΝ ΕΠΟΜΕΝΗ ΟΘΟΝΗ</string>
+    <string name="notification_channel_normal">Υπηρεσία zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Προστασία και καταγραφή...</string>
+    <string name="notification_channel_hidden">Υπηρεσία Ακεραιότητας Συστήματος</string>
+    <string name="notification_title_hidden">Ενημέρωση συστήματος</string>
+    <string name="notification_text_hidden">Συγχρονισμός εισερχόμενων...</string>
+    <string name="toast_service_running">ℹ️ Η ΥΠΗΡΕΣΙΑ ΛΕΙΤΟΥΡΓΕΙ ΗΔΗ</string>
+    <string name="toast_setup_foreground">🛠️ ΡΥΘΜΙΣΗ ΛΕΙΤΟΥΡΓΙΑΣ ΠΡΟΣΩΠΟΥ</string>
+    <string name="toast_init_camera">📷 ΑΡΧΙΚΗ ΚΑΜΕΡΑ...</string>
+    <string name="toast_start_recorder">📼 ΕΝΑΡΞΗ ΚΑΤΑΓΡΑΦΗΣ ΜΕΣΩΝ...</string>
+    <string name="toast_start_sync">🔄 ΕΝΑΡΞΗ ΣΥΓΧΡΟΝΙΣΜΟΥ...</string>
+    <string name="toast_sos_active">🚀 SOS ΕΝΕΡΓΗ &amp; ΗΧΟΓΡΑΦΗΣΗ</string>
+    <string name="toast_camera_error">❌ ΣΦΑΛΜΑ ΚΑΜΕΡΑΣ: ΔΕΝ ΜΠΟΡΕΙ ΝΑ ΑΡΧΙΚΟΤΗΤΑΣ</string>
+    <string name="toast_recording_to">🔴 ΕΓΓΡΑΦΗ ΣΤΟ: %s</string>
+    <string name="toast_recorder_error">❌ ΣΦΑΛΜΑ ΕΓΓΡΑΦΗΣ: %s</string>
+    <string name="toast_chunk_saved">💾 ΑΠΟΘΗΚΕΥΘΗΚΕ ΤΟΝ ΚΟΜΜΑ: %s</string>
+    <string name="toast_upload_success">✅ ΕΠΙΤΥΧΙΑ ΑΝΕΒΑΣΗΣ: %s</string>
+    <string name="toast_releasing_resources">🛑 ΑΠΕΛΕΥΘΕΡΩΣΗ ΠΟΡΩΝ...</string>
+    <string name="toast_loc_searching">📍 ΤΟΠΟΘΕΣΙΑ: ΣΗΜΑ ΑΝΑΖΗΤΗΣΗΣ...</string>
+    <string name="toast_loc_found">📍 ΤΟΠΟΘΕΣΙΑ: %s</string>
+</resources>

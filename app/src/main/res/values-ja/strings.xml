@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">停止</string>
+    <string name="btn_hold">所有</string>
+    <string name="title_system_settings">システム設定</string>
+    <string name="hint_server_ip">サーバーのIPアドレス</string>
+    <string name="hint_port">ポート</string>
+    <string name="hint_secs">秒</string>
+    <string name="label_front_camera">🤳 フロントカメラ</string>
+    <string name="label_hidden_mode">👻 隠しモード</string>
+    <string name="btn_download_server">📜 サーバースクリプトをダウンロード</string>
+    <string name="dialog_eula_title">⚠️ システムセキュリティに関する通知</string>
+    <string name="dialog_eula_positive">受け入れる</string>
+    <string name="dialog_eula_negative">衰退</string>
+    <string name="dialog_eula_message">サービス利用規約とエンド ユーザー使用許諾契約 (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nThis project is open-source but protected by Copyright.元の作成者に明確なクレジットが与えられている場合、このソフトウェアを再配布および変更することが許可されています。\n© zMykerd.すべての著作権は留保されています。\n\n2.許可および合法的な使用\nこのソフトウェアは個人の安全/SOS ツールとして設計されています。あなたは、このアプリケーション、そのソースコード、または関連スクリプトを違法な目的、無許可の監視、またはスパイ活動に使用しないことに厳密に同意します。作成者は不適切な使用に対して一切の責任を負いません!\n\n[同意する] をクリックすると、これらの規約に同意したことになります。 If you do not agree, choose "DECLINE" to exit the application.</string>
+    <string name="toast_alias_active">🎭 システム自動アップデーター</string>
+    <string name="toast_alias_inactive">🔓 通常モードのロックが解除されました</string>
+    <string name="toast_perm_denied">❌ 必要な許可が与えられていない</string>
+    <string name="toast_bg_perm_denied">❌ バックグラウンド権限が拒否されました: 一部の機能が制限されています</string>
+    <string name="toast_service_stopped">🛑 SOS サービスが停止しました</string>
+    <string name="toast_script_saved">✅ 保存済み: %s</string>
+    <string name="toast_script_error">❌ エラー: %s</string>
+    <string name="toast_select_always_allow">⚠️ 次の画面で「常に許可」を選択します</string>
+    <string name="notification_channel_normal">zM SOSサービス</string>
+    <string name="notification_title_normal">zM SOS ガードアクティブ</string>
+    <string name="notification_text_normal">保護と記録中...</string>
+    <string name="notification_channel_hidden">システム整合性サービス</string>
+    <string name="notification_title_hidden">システムアップデート</string>
+    <string name="notification_text_hidden">受信を同期します...</string>
+    <string name="toast_service_running">ℹ️ サービスはすでに実行中です</string>
+    <string name="toast_setup_foreground">🛠️ フォアグラウンドモードの設定</string>
+    <string name="toast_init_camera">📷 カメラを初期化しています...</string>
+    <string name="toast_start_recorder">📼 メディアレコーダーを開始しています...</string>
+    <string name="toast_start_sync">🔄 同期ワーカーを開始しています...</string>
+    <string name="toast_sos_active">🚀 SOS アクティブおよび録音中</string>
+    <string name="toast_camera_error">❌ カメラエラー: 初期化できませんでした</string>
+    <string name="toast_recording_to">🔴 録音先: %s</string>
+    <string name="toast_recorder_error">❌ レコーダーエラー: %s</string>
+    <string name="toast_chunk_saved">💾 保存されたチャンク: %s</string>
+    <string name="toast_upload_success">✅ アップロード成功: %s</string>
+    <string name="toast_releasing_resources">🛑 リソースをリリース中...</string>
+    <string name="toast_loc_searching">📍 位置: 信号を検索中...</string>
+    <string name="toast_loc_found">📍 所在地: %s</string>
+</resources>

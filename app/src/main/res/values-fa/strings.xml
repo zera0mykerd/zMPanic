@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">توقف</string>
+    <string name="btn_hold">نگه دارید</string>
+    <string name="title_system_settings">تنظیمات سیستم</string>
+    <string name="hint_server_ip">آدرس IP سرور</string>
+    <string name="hint_port">بندر</string>
+    <string name="hint_secs">ثانیه</string>
+    <string name="label_front_camera">🤳 دوربین جلو</string>
+    <string name="label_hidden_mode">👻 حالت پنهان</string>
+    <string name="btn_download_server">📜 اسکریپت سرور را دانلود کنید</string>
+    <string name="dialog_eula_title">⚠️ اطلاعیه ایمنی سیستم</string>
+    <string name="dialog_eula_positive">قبول کنید</string>
+    <string name="dialog_eula_negative">رد کردن</string>
+    <string name="dialog_eula_message">شرایط خدمات و موافقتنامه مجوز کاربر نهایی (EULA)\n\n1. حق نسخه برداری و اعتبار\nاین پروژه منبع باز است اما توسط حق نسخه برداری محافظت می شود. شما مجاز به توزیع مجدد و اصلاح این نرم افزار هستید، مشروط بر اینکه اعتبار واضح به سازنده اصلی داده شود.\n© zMykerd. تمامی حقوق محفوظ است.\n\n2. استفاده مجاز و قانونی\nاین نرم افزار به عنوان یک ابزار ایمنی/SOS شخصی طراحی شده است. شما کاملاً موافقت می کنید که از این برنامه، کد منبع آن یا هر اسکریپت مرتبط برای اهداف غیرقانونی، نظارت غیرمجاز یا فعالیت های جاسوسی استفاده نکنید. سازنده هیچ مسئولیتی در قبال استفاده نادرست نمی‌پذیرد!\n\nبا کلیک کردن روی "پذیرش"، با این شرایط موافقت می‌کنید. اگر موافق نیستید، «رد کردن» را برای خروج از برنامه انتخاب کنید.</string>
+    <string name="toast_alias_active">🎭 به روز رسانی خودکار سیستم</string>
+    <string name="toast_alias_inactive">🔓 حالت عادی باز شد</string>
+    <string name="toast_perm_denied">❌ مجوزهای لازم داده نشده است</string>
+    <string name="toast_bg_perm_denied">❌ اجازه پس‌زمینه رد شد: برخی از عملکردها محدود است</string>
+    <string name="toast_service_stopped">🛑 سرویس SOS متوقف شد</string>
+    <string name="toast_script_saved">✅ ذخیره شده: %s</string>
+    <string name="toast_script_error">❌ خطا: %s</string>
+    <string name="toast_select_always_allow">⚠️ "همیشه مجاز" را در صفحه بعدی انتخاب کنید</string>
+    <string name="notification_channel_normal">سرویس zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">حفاظت و ضبط ...</string>
+    <string name="notification_channel_hidden">سرویس یکپارچگی سیستم</string>
+    <string name="notification_title_hidden">به روز رسانی سیستم</string>
+    <string name="notification_text_hidden">همگام سازی ورودی...</string>
+    <string name="toast_service_running">ℹ️ خدمات از قبل در حال اجراست</string>
+    <string name="toast_setup_foreground">🛠️ راه اندازی حالت پیش زمینه</string>
+    <string name="toast_init_camera">📷 دوربین اولیه...</string>
+    <string name="toast_start_recorder">📼 شروع ضبط رسانه...</string>
+    <string name="toast_start_sync">🔄 شروع کار همگام سازی...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE و ضبط</string>
+    <string name="toast_camera_error">❌ خطای دوربین: شروع نشد</string>
+    <string name="toast_recording_to">🔴 ضبط به: %s</string>
+    <string name="toast_recorder_error">❌ خطای ضبط: %s</string>
+    <string name="toast_chunk_saved">💾 CHUNK ذخیره شده: %s</string>
+    <string name="toast_upload_success">✅ موفقیت در آپلود: %s</string>
+    <string name="toast_releasing_resources">🛑 انتشار منابع...</string>
+    <string name="toast_loc_searching">📍 مکان: سیگنال جستجو...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

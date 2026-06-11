@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOPPE</string>
+    <string name="btn_hold">HOLDE</string>
+    <string name="title_system_settings">SYSTEMINNSTILLINGER</string>
+    <string name="hint_server_ip">Server IP-adresse</string>
+    <string name="hint_port">Havn</string>
+    <string name="hint_secs">Sek</string>
+    <string name="label_front_camera">🤳 Frontkamera</string>
+    <string name="label_hidden_mode">👻 Skjult modus</string>
+    <string name="btn_download_server">📜 Last ned serverskript</string>
+    <string name="dialog_eula_title">⚠️ MERKNAD OM SYSTEMSIKKERHET</string>
+    <string name="dialog_eula_positive">AKSEPTERE</string>
+    <string name="dialog_eula_negative">AVSLÅ</string>
+    <string name="dialog_eula_message">VILKÅR FOR SERVICE OG SLUTTBRUKERLISENSAVTALE (EULA)\n\n1. COPYRIGHT OG KREDITTER\nDette prosjektet er åpen kildekode, men beskyttet av opphavsrett. Du har tillatelse til å omdistribuere og modifisere denne programvaren forutsatt at den opprinnelige skaperen gis tydelig kreditt.\n© zMykerd. Alle rettigheter forbeholdt.\n\n2. TILLATT OG LOVLIG BRUK\nDenne programvaren er utviklet som et personlig sikkerhets-/SOS-verktøy. Du samtykker strengt til IKKE å bruke denne applikasjonen, dens kildekode eller tilhørende skript til ulovlige formål, uautorisert overvåking eller spionasjeaktiviteter. Skaperen påtar seg intet ansvar for feil bruk!\n\nVed å klikke på "GODTAT", godtar du disse vilkårene. Hvis du ikke er enig, velg "AVVIS" for å avslutte applikasjonen.</string>
+    <string name="toast_alias_active">🎭 System AutoUpdater</string>
+    <string name="toast_alias_inactive">🔓 Normal modus låst opp</string>
+    <string name="toast_perm_denied">❌ Nødvendige tillatelser ikke gitt</string>
+    <string name="toast_bg_perm_denied">❌ Bakgrunnstillatelse nektet: noen funksjoner begrenset</string>
+    <string name="toast_service_stopped">🛑 SOS SERVICE STOPPET</string>
+    <string name="toast_script_saved">✅ Lagret: %s</string>
+    <string name="toast_script_error">❌ Feil: %s</string>
+    <string name="toast_select_always_allow">⚠️ VELG \'TILLAT ALLTID\' PÅ NESTE SKJERM</string>
+    <string name="notification_channel_normal">zM SOS-tjeneste</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Beskytter og tar opp...</string>
+    <string name="notification_channel_hidden">Systemintegritetstjeneste</string>
+    <string name="notification_title_hidden">Systemoppdatering</string>
+    <string name="notification_text_hidden">Synkroniser innkommende...</string>
+    <string name="toast_service_running">ℹ️ SERVICE KJØRER ALLEREDE</string>
+    <string name="toast_setup_foreground">🛠️ SETTE OPP FORGRUNNSMODUS</string>
+    <string name="toast_init_camera">📷 INITIALISERER KAMERA...</string>
+    <string name="toast_start_recorder">📼 STARTER MEDIEOPPTAKER...</string>
+    <string name="toast_start_sync">🔄 STARTER SYNC ARBEIDER...</string>
+    <string name="toast_sos_active">🚀 SOS AKTIV OG OPPTAK</string>
+    <string name="toast_camera_error">❌ KAMERAFEIL: KUNNE IKKE INITIALISERE</string>
+    <string name="toast_recording_to">🔴 OPPTAK TIL: %s</string>
+    <string name="toast_recorder_error">❌ OPPTAKERFEIL: %s</string>
+    <string name="toast_chunk_saved">💾 KUNK LAGREDE: %s</string>
+    <string name="toast_upload_success">✅ OPPLASTNINGSSUKSESS: %s</string>
+    <string name="toast_releasing_resources">🛑 FRIGJØR RESSURSER...</string>
+    <string name="toast_loc_searching">📍 LOK: SØKER SIGNAL...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">ТОҚТАТУ</string>
+    <string name="btn_hold">ҰСТАП ТҰРУ</string>
+    <string name="title_system_settings">ЖҮЙЕ ПАРАМЕТРЛЕРІ</string>
+    <string name="hint_server_ip">Сервердің IP мекенжайы</string>
+    <string name="hint_port">Порт</string>
+    <string name="hint_secs">сек</string>
+    <string name="label_front_camera">🤳 Алдыңғы камера</string>
+    <string name="label_hidden_mode">👻 Жасырын режим</string>
+    <string name="btn_download_server">📜 Сервер сценарийін жүктеп алыңыз</string>
+    <string name="dialog_eula_title">⚠️ ЖҮЙЕ ҚАУІПСІЗДІГІ ТУРАЛЫ ЕСКЕРТУ</string>
+    <string name="dialog_eula_positive">ҚАБЫЛДАУ</string>
+    <string name="dialog_eula_negative">ҚАБЫЛДАУ</string>
+    <string name="dialog_eula_message">ҚЫЗМЕТ КӨРСЕТУ ШАРТТАРЫ ЖӘНЕ СОҢҒЫ ПАЙДАЛАНУШЫ ЛИЦЕНЗИЯЛЫҚ КЕЛІСІМ (EULA)\n\n1. АВТОРЛЫҚ ҚҰҚЫҚ ЖӘНЕ КРЕДИТ\nБұл жобаның бастапқы көзі ашық, бірақ авторлық құқықпен қорғалған. Түпнұсқа жасаушыға нақты несие берілген жағдайда бұл бағдарламалық құралды қайта таратуға және өзгертуге рұқсат етілген.\n© zMykerd. Барлық құқықтар қорғалған.\n\n2. РҰҚСАТ ЕТІЛГЕН ЖӘНЕ ЗАҢДЫ ҚОЛДАНУ\nБұл бағдарламалық құрал жеке қауіпсіздік/SOS құралы ретінде жасалған. Сіз бұл қолданбаны, оның бастапқы кодын немесе кез келген байланысты сценарийлерді заңсыз мақсаттарға, рұқсат етілмеген бақылауға немесе тыңшылық әрекеттерге ҚОЛДАНБАУға қатаң келісесіз. Автор дұрыс пайдаланбағаны үшін жауапкершілік көтермейді!\n\n"ҚАБЫЛДАУ" түймесін басу арқылы сіз осы шарттармен келісесіз. Егер келіспесеңіз, қолданбадан шығу үшін "БАСТАУ" пәрменін таңдаңыз.</string>
+    <string name="toast_alias_active">🎭 Жүйені автоматты жаңарту</string>
+    <string name="toast_alias_inactive">🔓 Қалыпты режим құлпы ашылды</string>
+    <string name="toast_perm_denied">❌ Қажетті рұқсаттар берілмейді</string>
+    <string name="toast_bg_perm_denied">❌ Фондық рұқсат қабылданбады: кейбір функциялар шектелген</string>
+    <string name="toast_service_stopped">🛑 SOS ҚЫЗМЕТІ ТОҚТАДЫ</string>
+    <string name="toast_script_saved">✅ Сақталған: %s</string>
+    <string name="toast_script_error">❌ Қате: %s</string>
+    <string name="toast_select_always_allow">⚠️ КЕЛЕСІ ЭКРАНДА "ӘРҚАШАН РҰҚСАТ БЕРУ" ТАҢДАҢЫЗ</string>
+    <string name="notification_channel_normal">zM SOS қызметі</string>
+    <string name="notification_title_normal">zM SOS Guard белсенді</string>
+    <string name="notification_text_normal">Қорғау және жазу...</string>
+    <string name="notification_channel_hidden">Жүйе тұтастығы қызметі</string>
+    <string name="notification_title_hidden">Жүйені жаңарту</string>
+    <string name="notification_text_hidden">Кірістерді синхрондау...</string>
+    <string name="toast_service_running">ℹ️ ҚЫЗМЕТ ҚОСУДА</string>
+    <string name="toast_setup_foreground">🛠️ Алдыңғы жоспар режимін орнату</string>
+    <string name="toast_init_camera">📷 КАМЕРАНЫ БАСТАУ...</string>
+    <string name="toast_start_recorder">📼 МЕДИЯ ДИАҚТАПШЫ БАСТАУ...</string>
+    <string name="toast_start_sync">🔄 синхрондауды бастау...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIVE және ЖАЗУ</string>
+    <string name="toast_camera_error">❌ КАМЕРА ҚАТЕСІ: БАСТАУ АЛМАДЫ</string>
+    <string name="toast_recording_to">🔴 ЖАЗУ: %s</string>
+    <string name="toast_recorder_error">❌ ДИПЛОГАТОР ҚАТЕСІ: %s</string>
+    <string name="toast_chunk_saved">💾 САҚТАЛДЫ: %s</string>
+    <string name="toast_upload_success">✅ ЖҮКТЕП ЖҮРГІЗУ ТАБЫСЫ: %s</string>
+    <string name="toast_releasing_resources">🛑 РЕСУРСТАРДЫ ШЫҒАРУ...</string>
+    <string name="toast_loc_searching">📍 LOC: Іздеу СИГНАЛЫ...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_hold">TURĒT</string>
+    <string name="title_system_settings">SISTĒMAS IESTATĪJUMI</string>
+    <string name="hint_server_ip">Servera IP adrese</string>
+    <string name="hint_port">Osta</string>
+    <string name="hint_secs">Sekundes</string>
+    <string name="label_front_camera">🤳 Priekšējā kamera</string>
+    <string name="label_hidden_mode">👻 Slēpts režīms</string>
+    <string name="btn_download_server">📜 Lejupielādējiet servera skriptu</string>
+    <string name="dialog_eula_title">⚠️ SISTĒMAS DROŠĪBAS PAZIŅOJUMS</string>
+    <string name="dialog_eula_positive">AKCEPT</string>
+    <string name="dialog_eula_negative">NORAIDĪT</string>
+    <string name="dialog_eula_message">PAKALPOJUMU NOTEIKUMI UN GALA LIETOTĀJA LICENCES LĪGUMS (EULA)\n\n1. AUTORTIESĪBAS UN KREDĪTI\nŠis projekts ir atvērtā koda, taču aizsargāts ar autortiesībām. Jums ir atļauts izplatīt un modificēt šo programmatūru ar nosacījumu, ka tas ir skaidri norādīts sākotnējam izveidotājam.\n© zMykerd. Visas tiesības paturētas.\n\n2. ATĻAUTA UN LIKUMĪGA LIETOŠANA\nŠī programmatūra ir izstrādāta kā personīgās drošības/SOS rīks. Jūs stingri piekrītat NElietot šo lietojumprogrammu, tās avota kodu vai jebkādus saistītos skriptus nelikumīgiem mērķiem, neatļautai uzraudzībai vai spiegošanas darbībām. Radītājs neuzņemas nekādu atbildību par nepareizu lietošanu!\n\nNoklikšķinot uz "PIEKĀT", jūs piekrītat šiem noteikumiem. Ja nepiekrītat, izvēlieties "ATSAISTĪT", lai izietu no lietojumprogrammas.</string>
+    <string name="toast_alias_active">🎭 Sistēmas automātiskais atjauninātājs</string>
+    <string name="toast_alias_inactive">🔓 Atbloķēts parastais režīms</string>
+    <string name="toast_perm_denied">❌ Nepieciešamās atļaujas nav piešķirtas</string>
+    <string name="toast_bg_perm_denied">❌ Fona atļauja liegta: dažas funkcijas ir ierobežotas</string>
+    <string name="toast_service_stopped">🛑 SOS PAKALPOJUMS PĀRTRAUKTS</string>
+    <string name="toast_script_saved">✅ Saglabāts: %s</string>
+    <string name="toast_script_error">❌ Kļūda: %s</string>
+    <string name="toast_select_always_allow">⚠️ NĀKAMAJĀ EKRĀNĀ IZVĒLĒTIES VIENMĒR ATĻAUT</string>
+    <string name="notification_channel_normal">zM SOS serviss</string>
+    <string name="notification_title_normal">zM SOS aizsargs aktīvs</string>
+    <string name="notification_text_normal">Aizsargā un ieraksta...</string>
+    <string name="notification_channel_hidden">Sistēmas integritātes pakalpojums</string>
+    <string name="notification_title_hidden">Sistēmas atjaunināšana</string>
+    <string name="notification_text_hidden">Sinhronizēt ienākošos...</string>
+    <string name="toast_service_running">ℹ️ SERVISS JAU STRĀDĀ</string>
+    <string name="toast_setup_foreground">🛠️ PRIEKŠPLĒTA REŽĪMA IESTATĪŠANA</string>
+    <string name="toast_init_camera">📷 NOTIEK KAMERAS INICIALIZĒŠANA...</string>
+    <string name="toast_start_recorder">📼 MULDIJU IERAKSTĪŠANAS SĀKŠANA...</string>
+    <string name="toast_start_sync">🔄 SĀKOT SINHRONIZĒŠANAS DARBINIEKU...</string>
+    <string name="toast_sos_active">🚀 SOS AKTĪVS UN IERAKSTS</string>
+    <string name="toast_camera_error">❌ KAMERAS KĻŪDA: NEVARĒJA INICIALIZĒT</string>
+    <string name="toast_recording_to">🔴 IERAKSTS: %s</string>
+    <string name="toast_recorder_error">❌ IERAKSTĪTĀJA KĻŪDA: %s</string>
+    <string name="toast_chunk_saved">💾 DAĻA SAGLABĀTS: %s</string>
+    <string name="toast_upload_success">✅ VEIKSMES AUGšupielāde: %s</string>
+    <string name="toast_releasing_resources">🛑 RESURSU ATBRĪVOŠANA...</string>
+    <string name="toast_loc_searching">📍 LOC: MEKLĒŠANAS SIGNĀLS...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

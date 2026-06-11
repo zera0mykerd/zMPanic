@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">DURO</string>
+    <string name="btn_hold">DIMU</string>
+    <string name="title_system_settings">Eto Eto</string>
+    <string name="hint_server_ip">Adirẹsi IP olupin</string>
+    <string name="hint_port">Ibudo</string>
+    <string name="hint_secs">Awọn iṣẹju-aaya</string>
+    <string name="label_front_camera">🤳 Kamẹra iwaju</string>
+    <string name="label_hidden_mode">👻 Ipo Farasin</string>
+    <string name="btn_download_server">📜 Ṣe igbasilẹ iwe afọwọkọ olupin</string>
+    <string name="dialog_eula_title">⚠️ AKIYESI AABO ETO</string>
+    <string name="dialog_eula_positive">GBA</string>
+    <string name="dialog_eula_negative">KEKERE</string>
+    <string name="dialog_eula_message">OFIN ISE &amp; OPIN ASEJE ašẹ olumulo (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nIṣẹ-iṣẹ yii jẹ ṣiṣi-orisun ṣugbọn aabo nipasẹ Aṣẹ-lori-ara. O gba ọ laaye lati tun pin kaakiri ati ṣatunṣe sọfitiwia yii ti a pese pe o ti fi kirẹditi mimọ fun ẹlẹda atilẹba.\n© zMykerd. Gbogbo ẹtọ wa ni ipamọ.\n\n2. IGBAGBỌ &amp; LILO OFIN\n Sọfitiwia yii jẹ apẹrẹ bi aabo ara ẹni/irinṣẹ SOS. O gba ni kikun KO lati lo ohun elo yii, koodu orisun rẹ, tabi eyikeyi awọn iwe afọwọkọ ti o somọ fun awọn idi arufin, eto iwo-kakiri laigba aṣẹ, tabi awọn iṣẹ ṣiṣe amí. Eleda ko gba ojuse kankan fun lilo aibojumu!\n\nNipa titẹ "ACCEPT", o gba si awọn ofin wọnyi. Ti o ko ba gba, yan "DECLINE" lati jade kuro ni ohun elo naa.</string>
+    <string name="toast_alias_active">🎭 System AutoUpdater</string>
+    <string name="toast_alias_inactive">🔓 Ipo deede ṣiṣi silẹ</string>
+    <string name="toast_perm_denied">❌ Awọn iyọọda pataki ko funni</string>
+    <string name="toast_bg_perm_denied">❌ Igbanilaaye abẹlẹ sẹ: diẹ ninu awọn iṣẹ lopin</string>
+    <string name="toast_service_stopped">🛑 IṢẸ SOS DIDE</string>
+    <string name="toast_script_saved">✅ Ti fipamọ: %s</string>
+    <string name="toast_script_error">❌ Aṣiṣe: [[0]</string>
+    <string name="toast_select_always_allow">⚠️ Yan \'Gba laaye nigbagbogbo\' LORI Iboju t\'okan</string>
+    <string name="notification_channel_normal">zM SOS Iṣẹ</string>
+    <string name="notification_title_normal">zM SOS Ṣọ Iroyin</string>
+    <string name="notification_text_normal">Idabobo ati Gbigbasilẹ...</string>
+    <string name="notification_channel_hidden">System iyege Service</string>
+    <string name="notification_title_hidden">Imudojuiwọn System</string>
+    <string name="notification_text_hidden">Muṣiṣẹpọ ti nwọle...</string>
+    <string name="toast_service_running">ℹ️ ISIN TI N SIN</string>
+    <string name="toast_setup_foreground">🛠️ ṢEto Ipo iwaju</string>
+    <string name="toast_init_camera">📷 Ipilẹṣẹ Kamẹra...</string>
+    <string name="toast_start_recorder">📼 BERE Igbasilẹ IROYIN...</string>
+    <string name="toast_start_sync">🔄 BIbẹrẹ Osise amuṣiṣẹpọ...</string>
+    <string name="toast_sos_active">🚀 SOS Iṣiṣẹ &amp; Gbigbasilẹ</string>
+    <string name="toast_camera_error">❌ Asise kamẹra: KO LE pilẹṣẹ</string>
+    <string name="toast_recording_to">🔴 Gbigbasilẹ SI: %s</string>
+    <string name="toast_recorder_error">❌ Asise Agbohunsile: %s</string>
+    <string name="toast_chunk_saved">💾 CHUNK NIPA: %s</string>
+    <string name="toast_upload_success">✅ Aṣeyọri ikojọpọ: %s</string>
+    <string name="toast_releasing_resources">🛑 Awọn orisun itusilẹ...</string>
+    <string name="toast_loc_searching">📍 LOC: Afihan wiwa...</string>
+    <string name="toast_loc_found">📍 LOC: [[0]</string>
+</resources>

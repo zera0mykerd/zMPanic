@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">멈추다</string>
+    <string name="btn_hold">잡고 있다</string>
+    <string name="title_system_settings">시스템 설정</string>
+    <string name="hint_server_ip">서버 IP 주소</string>
+    <string name="hint_port">포트</string>
+    <string name="hint_secs">초</string>
+    <string name="label_front_camera">🤳 전면 카메라</string>
+    <string name="label_hidden_mode">👻 숨겨진 모드</string>
+    <string name="btn_download_server">📜 서버 스크립트 다운로드</string>
+    <string name="dialog_eula_title">⚠️ 시스템 보안 공지</string>
+    <string name="dialog_eula_positive">수용하다</string>
+    <string name="dialog_eula_negative">감소</string>
+    <string name="dialog_eula_message">서비스 약관 및 최종 사용자 라이센스 계약(EULA)\n\n1. 저작권 및 크레딧\n이 프로젝트는 오픈 소스이지만 저작권으로 보호됩니다. 원본 작성자에게 명확한 출처를 명시하는 경우 이 소프트웨어를 재배포하고 수정할 수 있습니다.\n© zMykerd. 모든 권리 보유.\n\n2. 허용되고 합법적인 사용\n이 소프트웨어는 개인 안전/SOS 도구로 설계되었습니다. 귀하는 불법적인 목적, 무단 감시 또는 감시 활동을 위해 이 애플리케이션, 소스 코드 또는 관련 스크립트를 사용하지 않는다는 데 엄격히 동의합니다. 제작자는 부적절한 사용에 대해 책임을 지지 않습니다!\n\n"동의"를 클릭하면 본 약관에 동의하는 것입니다. 동의하지 않으시면 "DECLINE"을 선택하여 애플리케이션을 종료하세요.</string>
+    <string name="toast_alias_active">🎭 시스템 자동 업데이트</string>
+    <string name="toast_alias_inactive">🔓 일반 모드 잠금 해제</string>
+    <string name="toast_perm_denied">❌ 필수 허가가 부여되지 않음</string>
+    <string name="toast_bg_perm_denied">❌ 백그라운드 권한 거부됨: 일부 기능이 제한됨</string>
+    <string name="toast_service_stopped">🛑 SOS 서비스가 중단되었습니다</string>
+    <string name="toast_script_saved">✅ 저장됨: %s</string>
+    <string name="toast_script_error">❌ 오류: %s</string>
+    <string name="toast_select_always_allow">⚠️ 다음 화면에서 \'항상 허용\'을 선택하세요.</string>
+    <string name="notification_channel_normal">zM SOS 서비스</string>
+    <string name="notification_title_normal">zM SOS 가드 액티브</string>
+    <string name="notification_text_normal">보호 및 녹화 중...</string>
+    <string name="notification_channel_hidden">시스템 무결성 서비스</string>
+    <string name="notification_title_hidden">시스템 업데이트</string>
+    <string name="notification_text_hidden">동기화 수신 중...</string>
+    <string name="toast_service_running">ℹ️ 서비스가 이미 실행 중입니다.</string>
+    <string name="toast_setup_foreground">🛠️ 전경 모드 설정</string>
+    <string name="toast_init_camera">📷 카메라 초기화 중...</string>
+    <string name="toast_start_recorder">📼 미디어 레코더 시작 중...</string>
+    <string name="toast_start_sync">🔄 동기화 워커 시작 중...</string>
+    <string name="toast_sos_active">🚀 SOS 활성 및 녹음 중</string>
+    <string name="toast_camera_error">❌ 카메라 오류: 초기화할 수 없습니다.</string>
+    <string name="toast_recording_to">🔴 녹음 대상: %s</string>
+    <string name="toast_recorder_error">❌ 녹음기 오류: %s</string>
+    <string name="toast_chunk_saved">💾 저장된 청크: %s</string>
+    <string name="toast_upload_success">✅ 업로드 성공: %s</string>
+    <string name="toast_releasing_resources">🛑 리소스 공개 중...</string>
+    <string name="toast_loc_searching">📍 LOC: 신호 검색 중...</string>
+    <string name="toast_loc_found">📍 위치: %s</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">BERHENTI</string>
+    <string name="btn_hold">TAHAN</string>
+    <string name="title_system_settings">TETAPAN SISTEM</string>
+    <string name="hint_server_ip">Alamat IP Pelayan</string>
+    <string name="hint_port">Pelabuhan</string>
+    <string name="hint_secs">Sek</string>
+    <string name="label_front_camera">🤳 Kamera Depan</string>
+    <string name="label_hidden_mode">👻 Mod Tersembunyi</string>
+    <string name="btn_download_server">📜 Muat turun Skrip Pelayan</string>
+    <string name="dialog_eula_title">⚠️ NOTIS KESELAMATAN SISTEM</string>
+    <string name="dialog_eula_positive">TERIMA</string>
+    <string name="dialog_eula_negative">TOLAK</string>
+    <string name="dialog_eula_message">SYARAT PERKHIDMATAN &amp; PERJANJIAN LESEN PENGGUNA AKHIR (EULA)\n\n1. HAK CIPTA &amp; KREDIT\nProjek ini adalah sumber terbuka tetapi dilindungi oleh Hak Cipta. Anda dibenarkan untuk mengedarkan semula dan mengubah suai perisian ini dengan syarat kredit yang jelas diberikan kepada pencipta asal.\n© zMykerd. Semua hak terpelihara.\n\n2. PENGGUNAAN YANG DIBENARKAN &amp; SAH\nPerisian ini direka bentuk sebagai alat keselamatan peribadi/SOS. Anda benar-benar bersetuju untuk TIDAK menggunakan aplikasi ini, kod sumbernya, atau mana-mana skrip yang berkaitan untuk tujuan yang menyalahi undang-undang, pengawasan tanpa kebenaran atau aktiviti mengintip. Pencipta tidak bertanggungjawab atas penggunaan yang tidak wajar!\n\nDengan mengklik "TERIMA", anda bersetuju menerima syarat ini. Jika anda tidak bersetuju, pilih "TOLAK" untuk keluar dari aplikasi.</string>
+    <string name="toast_alias_active">🎭 AutoUpdater Sistem</string>
+    <string name="toast_alias_inactive">🔓 Mod biasa dibuka kunci</string>
+    <string name="toast_perm_denied">❌ Permit yang diperlukan tidak diberikan</string>
+    <string name="toast_bg_perm_denied">❌ Kebenaran latar belakang ditolak: beberapa fungsi terhad</string>
+    <string name="toast_service_stopped">🛑 PERKHIDMATAN SOS DIHENTIKAN</string>
+    <string name="toast_script_saved">✅ Disimpan: %s</string>
+    <string name="toast_script_error">❌ Ralat: %s</string>
+    <string name="toast_select_always_allow">⚠️ PILIH \'SENTIASA BENAR\' PADA SKRIN SETERUSNYA</string>
+    <string name="notification_channel_normal">Perkhidmatan SOS zM</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Melindungi dan Merakam...</string>
+    <string name="notification_channel_hidden">Perkhidmatan Integriti Sistem</string>
+    <string name="notification_title_hidden">Kemas Kini Sistem</string>
+    <string name="notification_text_hidden">Segerakkan masuk...</string>
+    <string name="toast_service_running">ℹ️ SERVIS SUDAH BERJALAN</string>
+    <string name="toast_setup_foreground">🛠️ MENYEDIAKAN MOD FOREGROUND</string>
+    <string name="toast_init_camera">📷 MEMULAKAN KAMERA...</string>
+    <string name="toast_start_recorder">📼 MEMULAKAN PERAKAM MEDIA...</string>
+    <string name="toast_start_sync">🔄 MEMULAKAN PEKERJA SYNC...</string>
+    <string name="toast_sos_active">🚀 SOS AKTIF &amp; RAKAMAN</string>
+    <string name="toast_camera_error">❌ RALAT KAMERA: TIDAK DAPAT DIMULAKAN</string>
+    <string name="toast_recording_to">🔴 RAKAMAN KE: %s</string>
+    <string name="toast_recorder_error">❌ RALAT REKODER: %s</string>
+    <string name="toast_chunk_saved">💾 BAHAGIAN DISIMPAN: %s</string>
+    <string name="toast_upload_success">✅ KEJAYAAN MUAT NAIK: %s</string>
+    <string name="toast_releasing_resources">🛑 MELEPASKAN SUMBER...</string>
+    <string name="toast_loc_searching">📍 LOC: Isyarat MENCARI...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

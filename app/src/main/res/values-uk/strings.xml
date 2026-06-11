@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">СТІЙ</string>
+    <string name="btn_hold">ТРИМАТИ</string>
+    <string name="title_system_settings">НАЛАШТУВАННЯ СИСТЕМИ</string>
+    <string name="hint_server_ip">IP-адреса сервера</string>
+    <string name="hint_port">Порт</string>
+    <string name="hint_secs">сек</string>
+    <string name="label_front_camera">🤳 Фронтальна камера</string>
+    <string name="label_hidden_mode">👻 Прихований режим</string>
+    <string name="btn_download_server">📜 Завантажте серверний скрипт</string>
+    <string name="dialog_eula_title">⚠️ ПРИМІТКА ПРО БЕЗПЕКУ СИСТЕМИ</string>
+    <string name="dialog_eula_positive">ПРИЙНЯТИ</string>
+    <string name="dialog_eula_negative">ВІДХИЛИТИСЯ</string>
+    <string name="dialog_eula_message">УМОВИ НАДАННЯ ПОСЛУГ ТА ЛІЦЕНЗІЙНА УГОДА КІНЦЕВОГО КОРИСТУВАЧА (EULA)\n\n1. АВТОРСЬКІ ПРАВА ТА КРЕДИТИ\nЦей проект є відкритим кодом, але захищений авторським правом. Вам дозволяється поширювати та змінювати це програмне забезпечення за умови чіткого вказівки автора.\n© zMykerd. Усі права захищені.\n\n2. ДОЗВОЛЕНЕ ТА ЗАКОННЕ ВИКОРИСТАННЯ\nЦе програмне забезпечення розроблено як інструмент особистої безпеки/SOS. Ви суворо погоджуєтеся НЕ використовувати цю програму, її вихідний код або будь-які пов’язані сценарії для незаконних цілей, несанкціонованого стеження або шпигунської діяльності. Творець не несе відповідальності за неналежне використання!\n\nНатискаючи «ПРИЙМАЮ», ви погоджуєтеся з цими умовами. Якщо ви не згодні, виберіть «ВІДМОВИТИСЯ», щоб вийти з програми.</string>
+    <string name="toast_alias_active">🎭 Автоматичне оновлення системи</string>
+    <string name="toast_alias_inactive">🔓 Звичайний режим розблоковано</string>
+    <string name="toast_perm_denied">❌ Не надані необхідні дозволи</string>
+    <string name="toast_bg_perm_denied">❌ У фоновому режимі заборонено: деякі функції обмежені</string>
+    <string name="toast_service_stopped">🛑 СЛУЖБА SOS ЗУПИНЕНА</string>
+    <string name="toast_script_saved">✅ Збережено: %s</string>
+    <string name="toast_script_error">❌ Помилка: %s</string>
+    <string name="toast_select_always_allow">⚠️ ВИБЕРІТЬ «ЗАВЖДИ ДОЗВОЛЯТИ» НА НАСТУПНОМУ ЕКРАНІ</string>
+    <string name="notification_channel_normal">Служба zM SOS</string>
+    <string name="notification_title_normal">zM SOS Guard Активний</string>
+    <string name="notification_text_normal">Захист і запис...</string>
+    <string name="notification_channel_hidden">Служба цілісності системи</string>
+    <string name="notification_title_hidden">Оновлення системи</string>
+    <string name="notification_text_hidden">Синхронізувати вхідні...</string>
+    <string name="toast_service_running">ℹ️ ПОСЛУГА ВЖЕ ПРАЦЮЄ</string>
+    <string name="toast_setup_foreground">🛠️ НАЛАШТУВАННЯ РЕЖИМУ ПЕРЕДНЬОГО ПЛАНУ</string>
+    <string name="toast_init_camera">📷 ІНІЦІАЛІЗАЦІЯ КАМЕРИ...</string>
+    <string name="toast_start_recorder">📼 ЗАПУСК МЕДІА-ЗАПИСУ...</string>
+    <string name="toast_start_sync">🔄 ЗАПУСК SYNC WORKER...</string>
+    <string name="toast_sos_active">🚀 SOS АКТИВНИЙ ТА ЗАПИС</string>
+    <string name="toast_camera_error">❌ ПОМИЛКА КАМЕРИ: НЕ МОЖНА ІНІЦІАЛІЗУВАТИ</string>
+    <string name="toast_recording_to">🔴 ЗАПИС НА: %s</string>
+    <string name="toast_recorder_error">❌ ПОМИЛКА ЗАПИСУ: %s</string>
+    <string name="toast_chunk_saved">💾 ЧАНК ЗБЕРЕЖЕНО: %s</string>
+    <string name="toast_upload_success">✅ УСПІХ ЗАВАНТАЖЕННЯ: %s</string>
+    <string name="toast_releasing_resources">🛑 ВИВІЛЬНЕННЯ РЕСУРСІВ...</string>
+    <string name="toast_loc_searching">📍 LOC: ПОШУКОВИЙ СИГНАЛ...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

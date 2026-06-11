@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">KWỤSỊ</string>
+    <string name="btn_hold">Jide</string>
+    <string name="title_system_settings">Nhazi usoro</string>
+    <string name="hint_server_ip">Adreesị IP nkesa</string>
+    <string name="hint_port">Port</string>
+    <string name="hint_secs">Sk</string>
+    <string name="label_front_camera">🤳 Igwefoto ihu</string>
+    <string name="label_hidden_mode">👻 Ọnọdụ ezoro ezo</string>
+    <string name="btn_download_server">📜 Budata Script Server</string>
+    <string name="dialog_eula_title">⚠️ Ọkwa nchekwa nchekwa usoro</string>
+    <string name="dialog_eula_positive">NAbata</string>
+    <string name="dialog_eula_negative">Kwụsị</string>
+    <string name="dialog_eula_message">Usoro ọrụ &amp; Kwụsị Nkwekọrịta Ikikere Onye Ọrụ (EULA)\n\n1. COPYRIGHT &amp; CREDITS\n Ọrụ a bụ ebe mepere emepe mana ikike nwebiisinka chekwara ya. Enyere gị ohere ikesa ma gbanwee ngwanro a ma ọ bụrụhaala na enyere onye okike mbụ otuto doro anya.\n© zMykerd. Edebere ikike niile.\n\n2. KWERE &amp; OKWU KWESỊRỊ \nEmebere ngwanrọ a ka ọ bụrụ ngwa nchekwa onwe/SOS. Ị kwenyesiri ike ka ịghara iji ngwa a, koodu isi mmalite ya, ma ọ bụ edemede ọ bụla metụtara maka ebumnuche iwu na-akwadoghị, onyunyo na-enweghị ikike, ma ọ bụ mmemme nledo. Onye okike anaghị ewere ọrụ ọ bụla maka iji na-ezighi ezi!\n\nSite na ịpị "ACCEPT", ị kwenyere na usoro ndị a. Ọ bụrụ na ikwenyeghị, họrọ "DECLINE" ka ịpụ na ngwa ahụ.</string>
+    <string name="toast_alias_active">🎭 System AutoUpdater</string>
+    <string name="toast_alias_inactive">🔓 Akpọchiela ọnọdụ nkịtị</string>
+    <string name="toast_perm_denied">❌ anabataghị ikike dị mkpa</string>
+    <string name="toast_bg_perm_denied">❌ Agọnarị ikike ndabere: ụfọdụ ọrụ nwere oke</string>
+    <string name="toast_service_stopped">🛑 Ọrụ SOS kwụsịrị</string>
+    <string name="toast_script_saved">✅ echekwara: %s</string>
+    <string name="toast_script_error">❌ Njehie: [[0]</string>
+    <string name="toast_select_always_allow">⚠️ Họọrọ \'Kwụsị Kwụsị\' na ihuenyo ọzọ</string>
+    <string name="notification_channel_normal">zM SOS ọrụ</string>
+    <string name="notification_title_normal">zM SOS Nche na-arụ ọrụ</string>
+    <string name="notification_text_normal">Na-echekwa na ndekọ...</string>
+    <string name="notification_channel_hidden">Ọrụ iguzosi ike n\'ezi ihe Sistemu</string>
+    <string name="notification_title_hidden">Mmelite sistemụ</string>
+    <string name="notification_text_hidden">Mekọrịta mbata...</string>
+    <string name="toast_service_running">ℹ️ Ọrụ na-agba ọsọ</string>
+    <string name="toast_setup_foreground">🛠️ ỊKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWỤKWASỊ</string>
+    <string name="toast_init_camera">📷 na-ebute igwefoto...</string>
+    <string name="toast_start_recorder">📼 ibido ndekọ mgbasa ozi...</string>
+    <string name="toast_start_sync">🔄 Mmalite onye ọrụ mmekọrịta...</string>
+    <string name="toast_sos_active">🚀 SOS arụ ọrụ &amp; ndekọ</string>
+    <string name="toast_camera_error">❌ mperi igwefoto: enweghị ike ibido</string>
+    <string name="toast_recording_to">🔴 NA-edekọ: %s</string>
+    <string name="toast_recorder_error">❌ Mpempe akwụkwọ ndekọ: %s</string>
+    <string name="toast_chunk_saved">💾 CHUNK echekwabara: %s</string>
+    <string name="toast_upload_success">✅ bulite ihe ịga nke ọma: %s</string>
+    <string name="toast_releasing_resources">🛑 ewepụta akụrụngwa...</string>
+    <string name="toast_loc_searching">📍 LOC: Akara ngosi...</string>
+    <string name="toast_loc_found">📍 LOC: [[0]</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">ఆపు</string>
+    <string name="btn_hold">పట్టుకోండి</string>
+    <string name="title_system_settings">సిస్టమ్ సెట్టింగ్‌లు</string>
+    <string name="hint_server_ip">సర్వర్ IP చిరునామా</string>
+    <string name="hint_port">పోర్ట్</string>
+    <string name="hint_secs">సెకన్లు</string>
+    <string name="label_front_camera">🤳 ఫ్రంట్ కెమెరా</string>
+    <string name="label_hidden_mode">👻 దాచిన మోడ్</string>
+    <string name="btn_download_server">📜 సర్వర్ స్క్రిప్ట్‌ను డౌన్‌లోడ్ చేయండి</string>
+    <string name="dialog_eula_title">⚠️ సిస్టమ్ సెక్యూరిటీ నోటీసు</string>
+    <string name="dialog_eula_positive">అంగీకరించు</string>
+    <string name="dialog_eula_negative">తిరస్కరించు</string>
+    <string name="dialog_eula_message">సేవా నిబంధనలు &amp; తుది వినియోగదారు లైసెన్స్ ఒప్పందం (EULA)\n\n1. కాపీరైట్ &amp; క్రెడిట్‌లు\nఈ ప్రాజెక్ట్ ఓపెన్ సోర్స్ కానీ కాపీరైట్ ద్వారా రక్షించబడింది. అసలు సృష్టికర్తకు స్పష్టమైన క్రెడిట్ అందించబడితే ఈ సాఫ్ట్‌వేర్‌ను పునఃపంపిణీ చేయడానికి మరియు సవరించడానికి మీకు అనుమతి ఉంది.\n© zMykerd. అన్ని హక్కులు ప్రత్యేకించబడ్డాయి.\n\n2. అనుమతించబడిన &amp; చట్టబద్ధమైన ఉపయోగం\nఈ సాఫ్ట్‌వేర్ వ్యక్తిగత భద్రత/SOS సాధనంగా రూపొందించబడింది. చట్టవిరుద్ధమైన ప్రయోజనాల కోసం, అనధికార నిఘా లేదా గూఢచర్య కార్యకలాపాల కోసం ఈ అప్లికేషన్, దాని సోర్స్ కోడ్ లేదా ఏదైనా అనుబంధిత స్క్రిప్ట్‌లను ఉపయోగించకూడదని మీరు ఖచ్చితంగా అంగీకరిస్తున్నారు. అక్రమ వినియోగానికి సృష్టికర్త బాధ్యత వహించడు!\n\n"అంగీకరించు" క్లిక్ చేయడం ద్వారా, మీరు ఈ నిబంధనలను అంగీకరిస్తారు. మీరు అంగీకరించకపోతే, అప్లికేషన్ నుండి నిష్క్రమించడానికి "నిరాకరించు"ని ఎంచుకోండి.</string>
+    <string name="toast_alias_active">🎭 సిస్టమ్ ఆటోఅప్‌డేటర్</string>
+    <string name="toast_alias_inactive">🔓 సాధారణ మోడ్ అన్‌లాక్ చేయబడింది</string>
+    <string name="toast_perm_denied">❌ అవసరమైన అనుమతులు మంజూరు చేయబడలేదు</string>
+    <string name="toast_bg_perm_denied">❌ నేపథ్య అనుమతి నిరాకరించబడింది: కొన్ని విధులు పరిమితం చేయబడ్డాయి</string>
+    <string name="toast_service_stopped">🛑 SOS సేవ నిలిపివేయబడింది</string>
+    <string name="toast_script_saved">✅ సేవ్ చేయబడింది: %s</string>
+    <string name="toast_script_error">❌ లోపం: %s</string>
+    <string name="toast_select_always_allow">⚠️ తదుపరి స్క్రీన్‌లో \'ఎల్లప్పుడూ అనుమతించు\' ఎంచుకోండి</string>
+    <string name="notification_channel_normal">zM SOS సర్వీస్</string>
+    <string name="notification_title_normal">zM SOS గార్డ్ యాక్టివ్</string>
+    <string name="notification_text_normal">రక్షణ మరియు రికార్డింగ్...</string>
+    <string name="notification_channel_hidden">సిస్టమ్ సమగ్రత సేవ</string>
+    <string name="notification_title_hidden">సిస్టమ్ నవీకరణ</string>
+    <string name="notification_text_hidden">ఇన్‌కమింగ్‌ని సమకాలీకరించు...</string>
+    <string name="toast_service_running">ℹ️ సర్వీస్ ఇప్పటికే నడుస్తోంది</string>
+    <string name="toast_setup_foreground">🛠️ ఫోర్‌గ్రౌండ్ మోడ్‌ని సెటప్ చేస్తోంది</string>
+    <string name="toast_init_camera">📷 ప్రారంభ కెమెరా...</string>
+    <string name="toast_start_recorder">📼 మీడియా రికార్డర్‌ను ప్రారంభిస్తోంది...</string>
+    <string name="toast_start_sync">🔄 సింక్ వర్కర్‌ని ప్రారంభిస్తోంది...</string>
+    <string name="toast_sos_active">🚀 SOS యాక్టివ్ &amp; రికార్డింగ్</string>
+    <string name="toast_camera_error">❌ కెమెరా లోపం: ప్రారంభించడం సాధ్యపడలేదు</string>
+    <string name="toast_recording_to">🔴 రికార్డింగ్: %s</string>
+    <string name="toast_recorder_error">❌ రికార్డర్ లోపం: %s</string>
+    <string name="toast_chunk_saved">💾 భాగం సేవ్ చేయబడింది: %s</string>
+    <string name="toast_upload_success">✅ అప్‌లోడ్ విజయం: %s</string>
+    <string name="toast_releasing_resources">🛑 వనరులను విడుదల చేస్తోంది...</string>
+    <string name="toast_loc_searching">📍 LOC: శోధిస్తున్న సిగ్నల్...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

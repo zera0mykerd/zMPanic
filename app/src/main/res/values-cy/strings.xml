@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">AROS</string>
+    <string name="btn_hold">DAL</string>
+    <string name="title_system_settings">GOSODIADAU SYSTEM</string>
+    <string name="hint_server_ip">Cyfeiriad IP Gweinydd</string>
+    <string name="hint_port">Porthladd</string>
+    <string name="hint_secs">Eiliadau</string>
+    <string name="label_front_camera">🤳 Camera Blaen</string>
+    <string name="label_hidden_mode">👻 Modd Cudd</string>
+    <string name="btn_download_server">📜 Lawrlwythwch Sgript Gweinyddwr</string>
+    <string name="dialog_eula_title">⚠️ HYSBYSIAD DIOGELWCH SYSTEM</string>
+    <string name="dialog_eula_positive">DERBYN</string>
+    <string name="dialog_eula_negative">DIRYWIAD</string>
+    <string name="dialog_eula_message">TELERAU GWASANAETH A CHYTUNDEB TRWYDDED DEFNYDDWYR TERFYNOL (EULA)\n\n1. HAWLFRAINT A CHREDYDAU\nMae\'r prosiect hwn yn ffynhonnell agored ond wedi\'i warchod gan Hawlfraint. Caniateir i chi ailddosbarthu ac addasu\'r feddalwedd hon ar yr amod bod credyd clir yn cael ei roi i\'r crëwr gwreiddiol.\n© zMykerd. Cedwir pob hawl.\n\n2. DEFNYDD A GANIATEIR A GYFREITHIOL\nMae\'r feddalwedd hon wedi\'i dylunio fel arf diogelwch personol/SOS. Rydych yn cytuno\'n llwyr i BEIDIO â defnyddio\'r cymhwysiad hwn, ei god ffynhonnell, nac unrhyw sgriptiau cysylltiedig at ddibenion anghyfreithlon, gwyliadwriaeth heb awdurdod, neu weithgareddau ysbïo. Nid yw\'r crëwr yn cymryd unrhyw gyfrifoldeb am ddefnydd amhriodol!\n\nTrwy glicio "DERBYN", rydych yn cytuno i\'r telerau hyn. Os nad ydych yn cytuno, dewiswch "DECLINE" i adael y cais.</string>
+    <string name="toast_alias_active">🎭 System AutoUpdater</string>
+    <string name="toast_alias_inactive">🔓 Modd arferol heb ei gloi</string>
+    <string name="toast_perm_denied">❌ Ni roddwyd hawlenni angenrheidiol</string>
+    <string name="toast_bg_perm_denied">❌ Gwrthod caniatâd cefndir: mae rhai swyddogaethau wedi\'u cyfyngu</string>
+    <string name="toast_service_stopped">🛑 GWASANAETH SOS WEDI STOPIO</string>
+    <string name="toast_script_saved">✅ Wedi\'i gadw: %s</string>
+    <string name="toast_script_error">❌ Gwall: %s</string>
+    <string name="toast_select_always_allow">⚠️ DEWISWCH \'ALIWCH ALWAD\' AR Y SGRIN NESAF</string>
+    <string name="notification_channel_normal">zM Gwasanaeth SOS</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Diogelu a Chofnodi...</string>
+    <string name="notification_channel_hidden">Gwasanaeth Uniondeb System</string>
+    <string name="notification_title_hidden">Diweddariad System</string>
+    <string name="notification_text_hidden">Wrthi\'n cysoni yn dod i mewn...</string>
+    <string name="toast_service_running">ℹ️ GWASANAETH EISOES YN RHEDEG</string>
+    <string name="toast_setup_foreground">🛠️ SEFYDLU MODD RHAGAIR</string>
+    <string name="toast_init_camera">📷 CYCHWYN CAMERA...</string>
+    <string name="toast_start_recorder">📼 DECHRAU RECORDYDD CYFRYNGAU...</string>
+    <string name="toast_start_sync">🔄 DECHRAU GWEITHIWR SYNC...</string>
+    <string name="toast_sos_active">🚀 SOS ACTIF &amp; COFNODI</string>
+    <string name="toast_camera_error">❌ GWALL CAMERA: NI ALLAI YMCHWILIO</string>
+    <string name="toast_recording_to">🔴 COFNODI I: %s</string>
+    <string name="toast_recorder_error">❌ GWALL COFNODI: %s</string>
+    <string name="toast_chunk_saved">💾 STONDIN ARBED: %s</string>
+    <string name="toast_upload_success">✅ LLWYDDIANT I lwytho i fyny: %s</string>
+    <string name="toast_releasing_resources">🛑 RHYDDHAU ADNODDAU...</string>
+    <string name="toast_loc_searching">📍 LOC: CHWILIO ARWYDD...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>

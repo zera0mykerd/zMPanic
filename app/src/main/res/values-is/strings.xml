@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">zMkSOSGuard</string>
+    <string name="btn_stop">HÆTTU</string>
+    <string name="btn_hold">HOLD</string>
+    <string name="title_system_settings">KERFSSTILLINGAR</string>
+    <string name="hint_server_ip">IP tölu netþjóns</string>
+    <string name="hint_port">Höfn</string>
+    <string name="hint_secs">Sek</string>
+    <string name="label_front_camera">🤳 myndavél að framan</string>
+    <string name="label_hidden_mode">👻 Falinn hamur</string>
+    <string name="btn_download_server">📜 Hlaða niður netþjónaforskrift</string>
+    <string name="dialog_eula_title">⚠️ KERFI ÖRYGGI TILKYNNING</string>
+    <string name="dialog_eula_positive">SAMÞYKKJA</string>
+    <string name="dialog_eula_negative">HAFNA</string>
+    <string name="dialog_eula_message">ÞJÓNUSTUSKILMÁLAR OG LEYFISSAMNINGUR ENDAnotenda (EULA)\n\n1. HÖFUNDARRETtur og inneign\nÞetta verkefni er opinn uppspretta en verndað af höfundarrétti. Þér er heimilt að endurdreifa og breyta þessum hugbúnaði að því tilskildu að upphaflega höfundurinn fái skýr kredit.\n© zMykerd. Allur réttur áskilinn.\n\n2. LEYFIÐ OG LÖGLEG NOTKUN\nÞessi hugbúnaður er hannaður sem persónulegt öryggis-/SOS tól. Þú samþykkir algjörlega að nota EKKI þetta forrit, frumkóðann þess eða nein tengd forskriftir í ólöglegum tilgangi, óviðkomandi eftirliti eða njósnastarfsemi. Höfundurinn tekur enga ábyrgð á óviðeigandi notkun!\n\nMeð því að smella á „SAMTYKJA“ samþykkir þú þessa skilmála. Ef þú ert ekki sammála skaltu velja „DECLINE“ til að hætta í forritinu.</string>
+    <string name="toast_alias_active">🎭 Sjálfvirk uppfærsla kerfis</string>
+    <string name="toast_alias_inactive">🔓 Venjuleg stilling ólæst</string>
+    <string name="toast_perm_denied">❌ Nauðsynleg leyfi ekki veitt</string>
+    <string name="toast_bg_perm_denied">❌ Bakgrunnsleyfi hafnað: sumar aðgerðir takmarkaðar</string>
+    <string name="toast_service_stopped">🛑 SOS ÞJÓNUSTA hætt</string>
+    <string name="toast_script_saved">✅ Vistað: %s</string>
+    <string name="toast_script_error">❌ Villa: %s</string>
+    <string name="toast_select_always_allow">⚠️ VELDU \'LEFFA ALLTAF\' Á NÆSTA SKJÁ</string>
+    <string name="notification_channel_normal">zM SOS þjónusta</string>
+    <string name="notification_title_normal">zM SOS Guard Active</string>
+    <string name="notification_text_normal">Vernda og taka upp...</string>
+    <string name="notification_channel_hidden">Kerfisheiðarþjónusta</string>
+    <string name="notification_title_hidden">Kerfisuppfærsla</string>
+    <string name="notification_text_hidden">Samstilla mótteknar...</string>
+    <string name="toast_service_running">ℹ️ ÞJÓNUSTA Í LEIÐ</string>
+    <string name="toast_setup_foreground">🛠️ SETJA UPP FORGRUÐSMÁL</string>
+    <string name="toast_init_camera">📷 FRÆSTIR MYNDAVÉLA...</string>
+    <string name="toast_start_recorder">📼 BYRJAR UPPLÝSINGAR...</string>
+    <string name="toast_start_sync">🔄 BYRJUR SAMSTÖRKU...</string>
+    <string name="toast_sos_active">🚀 SOS VIRK OG UPPTAKA</string>
+    <string name="toast_camera_error">❌ VILLA í myndavél: GÆTTI EKKI FRÆSTJA</string>
+    <string name="toast_recording_to">🔴 UPPTAKA Á: %s</string>
+    <string name="toast_recorder_error">❌ VILLA í upptökutæki: %s</string>
+    <string name="toast_chunk_saved">💾 HÚS VISTAÐI: %s</string>
+    <string name="toast_upload_success">✅ UPPLÆÐI TEKST: %s</string>
+    <string name="toast_releasing_resources">🛑 LEIT AÐRÁÐ...</string>
+    <string name="toast_loc_searching">📍 LOC: Leitarmerki...</string>
+    <string name="toast_loc_found">📍 LOC: %s</string>
+</resources>
