@@ -15,7 +15,7 @@ Unlike modern commercial apps, bloated with heavy frameworks, zM SOS GUARD is de
 
 * **Zero Framework Overhead:** Removing Jetpack Compose and external network dependencies reduces the attack surface and the thermal/energy footprint on the device.
 * **Total Retrocompatibility & Longevity:** By relying exclusively on native Android SDK pillars, the application's behavior is protected from OS alterations, ensuring full support from Marshmallow up to Android 16+.
-* **Native Global Localization:** Managed via system resource qualifiers (`res/values-xx/strings.xml`). It speaks the world's major languages without injecting hardcoded strings or heavy external JSON dictionaries, preserving compiler efficiency.
+* **🇮🇹 🇺🇸 Native Global Localization:** Managed via system resource qualifiers (`res/values-xx/strings.xml`). It speaks the world's major languages without injecting hardcoded strings or heavy external JSON dictionaries, preserving compiler efficiency.
 
 ---
 
