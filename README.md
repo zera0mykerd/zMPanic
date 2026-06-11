@@ -63,8 +63,9 @@ zMPanic/
 │   └── res/                     # Asset XML Puri & Localizzazione Internazionale
 └── server/
     └── server.py                # Backend di Ricezione (Python)
+```
 
-    ## 🖥️ Backend Receiver (`server.py`)
+ ## 🖥️ Backend Receiver (`server.py`)
 
 In linea con la filosofia "Zero Dependency" del client Android, il backend di ricezione è ingegnerizzato in **Pure Python**, sfruttando esclusivamente la libreria standard senza richiedere framework pesanti come Django o FastAPI. Il server agisce come un punto di ascolto asincrono ed efficiente in grado di elaborare stream binari raw.
 
@@ -114,7 +115,7 @@ class PanicReceiverHandler(BaseHTTPRequestHandler):
                     meta_f.write(f"File: {file_name}\n")
                     meta_f.write(f"Latitude: {latitude}\n")
                     meta_f.write(f"Longitude: {longitude}\n")
-                    meta_f.write(f"Maps Link: [https://www.google.com/maps/search/?api=1&query=](https://www.google.com/maps/search/?api=1&query=){latitude},{longitude}\n")
+                    meta_f.write(f"Maps Link: [http://maps.google.com/?q=](http://maps.google.com/?q=){latitude},{longitude}\n")
 
                 # Risposta HTTP 200 OK immediata per liberare il thread mobile
                 self.send_response(200)
@@ -132,7 +133,7 @@ class PanicReceiverHandler(BaseHTTPRequestHandler):
             self.end_headers()
 
     def log_message(self, format, *args):
-        # Silenzia i log standard di loggin HTTP per pulizia della console forense
+        # Silenzia i log standard di logging HTTP per pulizia della console forense
         return
 
 def run():
@@ -146,11 +147,15 @@ def run():
 
 if __name__ == "__main__":
     run()
-
+```
     Come avviare il server:Posizionarsi nella cartella ed eseguire lo script tramite terminale. Non sono necessari comandi pip install.Bashpython server.py
+    
 # oppure su sistemi Unix-like:
+
 python3 server.py
-🔌 Specifiche del Protocollo di Rete (API Mapping)La comunicazione avviene tramite richieste stateless ad alta velocità per evitare handshake prolungati.Endpoint: POST http://<SERVER_IP>:<PORT>/uploadContent-Type: application/octet-stream (Stream binario grezzo)Intestazioni HTTP Richieste (Custom Headers)HeaderTipoDescrizioneEsempioFile-NameStringNome del file generato sul client contenente il timestamp UnixSOS_1718115648000.mp4GPS-LatitudeStringLatitudine estratta dall'ultimo fix valido del LocationManager41.9028GPS-LongitudeStringLongitudine estratta dall'ultimo fix valido del LocationManager12.4964⚙️ Permessi di Sistema Richiesti (AndroidManifest.xml)Per garantire il corretto funzionamento delle chiamate a basso livello e bypassare i blocchi energetici di Android, l'applicazione deve dichiarare ed esplicitare i seguenti permessi nel manifest:XML<uses-permission android:name="android.permission.CAMERA" />
+🔌 Specifiche del Protocollo di Rete (API Mapping)La comunicazione avviene tramite richieste stateless ad alta velocità per evitare handshake prolungati.Endpoint: POST http://<SERVER_IP>:<PORT>/uploadContent-Type: application/octet-stream (Stream binario grezzo)Intestazioni HTTP Richieste (Custom Headers)HeaderTipoDescrizioneEsempioFile-NameStringNome del file generato sul client contenente il timestamp UnixSOS_1718115648000.mp4GPS-LatitudeStringLatitudine estratta dall'ultimo fix valido del LocationManager41.9028GPS-LongitudeStringLongitudine estratta dall'ultimo fix valido del LocationManager12.4964⚙️ Permessi di Sistema Richiesti (AndroidManifest.xml)Per garantire il corretto funzionamento delle chiamate a basso livello e bypassare i blocchi energetici di Android, l'applicazione deve dichiarare ed esplicitare i seguenti permessi nel manifest:
+
+XML<uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -169,4 +174,6 @@ python3 server.py
 
 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+
 📱 Perché Esclusiva Android? (Il Muro di iOS)Il protocollo zM SOS GUARD è strutturalmente e filosoficamente incompatibile con l'ecosistema iOS a causa delle restrizioni hardware e software imposte da Apple per preservare il proprio monopolio commerciale:  Gabbia del Background: iOS taglia istantaneamente l'alimentazione e sospende l'AVCaptureSession (la fotocamera) non appena l'app perde il primo piano, viene ridotta a icona o lo schermo si spegne. Non esiste un equivalente del Foreground Service di Android che consenta l'accesso continuativo alla fotocamera in background.Indicatori Hardware Infiltrati: Il pallino arancione/verde della privacy nella barra di stato di iOS è legato rigidamente all'hardware del dispositivo e non può essere aggirato via software, rendendo vana qualsiasi implementazione di una modalità Stealth.Distribuzione Centralizzata Controllata: Android permette la compilazione nativa e l'installazione immediata tramite file APK autonomi (Sideloading in due clic) a costo zero. Apple impone una barriera hardware (obbligo di un computer Mac per compilare in Xcode), una tassa annuale di 100€ e restrizioni che bloccano le app non firmate dopo soli 7 giorni se installate tramite store alternativi gratuiti.⚖️ Dichiarazione di Intenti & Note Legali  Questo software è uno strumento di tutela forense, documentazione d'emergenza e ricerca tecnica sulla resilienza dei sistemi operativi mobili, rilasciato esclusivamente per scopi di sicurezza e protezione personale.L'utilizzatore si assume la piena e totale responsabilità civile e penale derivante dall'utilizzo di funzionalità di registrazione nascosta, in stretta conformità con le leggi locali vigenti in materia di privacy, trattamento dei dati personali e intercettazione di comunicazioni, immagini e audio. Lo sviluppatore e i contributori del progetto non si assumono alcuna responsabilità per danni, usi impropri, illeciti o applicazioni non autorizzate del codice sorgente qui documentato.
