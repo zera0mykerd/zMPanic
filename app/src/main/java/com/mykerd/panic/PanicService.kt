@@ -299,8 +299,22 @@ class PanicService : Service() {
                 Log.e(TAG, "Sync aborted: IP is empty")
                 return@Thread
             }
-            val protocol = if (activeIp.startsWith("http")) "" else "http://"
-            val url = "$protocol$activeIp:$activePort/upload"
+            val targetServers = mutableListOf<String>()
+            val ipChunks = activeIp.split(";")
+            for (chunk in ipChunks) {
+                val clIp = chunk.trim()
+                if (clIp.isNotEmpty()) {
+                    var finalUrl = if (clIp.startsWith("http://") || clIp.startsWith("https://")) clIp else "http://$clIp"
+                    if (finalUrl.count { it == ':' } == 1) {
+                        finalUrl = "$finalUrl:$activePort"
+                    }
+                    if (!finalUrl.endsWith("/upload")) {
+                        finalUrl = if (finalUrl.endsWith("/")) "${finalUrl}upload" else "$finalUrl/upload"
+                    }
+                    targetServers.add(finalUrl)
+                }
+            }
+            if (targetServers.isEmpty()) return@Thread
             val baseDir = getExternalFilesDir(Environment.DIRECTORY_MOVIES) ?: filesDir
             val panicFolder = File(baseDir, "zMPanicRec")
             val getFilesToSync = {
@@ -317,38 +331,42 @@ class PanicService : Service() {
                 for (file in filesToSync) {
                     if (!isRunning) break
                     var success = false
-                    try {
-                        val latStr = lastLocation?.latitude?.toString() ?: "0.0"
-                        val lonStr = lastLocation?.longitude?.toString() ?: "0.0"
-                        val urlObj = java.net.URL(url)
-                        val connection = urlObj.openConnection() as java.net.HttpURLConnection
-                        if (connection is javax.net.ssl.HttpsURLConnection) {
-                            connection.hostnameVerifier = javax.net.ssl.HostnameVerifier { _, _ -> true }
-                        }
-                        connection.connectTimeout = 5000
-                        connection.readTimeout = 5000
-                        connection.requestMethod = "POST"
-                        connection.doOutput = true
-                        connection.setRequestProperty("Content-Type", "application/octet-stream")
-                        connection.setRequestProperty("File-Name", file.name)
-                        connection.setRequestProperty("GPS-Latitude", latStr)
-                        connection.setRequestProperty("GPS-Longitude", lonStr)
-                        connection.outputStream.use { os ->
-                            file.inputStream().use { fis ->
-                                fis.copyTo(os)
+                    for (serverUrl in targetServers) {
+                        if (!isRunning) break
+                        try {
+                            val latStr = lastLocation?.latitude?.toString() ?: "0.0"
+                            val lonStr = lastLocation?.longitude?.toString() ?: "0.0"
+                            val urlObj = java.net.URL(serverUrl)
+                            val connection = urlObj.openConnection() as java.net.HttpURLConnection
+                            if (connection is javax.net.ssl.HttpsURLConnection) {
+                                connection.hostnameVerifier = javax.net.ssl.HostnameVerifier { _, _ -> true }
                             }
+                            connection.connectTimeout = 5000
+                            connection.readTimeout = 5000
+                            connection.requestMethod = "POST"
+                            connection.doOutput = true
+                            connection.setRequestProperty("Content-Type", "application/octet-stream")
+                            connection.setRequestProperty("File-Name", file.name)
+                            connection.setRequestProperty("GPS-Latitude", latStr)
+                            connection.setRequestProperty("GPS-Longitude", lonStr)
+                            connection.outputStream.use { os ->
+                                file.inputStream().use { fis ->
+                                    fis.copyTo(os)
+                                }
+                            }
+                            val responseCode = connection.responseCode
+                            if (responseCode in 200..299) {
+                                success = true
+                                if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_upload_success, file.name)) else Log.d(TAG, "Upload success: ${file.name}")
+                                connection.disconnect()
+                                break
+                            } else {
+                                Log.e(TAG, "Server Error on $serverUrl: $responseCode")
+                            }
+                            connection.disconnect()
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Network Error on $serverUrl: Unreachable")
                         }
-                        val responseCode = connection.responseCode
-                        if (responseCode in 200..299) {
-                            success = true
-                            if (!activeHiddenMode) showVerboseToast(getString(R.string.toast_upload_success, file.name)) else Log.d(TAG, "Upload success: ${file.name}")
-                        } else {
-                            Log.e(TAG, "Server Error: $responseCode")
-                        }
-                        connection.disconnect()
-                    } catch (e: Exception) {
-                        Log.e(TAG, "Network Error: Unreachable")
-                        break
                     }
                     if (success) {
                         val syncedFile = File(file.parent, file.name.replace(".mp4", ".synced.mp4"))
