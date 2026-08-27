@@ -1,7 +1,7 @@
 # 🛡️ zM SOS GUARD - Pure Vanilla Forensic Surveillance System
 
 ![Android 16 Compatible](https://img.shields.io/badge/Android-16%20Ready-brightgreen?style=for-the-badge&logo=android)
-![Size](https://img.shields.io/badge/Package%20Size-<500%20KB-blue?style=for-the-badge)
+![Size](https://img.shields.io/badge/Package%20Size-<600%20KB-blue?style=for-the-badge)
 ![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Pure%20Vanilla)-red?style=for-the-badge)
 ![Network](https://img.shields.io/badge/Networking-Native%20HttpURLConnection-purple?style=for-the-badge)
 
