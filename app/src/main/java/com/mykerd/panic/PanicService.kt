@@ -304,7 +304,7 @@ class PanicService : Service() {
             for (chunk in ipChunks) {
                 val clIp = chunk.trim()
                 if (clIp.isNotEmpty()) {
-                    var finalUrl = if (clIp.startsWith("http://") || clIp.startsWith("https://")) clIp else "http://$clIp"
+                    var finalUrl = if (clIp.startsWith("http://") || clIp.startsWith("https://")) clIp else "https://$clIp"
                     if (finalUrl.count { it == ':' } == 1) {
                         finalUrl = "$finalUrl:$activePort"
                     }
@@ -339,6 +339,14 @@ class PanicService : Service() {
                             val urlObj = java.net.URL(serverUrl)
                             val connection = urlObj.openConnection() as java.net.HttpURLConnection
                             if (connection is javax.net.ssl.HttpsURLConnection) {
+                                val trustAllCerts = arrayOf<javax.net.ssl.TrustManager>(object : javax.net.ssl.X509TrustManager {
+                                    override fun getAcceptedIssuers(): Array<java.security.cert.X509Certificate> = arrayOf()
+                                    override fun checkClientTrusted(chain: Array<java.security.cert.X509Certificate>, authType: String) {}
+                                    override fun checkServerTrusted(chain: Array<java.security.cert.X509Certificate>, authType: String) {}
+                                })
+                                val sslContext = javax.net.ssl.SSLContext.getInstance("TLS")
+                                sslContext.init(null, trustAllCerts, java.security.SecureRandom())
+                                connection.sslSocketFactory = sslContext.socketFactory
                                 connection.hostnameVerifier = javax.net.ssl.HostnameVerifier { _, _ -> true }
                             }
                             connection.connectTimeout = 5000
