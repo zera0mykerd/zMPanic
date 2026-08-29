@@ -5,12 +5,14 @@
     <string name="btn_hold">ДЕРЖАТЬ</string>
     <string name="title_system_settings">СИСТЕМНЫЕ НАСТРОЙКИ</string>
     <string name="hint_server_ip">IP-адрес сервера</string>
+    <string name="hint_server_password">Пароль сервера</string>
     <string name="hint_port">Порт</string>
     <string name="hint_secs">Секунды</string>
     <string name="label_front_camera">🤳 Передняя камера</string>
     <string name="label_hidden_mode">👻 Скрытый режим</string>
     <string name="btn_download_server">📜 Скачать серверный скрипт</string>
     <string name="dialog_eula_title">⚠️ УВЕДОМЛЕНИЕ О БЕЗОПАСНОСТИ СИСТЕМЫ</string>
+    <string name="dialog_password_title">Пароль:</string>
     <string name="dialog_eula_positive">ПРИНИМАТЬ</string>
     <string name="dialog_eula_negative">ОТКЛОНИТЬ</string>
     <string name="dialog_eula_message">УСЛОВИЯ ОБСЛУЖИВАНИЯ И ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ С КОНЕЧНЫМ ПОЛЬЗОВАТЕЛЕМ (EULA)\n\n1. АВТОРСКИЕ ПРАВА И КРЕДИТЫ\nЭтот проект с открытым исходным кодом, но защищен авторскими правами. Вам разрешено распространять и изменять это программное обеспечение при условии, что автору будет явно предоставлена ​​ссылка на его создателя.\n© zMykerd. Все права защищены.\n\n2. РАЗРЕШЕННОЕ И ЗАКОННОЕ ИСПОЛЬЗОВАНИЕ\nЭто программное обеспечение разработано как инструмент личной безопасности/SOS. Вы строго соглашаетесь НЕ использовать это приложение, его исходный код или любые связанные сценарии в незаконных целях, несанкционированном наблюдении или шпионской деятельности. Создатель не несет ответственности за неправомерное использование!\n\nНажимая «ПРИНЯТЬ», вы соглашаетесь с этими условиями. Если вы не согласны, выберите «ОТКАЗАТЬСЯ», чтобы выйти из приложения.</string>

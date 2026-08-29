@@ -5,12 +5,14 @@
     <string name="btn_hold">TUMAU</string>
     <string name="title_system_settings">FA\'AIGA</string>
     <string name="hint_server_ip">tuatusi IP Server</string>
+    <string name="hint_server_password">Password o le Server</string>
     <string name="hint_port">Taulaga</string>
     <string name="hint_secs">Sec</string>
     <string name="label_front_camera">🤳 Meapueata Luma</string>
     <string name="label_hidden_mode">👻 Faiga Natia</string>
     <string name="btn_download_server">📜 La\'i mai le Fa\'amaumauga a le Server</string>
     <string name="dialog_eula_title">⚠️ FA\'AALIGA FA\'AALIGA FA\'AIGA</string>
+    <string name="dialog_password_title">Password:</string>
     <string name="dialog_eula_positive">TALIA</string>
     <string name="dialog_eula_negative">TE\'I</string>
     <string name="dialog_eula_message">TU\'U\'U\'U\'U\'U\'U\'U\'U MA\'IGA FA\'A\'OA\'OGA FA\'A\'UGA (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nO lenei poloketi e tatala-puna ae puipuia e Puletaofia. Ua fa\'atagaina oe e toe fa\'asoa ma fa\'aleleia lenei polokalame pe a fa\'apea o lo\'o tu\'uina atu le fa\'afetai manino i lē na faia muamua.\n© zMykerd. Ua taofia uma aia tatau.\n\n2. FA\'ATAGA &amp; FAATULAFONO\nO lenei polokalame ua mamanuina e avea o se mea faigaluega saogalemu/SOS. E te matua\'i malie e LE\'I fa\'aogaina lenei talosaga, lona puna code, po\'o so\'o se tusitusiga e feso\'ota\'i mo fa\'amoemoega fa\'aletulafono, mata\'ituina e le\'i fa\'atagaina, po\'o gaoioiga tau sipai. E leai se matafaioi a le na faia mea mo le fa\'aoga sese!\n\nI le kilikiina o le "ACCEPT", ua e ioe i nei aiaiga. Afai e te le malie, filifili le "TE\'I" e alu ese mai le talosaga.</string>

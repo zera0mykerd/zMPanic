@@ -5,12 +5,14 @@
     <string name="btn_hold">SHIKA</string>
     <string name="title_system_settings">MIPANGILIO YA MFUMO</string>
     <string name="hint_server_ip">Anwani ya IP ya seva</string>
+    <string name="hint_server_password">Nenosiri la Seva</string>
     <string name="hint_port">Bandari</string>
     <string name="hint_secs">Sek</string>
     <string name="label_front_camera">🤳 Kamera ya mbele</string>
     <string name="label_hidden_mode">👻 Hali Iliyofichwa</string>
     <string name="btn_download_server">📜 Pakua Hati ya Seva</string>
     <string name="dialog_eula_title">⚠️ ILANI YA USALAMA WA MFUMO</string>
+    <string name="dialog_password_title">Nenosiri:</string>
     <string name="dialog_eula_positive">KUBALI</string>
     <string name="dialog_eula_negative">KUPUNGUA</string>
     <string name="dialog_eula_message">MASHARTI YA HUDUMA NA KUMALIZA MKATABA WA LESENI YA MTUMIAJI (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nMradi huu ni huria lakini unalindwa na Hakimiliki. Unaruhusiwa kusambaza tena na kurekebisha programu hii mradi tu mkopo wa wazi umetolewa kwa mtayarishi asili.\n© zMykerd. Haki zote zimehifadhiwa.\n\n2. MATUMIZI YANAYORUHUSIWA NA HALALI\nProgramu hii imeundwa kama zana ya usalama wa kibinafsi/SOS. Unakubali kabisa KUTOtumia programu hii, msimbo wake wa chanzo, au hati zozote zinazohusiana kwa madhumuni haramu, ufuatiliaji ambao haujaidhinishwa au shughuli za upelelezi. Mtayarishi hachukui jukumu lolote kwa matumizi yasiyofaa!\n\nKwa kubofya "KUBALI", unakubali sheria na masharti haya. Ikiwa hukubaliani, chagua "KATAA" ili uondoke kwenye programu.</string>

@@ -7,6 +7,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.KeyguardManager
+import android.util.Log
 import android.content.*
 import android.content.pm.PackageManager
 import android.graphics.Color
@@ -19,6 +20,8 @@ import android.os.Handler
 import android.os.Looper
 import android.os.PowerManager
 import android.text.Editable
+import android.text.InputFilter
+import android.text.InputType
 import android.text.TextWatcher
 import android.view.TextureView
 import android.view.View
@@ -27,10 +30,30 @@ import android.view.WindowManager
 import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.MasterKey
 import java.io.File
+
 class MainActivity : Activity() {
     private val PERMISSION_REQUEST_CODE = 1001
     private lateinit var prefs: SharedPreferences
+    private val securePrefs: SharedPreferences by lazy {
+        try {
+            val masterKey = MasterKey.Builder(this)
+                .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+                .build()
+            EncryptedSharedPreferences.create(
+                this,
+                "secure_zmpanic_prefs",
+                masterKey,
+                EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+            )
+        } catch (e: Exception) {
+            Log.e("zMPanic", "SecurePrefs Init Failure, falling back to standard", e)
+            getSharedPreferences("secure_zmpanic_fallback", MODE_PRIVATE)
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
@@ -143,6 +166,7 @@ class MainActivity : Activity() {
         }
         val editIp = findViewById<EditText>(R.id.editIp)
         val editPort = findViewById<EditText>(R.id.editPort)
+        val editPassword = findViewById<EditText>(R.id.editPassword)
         val editSecs = findViewById<EditText>(R.id.editSecs)
         val switchFront = findViewById<Switch>(R.id.switchFront)
         val switchHidden = findViewById<Switch>(R.id.switchHidden)
@@ -150,6 +174,7 @@ class MainActivity : Activity() {
         (editIp.parent as? ViewGroup)?.background = settingsBg
         editIp.setText(prefs.getString("server_ip", "192.168.1.220"))
         editPort.setText(prefs.getString("server_port", "9999"))
+        editPassword.setText(securePrefs.getString("server_password", ""))
         editSecs.setText(prefs.getInt("rotation_seconds", 20).toString())
         switchFront.isChecked = prefs.getBoolean("use_front_cam", false)
         val isHidden = prefs.getBoolean("hidden_mode", false)
@@ -171,6 +196,13 @@ class MainActivity : Activity() {
         editIp.addTextChangedListener(textWatcher)
         editPort.addTextChangedListener(textWatcher)
         editSecs.addTextChangedListener(textWatcher)
+        editPassword.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                securePrefs.edit().putString("server_password", s.toString()).apply()
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
         switchFront.setOnCheckedChangeListener { _, isChecked ->
             prefs.edit().putBoolean("use_front_cam", isChecked).apply()
             restartService()
@@ -186,7 +218,7 @@ class MainActivity : Activity() {
             override fun onSurfaceTextureAvailable(st: SurfaceTexture, w: Int, h: Int) {
                 PanicService.setVisibleSurfaceTexture(st)
                 if (!prefs.getBoolean("eula_accepted", false)) return
-                if (hasRequiredPermissions()) startPanicService()
+                if (hasRequiredPermissions()) checkPasswordAndStart()
             }
             override fun onSurfaceTextureSizeChanged(st: SurfaceTexture, w: Int, h: Int) {}
             override fun onSurfaceTextureDestroyed(st: SurfaceTexture): Boolean {
@@ -214,7 +246,7 @@ class MainActivity : Activity() {
     }
     private fun restartService() {
         stopService(Intent(this, PanicService::class.java))
-        if (hasRequiredPermissions()) startPanicService()
+        if (hasRequiredPermissions()) checkPasswordAndStart()
     }
     private fun requestPermissionsAndStart() {
         if (!prefs.getBoolean("eula_accepted", false)) return
@@ -241,7 +273,7 @@ class MainActivity : Activity() {
             Toast.makeText(this, getString(R.string.toast_select_always_allow), Toast.LENGTH_LONG).show()
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION), 1002)
         } else {
-            startPanicService()
+            checkPasswordAndStart()
         }
     }
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -254,25 +286,65 @@ class MainActivity : Activity() {
             }
         } else if (requestCode == 1002) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                startPanicService()
+                checkPasswordAndStart()
             } else {
                 Toast.makeText(this, getString(R.string.toast_bg_perm_denied), Toast.LENGTH_SHORT).show()
-                startPanicService()
+                checkPasswordAndStart()
             }
         }
+    }
+    private fun checkPasswordAndStart() {
+        val pwd = securePrefs.getString("server_password", null)
+        if (pwd.isNullOrEmpty()) {
+            showPasswordDialog()
+        } else {
+            startPanicService()
+        }
+    }
+    private fun showPasswordDialog() {
+        val container = FrameLayout(this)
+        val params = FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        params.setMargins(50, 20, 50, 20)
+        val input = EditText(this).apply {
+            hint = getString(R.string.hint_server_password)
+            inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+            filters = arrayOf(InputFilter.LengthFilter(512))
+            maxLines = 1
+            layoutParams = params
+        }
+        container.addView(input)
+        val dialog = AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+            .setTitle(getString(R.string.dialog_password_title))
+            .setView(container)
+            .setCancelable(false)
+            .setPositiveButton("SAVE") { _, _ ->
+                val pass = input.text.toString()
+                if (pass.isNotEmpty()) {
+                    securePrefs.edit().putString("server_password", pass).apply()
+                    startPanicService()
+                } else {
+                    showPasswordDialog()
+                }
+            }
+            .create()
+        dialog.show()
     }
     private fun requestIgnoreBatteryOptimizations() {
         if (!prefs.getBoolean("eula_accepted", false)) return
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
-            if (!pm.isIgnoringBatteryOptimizations(packageName)) {
-                try {
+            try {
+                val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
+                if (!pm.isIgnoringBatteryOptimizations(packageName)) {
                     val intent = Intent(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
                         data = android.net.Uri.parse("package:$packageName")
                     }
                     startActivity(intent)
-                } catch (e: Exception) {
+                }
+            } catch (e: Exception) {
+                try {
                     startActivity(Intent(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))
+                } catch (ex: Exception) {
+                    Log.e("zMPanic", "Battery settings unreachable")
                 }
             }
         }

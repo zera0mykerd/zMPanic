@@ -5,12 +5,14 @@
     <string name="btn_hold">HOIDA</string>
     <string name="title_system_settings">SÜSTEEMI SEADED</string>
     <string name="hint_server_ip">Serveri IP-aadress</string>
+    <string name="hint_server_password">Serveri parool</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Seks</string>
     <string name="label_front_camera">🤳 Esikaamera</string>
     <string name="label_hidden_mode">👻 Peidetud režiim</string>
     <string name="btn_download_server">📜 Laadige alla serveri skript</string>
     <string name="dialog_eula_title">⚠️ SÜSTEEMI TURVATEADE</string>
+    <string name="dialog_password_title">Parool:</string>
     <string name="dialog_eula_positive">NÕUSTU</string>
     <string name="dialog_eula_negative">KEELDUS</string>
     <string name="dialog_eula_message">TEENUSETINGIMUSED JA LÕPPKASUTAJA LITSENTSILEPING (EULA)\n\n1. AUTORIÕIGUSED JA KREDIIT\nSee projekt on avatud lähtekoodiga, kuid kaitstud autoriõigusega. Teil on lubatud seda tarkvara edasi levitada ja muuta, eeldusel, et algsele loojale antakse selge tunnustus.\n© zMykerd. Kõik õigused kaitstud.\n\n2. LUBATUD JA SEADUSLIK KASUTAMINE\nSee tarkvara on loodud isikliku turva-/SOS-tööriistana. Nõustute rangelt, et MITTE kasutada seda rakendust, selle lähtekoodi ega sellega seotud skripte ebaseaduslikel eesmärkidel, volitamata jälgimiseks või nuhkimistegevuseks. Looja ei vastuta sobimatu kasutamise eest!\n\nKlõpsates "NÕUSTU", nõustute nende tingimustega. Kui te ei ole nõus, valige rakendusest väljumiseks "KEELA".</string>

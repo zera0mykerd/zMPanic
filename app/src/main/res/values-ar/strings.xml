@@ -5,12 +5,14 @@
     <string name="btn_hold">يمسك</string>
     <string name="title_system_settings">إعدادات النظام</string>
     <string name="hint_server_ip">عنوان IP للخادم</string>
+    <string name="hint_server_password">كلمة سر الخادم</string>
     <string name="hint_port">ميناء</string>
     <string name="hint_secs">ثواني</string>
     <string name="label_front_camera">🤳 كاميرا أمامية</string>
     <string name="label_hidden_mode">👻 الوضع المخفي</string>
     <string name="btn_download_server">📜 تنزيل سكريبت الخادم</string>
     <string name="dialog_eula_title">⚠️ إشعار أمان النظام</string>
+    <string name="dialog_password_title">كلمة السر:</string>
     <string name="dialog_eula_positive">يقبل</string>
     <string name="dialog_eula_negative">انخفاض</string>
     <string name="dialog_eula_message">شروط الخدمة واتفاقية ترخيص المستخدم النهائي (EULA)\n\n1. حقوق الطبع والنشر والاعتمادات\nهذا المشروع مفتوح المصدر ولكنه محمي بموجب حقوق الطبع والنشر. يُسمح لك بإعادة توزيع هذا البرنامج وتعديله بشرط منح ائتمان واضح للمنشئ الأصلي.\n© zMykerd. كافة الحقوق محفوظة.\n\n2. الاستخدام المسموح به والقانوني\nتم تصميم هذا البرنامج كأداة للسلامة الشخصية/SOS. أنت توافق تمامًا على عدم استخدام هذا التطبيق أو كود المصدر الخاص به أو أي نصوص برمجية مرتبطة به لأغراض غير قانونية أو مراقبة غير مصرح بها أو أنشطة تجسس. لا يتحمل المنشئ أية مسؤولية عن الاستخدام غير السليم!\n\nبالنقر فوق "قبول"، فإنك توافق على هذه الشروط. إذا كنت لا توافق، فاختر "رفض" للخروج من التطبيق.</string>

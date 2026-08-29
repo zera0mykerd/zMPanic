@@ -5,12 +5,14 @@
     <string name="btn_hold">MEMEGANG</string>
     <string name="title_system_settings">PENGATURAN SISTEM</string>
     <string name="hint_server_ip">Alamat IP Server</string>
+    <string name="hint_server_password">Kata Sandi Server</string>
     <string name="hint_port">Pelabuhan</string>
     <string name="hint_secs">Detik</string>
     <string name="label_front_camera">🤳 Kamera Depan</string>
     <string name="label_hidden_mode">👻 Modus Tersembunyi</string>
     <string name="btn_download_server">📜 Unduh Skrip Server</string>
     <string name="dialog_eula_title">⚠️ PEMBERITAHUAN KEAMANAN SISTEM</string>
+    <string name="dialog_password_title">Kata Sandi:</string>
     <string name="dialog_eula_positive">MENERIMA</string>
     <string name="dialog_eula_negative">MENOLAK</string>
     <string name="dialog_eula_message">PERSYARATAN LAYANAN &amp; PERJANJIAN LISENSI PENGGUNA AKHIR (EULA)\n\n1. HAK CIPTA &amp; KREDIT\nProyek ini bersifat open-source namun dilindungi oleh Hak Cipta. Anda diizinkan untuk mendistribusikan ulang dan memodifikasi perangkat lunak ini asalkan kredit yang jelas diberikan kepada pencipta aslinya.\n© zMykerd. Semua hak dilindungi undang-undang.\n\n2. PENGGUNAAN YANG DIIZINKAN &amp; HUKUM\nPerangkat lunak ini dirancang sebagai alat keselamatan/SOS pribadi. Anda sangat setuju untuk TIDAK menggunakan aplikasi ini, kode sumbernya, atau skrip apa pun yang terkait untuk tujuan ilegal, pengawasan tidak sah, atau aktivitas mata-mata. Pencipta tidak bertanggung jawab atas penggunaan yang tidak patut!\n\nDengan mengklik "TERIMA", Anda menyetujui persyaratan ini. Jika Anda tidak setuju, pilih "TOLAK" untuk keluar dari aplikasi.</string>

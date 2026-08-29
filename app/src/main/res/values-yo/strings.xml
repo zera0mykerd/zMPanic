@@ -5,12 +5,14 @@
     <string name="btn_hold">DIMU</string>
     <string name="title_system_settings">Eto Eto</string>
     <string name="hint_server_ip">Adirẹsi IP olupin</string>
+    <string name="hint_server_password">Ọrọ igbaniwọle olupin</string>
     <string name="hint_port">Ibudo</string>
     <string name="hint_secs">Awọn iṣẹju-aaya</string>
     <string name="label_front_camera">🤳 Kamẹra iwaju</string>
     <string name="label_hidden_mode">👻 Ipo Farasin</string>
     <string name="btn_download_server">📜 Ṣe igbasilẹ iwe afọwọkọ olupin</string>
     <string name="dialog_eula_title">⚠️ AKIYESI AABO ETO</string>
+    <string name="dialog_password_title">Ọrọ igbaniwọle:</string>
     <string name="dialog_eula_positive">GBA</string>
     <string name="dialog_eula_negative">KEKERE</string>
     <string name="dialog_eula_message">OFIN ISE &amp; OPIN ASEJE ašẹ olumulo (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nIṣẹ-iṣẹ yii jẹ ṣiṣi-orisun ṣugbọn aabo nipasẹ Aṣẹ-lori-ara. O gba ọ laaye lati tun pin kaakiri ati ṣatunṣe sọfitiwia yii ti a pese pe o ti fi kirẹditi mimọ fun ẹlẹda atilẹba.\n© zMykerd. Gbogbo ẹtọ wa ni ipamọ.\n\n2. IGBAGBỌ &amp; LILO OFIN\n Sọfitiwia yii jẹ apẹrẹ bi aabo ara ẹni/irinṣẹ SOS. O gba ni kikun KO lati lo ohun elo yii, koodu orisun rẹ, tabi eyikeyi awọn iwe afọwọkọ ti o somọ fun awọn idi arufin, eto iwo-kakiri laigba aṣẹ, tabi awọn iṣẹ ṣiṣe amí. Eleda ko gba ojuse kankan fun lilo aibojumu!\n\nNipa titẹ "ACCEPT", o gba si awọn ofin wọnyi. Ti o ko ba gba, yan "DECLINE" lati jade kuro ni ohun elo naa.</string>

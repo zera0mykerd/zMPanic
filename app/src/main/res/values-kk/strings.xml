@@ -5,12 +5,14 @@
     <string name="btn_hold">ҰСТАП ТҰРУ</string>
     <string name="title_system_settings">ЖҮЙЕ ПАРАМЕТРЛЕРІ</string>
     <string name="hint_server_ip">Сервердің IP мекенжайы</string>
+    <string name="hint_server_password">Сервер паролі</string>
     <string name="hint_port">Порт</string>
     <string name="hint_secs">сек</string>
     <string name="label_front_camera">🤳 Алдыңғы камера</string>
     <string name="label_hidden_mode">👻 Жасырын режим</string>
     <string name="btn_download_server">📜 Сервер сценарийін жүктеп алыңыз</string>
-    <string name="dialog_eula_title">⚠️ ЖҮЙЕ ҚАУІПСІЗДІГІ ТУРАЛЫ ЕСКЕРТУ</string>
+    <string name="dialog_eula_title">⚠️ ЖҮЙЕ ҚАУІПСІΔІГІ ТУРАЛЫ ЕСКЕРТУ</string>
+    <string name="dialog_password_title">Пароль:</string>
     <string name="dialog_eula_positive">ҚАБЫЛДАУ</string>
     <string name="dialog_eula_negative">ҚАБЫЛДАУ</string>
     <string name="dialog_eula_message">ҚЫЗМЕТ КӨРСЕТУ ШАРТТАРЫ ЖӘНЕ СОҢҒЫ ПАЙДАЛАНУШЫ ЛИЦЕНЗИЯЛЫҚ КЕЛІСІМ (EULA)\n\n1. АВТОРЛЫҚ ҚҰҚЫҚ ЖӘНЕ КРЕДИТ\nБұл жобаның бастапқы көзі ашық, бірақ авторлық құқықпен қорғалған. Түпнұсқа жасаушыға нақты несие берілген жағдайда бұл бағдарламалық құралды қайта таратуға және өзгертуге рұқсат етілген.\n© zMykerd. Барлық құқықтар қорғалған.\n\n2. РҰҚСАТ ЕТІЛГЕН ЖӘНЕ ЗАҢДЫ ҚОЛДАНУ\nБұл бағдарламалық құрал жеке қауіпсіздік/SOS құралы ретінде жасалған. Сіз бұл қолданбаны, оның бастапқы кодын немесе кез келген байланысты сценарийлерді заңсыз мақсаттарға, рұқсат етілмеген бақылауға немесе тыңшылық әрекеттерге ҚОЛДАНБАУға қатаң келісесіз. Автор дұрыс пайдаланбағаны үшін жауапкершілік көтермейді!\n\n"ҚАБЫЛДАУ" түймесін басу арқылы сіз осы шарттармен келісесіз. Егер келіспесеңіз, қолданбадан шығу үшін "БАСТАУ" пәрменін таңдаңыз.</string>

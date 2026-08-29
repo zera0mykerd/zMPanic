@@ -5,12 +5,14 @@
     <string name="btn_hold">ถือ</string>
     <string name="title_system_settings">การตั้งค่าระบบ</string>
     <string name="hint_server_ip">ที่อยู่ IP ของเซิร์ฟเวอร์</string>
+    <string name="hint_server_password">รหัสผ่านเซิร์ฟเวอร์</string>
     <string name="hint_port">ท่าเรือ</string>
     <string name="hint_secs">วินาที</string>
     <string name="label_front_camera">🤳 กล้องหน้า</string>
     <string name="label_hidden_mode">🎃 โหมดซ่อนเร้น</string>
     <string name="btn_download_server">📜 ดาวน์โหลดสคริปต์เซิร์ฟเวอร์</string>
     <string name="dialog_eula_title">⚠️ ประกาศเกี่ยวกับความปลอดภัยของระบบ</string>
+    <string name="dialog_password_title">รหัสผ่าน:</string>
     <string name="dialog_eula_positive">ยอมรับ</string>
     <string name="dialog_eula_negative">ปฏิเสธ</string>
     <string name="dialog_eula_message">ข้อกำหนดในการให้บริการและข้อตกลงสิทธิ์การใช้งานสำหรับผู้ใช้ปลายทาง (EULA)\n\n1. ลิขสิทธิ์และเครดิต\nโครงการนี้เป็นโอเพ่นซอร์สแต่ได้รับการคุ้มครองโดยลิขสิทธิ์ คุณได้รับอนุญาตให้แจกจ่ายและแก้ไขซอฟต์แวร์นี้โดยต้องให้เครดิตที่ชัดเจนแก่ผู้สร้างต้นฉบับ\n© zMykerd สงวนลิขสิทธิ์\n\n2. การใช้งานที่ได้รับอนุญาตและถูกกฎหมาย\nซอฟต์แวร์นี้ได้รับการออกแบบให้เป็นเครื่องมือด้านความปลอดภัย/SOS ส่วนบุคคล คุณตกลงอย่างเคร่งครัดว่าจะไม่ใช้แอปพลิเคชันนี้ ซอร์สโค้ดของแอปพลิเคชันนี้ หรือสคริปต์ที่เกี่ยวข้องเพื่อวัตถุประสงค์ที่ผิดกฎหมาย การเฝ้าระวังโดยไม่ได้รับอนุญาต หรือการสอดแนม ผู้สร้างจะไม่รับผิดชอบต่อการใช้งานที่ไม่เหมาะสม!\n\nการคลิก "ยอมรับ" แสดงว่าคุณยอมรับข้อกำหนดเหล่านี้ หากคุณไม่เห็นด้วย ให้เลือก "ปฏิเสธ" เพื่อออกจากแอปพลิเคชัน</string>

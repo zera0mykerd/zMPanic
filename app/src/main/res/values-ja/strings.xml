@@ -5,12 +5,14 @@
     <string name="btn_hold">所有</string>
     <string name="title_system_settings">システム設定</string>
     <string name="hint_server_ip">サーバーのIPアドレス</string>
+    <string name="hint_server_password">サーバーのパスワード</string>
     <string name="hint_port">ポート</string>
     <string name="hint_secs">秒</string>
     <string name="label_front_camera">🤳 フロントカメラ</string>
     <string name="label_hidden_mode">👻 隠しモード</string>
     <string name="btn_download_server">📜 サーバースクリプトをダウンロード</string>
     <string name="dialog_eula_title">⚠️ システムセキュリティに関する通知</string>
+    <string name="dialog_password_title">パスワード:</string>
     <string name="dialog_eula_positive">受け入れる</string>
     <string name="dialog_eula_negative">衰退</string>
     <string name="dialog_eula_message">サービス利用規約とエンド ユーザー使用許諾契約 (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nThis project is open-source but protected by Copyright.元の作成者に明確なクレジットが与えられている場合、このソフトウェアを再配布および変更することが許可されています。\n© zMykerd.すべての著作権は留保されています。\n\n2.許可および合法的な使用\nこのソフトウェアは個人の安全/SOS ツールとして設計されています。あなたは、このアプリケーション、そのソースコード、または関連スクリプトを違法な目的、無許可の監視、またはスパイ活動に使用しないことに厳密に同意します。作成者は不適切な使用に対して一切の責任を負いません!\n\n[同意する] をクリックすると、これらの規約に同意したことになります。 If you do not agree, choose "DECLINE" to exit the application.</string>

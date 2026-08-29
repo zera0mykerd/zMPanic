@@ -5,12 +5,14 @@
     <string name="btn_hold">ያዝ</string>
     <string name="title_system_settings">የስርዓት ቅንብሮች</string>
     <string name="hint_server_ip">የአገልጋይ አይፒ አድራሻ</string>
+    <string name="hint_server_password">የአገልጋይ ይለፍ ቃል</string>
     <string name="hint_port">ወደብ</string>
     <string name="hint_secs">ሰከንድ</string>
     <string name="label_front_camera">🤳 የፊት ካሜራ</string>
     <string name="label_hidden_mode">👻 ድብቅ ሁነታ</string>
     <string name="btn_download_server">📜 የአገልጋይ ስክሪፕት አውርድ</string>
     <string name="dialog_eula_title">⚠️ የስርዓት ደህንነት ማስታወቂያ</string>
+    <string name="dialog_password_title">የይለፍ ቃል:</string>
     <string name="dialog_eula_positive">ተቀበል</string>
     <string name="dialog_eula_negative">አትቀበል</string>
     <string name="dialog_eula_message">የአገልግሎት ውል እና የተጠቃሚ ፍቃድ ስምምነት (EULA) ያበቃል\n\n1. የቅጂ መብት እና ክሬዲቶች\nይህ ፕሮጀክት ክፍት ምንጭ ቢሆንም በቅጂ መብት የተጠበቀ ነው። ግልጽ ክሬዲት ለዋናው ፈጣሪ እስከተሰጠ ድረስ ይህን ሶፍትዌር እንደገና ማሰራጨት እና ማሻሻል ተፈቅዶለታል።\n© zMykerd። መብቱ በህግ የተጠበቀ ነው።\n\n2. የተፈቀደ እና ህጋዊ አጠቃቀም\nይህ ሶፍትዌር የተነደፈው እንደ የግል ደህንነት/ኤስኦኤስ መሳሪያ ነው። ይህን መተግበሪያ፣ የምንጭ ኮድ ወይም ማንኛውንም ተዛማጅ ስክሪፕት ለህገወጥ ዓላማዎች፣ ላልተፈቀደ ክትትል ወይም የስለላ ተግባራት ላለመጠቀም በጥብቅ ተስማምተሃል። አላግባብ ለመጠቀም ፈጣሪ ምንም ሀላፊነት አይወስድም!\n\n"ተቀበል" የሚለውን ጠቅ በማድረግ በእነዚህ ውሎች ተስማምተሃል። ካልተስማሙ ከመተግበሪያው ለመውጣት "DECLINE" ን ይምረጡ።</string>

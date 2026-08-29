@@ -5,12 +5,14 @@
     <string name="btn_hold">KAUPAPA</string>
     <string name="title_system_settings">TE WHAKAMAHI PUNA</string>
     <string name="hint_server_ip">Wāhitau IP Tūmau</string>
+    <string name="hint_server_password">Kupuhipa Tūmau</string>
     <string name="hint_port">Tauranga</string>
     <string name="hint_secs">Hekona</string>
     <string name="label_front_camera">🤳 Kāmera o mua</string>
     <string name="label_hidden_mode">👻 Aratau Huna</string>
     <string name="btn_download_server">📜 Tikiake Hōtuhi Tūmau</string>
     <string name="dialog_eula_title">⚠️ WHAKAMAHI WHAKAMAHI PUNA</string>
+    <string name="dialog_password_title">Kupuhipa:</string>
     <string name="dialog_eula_positive">Whakaae</string>
     <string name="dialog_eula_negative">Whakaheke</string>
     <string name="dialog_eula_message">NGA WHAKAMAHI KAUPAPA ME TE WHAKAMAHI WHAKAMAHI WHAKAMAHI WHAKAMAHI (EULA)\n\n1. TE WHAKAMAHI KAUPAPA &amp; WHAKAMAHI\nHe puna tuwhera tenei kaupapa engari ma te Mana pupuri. Ka whakaaetia koe ki te tohatoha me te whakarereke i tenei rorohiko mena ka hoatu he nama marama ki te kaihanga taketake.\n© zMykerd. Katoa nga mana.\n\n2. TE WHAKAMAHI ME TE WHAKAMAHI I TE TURE\nI hangaia tenei rorohiko hei taputapu haumaru whaiaro/SOS. Ka tino whakaae koe KAUA e whakamahi i tenei tono, i tana waehere puna, i etahi tuhinga e pa ana mo nga kaupapa ture, te tirotiro kore mana, me nga mahi torotoro. Karekau he kawenga a te Kaihanga mo te whakamahi hee!\n\nMa te panui "Whakaae", ka whakaae koe ki enei tikanga. Ki te kore koe e whakaae, kowhiria te "DECLINE" ki te puta atu i te tono.</string>

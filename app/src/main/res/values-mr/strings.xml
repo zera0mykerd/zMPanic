@@ -5,12 +5,14 @@
     <string name="btn_hold">धरा</string>
     <string name="title_system_settings">सिस्टम सेटिंग्ज</string>
     <string name="hint_server_ip">सर्व्हर IP पत्ता</string>
+    <string name="hint_server_password">सर्व्हर पासवर्ड</string>
     <string name="hint_port">बंदर</string>
     <string name="hint_secs">से</string>
     <string name="label_front_camera">🤳 फ्रंट कॅमेरा</string>
     <string name="label_hidden_mode">👻 लपलेला मोड</string>
     <string name="btn_download_server">📜 सर्व्हर स्क्रिप्ट डाउनलोड करा</string>
     <string name="dialog_eula_title">⚠️ प्रणाली सुरक्षा सूचना</string>
+    <string name="dialog_password_title">पासवर्ड:</string>
     <string name="dialog_eula_positive">स्वीकारा</string>
     <string name="dialog_eula_negative">नकार द्या</string>
     <string name="dialog_eula_message">सेवा अटी आणि अंतिम वापरकर्ता परवाना करार (EULA)\n\n1. कॉपीराइट आणि क्रेडिट्स\nहा प्रकल्प मुक्त स्रोत आहे परंतु कॉपीराइटद्वारे संरक्षित आहे. मूळ निर्मात्याला स्पष्ट श्रेय दिले गेले असेल तर तुम्हाला हे सॉफ्टवेअर पुनर्वितरण आणि सुधारित करण्याची परवानगी आहे.\n© zMykerd. सर्व हक्क राखीव.\n\n2. परवानगी आणि कायदेशीर वापर\nहे सॉफ्टवेअर वैयक्तिक सुरक्षा/SOS साधन म्हणून डिझाइन केले आहे. बेकायदेशीर हेतूने, अनधिकृत पाळत ठेवणे किंवा हेरगिरी क्रियाकलापांसाठी हा अनुप्रयोग, त्याचा स्त्रोत कोड किंवा कोणत्याही संबंधित स्क्रिप्टचा वापर न करण्याबद्दल तुम्ही कठोरपणे सहमत आहात. अयोग्य वापरासाठी निर्माता कोणतीही जबाबदारी घेत नाही!\n\n"स्वीकार करा" वर क्लिक करून, तुम्ही या अटींना सहमती देता. तुम्ही सहमत नसल्यास, अर्जातून बाहेर पडण्यासाठी "नकार द्या" निवडा.</string>

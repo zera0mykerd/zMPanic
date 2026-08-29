@@ -5,12 +5,14 @@
     <string name="btn_hold">হোল্ড</string>
     <string name="title_system_settings">সিস্টেম সেটিংস</string>
     <string name="hint_server_ip">সার্ভারের আইপি ঠিকানা</string>
+    <string name="hint_server_password">সার্ভার পাসওয়ার্ড</string>
     <string name="hint_port">বন্দর</string>
     <string name="hint_secs">সেকেন্ড</string>
     <string name="label_front_camera">🤳 ফ্রন্ট ক্যামেরা</string>
     <string name="label_hidden_mode">👻 লুকানো মোড</string>
     <string name="btn_download_server">📜 সার্ভার স্ক্রিপ্ট ডাউনলোড করুন</string>
     <string name="dialog_eula_title">⚠️ সিস্টেম সিকিউরিটি নোটিশ</string>
+    <string name="dialog_password_title">পাসওয়ার্ড:</string>
     <string name="dialog_eula_positive">স্বীকার করুন</string>
     <string name="dialog_eula_negative">অস্বীকার করুন</string>
     <string name="dialog_eula_message">পরিষেবার শর্তাবলী এবং শেষ ব্যবহারকারী লাইসেন্স চুক্তি (EULA)\n\n1. কপিরাইট এবং ক্রেডিট\nএই প্রকল্পটি ওপেন সোর্স কিন্তু কপিরাইট দ্বারা সুরক্ষিত। আপনাকে এই সফ্টওয়্যারটি পুনরায় বিতরণ এবং সংশোধন করার অনুমতি দেওয়া হয়েছে যদি স্পষ্ট ক্রেডিট মূল নির্মাতাকে দেওয়া হয়।\n© zMykerd. সর্বস্বত্ব সংরক্ষিত।\n\n2. অনুমোদিত এবং আইনসম্মত ব্যবহার\nএই সফ্টওয়্যারটি ব্যক্তিগত নিরাপত্তা/এসওএস টুল হিসাবে ডিজাইন করা হয়েছে। আপনি কঠোরভাবে এই অ্যাপ্লিকেশন, এর সোর্স কোড, বা কোনো সংশ্লিষ্ট স্ক্রিপ্ট বেআইনি উদ্দেশ্যে, অননুমোদিত নজরদারি, বা গুপ্তচরবৃত্তির কার্যকলাপের জন্য ব্যবহার না করতে সম্মত হন। অনুপযুক্ত ব্যবহারের জন্য নির্মাতার কোনো দায় নেই!\n\n"স্বীকার করুন" ক্লিক করে আপনি এই শর্তাবলীতে সম্মত হন। আপনি সম্মত না হলে, আবেদন থেকে প্রস্থান করতে "অস্বীকার করুন" নির্বাচন করুন।</string>

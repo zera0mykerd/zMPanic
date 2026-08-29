@@ -10,7 +10,7 @@ android {
         minSdk = 23
         targetSdk = 36
         versionCode = 1
-        versionName = "13.0"
+        versionName = "13.0-BP"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -37,5 +37,6 @@ android {
 }
 dependencies {
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.security.crypto)
     //implementation(libs.androidx.lifecycle.runtime.ktx)
 }

@@ -5,12 +5,14 @@
     <string name="btn_hold">BAMBA</string>
     <string name="title_system_settings">IZILUNGISELELO ZOHLELO</string>
     <string name="hint_server_ip">Ikheli le-IP yeseva</string>
+    <string name="hint_server_password">Iphasiwedi yeseva</string>
     <string name="hint_port">Itheku</string>
     <string name="hint_secs">Imizuzwana</string>
     <string name="label_front_camera">🤳 Ikhamera yangaphambili</string>
     <string name="label_hidden_mode">👻 Imodi Efihliwe</string>
     <string name="btn_download_server">📜 Landa Isikripthi Seseva</string>
     <string name="dialog_eula_title">⚠️ ISAZISO SOKUVIKELA UHLELO</string>
+    <string name="dialog_password_title">Iphasiwedi:</string>
     <string name="dialog_eula_positive">YAMUKELA</string>
     <string name="dialog_eula_negative">YEHLUKA</string>
     <string name="dialog_eula_message">IMIGOMO YENKONZO KANYE NESIVUMELWANO SELAYISENSI YOMSEBENZISI (EULA)\n\n1. I-COPYRIGHT &amp; CREDITS\nLe phrojekthi iwumthombo ovulekile kodwa ivikelwe yi-Copyright. Uvunyelwe ukusabalalisa kabusha nokuguqula le softhiwe ngaphandle kokuthi ikhredithi ecacile inikezwe umdali wangempela.\n© zMykerd. Wonke amalungelo agodliwe.\n\n2. UKUSETSHENZISWA KWEMVUMELE KANYE OKUMTHETHO\nLe softhiwe yakhelwe njengethuluzi lokuphepha lomuntu siqu/i-SOS. UVUMELA ngokuqinile UKUTHI NGEKE ukusebenzisa lolu hlelo lokusebenza, ikhodi yalo yomthombo, nanoma yimiphi imibhalo ehlobene ngezinjongo ezingekho emthethweni, ukugada okungagunyaziwe, noma imisebenzi yobunhloli. Umdali akanasibopho sokusebenzisa okungafanele!\n\nNgokuchofoza "YAMUKELA", uyavumelana nale migomo. Uma ungavumelani, khetha okuthi "DECLINE" ukuze uphume kuhlelo lokusebenza.</string>

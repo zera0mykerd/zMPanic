@@ -5,12 +5,14 @@
     <string name="btn_hold">LAIKYTI</string>
     <string name="title_system_settings">SISTEMOS NUSTATYMAI</string>
     <string name="hint_server_ip">Serverio IP adresas</string>
+    <string name="hint_server_password">Serverio slaptažodis</string>
     <string name="hint_port">Uostas</string>
     <string name="hint_secs">Sek</string>
     <string name="label_front_camera">🤳 Priekinė kamera</string>
     <string name="label_hidden_mode">👻 Paslėptas režimas</string>
     <string name="btn_download_server">📜 Atsisiųskite serverio scenarijų</string>
     <string name="dialog_eula_title">⚠️ SISTEMOS SAUGOS PRANEŠIMAS</string>
+    <string name="dialog_password_title">Slaptažodis:</string>
     <string name="dialog_eula_positive">PRIIMTI</string>
     <string name="dialog_eula_negative">ATMESTI</string>
     <string name="dialog_eula_message">PASLAUGŲ TEIKIMO SĄLYGOS IR GALUTINĖS VARTOTOJŲ LICENCIJOS SUTARTIS (EULA)\n\n1. AUTORIŲ TEISĖS IR KREDITAI\nŠis projektas yra atvirojo kodo, bet saugomas autorių teisių. Jums leidžiama platinti ir modifikuoti šią programinę įrangą su sąlyga, kad pirminis kūrėjas yra aiškiai įvertintas.\n© zMykerd. Visos teisės saugomos.\n\n2. LEIDŽIAMAS IR TEISĖTAS NAUDOJIMAS\nŠi programinė įranga sukurta kaip asmens saugos / SOS įrankis. Jūs griežtai sutinkate NEnaudoti šios programos, jos šaltinio kodo ar bet kokių susijusių scenarijų neteisėtiems tikslams, neteisėtam stebėjimui ar šnipinėjimo veiklai. Kūrėjas neprisiima jokios atsakomybės už netinkamą naudojimą!\n\nSpustelėdami „SUTIKI“ sutinkate su šiomis sąlygomis. Jei nesutinkate, pasirinkite „ATMESTI“, kad išeitumėte iš programos.</string>

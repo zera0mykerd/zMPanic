@@ -5,12 +5,14 @@
     <string name="btn_hold">ŻOMM</string>
     <string name="title_system_settings">SETTINGS tas-SISTEMA</string>
     <string name="hint_server_ip">Indirizz IP tas-server</string>
+    <string name="hint_server_password">Password tas-Server</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Seks</string>
     <string name="label_front_camera">🤳 Kamera ta\' Quddiem</string>
     <string name="label_hidden_mode">👻 Modalità Moħbija</string>
     <string name="btn_download_server">📜 Niżżel Server Script</string>
     <string name="dialog_eula_title">⚠️ AVVIŻ TAS-SIGURTÀ TAS-SISTEMA</string>
+    <string name="dialog_password_title">Password:</string>
     <string name="dialog_eula_positive">AĊĊETTA</string>
     <string name="dialog_eula_negative">TNAQQAS</string>
     <string name="dialog_eula_message">TERMINI TA\' SERVIZZ U FTEHIM TAL-LIĊENZJA TAL-UTENTE AĦĦARIEN (EULA)\n\n1. COPYRIGHT &amp; KREDITI\nDan il-proġett huwa open source iżda protett mid-Dritt tal-Awtur. Inti permess li tqassam mill-ġdid u timmodifika dan is-software sakemm jingħata kreditu ċar lill-kreatur oriġinali.\n© zMykerd. Id-drittijiet kollha riżervati.\n\n2. UŻU PERMESS U LEĊI\nDan is-software huwa ddisinjat bħala għodda ta\' sikurezza/SOS personali. Inti taqbel strettament li MA tużax din l-applikazzjoni, il-kodiċi sors tagħha, jew kwalunkwe skripts assoċjati għal skopijiet illegali, sorveljanza mhux awtorizzata, jew attivitajiet ta \'spjunjar. Il-kreatur ma jassumi l-ebda responsabbiltà għal użu mhux xieraq!\n\nBilli tikklikkja "AĊĊĊETTA", inti taqbel ma\' dawn it-termini. Jekk ma taqbilx, agħżel "IRĊEDA" biex toħroġ mill-applikazzjoni.</string>

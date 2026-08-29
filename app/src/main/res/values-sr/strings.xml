@@ -5,12 +5,14 @@
     <string name="btn_hold">ХОЛД</string>
     <string name="title_system_settings">СИСТЕМСКЕ ПОСТАВКЕ</string>
     <string name="hint_server_ip">ИП адреса сервера</string>
+    <string name="hint_server_password">Лозинка сервера</string>
     <string name="hint_port">Порт</string>
     <string name="hint_secs">Сецс</string>
     <string name="label_front_camera">🤳 Предња камера</string>
     <string name="label_hidden_mode">👻 Скривени режим</string>
     <string name="btn_download_server">📜 Преузмите серверску скрипту</string>
     <string name="dialog_eula_title">⚠ ОБАВЕШТЕЊЕ О БЕЗБЕДНОСТИ СИСТЕМА</string>
+    <string name="dialog_password_title">Лозинка:</string>
     <string name="dialog_eula_positive">АЦЦЕПТ</string>
     <string name="dialog_eula_negative">ДЕЦЛИНЕ</string>
     <string name="dialog_eula_message">УСЛОВИ КОРИШЋЕЊА И УГОВОР О ЛИЦЕНЦИ КРАЈЊЕГ КОРИСНИКА (ЕУЛА)\н\н1. АУТОРСКА ПРАВА И КРЕДИТИ\нОвај пројекат је отвореног кода, али заштићен ауторским правима. Дозвољено вам је да редистрибуирате и модификујете овај софтвер под условом да се јасно одаје признање оригиналном креатору.\н© зМикерд. Сва права задржана.\н\н2. ДОЗВОЉЕНА И ЗАКОНИТА КОРИШЋЕЊЕ\нОвај софтвер је дизајниран као алатка за личну безбедност/СОС. Стриктно се слажете да НЕ користите ову апликацију, њен изворни код или било које повезане скрипте у незаконите сврхе, неовлашћени надзор или шпијунске активности. Креатор не преузима никакву одговорност за неправилну употребу!\н\нКликом на „ПРИХВАТИ“, прихватате ове услове. Ако се не слажете, изаберите „ОДБИЈЕНИ“ да бисте изашли из апликације.</string>

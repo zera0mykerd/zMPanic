@@ -5,12 +5,14 @@
     <string name="btn_hold">ȚINE</string>
     <string name="title_system_settings">SETĂRI DE SISTEM</string>
     <string name="hint_server_ip">Adresa IP a serverului</string>
+    <string name="hint_server_password">Parola serverului</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Sec</string>
     <string name="label_front_camera">🤳 Camera frontală</string>
     <string name="label_hidden_mode">👻 Modul ascuns</string>
     <string name="btn_download_server">📜 Descărcați Scriptul Server</string>
     <string name="dialog_eula_title">⚠️ NOTIFICARE DE SECURITATE A SISTEMULUI</string>
+    <string name="dialog_password_title">Parolă:</string>
     <string name="dialog_eula_positive">ACCEPTA</string>
     <string name="dialog_eula_negative">DECLIN</string>
     <string name="dialog_eula_message">TERMENI ȘI SERVICIUL ȘI ACORDUL DE LICENȚĂ CU UTILIZATORUL FINAL (EULA)\n\n1. COPYRIGHT ȘI CREDITE\nAcest proiect este open-source, dar protejat de drepturi de autor. Aveți permisiunea să redistribuiți și să modificați acest software cu condiția să acordați un credit clar creatorului original.\n© zMykerd. Toate drepturile rezervate.\n\n2. UTILIZARE PERMISĂ ȘI LEGAL\nAcest software este conceput ca un instrument de siguranță personală/SOS. Sunteți strict de acord să NU utilizați această aplicație, codul ei sursă sau orice scripturi asociate în scopuri ilegale, supraveghere neautorizată sau activități de spionaj. Creatorul nu își asumă nicio responsabilitate pentru utilizarea necorespunzătoare!\n\nFăcând clic pe „ACCEPT”, sunteți de acord cu acești termeni. Dacă nu sunteți de acord, alegeți „DECLINE” pentru a părăsi aplicația.</string>

@@ -5,12 +5,14 @@
     <string name="btn_hold">ಹಿಡಿದುಕೊಳ್ಳಿ</string>
     <string name="title_system_settings">ಸಿಸ್ಟಮ್ ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
     <string name="hint_server_ip">ಸರ್ವರ್ IP ವಿಳಾಸ</string>
+    <string name="hint_server_password">ಸರ್ವರ್ ಪಾಸ್‌ವರ್ಡ್</string>
     <string name="hint_port">ಬಂದರು</string>
     <string name="hint_secs">ಸೆಕೆಂಡುಗಳು</string>
     <string name="label_front_camera">🤳 ಮುಂಭಾಗದ ಕ್ಯಾಮರಾ</string>
     <string name="label_hidden_mode">👻 ಹಿಡನ್ ಮೋಡ್</string>
     <string name="btn_download_server">📜 ಸರ್ವರ್ ಸ್ಕ್ರಿಪ್ಟ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="dialog_eula_title">⚠️ ಸಿಸ್ಟಮ್ ಸೆಕ್ಯುರಿಟಿ ಸೂಚನೆ</string>
+    <string name="dialog_password_title">ಪಾಸ್‌ವರ್ಡ್:</string>
     <string name="dialog_eula_positive">ಸ್ವೀಕರಿಸಿ</string>
     <string name="dialog_eula_negative">ನಿರಾಕರಿಸು</string>
     <string name="dialog_eula_message">ಸೇವಾ ನಿಯಮಗಳು ಮತ್ತು ಅಂತಿಮ ಬಳಕೆದಾರರ ಪರವಾನಗಿ ಒಪ್ಪಂದ (EULA)\n\n1. ಹಕ್ಕುಸ್ವಾಮ್ಯ ಮತ್ತು ಕ್ರೆಡಿಟ್‌ಗಳು\nಈ ಯೋಜನೆಯು ಮುಕ್ತ ಮೂಲವಾಗಿದೆ ಆದರೆ ಹಕ್ಕುಸ್ವಾಮ್ಯದಿಂದ ರಕ್ಷಿಸಲಾಗಿದೆ. ಈ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ಮರುಹಂಚಿಕೆ ಮಾಡಲು ಮತ್ತು ಮಾರ್ಪಡಿಸಲು ನಿಮಗೆ ಅನುಮತಿ ಇದೆ, ಮೂಲ ರಚನೆಕಾರರಿಗೆ ಸ್ಪಷ್ಟ ಕ್ರೆಡಿಟ್ ನೀಡಲಾಗಿದೆ.\n© zMykerd. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.\n\n2. ಅನುಮತಿ ಮತ್ತು ಕಾನೂನುಬದ್ಧ ಬಳಕೆ\nಈ ಸಾಫ್ಟ್‌ವೇರ್ ಅನ್ನು ವೈಯಕ್ತಿಕ ಸುರಕ್ಷತೆ/SOS ಸಾಧನವಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ಈ ಅಪ್ಲಿಕೇಶನ್, ಅದರ ಮೂಲ ಕೋಡ್ ಅಥವಾ ಯಾವುದೇ ಸಂಬಂಧಿತ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ಕಾನೂನುಬಾಹಿರ ಉದ್ದೇಶಗಳಿಗಾಗಿ, ಅನಧಿಕೃತ ಕಣ್ಗಾವಲು ಅಥವಾ ಬೇಹುಗಾರಿಕೆ ಚಟುವಟಿಕೆಗಳಿಗಾಗಿ ಬಳಸದಿರಲು ನೀವು ಕಟ್ಟುನಿಟ್ಟಾಗಿ ಒಪ್ಪುತ್ತೀರಿ. ಅಸಮರ್ಪಕ ಬಳಕೆಗೆ ರಚನೆಕಾರರು ಯಾವುದೇ ಜವಾಬ್ದಾರಿಯನ್ನು ತೆಗೆದುಕೊಳ್ಳುವುದಿಲ್ಲ!\n\n"ಸಮ್ಮತಿಸಿ" ಕ್ಲಿಕ್ ಮಾಡುವ ಮೂಲಕ, ನೀವು ಈ ನಿಯಮಗಳನ್ನು ಒಪ್ಪುತ್ತೀರಿ. ನೀವು ಒಪ್ಪದಿದ್ದರೆ, ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ನಿರ್ಗಮಿಸಲು "ನಿರಾಕರಣೆ" ಆಯ್ಕೆಮಾಡಿ.</string>

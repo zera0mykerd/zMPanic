@@ -5,12 +5,14 @@
     <string name="btn_hold">نگه دارید</string>
     <string name="title_system_settings">تنظیمات سیستم</string>
     <string name="hint_server_ip">آدرس IP سرور</string>
+    <string name="hint_server_password">رمز عبور سرور</string>
     <string name="hint_port">بندر</string>
     <string name="hint_secs">ثانیه</string>
     <string name="label_front_camera">🤳 دوربین جلو</string>
     <string name="label_hidden_mode">👻 حالت پنهان</string>
     <string name="btn_download_server">📜 اسکریپت سرور را دانلود کنید</string>
     <string name="dialog_eula_title">⚠️ اطلاعیه ایمنی سیستم</string>
+    <string name="dialog_password_title">رمز عبور:</string>
     <string name="dialog_eula_positive">قبول کنید</string>
     <string name="dialog_eula_negative">رد کردن</string>
     <string name="dialog_eula_message">شرایط خدمات و موافقتنامه مجوز کاربر نهایی (EULA)\n\n1. حق نسخه برداری و اعتبار\nاین پروژه منبع باز است اما توسط حق نسخه برداری محافظت می شود. شما مجاز به توزیع مجدد و اصلاح این نرم افزار هستید، مشروط بر اینکه اعتبار واضح به سازنده اصلی داده شود.\n© zMykerd. تمامی حقوق محفوظ است.\n\n2. استفاده مجاز و قانونی\nاین نرم افزار به عنوان یک ابزار ایمنی/SOS شخصی طراحی شده است. شما کاملاً موافقت می کنید که از این برنامه، کد منبع آن یا هر اسکریپت مرتبط برای اهداف غیرقانونی، نظارت غیرمجاز یا فعالیت های جاسوسی استفاده نکنید. سازنده هیچ مسئولیتی در قبال استفاده نادرست نمی‌پذیرد!\n\nبا کلیک کردن روی "پذیرش"، با این شرایط موافقت می‌کنید. اگر موافق نیستید، «رد کردن» را برای خروج از برنامه انتخاب کنید.</string>

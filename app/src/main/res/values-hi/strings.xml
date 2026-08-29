@@ -5,12 +5,14 @@
     <string name="btn_hold">पकड़ना</string>
     <string name="title_system_settings">सिस्टम सेटिंग्स</string>
     <string name="hint_server_ip">सर्वर आईपी पता</string>
+    <string name="hint_server_password">सर्वर पासवर्ड</string>
     <string name="hint_port">पत्तन</string>
     <string name="hint_secs">सेकेंड</string>
     <string name="label_front_camera">🤳 फ्रंट कैमरा</string>
     <string name="label_hidden_mode">👻 हिडन मोड</string>
     <string name="btn_download_server">📜 सर्वर स्क्रिप्ट डाउनलोड करें</string>
     <string name="dialog_eula_title">⚠️ सिस्टम सुरक्षा सूचना</string>
+    <string name="dialog_password_title">पासवर्ड:</string>
     <string name="dialog_eula_positive">स्वीकार करना</string>
     <string name="dialog_eula_negative">गिरावट</string>
     <string name="dialog_eula_message">सेवा की शर्तें और अंतिम उपयोगकर्ता लाइसेंस समझौता (EULA)\n\n1. कॉपीराइट और क्रेडिट\nयह प्रोजेक्ट ओपन-सोर्स है लेकिन कॉपीराइट द्वारा संरक्षित है। आपको इस सॉफ़्टवेयर को पुनर्वितरित और संशोधित करने की अनुमति है, बशर्ते कि मूल निर्माता को स्पष्ट श्रेय दिया जाए।\n© zMykerd। सर्वाधिकार सुरक्षित.\n\n2. अनुमत और वैध उपयोग\nयह सॉफ़्टवेयर एक व्यक्तिगत सुरक्षा/एसओएस उपकरण के रूप में डिज़ाइन किया गया है। आप इस एप्लिकेशन, इसके स्रोत कोड, या किसी भी संबद्ध स्क्रिप्ट का उपयोग अवैध उद्देश्यों, अनधिकृत निगरानी या जासूसी गतिविधियों के लिए नहीं करने के लिए सख्ती से सहमत हैं। निर्माता अनुचित उपयोग के लिए कोई जिम्मेदारी नहीं लेता है!\n\n"स्वीकार करें" पर क्लिक करके, आप इन शर्तों से सहमत होते हैं। यदि आप सहमत नहीं हैं, तो एप्लिकेशन से बाहर निकलने के लिए "अस्वीकार करें" चुनें।</string>

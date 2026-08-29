@@ -5,12 +5,14 @@
     <string name="btn_hold">ΑΜΠΑΡΙ</string>
     <string name="title_system_settings">ΡΥΘΜΙΣΕΙΣ ΣΥΣΤΗΜΑΤΟΣ</string>
     <string name="hint_server_ip">Διεύθυνση IP διακομιστή</string>
+    <string name="hint_server_password">Κωδικός διακομιστή</string>
     <string name="hint_port">Λιμάνι</string>
     <string name="hint_secs">Δευτ</string>
     <string name="label_front_camera">🤳 Μπροστινή κάμερα</string>
     <string name="label_hidden_mode">👻 Κρυφή λειτουργία</string>
     <string name="btn_download_server">📜 Λήψη σεναρίου διακομιστή</string>
     <string name="dialog_eula_title">⚠️ ΣΗΜΕΙΩΣΗ ΑΣΦΑΛΕΙΑΣ ΣΥΣΤΗΜΑΤΟΣ</string>
+    <string name="dialog_password_title">Κωδικός:</string>
     <string name="dialog_eula_positive">ΑΠΟΔΕΧΟΜΑΙ</string>
     <string name="dialog_eula_negative">ΠΤΩΣΗ</string>
     <string name="dialog_eula_message">ΟΡΟΙ ΥΠΗΡΕΣΙΑΣ &amp; ΣΥΜΦΩΝΙΑ ΑΔΕΙΑΣ ΤΕΛΙΚΟΥ ΧΡΗΣΤΗ (EULA)\n\n1. ΠΝΕΥΜΑΤΙΚΑ ΔΙΚΑΙΩΜΑΤΑ &amp; ΠΙΣΤΩΣΕΙΣ\nΑυτό το έργο είναι ανοιχτού κώδικα αλλά προστατεύεται από πνευματικά δικαιώματα. Επιτρέπεται να αναδιανείμετε και να τροποποιήσετε αυτό το λογισμικό με την προϋπόθεση ότι αποδίδεται σαφής πίστωση στον αρχικό δημιουργό.\n© zMykerd. Με την επιφύλαξη παντός δικαιώματος.\n\n2. ΕΠΙΤΡΕΠΟΜΕΝΗ &amp; ΝΟΜΙΜΗ ΧΡΗΣΗ\nΑυτό το λογισμικό έχει σχεδιαστεί ως εργαλείο προσωπικής ασφάλειας/SOS. Συμφωνείτε αυστηρά να ΜΗΝ χρησιμοποιείτε αυτήν την εφαρμογή, τον πηγαίο κώδικα ή οποιαδήποτε σχετικά σενάρια για παράνομους σκοπούς, μη εξουσιοδοτημένη παρακολούθηση ή κατασκοπευτικές δραστηριότητες. Ο δημιουργός δεν φέρει καμία ευθύνη για ακατάλληλη χρήση!\n\nΚάνοντας κλικ στο "ΑΠΟΔΟΧΗ", συμφωνείτε με αυτούς τους όρους. Εάν δεν συμφωνείτε, επιλέξτε "ΑΠΟΡΡΙΨΗ" για έξοδο από την εφαρμογή.</string>

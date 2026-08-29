@@ -5,12 +5,14 @@
     <string name="btn_hold">HOLD</string>
     <string name="title_system_settings">SYSTÉMOVÉ NASTAVENIA</string>
     <string name="hint_server_ip">Adresa IP servera</string>
+    <string name="hint_server_password">Heslo servera</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">sek</string>
     <string name="label_front_camera">🤳 Predná kamera</string>
     <string name="label_hidden_mode">👻 Skrytý režim</string>
     <string name="btn_download_server">📜 Stiahnite si serverový skript</string>
     <string name="dialog_eula_title">⚠️ BEZPEČNOSTNÉ OZNÁMENIE SYSTÉMU</string>
+    <string name="dialog_password_title">Heslo:</string>
     <string name="dialog_eula_positive">PRIJAŤ</string>
     <string name="dialog_eula_negative">DECLINE</string>
     <string name="dialog_eula_message">ZMLUVNÉ PODMIENKY A LICENČNÁ ZMLUVA S KONCOVÝM POUŽÍVATEĽOM (EULA)\n\n1. AUTORSKÉ PRÁVA A KREDITY\nTento projekt je open source, ale chránený autorskými právami. Máte povolenie redistribuovať a upravovať tento softvér za predpokladu, že je jasné, že pôvodný tvorca bude označený za autora.\n© zMykerd. Všetky práva vyhradené.\n\n2. POVOLENÉ A ZÁKONNÉ POUŽÍVANIE\nTento softvér je navrhnutý ako nástroj osobnej bezpečnosti/SOS. Prísne súhlasíte s tým, že NEPOUŽÍVATE túto aplikáciu, jej zdrojový kód ani žiadne súvisiace skripty na nezákonné účely, neoprávnené sledovanie alebo špionážne aktivity. Tvorca nenesie žiadnu zodpovednosť za nesprávne použitie!\n\nKliknutím na „PRIJAŤ“ súhlasíte s týmito podmienkami. Ak nesúhlasíte, zvoľte "ODMIETNUŤ" pre ukončenie aplikácie.</string>

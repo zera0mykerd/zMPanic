@@ -5,12 +5,14 @@
     <string name="btn_hold">抓住</string>
     <string name="title_system_settings">系统设置</string>
     <string name="hint_server_ip">服务器IP地址</string>
+    <string name="hint_server_password">服务器密码</string>
     <string name="hint_port">港口</string>
     <string name="hint_secs">秒</string>
     <string name="label_front_camera">🤳 前置摄像头</string>
     <string name="label_hidden_mode">👻隐藏模式</string>
     <string name="btn_download_server">📜 下载服务器脚本</string>
     <string name="dialog_eula_title">⚠️系统安全通知</string>
+    <string name="dialog_password_title">密码:</string>
     <string name="dialog_eula_positive">接受</string>
     <string name="dialog_eula_negative">衰退</string>
     <string name="dialog_eula_message">服务条款和最终用户许可协议 (EULA)\n\n1.版权和制作人员\n该项目是开源的，但受版权保护。您可以重新分发和修改此软件，前提是明确注明原始创建者。\n© zMykerd。保留所有权利。\n\n2.允许且合法的使用\n该软件被设计为个人安全/SOS 工具。您严格同意不将此应用程序、其源代码或任何相关脚本用于非法目的、未经授权的监视或间谍活动。创建者对不当使用不承担任何责任！\n\n点击“接受”即表示您同意这些条款。如果您不同意，请选择“拒绝”退出申请。</string>

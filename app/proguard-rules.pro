@@ -2,17 +2,6 @@
 
 -keepattributes Signature, InnerClasses, EnclosingMethod
 
-# --- OPTIMIZE NETWORK (OkHttp & Okio) ---
--keep class okhttp3.internal.publicsuffix.PublicSuffixDatabase { *; }
-
-#R8 FullMode: nobug mode
--keepclassmembers class okhttp3.internal.publicsuffix.PublicSuffixDatabase {
-    private byte[] *;
-}
--keepclassmembers class okhttp3.OkHttpClient {
-    *** client;
-}
-
 -dontwarn okhttp3.internal.platform.**
 -dontwarn org.conscrypt.**
 -dontwarn org.bouncycastle.**
@@ -41,3 +30,11 @@
 # --- DEBUG & ERROR REPORTING ---
 -keepattributes SourceFile, LineNumberTable
 -dontnote **
+
+# --- MISSING CLASSES DETECTED BY R8 ---
+-dontwarn com.google.errorprone.annotations.CanIgnoreReturnValue
+-dontwarn com.google.errorprone.annotations.CheckReturnValue
+-dontwarn com.google.errorprone.annotations.Immutable
+-dontwarn com.google.errorprone.annotations.RestrictedApi
+-dontwarn javax.annotation.Nullable
+-dontwarn javax.annotation.concurrent.GuardedBy

@@ -5,12 +5,14 @@
     <string name="btn_hold">HOLD</string>
     <string name="title_system_settings">SYSTEM SETTINGS</string>
     <string name="hint_server_ip">Server IP Address</string>
+    <string name="hint_server_password">Server Password</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Secs</string>
     <string name="label_front_camera">🤳 Front Camera</string>
     <string name="label_hidden_mode">👻 Hidden Mode</string>
     <string name="btn_download_server">📜 Download Server Script</string>
     <string name="dialog_eula_title">⚠️ SYSTEM SECURITY NOTICE</string>
+    <string name="dialog_password_title">Password:</string>
     <string name="dialog_eula_positive">ACCEPT</string>
     <string name="dialog_eula_negative">DECLINE</string>
     <string name="dialog_eula_message">TERMS OF SERVICE &amp; END USER LICENSE AGREEMENT (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nThis project is open-source but protected by Copyright. You are permitted to redistribute and modify this software provided that clear credit is given to the original creator.\n© zMykerd. All rights reserved.\n\n2. PERMITTED &amp; LAWFUL USE\nThis software is designed as a personal safety/SOS tool. You strictly agree NOT to use this application, its source code, or any associated scripts for illegal purposes, unauthorized surveillance, or spying activities. The creator assumes no responsibility for improper use!\n\nBy clicking \"ACCEPT\", you agree to these terms. If you do not agree, choose \"DECLINE\" to exit the application.</string>

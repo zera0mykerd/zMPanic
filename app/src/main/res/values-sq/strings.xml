@@ -5,12 +5,14 @@
     <string name="btn_hold">MBAJ</string>
     <string name="title_system_settings">CILËSIMET E SISTEMIT</string>
     <string name="hint_server_ip">Adresa IP e serverit</string>
+    <string name="hint_server_password">Fjalëkalimi i serverit</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Sec</string>
     <string name="label_front_camera">🤳 Kamera e përparme</string>
     <string name="label_hidden_mode">👻 Modaliteti i fshehur</string>
     <string name="btn_download_server">📜 Shkarkoni skriptin e serverit</string>
     <string name="dialog_eula_title">⚠️ NJOFTIM PËR SIGURINË E SISTEMIT</string>
+    <string name="dialog_password_title">Fjalëkalimi:</string>
     <string name="dialog_eula_positive">PRANOJ</string>
     <string name="dialog_eula_negative">RËNIM</string>
     <string name="dialog_eula_message">KUSHTET E SHËRBIMIT DHE MARRËVESHJA E LICENCËS SË PËRDORIMIT TË FUNDIT (EULA)\n\n1. E DREJTA E AUTORIT DHE KREDITË\nKy projekt është me burim të hapur, por i mbrojtur nga të drejtat e autorit. Ju lejohet të rishpërndani dhe modifikoni këtë softuer me kusht që t\'i jepet kredit i qartë krijuesit origjinal.\n© zMykerd. Të gjitha të drejtat e rezervuara.\n\n2. PËRDORIMI I LEJUAR DHE LIGJOR\nKy softuer është projektuar si një mjet sigurie personale/SOS. Ju pranoni rreptësisht të MOS përdorni këtë aplikacion, kodin burimor të tij ose ndonjë skript të lidhur për qëllime të paligjshme, mbikëqyrje të paautorizuar ose aktivitete spiunazhi. Krijuesi nuk mban asnjë përgjegjësi për përdorim të pahijshëm!\n\nDuke klikuar "PRANO", ju pranoni këto kushte. Nëse nuk jeni dakord, zgjidhni "REFIZIM" për të dalë nga aplikacioni.</string>

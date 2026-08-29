@@ -5,12 +5,14 @@
     <string name="btn_hold">LEANBH</string>
     <string name="title_system_settings">SOCRUITHE CÓRAS</string>
     <string name="hint_server_ip">Seoladh IP an fhreastalaí</string>
+    <string name="hint_server_password">Focal Faire an Freastalaí</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Soicind</string>
     <string name="label_front_camera">🤳 Ceamara Tosaigh</string>
     <string name="label_hidden_mode">👻 Mód Hidden</string>
     <string name="btn_download_server">📜 Íoslódáil scripteanna freastalaí</string>
     <string name="dialog_eula_title">⚠️ FÓGRA SLÁNDÁLA CÓRAS</string>
+    <string name="dialog_password_title">Focal Faire:</string>
     <string name="dialog_eula_positive">GLACADH</string>
     <string name="dialog_eula_negative">DEARBHÚ</string>
     <string name="dialog_eula_message">TÉARMAÍ SEIRBHÍSE &amp; COMHAONTÚ CEADÚNAIS ÚSÁIDEORA DEIRIDH (EULA)\n\n1. CÓIPCHEART &amp; CREIDMHEASA\nTá an tionscadal foinse oscailte ach cosanta ag Cóipcheart. Tá cead agat na bogearraí seo a athdháileadh agus a mhodhnú ar an gcoinníoll go dtugtar creidmheas soiléir don bhunchruthaitheoir.\n© zMykerd. Gach ceart ar cosaint.\n\n2. ÚSÁID CEADAITHE &amp; DHLÍTHE\nTá an bogearra seo deartha mar uirlis sábháilteachta pearsanta/SOS. Aontaíonn tú go docht GAN an feidhmchlár seo, a cód foinse, nó aon scripteanna gaolmhara a úsáid chun críocha mídhleathacha, faireachas neamhúdaraithe, nó gníomhaíochtaí spiaireachta. Ní ghlacann an cruthaitheoir freagracht ar bith as úsáid mhíchuí!\n\nTrí "GLACADH", aontaíonn tú leis na téarmaí seo. Mura n-aontaíonn tú, roghnaigh "DECLINE" chun an feidhmchlár a fhágáil.</string>

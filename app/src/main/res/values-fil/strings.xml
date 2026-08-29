@@ -5,12 +5,14 @@
     <string name="btn_hold">HAWAKAN</string>
     <string name="title_system_settings">SYSTEM SETTINGS</string>
     <string name="hint_server_ip">IP Address ng Server</string>
+    <string name="hint_server_password">Password ng Server</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Secs</string>
     <string name="label_front_camera">🤳 Front Camera</string>
     <string name="label_hidden_mode">👻 Nakatagong Mode</string>
     <string name="btn_download_server">📜 I-download ang Server Script</string>
     <string name="dialog_eula_title">⚠️ NOTICE SA SEGURIDAD NG SYSTEM</string>
+    <string name="dialog_password_title">Password:</string>
     <string name="dialog_eula_positive">TANGGAPIN</string>
     <string name="dialog_eula_negative">TUMAWAG</string>
     <string name="dialog_eula_message">MGA TUNTUNIN NG SERBISYO at END USER LICENSE AGREEMENT (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nAng proyektong ito ay open-source ngunit protektado ng Copyright. Pinahihintulutan kang muling ipamahagi at baguhin ang software na ito sa kondisyon na ang malinaw na kredito ay ibinigay sa orihinal na lumikha.\n© zMykerd. Nakalaan ang lahat ng karapatan.\n\n2. PINAHIHINTULUTAN AT BATAS NA PAGGAMIT\nAng software na ito ay idinisenyo bilang personal na kaligtasan/SOS tool. Mahigpit kang sumasang-ayon na HINDI gamitin ang application na ito, ang source code nito, o anumang nauugnay na script para sa mga iligal na layunin, hindi awtorisadong pagsubaybay, o mga aktibidad sa pag-espiya. Walang pananagutan ang tagalikha para sa hindi wastong paggamit!\n\nSa pamamagitan ng pag-click sa "TANGGAPIN", sumasang-ayon ka sa mga tuntuning ito. Kung hindi ka sumasang-ayon, piliin ang "DECLINE" upang lumabas sa aplikasyon.</string>

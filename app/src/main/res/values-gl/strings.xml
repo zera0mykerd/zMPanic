@@ -5,12 +5,14 @@
     <string name="btn_hold">ATENCIÓN</string>
     <string name="title_system_settings">CONFIGURACIÓN DO SISTEMA</string>
     <string name="hint_server_ip">Enderezo IP do servidor</string>
+    <string name="hint_server_password">Contrasinal do servidor</string>
     <string name="hint_port">Porto</string>
     <string name="hint_secs">Seg</string>
     <string name="label_front_camera">🤳 Cámara frontal</string>
     <string name="label_hidden_mode">👻 Modo oculto</string>
     <string name="btn_download_server">📜 Descargar Server Script</string>
     <string name="dialog_eula_title">⚠️ AVISO DE SEGURIDADE DO SISTEMA</string>
+    <string name="dialog_password_title">Contrasinal:</string>
     <string name="dialog_eula_positive">ACEPTAR</string>
     <string name="dialog_eula_negative">DECLINACIÓN</string>
     <string name="dialog_eula_message">TERMOS DE SERVIZO E CONTRATO DE LICENZA DO USUARIO FINAL (EULA)\n\n1. DEREITOS DE AUTOR E CRÉDITOS\nEste proxecto é de código aberto pero está protexido polos dereitos de autor. Permíteche redistribuír e modificar este software sempre que se lle conceda un crédito claro ao creador orixinal.\n© zMykerd. Todos os dereitos reservados.\n\n2. USO PERMITIDO E LEGAL\nEste software está deseñado como unha ferramenta de seguridade persoal/SOS. Aceptas estrictamente NON usar esta aplicación, o seu código fonte ou calquera script asociado con fins ilegais, vixilancia non autorizada ou actividades de espionaxe. O creador non asume ningunha responsabilidade polo uso inadecuado!\n\nAo facer clic en "ACEPTAR", aceptas estas condicións. Se non está de acordo, escolla "DECLINE" para saír da aplicación.</string>

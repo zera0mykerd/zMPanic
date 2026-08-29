@@ -5,12 +5,14 @@
     <string name="btn_hold">HOLD</string>
     <string name="title_system_settings">KERFSSTILLINGAR</string>
     <string name="hint_server_ip">IP tölu netþjóns</string>
+    <string name="hint_server_password">Lykilorð netþjóns</string>
     <string name="hint_port">Höfn</string>
     <string name="hint_secs">Sek</string>
     <string name="label_front_camera">🤳 myndavél að framan</string>
     <string name="label_hidden_mode">👻 Falinn hamur</string>
     <string name="btn_download_server">📜 Hlaða niður netþjónaforskrift</string>
     <string name="dialog_eula_title">⚠️ KERFI ÖRYGGI TILKYNNING</string>
+    <string name="dialog_password_title">Lykilorð:</string>
     <string name="dialog_eula_positive">SAMÞYKKJA</string>
     <string name="dialog_eula_negative">HAFNA</string>
     <string name="dialog_eula_message">ÞJÓNUSTUSKILMÁLAR OG LEYFISSAMNINGUR ENDAnotenda (EULA)\n\n1. HÖFUNDARRETtur og inneign\nÞetta verkefni er opinn uppspretta en verndað af höfundarrétti. Þér er heimilt að endurdreifa og breyta þessum hugbúnaði að því tilskildu að upphaflega höfundurinn fái skýr kredit.\n© zMykerd. Allur réttur áskilinn.\n\n2. LEYFIÐ OG LÖGLEG NOTKUN\nÞessi hugbúnaður er hannaður sem persónulegt öryggis-/SOS tól. Þú samþykkir algjörlega að nota EKKI þetta forrit, frumkóðann þess eða nein tengd forskriftir í ólöglegum tilgangi, óviðkomandi eftirliti eða njósnastarfsemi. Höfundurinn tekur enga ábyrgð á óviðeigandi notkun!\n\nMeð því að smella á „SAMTYKJA“ samþykkir þú þessa skilmála. Ef þú ert ekki sammála skaltu velja „DECLINE“ til að hætta í forritinu.</string>

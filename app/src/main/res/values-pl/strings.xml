@@ -5,12 +5,14 @@
     <string name="btn_hold">TRZYMAĆ</string>
     <string name="title_system_settings">USTAWIENIA SYSTEMU</string>
     <string name="hint_server_ip">Adres IP serwera</string>
+    <string name="hint_server_password">Hasło serwera</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">sek</string>
     <string name="label_front_camera">🤳 Przedni aparat</string>
     <string name="label_hidden_mode">👻 Tryb ukryty</string>
     <string name="btn_download_server">📜 Pobierz skrypt serwera</string>
     <string name="dialog_eula_title">⚠️ UWAGA DOTYCZĄCA BEZPIECZEŃSTWA SYSTEMU</string>
+    <string name="dialog_password_title">Hasło:</string>
     <string name="dialog_eula_positive">PRZYJĄĆ</string>
     <string name="dialog_eula_negative">SPADEK</string>
     <string name="dialog_eula_message">WARUNKI KORZYSTANIA Z USŁUG I UMOWA LICENCYJNA UŻYTKOWNIKA KOŃCOWEGO (EULA)\n\n1. PRAWA AUTORSKIE I KREDYTY\nTen projekt ma charakter open source, ale jest chroniony prawem autorskim. Możesz rozpowszechniać i modyfikować to oprogramowanie pod warunkiem wyraźnego wskazania pierwotnego twórcy.\n© zMykerd. Wszelkie prawa zastrzeżone.\n\n2. DOZWOLONE I ZGODNE Z PRAWEM UŻYCIE\nTo oprogramowanie zostało zaprojektowane jako narzędzie zapewniające bezpieczeństwo osobiste/narzędzie SOS. Użytkownik całkowicie zgadza się NIE używać tej aplikacji, jej kodu źródłowego ani żadnych powiązanych skryptów do celów nielegalnych, nieautoryzowanego nadzoru lub działań szpiegowskich. Twórca nie ponosi odpowiedzialności za niewłaściwe użycie!\n\nKlikając „AKCEPTUJĘ”, wyrażasz zgodę na te warunki. Jeżeli nie wyrażasz zgody, wybierz opcję „ODMÓW”, aby wyjść z aplikacji.</string>

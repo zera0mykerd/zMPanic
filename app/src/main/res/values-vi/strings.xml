@@ -5,12 +5,14 @@
     <string name="btn_hold">GIỮ</string>
     <string name="title_system_settings">CÀI ĐẶT HỆ THỐNG</string>
     <string name="hint_server_ip">Địa chỉ IP máy chủ</string>
+    <string name="hint_server_password">Mật khẩu máy chủ</string>
     <string name="hint_port">Cảng</string>
     <string name="hint_secs">Giây</string>
     <string name="label_front_camera">🤳 Camera trước</string>
     <string name="label_hidden_mode">👻 Chế độ ẩn</string>
     <string name="btn_download_server">📜 Tải xuống tập lệnh máy chủ</string>
     <string name="dialog_eula_title">⚠️ THÔNG BÁO AN NINH HỆ THỐNG</string>
+    <string name="dialog_password_title">Mật khẩu:</string>
     <string name="dialog_eula_positive">CHẤP NHẬN</string>
     <string name="dialog_eula_negative">SỰ SUY SỤP</string>
     <string name="dialog_eula_message">ĐIỀU KHOẢN DỊCH VỤ &amp; THỎA THUẬN CẤP PHÉP NGƯỜI DÙNG CUỐI (EULA)\n\n1. BẢN QUYỀN &amp; TÍN DỤNG\nDự án này là nguồn mở nhưng được bảo vệ bởi Bản quyền. Bạn được phép phân phối lại và sửa đổi phần mềm này với điều kiện là người sáng tạo ban đầu phải ghi công rõ ràng.\n© zMykerd. Mọi quyền được bảo lưu.\n\n2. ĐƯỢC PHÉP VÀ SỬ DỤNG HỢP PHÁP\nPhần mềm này được thiết kế như một công cụ an toàn cá nhân/SOS. Bạn hoàn toàn đồng ý KHÔNG sử dụng ứng dụng này, mã nguồn của nó hoặc bất kỳ tập lệnh liên quan nào cho các mục đích bất hợp pháp, giám sát trái phép hoặc hoạt động gián điệp. Người sáng tạo không chịu trách nhiệm về việc sử dụng không đúng cách!\n\nBằng cách nhấp vào "CHẤP NHẬN", bạn đồng ý với các điều khoản này. Nếu không đồng ý chọn “TỪ CHỐI” để thoát khỏi ứng dụng.</string>

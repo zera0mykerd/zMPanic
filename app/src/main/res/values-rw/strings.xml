@@ -5,12 +5,14 @@
     <string name="btn_hold">HOLD</string>
     <string name="title_system_settings">SYSTEM SETTINGS</string>
     <string name="hint_server_ip">Seriveri IP Aderesi</string>
+    <string name="hint_server_password">Ijambo ryibanga rya seriveri</string>
     <string name="hint_port">Icyambu</string>
     <string name="hint_secs">Amasegonda</string>
     <string name="label_front_camera">Kamera Imbere</string>
     <string name="label_hidden_mode">Mode Uburyo bwihishe</string>
     <string name="btn_download_server">Kuramo inyandiko ya seriveri</string>
     <string name="dialog_eula_title">ICYITONDERWA RY\'UMUTEKANO WA SYSTEM</string>
+    <string name="dialog_password_title">Ijambo ryibanga:</string>
     <string name="dialog_eula_positive">Emera</string>
     <string name="dialog_eula_negative">ICYEMEZO</string>
     <string name="dialog_eula_message">AMABWIRIZA YA SERIVISI &amp; IHEREZO RY\'AMASEZERANO Y’ABAKORESHEJWE (EULA) \ n \ n1. COPYRIGHT &amp; CREDITS \ nUyu mushinga ufunguye-isoko ariko urinzwe na Copyright. Uremerewe kugabura no guhindura iyi software mugihe inguzanyo isobanutse ihabwa uwashizeho umwimerere. \ N © zMykerd. Uburenganzira bwose burasubitswe. \ N \ n2. BIKORESHEJWE &amp; GUKORESHA AMATEGEKO \ nIyi software yateguwe nkumutekano wihariye / igikoresho cya SOS. Uremeranya rwose Kudakoresha iyi porogaramu, code yinkomoko yayo, cyangwa inyandiko iyo ari yo yose ifitanye isano nintego zitemewe, kugenzura bitemewe, cyangwa ibikorwa byubutasi. Iyakaremye nta nshingano afite yo gukoresha nabi! \ N \ nKanda "KWEMERA", wemera aya magambo. Niba utabyemera, hitamo "DECLINE" kugirango usohoke.</string>

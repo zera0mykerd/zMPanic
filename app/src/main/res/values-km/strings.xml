@@ -5,12 +5,14 @@
     <string name="btn_hold">កាន់</string>
     <string name="title_system_settings">ការកំណត់ប្រព័ន្ធ</string>
     <string name="hint_server_ip">អាសយដ្ឋាន IP ម៉ាស៊ីនមេ</string>
+    <string name="hint_server_password">លេខសម្ងាត់ម៉ាស៊ីនមេ</string>
     <string name="hint_port">ច្រក</string>
     <string name="hint_secs">វិ</string>
     <string name="label_front_camera">🤳 កាមេរ៉ាមុខ</string>
     <string name="label_hidden_mode">👻 របៀបលាក់</string>
     <string name="btn_download_server">📜 ទាញយក Server Script</string>
     <string name="dialog_eula_title">⚠️ ការជូនដំណឹងអំពីសុវត្ថិភាពប្រព័ន្ធ</string>
+    <string name="dialog_password_title">លេខសម្ងាត់:</string>
     <string name="dialog_eula_positive">ទទួលយក</string>
     <string name="dialog_eula_negative">បដិសេធ</string>
     <string name="dialog_eula_message">លក្ខខណ្ឌនៃសេវាកម្ម និងកិច្ចព្រមព្រៀងអាជ្ញាប័ណ្ណអ្នកប្រើប្រាស់ចុងក្រោយ (EULA)\n\n1. រក្សាសិទ្ធិ និងឥណទាន\nគម្រោងនេះគឺជាប្រភពបើកចំហ ប៉ុន្តែត្រូវបានការពារដោយរក្សាសិទ្ធិ។ អ្នកត្រូវបានអនុញ្ញាតឱ្យចែកចាយឡើងវិញ និងកែប្រែកម្មវិធីនេះដោយផ្តល់ឥណទានច្បាស់លាស់ដល់អ្នកបង្កើតដើម។\n© zMykerd ។ រក្សាសិទ្ធិគ្រប់យ៉ាង។\n\n2. អនុញ្ញាត និងប្រើប្រាស់ដោយស្របច្បាប់\nកម្មវិធីនេះត្រូវបានរចនាឡើងជាឧបករណ៍សុវត្ថិភាពផ្ទាល់ខ្លួន/SOS។ អ្នកយល់ព្រមយ៉ាងតឹងរ៉ឹងមិនឱ្យប្រើកម្មវិធីនេះ កូដប្រភពរបស់វា ឬស្គ្រីបដែលពាក់ព័ន្ធសម្រាប់គោលបំណងខុសច្បាប់ ការឃ្លាំមើលដែលគ្មានការអនុញ្ញាត ឬសកម្មភាពចារកម្ម។ អ្នកបង្កើតមិនទទួលខុសត្រូវចំពោះការប្រើប្រាស់មិនត្រឹមត្រូវទេ!\n\nដោយចុច "យល់ព្រម" អ្នកយល់ព្រមនឹងលក្ខខណ្ឌទាំងនេះ។ ប្រសិនបើអ្នកមិនយល់ព្រម សូមជ្រើសរើស "DECLINE" ដើម្បីចេញពីកម្មវិធី។</string>

@@ -5,12 +5,14 @@
     <string name="btn_hold">ДРЖИ</string>
     <string name="title_system_settings">СИСТЕМСКИ ПОСТАВКИ</string>
     <string name="hint_server_ip">IP адреса на серверот</string>
+    <string name="hint_server_password">Лозинка за серверот</string>
     <string name="hint_port">Пристаниште</string>
     <string name="hint_secs">Сек</string>
     <string name="label_front_camera">🤳 Предна камера</string>
     <string name="label_hidden_mode">👻 Скриен режим</string>
     <string name="btn_download_server">📜 Преземете скрипта за сервер</string>
     <string name="dialog_eula_title">⚠️ ИЗВЕСТУВАЊЕ ЗА БЕЗБЕДНОСТ НА СИСТЕМОТ</string>
+    <string name="dialog_password_title">Лозинка:</string>
     <string name="dialog_eula_positive">ПРИФАТИ</string>
     <string name="dialog_eula_negative">ОПАЃАЊЕ</string>
     <string name="dialog_eula_message">УСЛОВИ НА УСЛУГА И ДОГОВОР ЗА ЛИЦЕНЦА ЗА КРАЕН КОРИСНИК (EULA)\n\n1. АВТОРСКИ ПРАВА И КРЕДИТИ\nОвој проект е со отворен код, но заштитен со авторски права. Дозволено ви е да го редистрибуирате и менувате овој софтвер под услов да му се даде јасна заслуга на оригиналниот креатор.\n© zMykerd. Сите права се задржани.\n\n2. ДОЗВОЛЕНА И ЗАКОНСКА УПОТРЕБА\nОвој софтвер е дизајниран како алатка за лична безбедност/SOS. Строго се согласувате да НЕ ја користите оваа апликација, нејзиниот изворен код или кои било поврзани скрипти за нелегални цели, неовластено надгледување или активности за шпионирање. Создавачот не презема никаква одговорност за неправилна употреба!\n\nСо кликнување на „ПРИФАТИ“, се согласувате со овие услови. Ако не се согласувате, изберете „ОДБИЕ“ за да излезете од апликацијата.</string>

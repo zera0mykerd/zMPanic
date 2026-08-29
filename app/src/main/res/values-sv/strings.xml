@@ -5,12 +5,14 @@
     <string name="btn_hold">HÅLLA</string>
     <string name="title_system_settings">SYSTEMINSTÄLLNINGAR</string>
     <string name="hint_server_ip">Serverns IP-adress</string>
+    <string name="hint_server_password">Serverlösenord</string>
     <string name="hint_port">Hamn</string>
     <string name="hint_secs">Sek</string>
     <string name="label_front_camera">🤳 Främre kamera</string>
     <string name="label_hidden_mode">👻 Dolt läge</string>
     <string name="btn_download_server">📜 Ladda ner serverskript</string>
     <string name="dialog_eula_title">⚠️ SYSTEMSÄKERHETSMEDDELANDE</string>
+    <string name="dialog_password_title">Lösenord:</string>
     <string name="dialog_eula_positive">ACCEPTERA</string>
     <string name="dialog_eula_negative">NEDGÅNG</string>
     <string name="dialog_eula_message">SERVICEVILLKOR OCH SLUTANVÄNDARLICENSAVTAL (EULA)\n\n1. COPYRIGHT &amp; CREDITS\nDet här projektet är öppen källkod men skyddas av upphovsrätt. Du har tillåtelse att omdistribuera och modifiera denna programvara förutsatt att tydlig kredit ges till den ursprungliga skaparen.\n© zMykerd. Alla rättigheter reserverade.\n\n2. TILLÅTEN OCH LAGLIG ANVÄNDNING\nDenna programvara är utformad som ett verktyg för personlig säkerhet/SOS. Du samtycker strängt till att INTE använda den här applikationen, dess källkod eller tillhörande skript för olagliga ändamål, otillåten övervakning eller spionverksamhet. Skaparen tar inget ansvar för felaktig användning!\n\nGenom att klicka på "ACCEPTERA" godkänner du dessa villkor. Om du inte godkänner, välj "NEJ" för att avsluta applikationen.</string>

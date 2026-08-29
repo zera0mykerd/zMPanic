@@ -5,12 +5,14 @@
     <string name="btn_hold">TAHAN</string>
     <string name="title_system_settings">TETAPAN SISTEM</string>
     <string name="hint_server_ip">Alamat IP Pelayan</string>
+    <string name="hint_server_password">Kata Laluan Pelayan</string>
     <string name="hint_port">Pelabuhan</string>
     <string name="hint_secs">Sek</string>
     <string name="label_front_camera">🤳 Kamera Depan</string>
     <string name="label_hidden_mode">👻 Mod Tersembunyi</string>
     <string name="btn_download_server">📜 Muat turun Skrip Pelayan</string>
     <string name="dialog_eula_title">⚠️ NOTIS KESELAMATAN SISTEM</string>
+    <string name="dialog_password_title">Kata Laluan:</string>
     <string name="dialog_eula_positive">TERIMA</string>
     <string name="dialog_eula_negative">TOLAK</string>
     <string name="dialog_eula_message">SYARAT PERKHIDMATAN &amp; PERJANJIAN LESEN PENGGUNA AKHIR (EULA)\n\n1. HAK CIPTA &amp; KREDIT\nProjek ini adalah sumber terbuka tetapi dilindungi oleh Hak Cipta. Anda dibenarkan untuk mengedarkan semula dan mengubah suai perisian ini dengan syarat kredit yang jelas diberikan kepada pencipta asal.\n© zMykerd. Semua hak terpelihara.\n\n2. PENGGUNAAN YANG DIBENARKAN &amp; SAH\nPerisian ini direka bentuk sebagai alat keselamatan peribadi/SOS. Anda benar-benar bersetuju untuk TIDAK menggunakan aplikasi ini, kod sumbernya, atau mana-mana skrip yang berkaitan untuk tujuan yang menyalahi undang-undang, pengawasan tanpa kebenaran atau aktiviti mengintip. Pencipta tidak bertanggungjawab atas penggunaan yang tidak wajar!\n\nDengan mengklik "TERIMA", anda bersetuju menerima syarat ini. Jika anda tidak bersetuju, pilih "TOLAK" untuk keluar dari aplikasi.</string>

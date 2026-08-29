@@ -5,12 +5,14 @@
     <string name="btn_hold">PRISE</string>
     <string name="title_system_settings">PARAMÈTRES DU SYSTÈME</string>
     <string name="hint_server_ip">Adresse IP du serveur</string>
+    <string name="hint_server_password">Mot de passe du serveur</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Secondes</string>
     <string name="label_front_camera">🤳 Caméra frontale</string>
     <string name="label_hidden_mode">👻 Mode caché</string>
     <string name="btn_download_server">📜 Télécharger le script du serveur</string>
     <string name="dialog_eula_title">⚠️ AVIS DE SÉCURITÉ DU SYSTÈME</string>
+    <string name="dialog_password_title">Mot de passe :</string>
     <string name="dialog_eula_positive">ACCEPTER</string>
     <string name="dialog_eula_negative">DÉCLIN</string>
     <string name="dialog_eula_message">CONDITIONS D\'UTILISATION ET CONTRAT DE LICENCE UTILISATEUR FINAL (CLUF)\n\n1. COPYRIGHT &amp; CREDITS\nCe projet est open source mais protégé par Copyright. Vous êtes autorisé à redistribuer et à modifier ce logiciel à condition que le crédit soit clairement attribué au créateur original.\n© zMykerd. Tous droits réservés.\n\n2. UTILISATION AUTORISÉE ET LÉGALE\nCe logiciel est conçu comme un outil de sécurité personnelle/SOS. Vous acceptez strictement de NE PAS utiliser cette application, son code source ou tout script associé à des fins illégales, de surveillance non autorisée ou d\'activités d\'espionnage. Le créateur n\'assume aucune responsabilité en cas d\'utilisation inappropriée !\n\nEn cliquant sur "ACCEPTER", vous acceptez ces conditions. Si vous n\'êtes pas d\'accord, choisissez « REFUSER » pour quitter l\'application.</string>

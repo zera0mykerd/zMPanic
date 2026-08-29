@@ -5,12 +5,14 @@
     <string name="btn_hold">Jide</string>
     <string name="title_system_settings">Nhazi usoro</string>
     <string name="hint_server_ip">Adreesị IP nkesa</string>
+    <string name="hint_server_password">Okwuntughe sava</string>
     <string name="hint_port">Port</string>
     <string name="hint_secs">Sk</string>
     <string name="label_front_camera">🤳 Igwefoto ihu</string>
     <string name="label_hidden_mode">👻 Ọnọdụ ezoro ezo</string>
     <string name="btn_download_server">📜 Budata Script Server</string>
     <string name="dialog_eula_title">⚠️ Ọkwa nchekwa nchekwa usoro</string>
+    <string name="dialog_password_title">Okwuntughe:</string>
     <string name="dialog_eula_positive">NAbata</string>
     <string name="dialog_eula_negative">Kwụsị</string>
     <string name="dialog_eula_message">Usoro ọrụ &amp; Kwụsị Nkwekọrịta Ikikere Onye Ọrụ (EULA)\n\n1. COPYRIGHT &amp; CREDITS\n Ọrụ a bụ ebe mepere emepe mana ikike nwebiisinka chekwara ya. Enyere gị ohere ikesa ma gbanwee ngwanro a ma ọ bụrụhaala na enyere onye okike mbụ otuto doro anya.\n© zMykerd. Edebere ikike niile.\n\n2. KWERE &amp; OKWU KWESỊRỊ \nEmebere ngwanrọ a ka ọ bụrụ ngwa nchekwa onwe/SOS. Ị kwenyesiri ike ka ịghara iji ngwa a, koodu isi mmalite ya, ma ọ bụ edemede ọ bụla metụtara maka ebumnuche iwu na-akwadoghị, onyunyo na-enweghị ikike, ma ọ bụ mmemme nledo. Onye okike anaghị ewere ọrụ ọ bụla maka iji na-ezighi ezi!\n\nSite na ịpị "ACCEPT", ị kwenyere na usoro ndị a. Ọ bụrụ na ikwenyeghị, họrọ "DECLINE" ka ịpụ na ngwa ahụ.</string>

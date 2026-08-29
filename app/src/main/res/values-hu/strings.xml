@@ -5,12 +5,14 @@
     <string name="btn_hold">TART</string>
     <string name="title_system_settings">RENDSZERBEÁLLÍTÁSOK</string>
     <string name="hint_server_ip">Szerver IP-címe</string>
+    <string name="hint_server_password">Szerver jelszó</string>
     <string name="hint_port">Kikötő</string>
     <string name="hint_secs">Secs</string>
     <string name="label_front_camera">🤳 Előlapi kamera</string>
     <string name="label_hidden_mode">👻 Rejtett mód</string>
     <string name="btn_download_server">📜 Szerver szkript letöltése</string>
     <string name="dialog_eula_title">⚠️ RENDSZERBIZTONSÁGI ÉRTESÍTÉS</string>
+    <string name="dialog_password_title">Jelszó:</string>
     <string name="dialog_eula_positive">ELFOGADJA</string>
     <string name="dialog_eula_negative">HANYATLÁS</string>
     <string name="dialog_eula_message">SZOLGÁLTATÁSI FELTÉTELEK ÉS VÉGFELHASZNÁLÓI LICENCSZERZŐDÉS (EULA)\n\n1. SZERZŐI JOG ÉS HITELEK\nEz a projekt nyílt forráskódú, de szerzői jogi védelem alatt áll. Ön jogosult a szoftver újraterjesztésére és módosítására, feltéve, hogy az eredeti készítőt egyértelműen elismerik.\n© zMykerd. Minden jog fenntartva.\n\n2. ENGEDÉLYEZETT ÉS TÖRVÉNYES HASZNÁLAT\nEz a szoftver személyes biztonsági/SOS eszköznek készült. Szigorúan beleegyezik abba, hogy ezt az alkalmazást, annak forráskódját vagy a kapcsolódó szkripteket NE használja illegális célokra, jogosulatlan megfigyelésre vagy kémtevékenységre. Az alkotó nem vállal felelősséget a nem megfelelő használatért!\n\nAz "ELFOGADÁS" gombra kattintva elfogadja ezeket a feltételeket. Ha nem ért egyet, válassza az „Elutasítás” lehetőséget az alkalmazásból való kilépéshez.</string>

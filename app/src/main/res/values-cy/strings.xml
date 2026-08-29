@@ -5,12 +5,14 @@
     <string name="btn_hold">DAL</string>
     <string name="title_system_settings">GOSODIADAU SYSTEM</string>
     <string name="hint_server_ip">Cyfeiriad IP Gweinydd</string>
+    <string name="hint_server_password">Cyfrinair y Gweinydd</string>
     <string name="hint_port">Porthladd</string>
     <string name="hint_secs">Eiliadau</string>
     <string name="label_front_camera">🤳 Camera Blaen</string>
     <string name="label_hidden_mode">👻 Modd Cudd</string>
     <string name="btn_download_server">📜 Lawrlwythwch Sgript Gweinyddwr</string>
     <string name="dialog_eula_title">⚠️ HYSBYSIAD DIOGELWCH SYSTEM</string>
+    <string name="dialog_password_title">Cyfrinair:</string>
     <string name="dialog_eula_positive">DERBYN</string>
     <string name="dialog_eula_negative">DIRYWIAD</string>
     <string name="dialog_eula_message">TELERAU GWASANAETH A CHYTUNDEB TRWYDDED DEFNYDDWYR TERFYNOL (EULA)\n\n1. HAWLFRAINT A CHREDYDAU\nMae\'r prosiect hwn yn ffynhonnell agored ond wedi\'i warchod gan Hawlfraint. Caniateir i chi ailddosbarthu ac addasu\'r feddalwedd hon ar yr amod bod credyd clir yn cael ei roi i\'r crëwr gwreiddiol.\n© zMykerd. Cedwir pob hawl.\n\n2. DEFNYDD A GANIATEIR A GYFREITHIOL\nMae\'r feddalwedd hon wedi\'i dylunio fel arf diogelwch personol/SOS. Rydych yn cytuno\'n llwyr i BEIDIO â defnyddio\'r cymhwysiad hwn, ei god ffynhonnell, nac unrhyw sgriptiau cysylltiedig at ddibenion anghyfreithlon, gwyliadwriaeth heb awdurdod, neu weithgareddau ysbïo. Nid yw\'r crëwr yn cymryd unrhyw gyfrifoldeb am ddefnydd amhriodol!\n\nTrwy glicio "DERBYN", rydych yn cytuno i\'r telerau hyn. Os nad ydych yn cytuno, dewiswch "DECLINE" i adael y cais.</string>

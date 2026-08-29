@@ -5,12 +5,14 @@
     <string name="btn_hold">ДЪРЖИ</string>
     <string name="title_system_settings">СИСТЕМНИ НАСТРОЙКИ</string>
     <string name="hint_server_ip">IP адрес на сървъра</string>
+    <string name="hint_server_password">Парола на сървъра</string>
     <string name="hint_port">Порт</string>
     <string name="hint_secs">сек</string>
     <string name="label_front_camera">🤳 Предна камера</string>
     <string name="label_hidden_mode">👻 Скрит режим</string>
     <string name="btn_download_server">📜 Изтеглете сървърен скрипт</string>
     <string name="dialog_eula_title">⚠️ БЕЛЕЖКА ЗА СИГУРНОСТТА НА СИСТЕМАТА</string>
+    <string name="dialog_password_title">Парола:</string>
     <string name="dialog_eula_positive">ПРИЕМАМ</string>
     <string name="dialog_eula_negative">ОТКАЗ</string>
     <string name="dialog_eula_message">УСЛОВИЯ ЗА УСЛУГА И ЛИЦЕНЗИОННО СПОРАЗУМЕНИЕ С КРАЕН ПОТРЕБИТЕЛ (EULA)\n\n1. АВТОРСКИ ПРАВА И КРЕДИТИ\nТози проект е с отворен код, но е защитен от авторски права. Разрешено ви е да разпространявате и модифицирате този софтуер, при условие че е посочена ясна заслуга за оригиналния създател.\n© zMykerd. Всички права запазени.\n\n2. РАЗРЕШЕНО И ЗАКОННО ИЗПОЛЗВАНЕ\nТози софтуер е проектиран като лична безопасност/SOS инструмент. Вие стриктно се съгласявате да НЕ използвате това приложение, неговия изходен код или всякакви свързани скриптове за незаконни цели, неразрешено наблюдение или шпионски дейности. Създателят не поема отговорност за неправилна употреба!\n\nКато щракнете върху „ПРИЕМАМ“, вие се съгласявате с тези условия. Ако не сте съгласни, изберете "ОТКАЗ", за да излезете от приложението.</string>

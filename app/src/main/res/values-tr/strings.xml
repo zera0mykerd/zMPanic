@@ -5,12 +5,14 @@
     <string name="btn_hold">TUTMAK</string>
     <string name="title_system_settings">SİSTEM AYARLARI</string>
     <string name="hint_server_ip">Sunucu IP Adresi</string>
+    <string name="hint_server_password">Sunucu Parolası</string>
     <string name="hint_port">Liman</string>
     <string name="hint_secs">saniye</string>
     <string name="label_front_camera">🤳 Ön Kamera</string>
     <string name="label_hidden_mode">👻 Gizli Mod</string>
     <string name="btn_download_server">📜 Sunucu Komut Dosyasını İndirin</string>
     <string name="dialog_eula_title">⚠️ SİSTEM GÜVENLİK BİLDİRİMİ</string>
+    <string name="dialog_password_title">Parola:</string>
     <string name="dialog_eula_positive">KABUL ETMEK</string>
     <string name="dialog_eula_negative">REDDETMEK</string>
     <string name="dialog_eula_message">HİZMET ŞARTLARI VE SON KULLANICI LİSANS SÖZLEŞMESİ (EULA)\n\n1. TELİF HAKKI VE KREDİLER\nBu proje açık kaynaktır ancak Telif Hakkı ile korunmaktadır. Orijinal yaratıcıya açıkça atıfta bulunulması koşuluyla, bu yazılımı yeniden dağıtmanıza ve değiştirmenize izin verilmektedir.\n© zMykerd. Tüm hakları saklıdır.\n\n2. İZİN VERİLEN VE YASAL KULLANIM\nBu yazılım kişisel güvenlik/SOS aracı olarak tasarlanmıştır. Bu uygulamayı, kaynak kodunu veya ilgili komut dosyalarını yasa dışı amaçlarla, yetkisiz gözetim veya casusluk faaliyetleri için KULLANMAMAYI kesinlikle kabul edersiniz. İçerik oluşturucu, uygunsuz kullanımla ilgili hiçbir sorumluluk kabul etmez!\n\n"KABUL ET" seçeneğini tıklayarak bu şartları kabul etmiş olursunuz. Kabul etmiyorsanız uygulamadan çıkmak için "REDDET" seçeneğini seçin.</string>
