@@ -21,7 +21,7 @@ All video and location data are transmitted directly to a **user-defined server 
 This app does not use any third-party analytics, tracking, or advertising SDKs.
 
 ### 5. Open Source
-The source code is public and transparent. You can audit the code at: https://github.com/zera0mykerd/zMPanic
+The source code is public and transparent. You can audit the code at: https://github.com/zmykerd/zMPanic
 
 ### 6. Contact
 If you have any questions, you can open an issue on the official GitHub repository.
