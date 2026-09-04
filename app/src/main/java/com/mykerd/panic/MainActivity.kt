@@ -5,8 +5,10 @@ import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.AlarmManager
 import android.app.AlertDialog
 import android.app.KeyguardManager
+import android.app.NotificationManager
 import android.util.Log
 import android.content.*
 import android.content.pm.PackageManager
@@ -14,11 +16,13 @@ import android.graphics.Color
 import android.graphics.SurfaceTexture
 import android.graphics.drawable.GradientDrawable
 import android.graphics.Typeface
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.PowerManager
+import android.provider.Settings
 import android.text.Editable
 import android.text.InputFilter
 import android.text.InputType
@@ -30,32 +34,55 @@ import android.view.WindowManager
 import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.security.crypto.EncryptedSharedPreferences
-import androidx.security.crypto.MasterKey
 import java.io.File
 
 class MainActivity : Activity() {
     private val PERMISSION_REQUEST_CODE = 1001
     private lateinit var prefs: SharedPreferences
-    private val securePrefs: SharedPreferences by lazy {
-        try {
-            val masterKey = MasterKey.Builder(this)
-                .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
-                .build()
-            EncryptedSharedPreferences.create(
-                this,
-                "secure_zmpanic_prefs",
-                masterKey,
-                EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-                EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-            )
-        } catch (e: Exception) {
-            Log.e("zMPanic", "SecurePrefs Init Failure, falling back to standard", e)
-            getSharedPreferences("secure_zmpanic_fallback", MODE_PRIVATE)
-        }
+    private val tapTimestamps = mutableListOf<Long>()
+    private val tapLimit = 5
+    private val tapWindow = 2500L
+    private val ACTION_START_STEALTH_COUNTDOWN = "com.mykerd.panic.ACTION_START_STEALTH_COUNTDOWN"
+    private val ACTION_CANCEL_STEALTH_ACTIVATION = "com.mykerd.panic.ACTION_CANCEL_STEALTH_ACTIVATION"
+    private enum class StealthState {
+        NORMAL,
+        PENDING_ACTIVATION,
+        CONFIRMING_ACTIVATION,
+        ACTIVE
     }
+    private val securePrefs: SharedPreferences by lazy {
+        SecureConfig.getPrefs(this)
+    }
+    private val secureStealthPrefs: SharedPreferences by lazy {
+        SecureConfig.getStealthPrefs(this)
+    }
+    @Volatile
+    private var _stealthState: StealthState = StealthState.NORMAL
+    private var stealthState: StealthState
+        get() = _stealthState
+        set(value) {
+            _stealthState = value
+            Thread {
+                try {
+                    secureStealthPrefs.edit().putString("stealth_state", value.name).apply()
+                } catch (e: Exception) {
+                    Log.e("zMPanic", "Error saving stealth state: ${e.message}")
+                }
+            }.start()
+        }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Thread {
+            try {
+                SecureConfig.getPrefs(this)
+                val sPrefs = SecureConfig.getStealthPrefs(this)
+                val stateStr = sPrefs.getString("stealth_state", StealthState.NORMAL.name)
+                _stealthState = try { StealthState.valueOf(stateStr ?: StealthState.NORMAL.name) } catch (e: Exception) { StealthState.NORMAL }
+                runOnUiThread { updateStealthUI() }
+            } catch (e: Exception) {
+                Log.e("zMPanic", "SecureConfig pre-warm failed: ${e.message}")
+            }
+        }.start()
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
             setShowWhenLocked(true)
@@ -69,13 +96,14 @@ class MainActivity : Activity() {
             )
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val km = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+            val km = getSystemService(KEYGUARD_SERVICE) as KeyguardManager
             km.requestDismissKeyguard(this, null)
         }
         setContentView(R.layout.activity_main)
         prefs = getSharedPreferences("zmpanic_prefs", MODE_PRIVATE)
         setupUI()
         checkEulaAndProceed()
+        updateStealthUI()
     }
     private fun checkEulaAndProceed() {
         val isEulaAccepted = prefs.getBoolean("eula_accepted", false)
@@ -88,7 +116,7 @@ class MainActivity : Activity() {
     private fun showEulaDialog() {
         val dialog = AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
             .setTitle(getString(R.string.dialog_eula_title))
-            .setMessage(getString(R.string.dialog_eula_message)) // <-- Cambiato qui!
+            .setMessage(getString(R.string.dialog_eula_message))
             .setCancelable(false)
             .setPositiveButton(getString(R.string.dialog_eula_positive)) { _, _ ->
                 prefs.edit().putBoolean("eula_accepted", true).apply()
@@ -160,6 +188,7 @@ class MainActivity : Activity() {
         }
         val btnStop = findViewById<LinearLayout>(R.id.btnStopSos)
         btnStop.setOnLongClickListener { stopPanicService(); true }
+        btnStop.setOnClickListener { handleTap() }
         val btnDownload = findViewById<Button>(R.id.btnDownloadServer)
         btnDownload.setOnClickListener {
             saveServerScript()
@@ -169,16 +198,17 @@ class MainActivity : Activity() {
         val editPassword = findViewById<EditText>(R.id.editPassword)
         val editSecs = findViewById<EditText>(R.id.editSecs)
         val switchFront = findViewById<Switch>(R.id.switchFront)
-        val switchHidden = findViewById<Switch>(R.id.switchHidden)
         val hiddenOverlay = findViewById<View>(R.id.hiddenOverlay)
         (editIp.parent as? ViewGroup)?.background = settingsBg
         editIp.setText(prefs.getString("server_ip", "192.168.1.220"))
         editPort.setText(prefs.getString("server_port", "9999"))
-        editPassword.setText(securePrefs.getString("server_password", ""))
+        Thread {
+            val pwd = securePrefs.getString("server_password", "")
+            runOnUiThread { editPassword.setText(pwd) }
+        }.start()
         editSecs.setText(prefs.getInt("rotation_seconds", 20).toString())
         switchFront.isChecked = prefs.getBoolean("use_front_cam", false)
         val isHidden = prefs.getBoolean("hidden_mode", false)
-        switchHidden.isChecked = isHidden
         hiddenOverlay.visibility = if (isHidden) View.VISIBLE else View.GONE
         findViewById<FrameLayout>(R.id.cameraContainer).layoutParams.height = if (isHidden) 1 else 400
         val textWatcher = object : TextWatcher {
@@ -198,7 +228,14 @@ class MainActivity : Activity() {
         editSecs.addTextChangedListener(textWatcher)
         editPassword.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                securePrefs.edit().putString("server_password", s.toString()).apply()
+                val pass = s.toString()
+                Thread {
+                    try {
+                        securePrefs.edit().putString("server_password", pass).apply()
+                    } catch (e: Exception) {
+                        Log.e("zMPanic", "Error saving password: ${e.message}")
+                    }
+                }.start()
             }
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
@@ -206,13 +243,6 @@ class MainActivity : Activity() {
         switchFront.setOnCheckedChangeListener { _, isChecked ->
             prefs.edit().putBoolean("use_front_cam", isChecked).apply()
             restartService()
-        }
-        switchHidden.setOnCheckedChangeListener { _, active ->
-            prefs.edit().putBoolean("hidden_mode", active).apply()
-            hiddenOverlay.visibility = if (active) View.VISIBLE else View.GONE
-            findViewById<FrameLayout>(R.id.cameraContainer).layoutParams.height = if (active) 1 else 400
-            restartService()
-            handleAlias(active)
         }
         findViewById<TextureView>(R.id.textureView).surfaceTextureListener = object : TextureView.SurfaceTextureListener {
             override fun onSurfaceTextureAvailable(st: SurfaceTexture, w: Int, h: Int) {
@@ -228,29 +258,16 @@ class MainActivity : Activity() {
             override fun onSurfaceTextureUpdated(st: SurfaceTexture) {}
         }
     }
-    private fun handleAlias(active: Boolean) {
-        val pkg = packageManager
-        val realApp = ComponentName(this, MainActivity::class.java)
-        val fakeApp = ComponentName(this, "com.mykerd.panic.MainActivityAlias")
-        if (active) {
-            Toast.makeText(this, getString(R.string.toast_alias_active), Toast.LENGTH_LONG).show()
-            Handler(Looper.getMainLooper()).postDelayed({
-                pkg.setComponentEnabledSetting(fakeApp, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
-                pkg.setComponentEnabledSetting(realApp, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
-            }, 2000)
-        } else {
-            pkg.setComponentEnabledSetting(realApp, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
-            pkg.setComponentEnabledSetting(fakeApp, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
-            Toast.makeText(this, getString(R.string.toast_alias_inactive), Toast.LENGTH_SHORT).show()
-        }
-    }
     private fun restartService() {
-        stopService(Intent(this, PanicService::class.java))
+        val intent = Intent(this, PanicService::class.java)
+        stopService(intent)
         if (hasRequiredPermissions()) checkPasswordAndStart()
     }
     private fun requestPermissionsAndStart() {
         if (!prefs.getBoolean("eula_accepted", false)) return
         requestIgnoreBatteryOptimizations()
+        checkDndPermission()
+        checkExactAlarmPermission()
         val permissions = mutableListOf(
             Manifest.permission.CAMERA,
             Manifest.permission.RECORD_AUDIO,
@@ -283,6 +300,7 @@ class MainActivity : Activity() {
                 checkBackgroundLocationPermission()
             } else {
                 Toast.makeText(this, getString(R.string.toast_perm_denied), Toast.LENGTH_SHORT).show()
+                checkBackgroundLocationPermission()
             }
         } else if (requestCode == 1002) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -294,12 +312,16 @@ class MainActivity : Activity() {
         }
     }
     private fun checkPasswordAndStart() {
-        val pwd = securePrefs.getString("server_password", null)
-        if (pwd.isNullOrEmpty()) {
-            showPasswordDialog()
-        } else {
-            startPanicService()
-        }
+        Thread {
+            val pwd = securePrefs.getString("server_password", null)
+            runOnUiThread {
+                if (pwd.isNullOrEmpty()) {
+                    showPasswordDialog()
+                } else {
+                    startPanicService()
+                }
+            }
+        }.start()
     }
     private fun showPasswordDialog() {
         val container = FrameLayout(this)
@@ -320,8 +342,14 @@ class MainActivity : Activity() {
             .setPositiveButton("SAVE") { _, _ ->
                 val pass = input.text.toString()
                 if (pass.isNotEmpty()) {
-                    securePrefs.edit().putString("server_password", pass).apply()
-                    startPanicService()
+                    Thread {
+                        try {
+                            securePrefs.edit().putString("server_password", pass).apply()
+                            runOnUiThread { startPanicService() }
+                        } catch (e: Exception) {
+                            Log.e("zMPanic", "Error saving password: ${e.message}")
+                        }
+                    }.start()
                 } else {
                     showPasswordDialog()
                 }
@@ -333,16 +361,16 @@ class MainActivity : Activity() {
         if (!prefs.getBoolean("eula_accepted", false)) return
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             try {
-                val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
+                val pm = getSystemService(POWER_SERVICE) as PowerManager
                 if (!pm.isIgnoringBatteryOptimizations(packageName)) {
-                    val intent = Intent(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
-                        data = android.net.Uri.parse("package:$packageName")
+                    val intent = Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS).apply {
+                        data = Uri.parse("package:$packageName")
                     }
                     startActivity(intent)
                 }
             } catch (e: Exception) {
                 try {
-                    startActivity(Intent(android.provider.Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))
+                    startActivity(Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))
                 } catch (ex: Exception) {
                     Log.e("zMPanic", "Battery settings unreachable")
                 }
@@ -357,54 +385,197 @@ class MainActivity : Activity() {
     }
     private fun startPanicService() {
         val intent = Intent(this, PanicService::class.java).apply {
+            action = "com.mykerd.panic.ACTION_START_SERVICE"
             putExtra("EXTRA_IP", prefs.getString("server_ip", "192.168.1.220"))
             putExtra("EXTRA_PORT", prefs.getString("server_port", "9999"))
             putExtra("EXTRA_ROTATION", prefs.getInt("rotation_seconds", 20))
             putExtra("EXTRA_FRONT", prefs.getBoolean("use_front_cam", false))
             putExtra("EXTRA_HIDDEN", prefs.getBoolean("hidden_mode", false))
         }
-        ContextCompat.startForegroundService(this, intent)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        } else {
+            startService(intent)
+        }
     }
     private fun stopPanicService() {
         stopService(Intent(this, PanicService::class.java))
         Toast.makeText(this, getString(R.string.toast_service_stopped), Toast.LENGTH_SHORT).show()
     }
     private fun saveServerScript() {
-        try {
-            val inputStream = assets.open("zmpanicsrcsrv.zip")
-            val outputFile = File(getExternalFilesDir(null), "zmpanicsrcsrv.zip")
-            inputStream.use { input ->
-                outputFile.outputStream().use { output ->
-                    input.copyTo(output)
+        Thread {
+            try {
+                val inputStream = assets.open("zmpanicsrcsrv.zip")
+                val outputFile = File(getExternalFilesDir(null), "zmpanicsrcsrv.zip")
+                inputStream.use { input ->
+                    outputFile.outputStream().use { output ->
+                        input.copyTo(output)
+                    }
+                }
+                runOnUiThread {
+                    Toast.makeText(this, getString(R.string.toast_script_saved, outputFile.absolutePath), Toast.LENGTH_LONG).show()
+                }
+            } catch (e: Exception) {
+                val baseErrorText = getString(R.string.toast_script_error).replace("%s", "").trim()
+                val errorMsg = e.message ?: "Unknown error"
+                runOnUiThread {
+                    Toast.makeText(this, "$baseErrorText $errorMsg", Toast.LENGTH_SHORT).show()
                 }
             }
-            Toast.makeText(this, getString(R.string.toast_script_saved, outputFile.absolutePath), Toast.LENGTH_LONG).show()
-        } catch (e: Exception) {
-            val baseErrorText = getString(R.string.toast_script_error).replace("%s", "").trim()
-            val errorMsg = e.message ?: "Unknown error"
-            Toast.makeText(this, "$baseErrorText $errorMsg", Toast.LENGTH_SHORT).show()
-        }
+        }.start()
+    }
+    private fun handleAlias(active: Boolean) {
+        Thread {
+            val pkg = packageManager
+            val realApp = ComponentName(this, MainActivity::class.java)
+            val fakeApp = ComponentName(this, "com.mykerd.panic.MainActivityAlias")
+            try {
+                if (active) {
+                    pkg.setComponentEnabledSetting(fakeApp, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+                    pkg.setComponentEnabledSetting(realApp, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+                } else {
+                    pkg.setComponentEnabledSetting(realApp, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+                    pkg.setComponentEnabledSetting(fakeApp, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+                }
+                Log.d("zMPanic", "Alias toggled: $active")
+            } catch (e: Exception) {
+                Log.e("zMPanic", "Error toggling alias", e)
+            }
+        }.start()
     }
     private fun hasRequiredPermissions(): Boolean {
         if (!prefs.getBoolean("eula_accepted", false)) return false
-        val perms = listOf(
+        val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !notificationManager.isNotificationPolicyAccessGranted) {
+            return false
+        }
+        val perms = mutableListOf(
             Manifest.permission.CAMERA,
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.ACCESS_FINE_LOCATION
         )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) perms.add(Manifest.permission.POST_NOTIFICATIONS)
+        
         val missingBasePerms = perms.filter {
             ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
         }
         if (missingBasePerms.isNotEmpty()) {
-            ActivityCompat.requestPermissions(this, missingBasePerms.toTypedArray(), 100)
             return false
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q &&
             ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_BACKGROUND_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, getString(R.string.toast_select_always_allow), Toast.LENGTH_LONG).show()
-            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_BACKGROUND_LOCATION), 100)
             return false
         }
         return true
+    }
+    private fun checkDndPermission() {
+        val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !notificationManager.isNotificationPolicyAccessGranted) {
+            Toast.makeText(this, getString(R.string.toast_dnd_permission), Toast.LENGTH_LONG).show()
+            val intent = Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS)
+            startActivity(intent)
+        }
+    }
+    private fun checkExactAlarmPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val alarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
+            if (!alarmManager.canScheduleExactAlarms()) {
+                val intent = Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
+                    data = Uri.parse("package:$packageName")
+                }
+                startActivity(intent)
+            }
+        }
+    }
+    private fun handleTap() {
+        val now = System.currentTimeMillis()
+        tapTimestamps.add(now)
+        tapTimestamps.removeAll { it < now - tapWindow }
+        if (tapTimestamps.size >= tapLimit) {
+            tapTimestamps.clear()
+            if (stealthState == StealthState.NORMAL) {
+                showAntiStalkingDialog()
+            }
+        }
+    }
+    private fun showAntiStalkingDialog() {
+        AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+            .setTitle(R.string.dialog_anti_stalking_title)
+            .setMessage(R.string.dialog_anti_stalking_message)
+            .setCancelable(false)
+            .setPositiveButton(R.string.btn_cancel_activation) { _, _ ->
+                cancelStealthActivation()
+            }
+            .setNegativeButton(android.R.string.ok) { _, _ ->
+                startStealthCountdown()
+            }
+            .show()
+    }
+    private fun startStealthCountdown() {
+        stealthState = StealthState.PENDING_ACTIVATION
+        Thread {
+            try {
+                secureStealthPrefs.edit().putLong("activation_start_time", System.currentTimeMillis()).apply()
+            } catch (e: Exception) {
+                Log.e("zMPanic", "Error saving activation time: ${e.message}")
+            }
+        }.start()
+        val intent = Intent(this, PanicService::class.java).apply {
+            action = ACTION_START_STEALTH_COUNTDOWN
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        } else {
+            startService(intent)
+        }
+        updateStealthUI()
+    }
+    private fun cancelStealthActivation() {
+        stealthState = StealthState.NORMAL
+        Thread {
+            try {
+                secureStealthPrefs.edit().putLong("activation_start_time", 0L).apply()
+            } catch (e: Exception) {
+                Log.e("zMPanic", "Error clearing activation time: ${e.message}")
+            }
+        }.start()
+        val intent = Intent(this, PanicService::class.java).apply {
+            action = ACTION_CANCEL_STEALTH_ACTIVATION
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        } else {
+            startService(intent)
+        }
+        updateStealthUI()
+    }
+    override fun onResume() {
+        super.onResume()
+        updateStealthUI()
+    }
+    private fun updateStealthUI() {
+        Thread {
+            val currentState = stealthState
+            runOnUiThread {
+                val btnSosContainer = findViewById<View>(R.id.btnSosContainer) ?: return@runOnUiThread
+                val container = btnSosContainer.parent as? LinearLayout ?: return@runOnUiThread
+                val existingBtn = container.findViewWithTag<Button>("btnCancelStealth")
+
+                if (currentState == StealthState.PENDING_ACTIVATION || currentState == StealthState.CONFIRMING_ACTIVATION) {
+                    if (existingBtn == null) {
+                        val btnCancel = Button(this).apply {
+                            tag = "btnCancelStealth"
+                            text = getString(R.string.btn_cancel_activation)
+                            setOnClickListener {
+                                cancelStealthActivation()
+                            }
+                        }
+                        container.addView(btnCancel, container.indexOfChild(btnSosContainer) + 1)
+                    }
+                } else {
+                    existingBtn?.let { container.removeView(it) }
+                }
+            }
+        }.start()
     }
 }
