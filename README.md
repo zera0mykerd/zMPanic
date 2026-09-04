@@ -165,6 +165,135 @@ When the `EXTRA_HIDDEN` flag is set:
 - Instant `moveTaskToBack(true)`.
 - Dynamic launcher icon disguise via `ActivityAlias` (optional build-time configuration).
 
+#### 🚨 Anti-Stalking Protection System (v15.0)
+
+Version **15.0** introduces a new Anti-Stalking protection system designed to provide a delayed, multi-stage safety workflow before automatically activating **Ghost Mode**.
+
+##### ⏱️ 30-Minute Countdown
+
+- Added a **30-minute countdown** before the protection sequence proceeds.
+- The extended countdown helps reduce accidental activations.
+- The protection timer operates independently from the visible application interface.
+
+##### 🔊 15-Second Emergency Alert
+
+Once the 30-minute countdown expires:
+
+- A **15-second emergency alert** is triggered.
+- The alert uses a high-priority audio mechanism designed to remain audible even when the device is in silent mode, where supported by Android/OEM audio policies.
+- The warning provides a final opportunity to intervene.
+
+##### ⏳ 30-Second Final Confirmation
+
+After the 15-second warning:
+
+- A final **30-second confirmation window** begins.
+- The user can cancel the protection sequence during this period.
+- If no valid confirmation/cancellation is received, the protection workflow proceeds automatically.
+
+##### 👻 Ghost Mode
+
+If the complete sequence reaches its activation point, the application automatically transitions into **Ghost Mode**.
+
+The complete workflow is:
+
+```text
+30-minute countdown
+        ↓
+15-second emergency alert
+        ↓
+30-second final confirmation
+        ↓
+Ghost Mode
+
+```
+
+##### 🕐 Android Time Anti-Tampering
+
+v15.0 adds protection against manipulation of the Android system clock being used to interfere with the Anti-Stalking countdown.
+
+The protection system does not blindly rely on the displayed wall-clock time.
+
+**Added protections:**
+
+* Detection of unexpected system-clock changes.
+* Detection of abnormal elapsed-time behavior.
+* Protection against simple forward/backward clock manipulation.
+* Additional consistency checks during critical protection-state transitions.
+* Use of monotonic/elapsed timing where appropriate.
+
+Changing the Android date or time should therefore no longer provide a simple way to bypass the protection countdown.
+
+##### 🔐 TOFU Trust Model
+
+Version 15.0 introduces TOFU (Trust On First Use) for server identity establishment.
+
+The first trusted server identity is recorded and subsequently used as a reference for future connections.
+
+**TOFU provides:**
+
+* Initial server identity establishment.
+* Persistent trust of the previously observed identity.
+* Detection of unexpected server identity changes.
+* Additional protection against silently switching to an untrusted server identity.
+
+TOFU adds a dedicated trust layer to the existing encrypted communication architecture.
+
+##### 🔑 ECC Asymmetric Cryptography
+
+v15.0 introduces Elliptic Curve Cryptography (ECC) for asymmetric cryptographic operations.
+
+The new architecture uses public/private key pairs to establish and verify cryptographic identity without transmitting private keys.
+
+**Added:**
+
+* Elliptic-curve public/private key pairs.
+* Public-key based identity verification.
+* Private-key protection on the originating device/system.
+* Public-key trust material for identity verification.
+* Integration between ECC identity and the new TOFU trust model.
+
+The ECC layer provides a dedicated asymmetric cryptographic foundation for the new trust architecture.
+
+##### 🛡️ New Security Architecture
+
+The v15.0 security model now adds a cryptographic identity layer on top of the existing security mechanisms:
+
+```
+             v15.0 Security Layer
+                     │
+             ┌───────┴───────┐
+             │               │
+            TOFU            ECC
+             │               │
+             └───────┬───────┘
+                     │
+             Server Identity
+                     │
+              Trusted Endpoint
+
+```
+
+This is an additional security layer and does not replace the security mechanisms introduced in previous releases.
+
+##### 📋 v15.0 — What's New
+
+* 🚨 Added Anti-Stalking Protection System
+* ⏱️ Added 30-minute protection countdown
+* 🔊 Added 15-second high-priority emergency alert
+* ⏳ Added 30-second final confirmation window
+* 👻 Added automatic Ghost Mode activation
+* 🕐 Added Android time-manipulation protection
+* 🛡️ Improved countdown integrity
+* 🔐 Added TOFU (Trust On First Use)
+* 🔑 Added ECC-based asymmetric cryptography
+* 🔒 Added cryptographic server identity verification
+* 🔗 Integrated TOFU + ECC into the new trust architecture
+
+**🚀 v15.0**  
+Focus: Anti-Stalking Protection · Ghost Mode · Time Integrity · TOFU · ECC Asymmetric Cryptography  
+Status: Stable
+
 #### Network Resilience & Store-and-Forward
 
 - Continuous local recording during network cuts.
