@@ -16,14 +16,15 @@ import select
 import getpass
 import hashlib
 import hmac
+import tempfile
 from http.server import ThreadingHTTPServer
 
 PORT = 9999
 SAVE_DIR = "zmpanic_recordings"
 MAX_FILE_SIZE = 100 * 1024 * 1024  # 100 MB
 SOCKET_TIMEOUT = 10.0  # Anti-Slowloris timeout
-CERT_FILE = "cert.pem"
-KEY_FILE = "key.pem"
+CERT_FILE = ".cert.pem"
+KEY_FILE = ".key.pem"
 PASS_FILE = ".srvpass.txt"
 
 # ===== RATE-LIMITING & INTERNAL BAN SYSTEM =====
@@ -287,11 +288,15 @@ def ensure_certificates():
     if not (os.path.exists(CERT_FILE) and os.path.exists(KEY_FILE)):
         try:
             cmd = [
-                "openssl", "req", "-x509", "-newkey", "rsa:2048",
+                "openssl", "req", "-x509", "-newkey", "ec", "-pkeyopt", "ec_paramgen_curve:prime256v1",
                 "-keyout", KEY_FILE, "-out", CERT_FILE,
-                "-days", "3650", "-nodes", "-subj", "/CN=zMPanicServer"
+                "-days", "36500", "-nodes", "-subj", "/CN=zMPanicServer"
             ]
+            #                "openssl", "req", "-x509", "-newkey", "rsa:2048" # or 4096,
+            #    "-keyout", KEY_FILE, "-out", CERT_FILE, #This is a old code
+            #    "-days", "3650", "-nodes", "-subj", "/CN=zMPanicServer" ### Old cert ###
             subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+            print(GREEN + " [SECURITY] New TOFU identity seeded (100-year validity). Do NOT delete .cert.pem / .key.pem!" + RESET)
             return True
         except Exception:
             return False
@@ -341,7 +346,7 @@ def prompt_autostart_setup():
         print(WHITE + f" Detected target : {launch_cmd}" + RESET)
         print(WHITE + f" Base directory  : {work_dir}" + RESET)
         print(CYAN + hr("─") + RESET)
-        print(GREEN + " Do you want to install autostart with GNU Screen [screen -S zmpserver]? (s/N) [5s timeout]: " + RESET, end="", flush=True)
+        print(GREEN + " Do you want to install autostart with GNU Screen [screen -S zmpserver]? (y/N) [5s timeout]: " + RESET, end="", flush=True)
         rlist, _, _ = select.select([sys.stdin], [], [], 5.0)
         if rlist:
             ans = sys.stdin.readline().strip().lower()
@@ -542,6 +547,7 @@ signal.signal(signal.SIGINT, signal_handler)
 signal.signal(signal.SIGTERM, signal_handler)
 ensure_certificates()
 log("NODE ONLINE (STRICT HTTPS / TLS). READY FOR CONNECTIONS...", CYAN, "SYS")
+log("TOFU LOCK ACTIVE: Do not delete .cert.pem/.key.pem or paired clients will reject connection!", YELLOW, "SEC")
 
 while not shutdown_flag:
     httpd = None
