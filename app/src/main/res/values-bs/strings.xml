@@ -14,7 +14,7 @@
     <string name="dialog_eula_title">⚠️ OBAVJEŠTENJE O SIGURNOSTI SISTEMA</string>
     <string name="dialog_password_title">Lozinka:</string>
     <string name="dialog_eula_positive">PRIHVATI</string>
-    <string name="dialog_eula_negative">DECLINE</string>
+    <string name="dialog_eula_negative">ODBIJ</string>
     <string name="dialog_eula_message">UVJETI UPOTREBE I UGOVOR O LICENCI KRAJNJEG KORISNIKA (EULA)\n\n1. AUTORSKA PRAVA I KREDITI\nOvaj projekat je otvorenog koda, ali zaštićen autorskim pravima. Dozvoljeno vam je da redistribuirate i modifikujete ovaj softver pod uslovom da se jasno odaje priznanje originalnom kreatoru.\n© zMykerd. Sva prava pridržana.\n\n2. DOZVOLJENA I ZAKONITA KORIŠĆENJE\nOvaj softver je dizajniran kao lični sigurnosni/SOS alat. Strogo se slažete da NE koristite ovu aplikaciju, njen izvorni kod ili bilo koje povezane skripte u nezakonite svrhe, neovlašteni nadzor ili špijunske aktivnosti. Kreator ne preuzima nikakvu odgovornost za nepropisnu upotrebu!\n\nKlikom na "PRIHVATI", slažete se sa ovim uslovima. Ako se ne slažete, odaberite "ODBIJENI" da izađete iz aplikacije.</string>
     <string name="toast_alias_active">🎭 Automatsko ažuriranje sistema</string>
     <string name="toast_alias_inactive">🔓 Normalni način rada je otključan</string>
@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 OBJAVIMO RESURSE...</string>
     <string name="toast_loc_searching">📍 LOC: TRAŽI SE SIGNAL...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Sigurnost protiv praćenja</string>
+    <string name="dialog_anti_stalking_message">Iz sigurnosnih razloga protiv praćenja, aktivacija skrivenog načina rada nije trenutna. Ako sami niste zatražili ovu radnju, možete je otkazati ovdje.</string>
+    <string name="btn_cancel_activation">Otkaži aktivaciju</string>
+    <string name="notification_stealth_warning_title">Sigurnosno upozorenje</string>
+    <string name="notification_stealth_warning_text">Upozorenje: skriveni način rada će se aktivirati za 30 sekundi. Dodirnite ovdje za otkazivanje.</string>
+    <string name="btn_cancel_hidden_mode">OTKAŽI AKTIVACIJU SKRIVENOG NAČINA RADA</string>
+    <string name="log_stealth_cancelled">Korisnik je otkazao aktivaciju nevidljivog načina rada.</string>
+    <string name="log_credential_change_deactivation">Nevidljivi način rada deaktiviran zbog promjene akreditiva uređaja.</string>
+    <string name="toast_dnd_permission">Molimo odobrite pristup Politici obavještenja kako biste osigurali da se sigurnosni alarm čuje čak i u nečujnom načinu rada.</string>
 </resources>

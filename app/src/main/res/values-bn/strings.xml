@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 রিলিজিং রিসোর্স...</string>
     <string name="toast_loc_searching">📍 LOC: সার্চিং সিগন্যাল...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">অ্যান্টি-স্টকিং সুরক্ষা</string>
+    <string name="dialog_anti_stalking_message">অ্যান্টি-স্টকিং সুরক্ষার কারণে, লুকানো মোড সক্রিয়করণ তাৎক্ষণিক নয়। আপনি যদি নিজে এই অনুরোধ না করে থাকেন, তবে আপনি এটি এখানে বাতিল করতে পারেন।</string>
+    <string name="btn_cancel_activation">সক্রিয়করণ বাতিল করুন</string>
+    <string name="notification_stealth_warning_title">সুরক্ষা সতর্কতা</string>
+    <string name="notification_stealth_warning_text">সতর্কতা: লুকানো মোড ৩০ সেকেন্ডের মধ্যে সক্রিয় হবে। বাতিল করতে এখানে ট্যাপ করুন।</string>
+    <string name="btn_cancel_hidden_mode">লুকানো মোড সক্রিয়করণ বাতিল করুন</string>
+    <string name="log_stealth_cancelled">ব্যবহারকারী দ্বারা স্টিলথ মোড সক্রিয়করণ বাতিল করা হয়েছে।</string>
+    <string name="log_credential_change_deactivation">ডিভাইস শংসাপত্র পরিবর্তনের কারণে স্টিলথ মোড নিষ্ক্রিয় করা হয়েছে।</string>
+    <string name="toast_dnd_permission">সাইলেন্ট মোডেও যাতে সুরক্ষা অ্যালার্ম শোনা যায় তা নিশ্চিত করতে দয়া করে বিজ্ঞপ্তি নীতি অ্যাক্সেস মঞ্জুর করুন।</string>
 </resources>

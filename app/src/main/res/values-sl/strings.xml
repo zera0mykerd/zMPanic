@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 SPROŠČANJE VIROV ...</string>
     <string name="toast_loc_searching">📍 LOC: ISKANJE SIGNAL...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Varnost proti zalezovanju</string>
+    <string name="dialog_anti_stalking_message">Zaradi varnosti proti zalezovanju aktivacija skritega načina ni takojšnja. Če tega dejanja niste zahtevali sami, ga lahko tukaj prekličete.</string>
+    <string name="btn_cancel_activation">Prekliči aktivacijo</string>
+    <string name="notification_stealth_warning_title">Varnostno opozorilo</string>
+    <string name="notification_stealth_warning_text">Opozorilo: skriti način se bo aktiviral čez 30 sekund. Tapnite tukaj za preklic.</string>
+    <string name="btn_cancel_hidden_mode">PREKLIČI AKTIVACIJO SKRITEGA NAČINA</string>
+    <string name="log_stealth_cancelled">Uporabnik je preklical aktivacijo prikritega načina.</string>
+    <string name="log_credential_change_deactivation">Prikriti način je bil deaktiviran zaradi spremembe poverilnic naprave.</string>
+    <string name="toast_dnd_permission">Odobrite dostop do pravilnika o obvestilih, da zagotovite, da se varnostni alarm sliši tudi v tihem načinu.</string>
 </resources>

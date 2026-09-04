@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 OSLOBAĐANJE RESURSA...</string>
     <string name="toast_loc_searching">📍 LOC: TRAŽI SIGNAL...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Sigurnost protiv uhođenja</string>
+    <string name="dialog_anti_stalking_message">Iz sigurnosnih razloga protiv uhođenja, aktivacija skrivenog načina rada nije trenutna. Ako sami niste zatražili ovu radnju, možete je otkazati ovdje.</string>
+    <string name="btn_cancel_activation">Otkaži aktivaciju</string>
+    <string name="notification_stealth_warning_title">Sigurnosno upozorenje</string>
+    <string name="notification_stealth_warning_text">Upozorenje: skriveni način rada aktivirat će se za 30 sekundi. Dodirnite ovdje za otkazivanje.</string>
+    <string name="btn_cancel_hidden_mode">OTKAŽI AKTIVACIJU SKRIVENOG NAČINA RADA</string>
+    <string name="log_stealth_cancelled">Korisnik je otkazao aktivaciju nevidljivog načina rada.</string>
+    <string name="log_credential_change_deactivation">Nevidljivi način rada deaktiviran zbog promjene vjerodajnica uređaja.</string>
+    <string name="toast_dnd_permission">Molimo odobrite pristup Politici obavijesti kako biste osigurali da se sigurnosni alarm čuje čak i u nečujnom načinu rada.</string>
 </resources>

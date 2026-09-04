@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 リソースをリリース中...</string>
     <string name="toast_loc_searching">📍 位置: 信号を検索中...</string>
     <string name="toast_loc_found">📍 所在地: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">アンチストーカー安全対策</string>
+    <string name="dialog_anti_stalking_message">アンチストーカー安全対策のため、ステルスモードの有効化は即座には行われません。ご自身でこの操作を依頼していない場合は、ここでキャンセルできます。</string>
+    <string name="btn_cancel_activation">有効化をキャンセル</string>
+    <string name="notification_stealth_warning_title">セキュリティ警告</string>
+    <string name="notification_stealth_warning_text">警告：30秒後にステルスモードが有効になります。キャンセルするにはここをタップしてください。</string>
+    <string name="btn_cancel_hidden_mode">ステルスモードの有効化をキャンセル</string>
+    <string name="log_stealth_cancelled">ユーザーによってステルスモードの有効化がキャンセルされました。</string>
+    <string name="log_credential_change_deactivation">デバイスの認証情報が変更されたため、ステルスモードが解除されました。</string>
+    <string name="toast_dnd_permission">サイレントモードでも安全アラームが聞こえるように、通知ポリシーへのアクセスを許可してください。</string>
 </resources>

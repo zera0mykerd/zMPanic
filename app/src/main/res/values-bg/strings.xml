@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 ОСВОБОЖДАВАНЕ НА РЕСУРСИ...</string>
     <string name="toast_loc_searching">📍 LOC: СИГНАЛ ЗА ТЪРСЕНЕ...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Защита срещу преследване</string>
+    <string name="dialog_anti_stalking_message">От съображения за безопасност срещу преследване активирането на скрития режим не е моментално. Ако не сте поискали това действие сами, можете да го отмените тук.</string>
+    <string name="btn_cancel_activation">Отмяна на активирането</string>
+    <string name="notification_stealth_warning_title">Предупреждение за сигурност</string>
+    <string name="notification_stealth_warning_text">Предупреждение: скритият режим ще се активира след 30 секунди. Докоснете тук за отмяна.</string>
+    <string name="btn_cancel_hidden_mode">ОТМЯНА НА АКТИВИРАНЕТО НА СКРИТИЯ РЕЖИМ</string>
+    <string name="log_stealth_cancelled">Активирането на скрития режим беше отменено от потребителя.</string>
+    <string name="log_credential_change_deactivation">Скритият режим е деактивиран поради промяна на идентификационните данни на устройството.</string>
+    <string name="toast_dnd_permission">Моля, дайте достъп до Политиката за известия, за да сте сигурни, че алармата за безопасност може да се чуе дори в безшумен режим.</string>
 </resources>

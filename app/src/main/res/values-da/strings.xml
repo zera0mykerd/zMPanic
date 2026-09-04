@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 FRIGØRER RESSOURCER...</string>
     <string name="toast_loc_searching">📍 LOC: SØGER SIGNAL...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Anti-stalking sikkerhed</string>
+    <string name="dialog_anti_stalking_message">Af hensyn til anti-stalking sikkerhed er aktivering af skjult tilstand ikke øjeblikkelig. Hvis du ikke selv har anmodet om denne handling, kan du annullere den her.</string>
+    <string name="btn_cancel_activation">Annuller aktivering</string>
+    <string name="notification_stealth_warning_title">Sikkerhedsadvarsel</string>
+    <string name="notification_stealth_warning_text">Advarsel: skjult tilstand aktiveres om 30 sekunder. Tryk her for at annullere.</string>
+    <string name="btn_cancel_hidden_mode">ANNULLER AKTIVERING AF SKJULT TILSTAND</string>
+    <string name="log_stealth_cancelled">Aktivering af stealth-tilstand blev annulleret af brugeren.</string>
+    <string name="log_credential_change_deactivation">Stealth-tilstand deaktiveret på grund af ændring af enhedsoplysninger.</string>
+    <string name="toast_dnd_permission">Giv venligst adgang til underretningspolitikken for at sikre, at sikkerhedsalarmen kan høres selv i lydløs tilstand.</string>
 </resources>

@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 ಸಂಪನ್ಮೂಲಗಳನ್ನು ಬಿಡುಗಡೆ ಮಾಡಲಾಗುತ್ತಿದೆ...</string>
     <string name="toast_loc_searching">📍 LOC: ಸಿಗ್ನಲ್ ಅನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">ವಿರೋಧಿ ಸ್ಟಾಕಿಂಗ್ ಸುರಕ್ಷತೆ</string>
+    <string name="dialog_anti_stalking_message">ವಿರೋಧಿ ಸ್ಟಾಕಿಂಗ್ ಸುರಕ್ಷತೆಯ ಕಾರಣಗಳಿಗಾಗಿ, ಗುಪ್ತ ಮೋಡ್‌ನ ಸಕ್ರಿಯಗೊಳಿಸುವಿಕೆಯು ತ್ವರಿತವಾಗಿರುವುದಿಲ್ಲ. ಈ ಕ್ರಿಯೆಯನ್ನು ನೀವೇ ವಿನಂತಿಸದಿದ್ದರೆ, ನೀವು ಅದನ್ನು ಇಲ್ಲಿ ರದ್ದುಗೊಳಿಸಬಹುದು.</string>
+    <string name="btn_cancel_activation">ಸಕ್ರಿಯಗೊಳಿಸುವಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="notification_stealth_warning_title">ಭದ್ರತಾ ಎಚ್ಚರಿಕೆ</string>
+    <string name="notification_stealth_warning_text">ಎಚ್ಚರಿಕೆ: ಗುಪ್ತ ಮೋಡ್ 30 ಸೆಕೆಂಡುಗಳಲ್ಲಿ ಸಕ್ರಿಯಗೊಳ್ಳುತ್ತದೆ. ರದ್ದುಗೊಳಿಸಲು ಇಲ್ಲಿ ಟ್ಯಾಪ್ ಮಾಡಿ.</string>
+    <string name="btn_cancel_hidden_mode">ಗುಪ್ತ ಮೋಡ್ ಸಕ್ರಿಯಗೊಳಿಸುವಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ</string>
+    <string name="log_stealth_cancelled">ಬಳಕೆದಾರರಿಂದ ಸ್ಟೆಲ್ತ್ ಮೋಡ್ ಸಕ್ರಿಯಗೊಳಿಸುವಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗಿದೆ.</string>
+    <string name="log_credential_change_deactivation">ಸಾಧನದ ರುಜುವಾತು ಬದಲಾವಣೆಯಿಂದಾಗಿ ಸ್ಟೆಲ್ತ್ ಮೋಡ್ ನಿಷ್ಕ್ರಿಯಗೊಂಡಿದೆ.</string>
+    <string name="toast_dnd_permission">ಸೈಲೆಂಟ್ ಮೋಡ್‌ನಲ್ಲೂ ಸುರಕ್ಷತಾ ಅಲಾರಂ ಕೇಳಿಸುತ್ತದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ದಯವಿಟ್ಟು ಅಧಿಸೂಚನೆ ನೀತಿ ಪ್ರವೇಶವನ್ನು ನೀಡಿ.</string>
 </resources>

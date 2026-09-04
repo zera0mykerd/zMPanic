@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 संसाधने जारी करत आहे...</string>
     <string name="toast_loc_searching">📍 LOC: सर्चिंग सिग्नल...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">अँटी-स्टॉकिंग सुरक्षा</string>
+    <string name="dialog_anti_stalking_message">अँटी-स्टॉकिंग सुरक्षिततेच्या कारणास्तव, हिडन मोड सक्रिय करणे त्वरित होत नाही. जर तुम्ही ही कृती स्वतः विनंती केली नसेल, तर तुम्ही ती येथे रद्द करू शकता।</string>
+    <string name="btn_cancel_activation">सक्रियन रद्द करा</string>
+    <string name="notification_stealth_warning_title">सुरक्षा चेतावणी</string>
+    <string name="notification_stealth_warning_text">चेतावणी: हिडन मोड ३० सेकंदात सक्रिय होईल. रद्द करण्यासाठी येथे टॅप करा।</string>
+    <string name="btn_cancel_hidden_mode">हिडन मोड सक्रिय करणे रद्द करा</string>
+    <string name="log_stealth_cancelled">वापरकर्त्याद्वारे स्टेल्थ मोड सक्रिय करणे रद्द करण्यात आले।</string>
+    <string name="log_credential_change_deactivation">डिव्हाइस क्रेडेंशियल बदलल्यामुळे स्टेल्थ मोड निष्क्रिय केला गेला।</string>
+    <string name="toast_dnd_permission">सुरक्षा अलार्म सायलेंट मोडमध्येही ऐकू येईल याची खात्री करण्यासाठी कृपया सूचना धोरण प्रवेश मंजूर करा।</string>
 </resources>

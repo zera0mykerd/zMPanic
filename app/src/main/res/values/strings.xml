@@ -44,4 +44,20 @@
     <string name="toast_releasing_resources">🛑 RELEASING RESOURCES...</string>
     <string name="toast_loc_searching">📍 LOC: SEARCHING SIGNAL...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Anti-Stalking Safety</string>
+    <string name="dialog_anti_stalking_message">For anti-stalking safety reasons, activation of the hidden mode is not instant. If you did not request this action yourself, you can cancel it here.</string>
+    <string name="btn_cancel_activation">Cancel Activation</string>
+    <string name="notification_stealth_warning_title">Security Warning</string>
+    <string name="notification_stealth_warning_text">Warning: hidden mode will activate in 30 seconds. Tap here to cancel.</string>
+    <string name="btn_cancel_hidden_mode">CANCEL HIDDEN MODE ACTIVATION</string>
+    <string name="log_stealth_cancelled">Stealth mode activation was cancelled by user.</string>
+    <string name="log_credential_change_deactivation">Stealth mode deactivated due to device credential change.</string>
+    <string name="toast_dnd_permission">Please grant Notification Policy access to ensure the safety alarm can be heard even in silent mode.</string>
+    <string name="notification_channel_id_normal" translatable="false">sos_guard</string>
+    <string name="notification_channel_id_hidden" translatable="false">sys_integrity</string>
+    <string name="notification_channel_id_confirmation" translatable="false">stealth_confirmation_high</string>
+    <string name="notification_channel_confirmation_name">Safety Activation Alarm</string>
+    <string name="notification_channel_confirmation_desc">Emergency alarm for stealth mode activation</string>
 </resources>

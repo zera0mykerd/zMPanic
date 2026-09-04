@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 释放资源...</string>
     <string name="toast_loc_searching">📍LOC：正在搜索信号...</string>
     <string name="toast_loc_found">📍位置：%s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">反跟踪安全</string>
+    <string name="dialog_anti_stalking_message">出于反跟踪安全原因，隐藏模式的激活不是即时的。如果您不是本人请求此操作，可以在此处取消。</string>
+    <string name="btn_cancel_activation">取消激活</string>
+    <string name="notification_stealth_warning_title">安全警告</string>
+    <string name="notification_stealth_warning_text">警告：隐藏模式将在 30 秒内激活。点击此处取消。</string>
+    <string name="btn_cancel_hidden_mode">取消隐藏模式激活</string>
+    <string name="log_stealth_cancelled">隐身模式激活已被用户取消。</string>
+    <string name="log_credential_change_deactivation">由于设备凭据更改，隐身模式已停用。</string>
+    <string name="toast_dnd_permission">请授予通知策略访问权限，以确保即使在静音模式下也能听到安全警报。</string>
 </resources>

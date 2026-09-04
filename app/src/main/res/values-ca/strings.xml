@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 ALLIBERAMENT DE RECURSOS...</string>
     <string name="toast_loc_searching">📍 LOC: SENYAL DE CERCANT...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Seguretat anti-assetjament</string>
+    <string name="dialog_anti_stalking_message">Per motius de seguretat anti-assetjament, l\'activació del mode ocult no és instantània. Si no heu sol·licitat aquesta acció vós mateix, podeu cancel·lar-la aquí.</string>
+    <string name="btn_cancel_activation">Cancel·lar activació</string>
+    <string name="notification_stealth_warning_title">Avís de seguretat</string>
+    <string name="notification_stealth_warning_text">Avís: el mode ocult s\'activarà en 30 segons. Toqueu aquí per cancel·lar.</string>
+    <string name="btn_cancel_hidden_mode">CANCEL·LAR ACTIVACIÓ DEL MODE OCULT</string>
+    <string name="log_stealth_cancelled">L\'activació del mode sigil ha estat cancel·lada per l\'usuari.</string>
+    <string name="log_credential_change_deactivation">Mode sigil desactivat a causa d\'un canvi de credencials del dispositiu.</string>
+    <string name="toast_dnd_permission">Concediu accés a la Política de notificacions per garantir que l\'alarma de seguretat es pugui escoltar fins i tot en mode silenciós.</string>
 </resources>

@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 IŠTEKLIŲ IŠLEIDIMAS...</string>
     <string name="toast_loc_searching">📍 LOC: PAIEŠKOS SIGNALAS...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Apsauga nuo persekiojimo</string>
+    <string name="dialog_anti_stalking_message">Saugumo sumetimais apsaugai nuo persekiojimo paslėptas režimas neaktyvuojamas akimirksniu. Jei patys neprašėte šio veiksmo, galite jį čia atšaukti.</string>
+    <string name="btn_cancel_activation">Atšaukti aktyvavimą</string>
+    <string name="notification_stealth_warning_title">Saugumo įspėjimas</string>
+    <string name="notification_stealth_warning_text">Įspėjimas: paslėptas režimas įsijungs po 30 sekundžių. Bakstelėkite čia, kad atšauktumėte.</string>
+    <string name="btn_cancel_hidden_mode">ATŠAUKTI PASLĖPTO REŽIMO AKTYVAVIMĄ</string>
+    <string name="log_stealth_cancelled">Vartotojas atšaukė nematomumo režimo aktyvavimą.</string>
+    <string name="log_credential_change_deactivation">Nematomumo režimas išjungtas dėl įrenginio atpažinimo duomenų pakeitimo.</string>
+    <string name="toast_dnd_permission">Suteikite prieigą prie pranešimų politikos, kad saugos signalas būtų girdimas net tyliuoju režimu.</string>
 </resources>

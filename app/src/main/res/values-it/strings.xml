@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 RILASCIO DELLE RISORSE IN CORSO...</string>
     <string name="toast_loc_searching">📍 POS: RICERCA SEGNALE...</string>
     <string name="toast_loc_found">📍 POS: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Sicurezza anti-stalking</string>
+    <string name="dialog_anti_stalking_message">Per motivi di sicurezza anti-stalking, l\'attivazione della modalità nascosta non è istantanea. Se non hai richiesto tu questa azione, puoi annullarla qui.</string>
+    <string name="btn_cancel_activation">Annulla attivazione</string>
+    <string name="notification_stealth_warning_title">Avviso di sicurezza</string>
+    <string name="notification_stealth_warning_text">Avviso: la modalità nascosta si attiverà tra 30 secondi. Tocca qui per annullare.</string>
+    <string name="btn_cancel_hidden_mode">ANNULLA ATTIVAZIONE MODALITÀ NASCOSTA</string>
+    <string name="log_stealth_cancelled">L\'attivazione della modalità stealth è stata annullata dall\'utente.</string>
+    <string name="log_credential_change_deactivation">Modalità stealth disattivata a causa del cambiamento delle credenziali del dispositivo.</string>
+    <string name="toast_dnd_permission">Per favore concedi l\'accesso alla Politica di Notifica per assicurarti che l\'allarme di sicurezza possa essere sentito anche in modalità silenziosa.</string>
 </resources>

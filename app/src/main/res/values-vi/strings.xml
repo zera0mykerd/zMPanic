@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 PHÁT HÀNH NGUỒN LỰC...</string>
     <string name="toast_loc_searching">📍 LỘC: TÍN HIỆU TÌM KIẾM...</string>
     <string name="toast_loc_found">📍 LỘC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">An toàn chống theo dõi</string>
+    <string name="dialog_anti_stalking_message">Vì lý do an toàn chống theo dõi, việc kích hoạt chế độ ẩn không diễn ra ngay lập tức. Nếu bạn không tự yêu cầu hành động này, bạn có thể hủy bỏ tại đây.</string>
+    <string name="btn_cancel_activation">Hủy kích hoạt</string>
+    <string name="notification_stealth_warning_title">Cảnh báo bảo mật</string>
+    <string name="notification_stealth_warning_text">Cảnh báo: chế độ ẩn sẽ kích hoạt sau 30 giây. Nhấn vào đây để hủy.</string>
+    <string name="btn_cancel_hidden_mode">HỦY KÍCH HOẠT CHẾ ĐỘ ẨN</string>
+    <string name="log_stealth_cancelled">Việc kích hoạt chế độ tàng hình đã bị người dùng hủy bỏ.</string>
+    <string name="log_credential_change_deactivation">Chế độ tàng hình đã bị hủy kích hoạt do thay đổi thông tin xác thực thiết bị.</string>
+    <string name="toast_dnd_permission">Vui lòng cấp quyền truy cập Chính sách thông báo để đảm bảo có thể nghe thấy báo động an toàn ngay cả ở chế độ im lặng.</string>
 </resources>

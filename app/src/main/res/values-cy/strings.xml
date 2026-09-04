@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 RHYDDHAU ADNODDAU...</string>
     <string name="toast_loc_searching">📍 LOC: CHWILIO ARWYDD...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Diogelwch Gwrth-Stalkio</string>
+    <string name="dialog_anti_stalking_message">Am resymau diogelwch gwrth-stalkio, nid yw actifadu\'r modd cudd yn digwydd ar unwaith. Os na wnaethoch chi ofyn am y weithred hon eich hun, gallwch ei chanslo yma.</string>
+    <string name="btn_cancel_activation">Canslo Actifadu</string>
+    <string name="notification_stealth_warning_title">Rhybudd Diogelwch</string>
+    <string name="notification_stealth_warning_text">Rhybudd: bydd y modd cudd yn actifadu mewn 30 eiliad. Tapiwch yma i ganslo.</string>
+    <string name="btn_cancel_hidden_mode">CANSLO ACTIFADU MODD CUDD</string>
+    <string name="log_stealth_cancelled">Cafodd actifadu modd llechwraidd ei ganslo gan y defnyddiwr.</string>
+    <string name="log_credential_change_deactivation">Modd llechwraidd wedi\'i ddadactifadu oherwydd newid ym manylion adnabod y ddyfais.</string>
+    <string name="toast_dnd_permission">Rhowch fynediad i\'r Polisi Hysbysu i sicrhau bod y larwm diogelwch i\'w glywed hyd yn oed yn y modd distaw.</string>
 </resources>

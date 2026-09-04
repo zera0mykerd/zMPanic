@@ -22,7 +22,7 @@
     <string name="toast_bg_perm_denied">❌ Igbanilaaye abẹlẹ sẹ: diẹ ninu awọn iṣẹ lopin</string>
     <string name="toast_service_stopped">🛑 IṢẸ SOS DIDE</string>
     <string name="toast_script_saved">✅ Ti fipamọ: %s</string>
-    <string name="toast_script_error">❌ Aṣiṣe: [[0]</string>
+    <string name="toast_script_error">❌ Aṣiṣe: %s</string>
     <string name="toast_select_always_allow">⚠️ Yan \'Gba laaye nigbagbogbo\' LORI Iboju t\'okan</string>
     <string name="notification_channel_normal">zM SOS Iṣẹ</string>
     <string name="notification_title_normal">zM SOS Ṣọ Iroyin</string>
@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 Awọn orisun itusilẹ...</string>
     <string name="toast_loc_searching">📍 LOC: Afihan wiwa...</string>
     <string name="toast_loc_found">📍 LOC: [[0]</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Aabo lodi si titọpinpin</string>
+    <string name="dialog_anti_stalking_message">Fun awọn idi aabo lodi si titọpinpin, ṣiṣiṣẹ ti ipo ti o farapamọ kii ṣe lẹsẹkẹsẹ. Ti o ko ba beere iṣẹ yii funrararẹ, o le fagilee nibi.</string>
+    <string name="btn_cancel_activation">Fagilee Ṣiṣiṣẹ</string>
+    <string name="notification_stealth_warning_title">Ikilo Aabo</string>
+    <string name="notification_stealth_warning_text">Ikilo: ipo ti o farapamọ yoo ṣiṣẹ ni iṣẹju-aaya 30. Fọwọkan ibi lati fagilee.</string>
+    <string name="btn_cancel_hidden_mode">FAGILE ṢIṢIṢẸ IPO TI O FARAPAMỌ</string>
+    <string name="log_stealth_cancelled">Ṣiṣiṣẹ ipo stealth ti fagile nipasẹ olumulo.</string>
+    <string name="log_credential_change_deactivation">Ipo stealth ti wa ni piparẹ nitori iyipada ijẹrisi ẹrọ.</string>
+    <string name="toast_dnd_permission">Jọwọ fun ni iwọle si Ilana Ifitonileti lati rii daju pe a le gbọ itaniji aabo paapaa ni ipo idakẹjẹ.</string>
 </resources>

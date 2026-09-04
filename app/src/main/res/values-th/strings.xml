@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 กำลังปล่อยทรัพยากร...</string>
     <string name="toast_loc_searching">📍 LOC: กำลังค้นหาสัญญาณ...</string>
     <string name="toast_loc_found">📍 ตำแหน่ง: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">ความปลอดภัยในการป้องกันการสะกดรอยตาม</string>
+    <string name="dialog_anti_stalking_message">ด้วยเหตุผลด้านความปลอดภัยในการป้องกันการสะกดรอยตาม การเปิดใช้งานโหมดซ่อนจะไม่เกิดขึ้นทันที หากคุณไม่ได้ร้องขอการดำเนินการนี้ด้วยตนเอง คุณสามารถยกเลิกได้ที่นี่</string>
+    <string name="btn_cancel_activation">ยกเลิกการเปิดใช้งาน</string>
+    <string name="notification_stealth_warning_title">คำเตือนด้านความปลอดภัย</string>
+    <string name="notification_stealth_warning_text">คำเตือน: โหมดซ่อนจะเปิดใช้งานใน 30 วินาที แตะที่นี่เพื่อยกเลิก</string>
+    <string name="btn_cancel_hidden_mode">ยกเลิกการเปิดใช้งานโหมดซ่อน</string>
+    <string name="log_stealth_cancelled">การเปิดใช้งานโหมดล่องหนถูกยกเลิกโดยผู้ใช้</string>
+    <string name="log_credential_change_deactivation">โหมดล่องหนถูกปิดใช้งานเนื่องจากการเปลี่ยนข้อมูลรับรองของอุปกรณ์</string>
+    <string name="toast_dnd_permission">โปรดให้สิทธิ์การเข้าถึงนโยบายการแจ้งเตือนเพื่อให้แน่ใจว่าได้ยินเสียงสัญญาณเตือนความปลอดภัยแม้ในโหมดเงียบ</string>
 </resources>

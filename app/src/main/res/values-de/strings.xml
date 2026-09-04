@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 RESSOURCEN FREIGEBEN...</string>
     <string name="toast_loc_searching">📍 LOC: SUCHE SIGNAL...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Anti-Stalking-Sicherheit</string>
+    <string name="dialog_anti_stalking_message">Aus Gründen der Anti-Stalking-Sicherheit erfolgt die Aktivierung des versteckten Modus nicht sofort. Wenn Sie diese Aktion nicht selbst angefordert haben, können Sie sie hier abbrechen.</string>
+    <string name="btn_cancel_activation">Aktivierung abbrechen</string>
+    <string name="notification_stealth_warning_title">Sicherheitswarnung</string>
+    <string name="notification_stealth_warning_text">Warnung: Der versteckte Modus wird in 30 Sekunden aktiviert. Zum Abbrechen hier tippen.</string>
+    <string name="btn_cancel_hidden_mode">AKTIVIERUNG DES VERSTECKTEN MODUS ABBRECHEN</string>
+    <string name="log_stealth_cancelled">Die Aktivierung des Stealth-Modus wurde vom Benutzer abgebrochen.</string>
+    <string name="log_credential_change_deactivation">Stealth-Modus aufgrund einer Änderung der Geräte-Zugangsdaten deaktiviert.</string>
+    <string name="toast_dnd_permission">Bitte gewähren Sie Zugriff auf die Benachrichtigungsrichtlinie, damit der Sicherheitsalarm auch im lautlosen Modus zu hören ist.</string>
 </resources>

@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 LEIT AÐRÁÐ...</string>
     <string name="toast_loc_searching">📍 LOC: Leitarmerki...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Öryggi gegn eltihrelli</string>
+    <string name="dialog_anti_stalking_message">Af öryggisástæðum gegn eltihrelli er virkjun falinnar stillingar ekki tafarlaus. Ef þú baðst ekki sjálfur um þessa aðgerð geturðu hætt við hana hér.</string>
+    <string name="btn_cancel_activation">Hætta við virkjun</string>
+    <string name="notification_stealth_warning_title">Öryggisviðvörun</string>
+    <string name="notification_stealth_warning_text">Viðvörun: falin stilling virkjast eftir 30 sekúndur. Bankaðu hér til að hætta við.</string>
+    <string name="btn_cancel_hidden_mode">HÆTTA VIÐ VIRKJUN FALINNAR STILLINGAR</string>
+    <string name="log_stealth_cancelled">Notandi hætti við virkjun laumustillingar.</string>
+    <string name="log_credential_change_deactivation">Laumustilling óvirkjuð vegna breytinga á skilríkjum tækis.</string>
+    <string name="toast_dnd_permission">Vinsamlegast veittu aðgang að tilkynningastefnu til að tryggja að öryggisviðvörunin heyrist jafnvel í hljóðlausri stillingu.</string>
 </resources>

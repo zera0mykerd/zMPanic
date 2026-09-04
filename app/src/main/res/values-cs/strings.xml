@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 UVOLNĚNÍ ZDROJŮ...</string>
     <string name="toast_loc_searching">📍 LOC: VYHLEDÁVACÍ SIGNÁL...</string>
     <string name="toast_loc_found">📍 MÍSTO: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Ochrana proti stalkingu</string>
+    <string name="dialog_anti_stalking_message">Z důvodu bezpečnosti proti stalkingu není aktivace skrytého režimu okamžitá. Pokud jste tuto akci sami nepožádali, můžete ji zde zrušit.</string>
+    <string name="btn_cancel_activation">Zrušit aktivaci</string>
+    <string name="notification_stealth_warning_title">Bezpečnostní varování</string>
+    <string name="notification_stealth_warning_text">Varování: skrytý režim se aktivuje za 30 sekund. Klepnutím sem akci zrušíte.</string>
+    <string name="btn_cancel_hidden_mode">ZRUŠIT AKTIVACI SKRYTÉHO REŽIMU</string>
+    <string name="log_stealth_cancelled">Aktivace neviditelného režimu byla zrušena uživatelem.</string>
+    <string name="log_credential_change_deactivation">Neviditelný režim deaktivován z důvodu změny přihlašovacích údajů zařízení.</string>
+    <string name="toast_dnd_permission">Udělte prosím přístup k Zásadám oznámení, aby byl bezpečnostní alarm slyšet i v tichém režimu.</string>
 </resources>

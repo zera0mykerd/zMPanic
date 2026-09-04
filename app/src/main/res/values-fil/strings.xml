@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 NAGLABAS NG MGA RESOURCES...</string>
     <string name="toast_loc_searching">📍 LOC: SEARCHING SIGNAL...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Kaligtasan Laban sa Stalking</string>
+    <string name="dialog_anti_stalking_message">Para sa mga dahilan ng kaligtasan laban sa stalking, ang pag-activate ng nakatagong mode ay hindi instant. Kung hindi mo hiniling ang aksyong ito, maaari mo itong kanselahin dito.</string>
+    <string name="btn_cancel_activation">Kanselahin ang Pag-activate</string>
+    <string name="notification_stealth_warning_title">Babala sa Seguridad</string>
+    <string name="notification_stealth_warning_text">Babala: maa-activate ang nakatagong mode sa loob ng 30 segundo. I-tap dito para kanselahin.</string>
+    <string name="btn_cancel_hidden_mode">KANSELAHIN ANG PAG-ACTIVATE NG NAKATAGONG MODE</string>
+    <string name="log_stealth_cancelled">Ang pag-activate ng stealth mode ay kinansela ng user.</string>
+    <string name="log_credential_change_deactivation">Na-deactivate ang stealth mode dahil sa pagbabago ng credential ng device.</string>
+    <string name="toast_dnd_permission">Mangyaring magbigay ng access sa Patakaran sa Notification upang matiyak na maririnig ang alarm sa kaligtasan kahit sa silent mode.</string>
 </resources>

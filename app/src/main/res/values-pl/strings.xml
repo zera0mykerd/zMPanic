@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 UWOLNIENIE ZASOBÓW...</string>
     <string name="toast_loc_searching">📍 LOC: WYSZUKIWANIE SYGNAŁU...</string>
     <string name="toast_loc_found">📍 LOKALIZACJA: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Bezpieczeństwo anty-stalkingowe</string>
+    <string name="dialog_anti_stalking_message">Ze względów bezpieczeństwa anty-stalkingowego aktywacja trybu ukrytego nie jest natychmiastowa. Jeśli nie zleciłeś tej akcji samodzielnie, możesz ją tutaj anulować.</string>
+    <string name="btn_cancel_activation">Anuluj aktywację</string>
+    <string name="notification_stealth_warning_title">Ostrzeżenie o bezpieczeństwie</string>
+    <string name="notification_stealth_warning_text">Ostrzeżenie: tryb ukryty aktywuje się za 30 sekund. Dotknij tutaj, aby anulować.</string>
+    <string name="btn_cancel_hidden_mode">ANULUJ AKTYWACJĘ TRYBU UKRYTEGO</string>
+    <string name="log_stealth_cancelled">Aktywacja trybu ukrytego została anulowana przez użytkownika.</string>
+    <string name="log_credential_change_deactivation">Tryb ukryty został dezaktywowany z powodu zmiany poświadczeń urządzenia.</string>
+    <string name="toast_dnd_permission">Przyznaj dostęp do Zasad powiadomień, aby mieć pewność, że alarm bezpieczeństwa będzie słyszalny nawet w trybie cichym.</string>
 </resources>

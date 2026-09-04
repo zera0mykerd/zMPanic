@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 ΑΠΕΛΕΥΘΕΡΩΣΗ ΠΟΡΩΝ...</string>
     <string name="toast_loc_searching">📍 ΤΟΠΟΘΕΣΙΑ: ΣΗΜΑ ΑΝΑΖΗΤΗΣΗΣ...</string>
     <string name="toast_loc_found">📍 ΤΟΠΟΘΕΣΙΑ: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Ασφάλεια κατά της παρενόχλησης</string>
+    <string name="dialog_anti_stalking_message">Για λόγους ασφαλείας κατά της παρενόχλησης, η ενεργοποίηση της κρυφής λειτουργίας δεν είναι άμεση. Εάν δεν ζητήσατε εσείς αυτήν την ενέργεια, μπορείτε να την ακυρώσετε εδώ.</string>
+    <string name="btn_cancel_activation">Ακύρωση ενεργοποίησης</string>
+    <string name="notification_stealth_warning_title">Προειδοποίηση ασφαλείας</string>
+    <string name="notification_stealth_warning_text">Προειδοποίηση: η κρυφή λειτουργία θα ενεργοποιηθεί σε 30 δευτερόλεπτα. Πατήστε εδώ για ακύρωση.</string>
+    <string name="btn_cancel_hidden_mode">ΑΚΥΡΩΣΗ ΕΝΕΡΓΟΠΟΙΗΣΗΣ ΚΡΥΦΗΣ ΛΕΙΤΟΥΡΓΙΑΣ</string>
+    <string name="log_stealth_cancelled">Η ενεργοποίηση της αόρατης λειτουργίας ακυρώθηκε από τον χρήστη.</string>
+    <string name="log_credential_change_deactivation">Η αόρατη λειτουργία απενεργοποιήθηκε λόγω αλλαγής διαπιστευτηρίων συσκευής.</string>
+    <string name="toast_dnd_permission">Παραχωρήστε πρόσβαση στην Πολιτική ειδοποιήσεων για να βεβαιωθείτε ότι ο συναγερμός ασφαλείας ακούγεται ακόμη και σε αθόρυβη λειτουργία.</string>
 </resources>

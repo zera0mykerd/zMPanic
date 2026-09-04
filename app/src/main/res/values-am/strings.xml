@@ -22,7 +22,7 @@
     <string name="toast_bg_perm_denied">❌ የበስተጀርባ ፍቃድ ተከልክሏል፡ አንዳንድ ተግባራት የተገደቡ ናቸው።</string>
     <string name="toast_service_stopped">🛑 የኤስኦኤስ አገልግሎት ቆመ</string>
     <string name="toast_script_saved">✅ ተቀምጧል፡ %s</string>
-    <string name="toast_script_error">❌ ስህተት፡[0]</string>
+    <string name="toast_script_error">❌ ስህተት፡ %s</string>
     <string name="toast_select_always_allow">⚠️ በሚቀጥለው ስክሪን ላይ \'ሁልጊዜ ፍቀድ\' የሚለውን ይምረጡ</string>
     <string name="notification_channel_normal">zM SOS አገልግሎት</string>
     <string name="notification_title_normal">zM SOS ጠባቂ ንቁ</string>
@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 ምንጮችን በመልቀቅ ላይ...</string>
     <string name="toast_loc_searching">📍 ቦታ፡ የፍለጋ ምልክት...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">ፀረ-ስርቆት ደህንነት</string>
+    <string name="dialog_anti_stalking_message">ለፀረ-ስርቆት ደህንነት ሲባል የተደበቀው ሁኔታ ወዲያውኑ አይነቃም። ይህንን ተግባር እራስዎ ካልጠየቁ እዚህ መሰረዝ ይችላሉ።</string>
+    <string name="btn_cancel_activation">ማግበርን ሰርዝ</string>
+    <string name="notification_stealth_warning_title">የደህንነት ማስጠንቀቂያ</string>
+    <string name="notification_stealth_warning_text">ማስጠንቀቂያ፡ የተደበቀ ሁኔታ በ30 ሰከንዶች ውስጥ ይነቃል። ለመሰረዝ እዚህ ይንኩ።</string>
+    <string name="btn_cancel_hidden_mode">የተደበቀ ሁኔታ ማግበርን ሰርዝ</string>
+    <string name="log_stealth_cancelled">በተጠቃሚው የተደበቀ ሁኔታ ማግበር ተሰርዟል።</string>
+    <string name="log_credential_change_deactivation">በመሣሪያ ምስክርነት ለውጥ ምክንያት የተደበቀ ሁኔታ ጠፍቷል።</string>
+    <string name="toast_dnd_permission">እባክዎን የደህንነት ማንቂያው በፀጥታ ሁኔታ ውስጥም ቢሆን መስማቱን ለማረጋገጥ የማሳወቂያ ፖሊሲ መዳረሻን ይፍቀዱ።</string>
 </resources>

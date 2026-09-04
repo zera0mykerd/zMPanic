@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 MELEPASKAN SUMBER DAYA...</string>
     <string name="toast_loc_searching">📍 LOC : SINYAL PENCARIAN...</string>
     <string name="toast_loc_found">📍 LOK: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Keamanan Anti-Stalking</string>
+    <string name="dialog_anti_stalking_message">Demi alasan keamanan anti-stalking, pengaktifan mode tersembunyi tidak instan. Jika Anda tidak meminta tindakan ini sendiri, Anda dapat membatalkannya di sini.</string>
+    <string name="btn_cancel_activation">Batalkan Pengaktifan</string>
+    <string name="notification_stealth_warning_title">Peringatan Keamanan</string>
+    <string name="notification_stealth_warning_text">Peringatan: mode tersembunyi akan aktif dalam 30 detik. Ketuk di sini untuk membatalkan.</string>
+    <string name="btn_cancel_hidden_mode">BATALKAN PENGAKTIFAN MODE TERSEMBUNYI</string>
+    <string name="log_stealth_cancelled">Pengaktifan mode senyap dibatalkan oleh pengguna.</string>
+    <string name="log_credential_change_deactivation">Mode senyap dinonaktifkan karena perubahan kredensial perangkat.</string>
+    <string name="toast_dnd_permission">Harap berikan akses Kebijakan Notifikasi untuk memastikan alarm keamanan dapat terdengar bahkan dalam mode senyap.</string>
 </resources>

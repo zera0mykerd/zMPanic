@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 TE PUTANGA RAUEMI...</string>
     <string name="toast_loc_searching">📍 WAHI: WHAKAMAHI RAPU...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Haumaru tūtei-kore</string>
+    <string name="dialog_anti_stalking_message">Mō ngā take haumaru tūtei-kore, kāore e puta wawe te whakahohenga o te aratau huna. Ki te kore koe i tono i tēnei mahi, ka taea e koe te whakakore i konei.</string>
+    <string name="btn_cancel_activation">Whakakore i te Whakahohenga</string>
+    <string name="notification_stealth_warning_title">Whakatūpato Haumarutanga</string>
+    <string name="notification_stealth_warning_text">Whakatūpato: ka whakahohehia te aratau huna i roto i te 30 hēkona. Pātui ki konei hei whakakore.</string>
+    <string name="btn_cancel_hidden_mode">WHAKAKORE I TE WHAKAHOHEGA ARATAU HUNA</string>
+    <string name="log_stealth_cancelled">I whakakorea te whakahohenga aratau puku e te kaiwhakamahi.</string>
+    <string name="log_credential_change_deactivation">I whakakorehia te aratau puku nā te huringa tohu pūrere.</string>
+    <string name="toast_dnd_permission">Tukuna koa te urunga ki te Kaupapahere Whakamōhiotanga kia rongo ai te whakaoho haumaru ahakoa i te aratau wahangu.</string>
 </resources>

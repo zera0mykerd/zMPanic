@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 வளங்களை வெளியிடுகிறது...</string>
     <string name="toast_loc_searching">📍 LOC: சிக்னல் தேடுகிறது...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">பின்தொடர்தல் எதிர்ப்பு பாதுகாப்பு</string>
+    <string name="dialog_anti_stalking_message">பின்தொடர்தல் எதிர்ப்பு பாதுகாப்பு காரணங்களுக்காக, மறைக்கப்பட்ட பயன்முறையை செயல்படுத்துவது உடனடியாக நடக்காது. இந்தச் செயலை நீங்களே கோரவில்லை என்றால், அதை இங்கே ரத்து செய்யலாம்.</string>
+    <string name="btn_cancel_activation">செயல்படுத்துவதை ரத்துசெய்</string>
+    <string name="notification_stealth_warning_title">பாதுகாப்பு எச்சரிக்கை</string>
+    <string name="notification_stealth_warning_text">எச்சரிக்கை: மறைக்கப்பட்ட பயன்முறை 30 வினாடிகளில் செயல்படும். ரத்துசெய்ய இங்கே தட்டவும்.</string>
+    <string name="btn_cancel_hidden_mode">மறைக்கப்பட்ட பயன்முறை செயல்படுத்தலை ரத்துசெய்</string>
+    <string name="log_stealth_cancelled">பயனரால் ஸ்டீல்த் பயன்முறை செயல்படுத்தல் ரத்து செய்யப்பட்டது.</string>
+    <string name="log_credential_change_deactivation">சாதன நற்சான்றிதழ் மாற்றத்தால் ஸ்டீல்த் பயன்முறை செயலிழக்கப்பட்டது.</string>
+    <string name="toast_dnd_permission">சத்தம் இல்லாத பயன்முறையிலும் பாதுகாப்பு அலாரம் கேட்கப்படுவதை உறுதிசெய்ய, அறிவிப்புக் கொள்கை அணுகலை வழங்கவும்।</string>
 </resources>

@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 MIDDELEN VRIJGEVEN...</string>
     <string name="toast_loc_searching">📍 LOC: SIGNAAL ZOEKEN...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Anti-stalking veiligheid</string>
+    <string name="dialog_anti_stalking_message">Om redenen van anti-stalking veiligheid is activering van de verborgen modus niet onmiddellijk. Als u deze actie niet zelf heeft aangevraagd, kunt u deze hier annuleren.</string>
+    <string name="btn_cancel_activation">Activering annuleren</string>
+    <string name="notification_stealth_warning_title">Veiligheidswaarschuwing</string>
+    <string name="notification_stealth_warning_text">Waarschuwing: verborgen modus wordt over 30 seconden geactiveerd. Tik hier om te annuleren.</string>
+    <string name="btn_cancel_hidden_mode">ACTIVERING VERBORGEN MODUS ANNULEREN</string>
+    <string name="log_stealth_cancelled">Activering van stealth-modus is geannuleerd door de gebruiker.</string>
+    <string name="log_credential_change_deactivation">Stealth-modus gedeactiveerd vanwege wijziging van apparaatgegevens.</string>
+    <string name="toast_dnd_permission">Geef toegang tot het Meldingsbeleid om ervoor te zorgen dat het veiligheidsalarm zelfs in de stille modus hoorbaar is.</string>
 </resources>

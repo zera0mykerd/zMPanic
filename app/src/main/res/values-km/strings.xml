@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 ការចេញផ្សាយប្រភព...</string>
     <string name="toast_loc_searching">📍ទីតាំង៖ សញ្ញាស្វែងរក...</string>
     <string name="toast_loc_found">📍ទីតាំង៖ %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">សុវត្ថិភាពប្រឆាំងនឹងការលួចតាមដាន</string>
+    <string name="dialog_anti_stalking_message">សម្រាប់ហេតុផលសុវត្ថិភាពប្រឆាំងនឹងការលួចតាមដាន ការធ្វើឱ្យសកម្មនៃរបៀបលាក់កំបាំងមិនមែនភ្លាមៗទេ។ ប្រសិនបើអ្នកមិនបានស្នើសុំសកម្មភាពនេះដោយខ្លួនឯងទេ អ្នកអាចបោះបង់វានៅទីនេះ।</string>
+    <string name="btn_cancel_activation">បោះបង់การធ្វើឱ្យសកម្ម</string>
+    <string name="notification_stealth_warning_title">ការព្រមានអំពីសុវត្ថិភាព</string>
+    <string name="notification_stealth_warning_text">ការព្រមាន៖ របៀបលាក់កំបាំងនឹងធ្វើឱ្យសកម្មក្នុងរយៈពេល 30 វិនាទី។ ប៉ះទីនេះដើម្បីបោះបង់।</string>
+    <string name="btn_cancel_hidden_mode">បោះបង់ការធ្វើឱ្យសកម្មនៃរបៀបលាក់កំបាំង</string>
+    <string name="log_stealth_cancelled">ការធ្វើឱ្យសកម្មនៃរបៀបបំបាំងកាយត្រូវបានបោះបង់ដោយអ្នកប្រើប្រាស់।</string>
+    <string name="log_credential_change_deactivation">របៀបបំបាំងកាយត្រូវបានបិទដោយសារតែការផ្លាស់ប្តូរលិខิตបញ្ជាក់ឧបករណ៍।</string>
+    <string name="toast_dnd_permission">សូមផ្តល់សិទ្ធិចូលប្រើគោលการណ៍ជូនដំណឹង ដើម្បីធានាថាការជូនដំណឹងសុវត្ថិภาพអាចត្រូវបានគេឮ សូម្បីតែនៅក្នុងរបៀបស្ងាត់ក៏ដោយ।</string>
 </resources>

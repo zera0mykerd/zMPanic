@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 LIBÉRER DES RESSOURCES...</string>
     <string name="toast_loc_searching">📍LOC : RECHERCHE DE SIGNAL...</string>
     <string name="toast_loc_found">📍LOC : %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Sécurité anti-traque</string>
+    <string name="dialog_anti_stalking_message">Pour des raisons de sécurité anti-traque, l\'activation du mode caché n\'est pas instantanée. Si vous n\'avez pas demandé cette action vous-même, vous pouvez l\'annuler ici.</string>
+    <string name="btn_cancel_activation">Annuler l\'activation</string>
+    <string name="notification_stealth_warning_title">Avertissement de sécurité</string>
+    <string name="notification_stealth_warning_text">Avertissement : le mode caché s\'activera dans 30 secondes. Appuyez ici pour annuler.</string>
+    <string name="btn_cancel_hidden_mode">ANNULER L\'ACTIVATION DU MODE CACHÉ</string>
+    <string name="log_stealth_cancelled">L\'activation du mode furtif a été annulée par l\'utilisateur.</string>
+    <string name="log_credential_change_deactivation">Mode furtif désactivé en raison d\'un changement de justificatifs d\'identité de l\'appareil.</string>
+    <string name="toast_dnd_permission">Veuillez accorder l\'accès à la politique de notification pour garantir que l\'alarme de sécurité puisse être entendue même en mode silencieux.</string>
 </resources>

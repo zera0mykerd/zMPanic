@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 انتشار منابع...</string>
     <string name="toast_loc_searching">📍 مکان: سیگنال جستجو...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">ایمنی ضد تعقیب</string>
+    <string name="dialog_anti_stalking_message">به دلایل ایمنی ضد تعقیب، فعال‌سازی حالت مخفی فوری نیست. اگر خودتان این اقدام را درخواست نکرده‌اید، می‌توانید آن را در اینجا لغو کنید.</string>
+    <string name="btn_cancel_activation">لغو فعال‌سازی</string>
+    <string name="notification_stealth_warning_title">هشدار امنیتی</string>
+    <string name="notification_stealth_warning_text">هشدار: حالت مخفی تا ۳۰ ثانیه دیگر فعال می‌شود. برای لغو اینجا ضربه بزنید.</string>
+    <string name="btn_cancel_hidden_mode">لغو فعال‌سازی حالت مخفی</string>
+    <string name="log_stealth_cancelled">فعال‌سازی حالت مخفی توسط کاربر لغو شد.</string>
+    <string name="log_credential_change_deactivation">حالت مخفی به دلیل تغییر اعتبارنامه دستگاه غیرفعال شد.</string>
+    <string name="toast_dnd_permission">لطفاً برای اطمینان از شنیده شدن زنگ ایمنی حتیใน حالت بی‌صدا، دسترسی به خط‌مشی اعلان را مجاز کنید.</string>
 </resources>

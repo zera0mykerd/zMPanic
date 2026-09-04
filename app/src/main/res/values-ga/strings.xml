@@ -44,4 +44,15 @@
     <string name="toast_releasing_resources">🛑 ACMHAINNÍ A FHÁIL...</string>
     <string name="toast_loc_searching">📍 LOC: COMHARTHA AG CUARDACH...</string>
     <string name="toast_loc_found">📍 LOC: %s</string>
+
+    <!-- Anti-Stalking Safety Layer -->
+    <string name="dialog_anti_stalking_title">Sábháilteacht Frith-Stalking</string>
+    <string name="dialog_anti_stalking_message">Ar chúiseanna sábháilteachta frith-stalking, ní tharlaíonn gníomhachtú an mhód fholaithe láithreach. Mura ndearna tú an gníomh seo a iarraidh ort féin, is féidir leat é a chealú anseo.</string>
+    <string name="btn_cancel_activation">Cealaigh Gníomhachtú</string>
+    <string name="notification_stealth_warning_title">Rabhadh Slándála</string>
+    <string name="notification_stealth_warning_text">Rabhadh: gníomhófar an mód folaithe i gceann 30 soicind. Tapáil anseo chun é a chealú.</string>
+    <string name="btn_cancel_hidden_mode">CEALAIGH GNÍOMHACHTÚ AN MHÓD FHOLAITHE</string>
+    <string name="log_stealth_cancelled">Chealaigh an t-úsáideoir gníomhachtú an mhód stealth.</string>
+    <string name="log_credential_change_deactivation">Mód stealth díghníomhaithe mar gheall ar athrú dintiúir gléis.</string>
+    <string name="toast_dnd_permission">Deonaigh rochtain ar an bPolasaí Fógra le do thoil chun a chinntiú gur féidir an t-aláram sábháilteachta a chloisteáil fiú sa Mhód Chiúin.</string>
 </resources>
