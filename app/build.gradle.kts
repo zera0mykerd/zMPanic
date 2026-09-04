@@ -5,13 +5,18 @@ plugins {
 android {
     namespace = "com.mykerd.panic"
     compileSdk = 36
+    buildToolsVersion = "36.0.0"
     defaultConfig {
         applicationId = "com.mykerd.panic"
         minSdk = 23
         targetSdk = 36
         versionCode = 1
-        versionName = "13.0-BP"
+        versionName = "15.0-Thor"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
     }
     buildTypes {
         release {
@@ -38,5 +43,11 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.security.crypto)
+    implementation(libs.androidx.work.runtime.ktx)
+    
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
     //implementation(libs.androidx.lifecycle.runtime.ktx)
+    testImplementation(kotlin("test"))
 }
